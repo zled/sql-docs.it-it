@@ -23,12 +23,12 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cb3e092e9ea185be0de966c73a5005072b8a70c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c08e1b617755d50b49de7c9286e6f5a512039527
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612209"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641832"
 ---
 # <a name="error-handling-in-data"></a>Gestione degli errori nei dati
   Quando tramite un componente flusso di dati viene applicata una trasformazione ai dati delle colonne, vengono estratti dati dalle origini o vengono caricati dati nelle destinazioni, possono verificarsi errori. Gli errori sono spesso dovuti alla presenza di valori non previsti. Una conversione di dati può ad esempio avere esito negativo perché una colonna contiene una stringa anziché un numero, un inserimento in una colonna di database può avere esito negativo perché i dati rappresentano una data mentre la colonna ha un tipo di dati numeric oppure la valutazione di un'espressione può avere esito negativo perché il valore di una colonna è zero e dà luogo a un'operazione matematica non valida.  
@@ -148,7 +148,7 @@ Usare la finestra di dialogo **Configura output errori** per configurare le opzi
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di dati](../../integration-services/data-flow/data-flow.md)   
  [Trasformazione di dati con le trasformazioni](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
- [Connessione di componenti con i percorsi](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [Connessione di componenti con i percorsi](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [Attività Flusso di dati](../../integration-services/control-flow/data-flow-task.md)   
  [Flusso di dati](../../integration-services/data-flow/data-flow.md)  
   

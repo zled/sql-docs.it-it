@@ -19,12 +19,12 @@ ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4dcaf21e561275e6379745f47c4eabd789c3965
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66bb8485cb49180d80c682148f4de899b707f55d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711909"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695419"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Progettare diagrammi di database (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ In un diagramma di database ogni tabella può presentarsi con tre caratteristich
   
 Se una tabella è stata modificata ma non ancora salvata, alla fine del nome della tabella sarà presente un asterisco (*) per segnalare che le modifiche non sono state salvate. Per informazioni sul salvataggio di tabelle e diagrammi modificati, vedere [Usare i diagrammi di database &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-**Selettore di riga** Per selezionare una colonna del database nella tabella, è possibile fare clic sul selettore di riga. Se la colonna è inclusa nella chiave primaria della tabella, con il selettore di riga verrà visualizzato un simbolo di chiave. Per informazioni sulle chiavi primarie, vedere [Utilizzo di chiavi (Visual Database Tools)](http://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd).  
+**Selettore di riga** Per selezionare una colonna del database nella tabella, è possibile fare clic sul selettore di riga. Se la colonna è inclusa nella chiave primaria della tabella, con il selettore di riga verrà visualizzato un simbolo di chiave. Per informazioni sulle chiavi primarie, vedere [Utilizzo di chiavi (Visual Database Tools)](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd).  
   
 **Colonne delle proprietà** Il set di colonne delle proprietà è visibile solo in determinate viste della tabella. Per semplificare la gestione delle dimensioni e del layout del diagramma, è possibile visualizzare una tabella in cinque viste diverse.  
   

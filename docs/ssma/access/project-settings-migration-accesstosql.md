@@ -13,12 +13,12 @@ ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 50556ffbe1ea88df7e62fdb75b9c9d260a0bd662
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 441366208d2bfd886794dd7e50dca7e0aef7b3ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099532"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659340"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Impostazioni progetto (migrazione) (AccessToSQL)
 Le impostazioni del progetto di migrazione consentono di configurare la modalità di migrazione dati per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
@@ -88,5 +88,5 @@ Specifica se le date di accesso precedenti alla meno recente dovrebbe risolversi
 Dimensioni batch utilizzate durante la migrazione dei dati. Una transazione viene registrata dopo ogni batch. Per impostazione predefinita, le dimensioni del batch per tutti gli schemi sono 10000.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Reference(Access) dell'interfaccia utente](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Reference(Access) dell'interfaccia utente](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

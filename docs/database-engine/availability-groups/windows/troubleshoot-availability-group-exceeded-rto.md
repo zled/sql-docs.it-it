@@ -10,18 +10,18 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8b3a2b9208900d89a56f3a49b5dd1cf1aa0e04d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 392b683ac3213f51f4a263f6643adf34d76c133c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724219"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606871"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RTO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Dopo un failover automatico o un failover manuale pianificato senza perdita di dati in un gruppo di disponibilità, è possibile che il tempo di failover superi l'obiettivo tempo di ripristino (RTO, Recovery Time Objective). Oppure, quando si stima il tempo di failover di una replica secondaria con commit asincrono (ad esempio un partner di failover automatico) tramite il metodo in [Monitor Performance for Always On Availability Groups](monitor-performance-for-always-on-availability-groups.md) (Monitorare le prestazioni per i gruppi di disponibilità Always On), è possibile scoprire che supera l'obiettivo RTO.  
   
- Se il failover automatico non è ancora completato, vedere [Risoluzione dei problemi di failover automatico in ambienti SQL Server 2012 AlwaysOn](http://support.microsoft.com/kb/2833707).  
+ Se il failover automatico non è ancora completato, vedere [Risoluzione dei problemi di failover automatico in ambienti SQL Server 2012 AlwaysOn](https://support.microsoft.com/kb/2833707).  
   
  Le sezioni seguenti descrivono le cause comuni del superamento dell'obiettivo RTO da parte del tempo di failover.  
   
@@ -64,6 +64,6 @@ from sys.dm_hadr_database_replica_states
  Se il thread di rollforward è effettivamente in ritardo, è necessario ricercare la causa radice della riduzione del livello delle prestazioni nella replica secondaria. Se è presente una contesa per le risorse I/O con il carico di lavoro di creazione di report, è possibile usare [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) per controllare i cicli della CPU usati dal carico di lavoro di creazione di report e controllare indirettamente, in una certa misura, i cicli di I/O eseguiti. Se ad esempio il carico di lavoro di creazione di report consuma il 10% della CPU ma il carico di lavoro esegue il binding I/O, è possibile usare Resource Governor per limitare l'utilizzo di risorse della CPU al 5%, limitando il carico di lavoro di lettura e riducendo al minimo l'impatto sull'I/O.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Troubleshooting performance problems in SQL Server (applies to SQL Server 2012)](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx) (Risoluzione dei problemi di prestazioni in SQL Server (si applica a SQL Server 2012))  
+ [Troubleshooting performance problems in SQL Server (applies to SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx) (Risoluzione dei problemi di prestazioni in SQL Server (si applica a SQL Server 2012))  
   
   

@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd42cf79d99566f6d3d356d8b96bdb5415dc258c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34aeae9faee8d0818f5a8db3c499850e0e969835
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673381"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676651"
 ---
 # <a name="database-checkpoints-sql-server"></a>Checkpoint di database (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -126,7 +126,7 @@ I checkpoint interni vengono generati da vari componenti server per garantire ch
   
 -   Impostazione della modalità offline per un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .      
   
-##  <a name="RelatedTasks"></a> Attività correlate  
+##  <a name="RelatedTasks"></a> Related tasks  
  **Per modificare l'intervallo di recupero su un'istanza del server**  
   
 -   [Configurare l'opzione di configurazione del server intervallo di recupero](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)  
@@ -142,6 +142,6 @@ I checkpoint interni vengono generati da vari componenti server per garantire ch
   
 ## <a name="see-also"></a>Vedere anche  
 [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)            
-[Architettura fisica del log delle transazioni](http://technet.microsoft.com/library/ms179355.aspx) (dalla documentazione online di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , ma comunque applicabile)       
+[Architettura fisica del log delle transazioni](https://technet.microsoft.com/library/ms179355.aspx) (dalla documentazione online di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , ma comunque applicabile)       
   
   

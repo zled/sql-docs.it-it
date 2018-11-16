@@ -15,12 +15,12 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da205f6e24c037eb6fe17601b188d07b66f12d99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07004bdd1285d919f2d7480e6ee0c99573d62732
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810619"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696269"
 ---
 # <a name="create-a-cross-domain-rule"></a>Creare una regola tra domini
 
@@ -97,7 +97,7 @@ ms.locfileid: "47810619"
   
     6.  Al termine del test fare clic su **Chiudi** nella finestra di dialogo **Test regola dominio composito** .  
   
-2.  Dopo aver completato le regole tra domini, fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+2.  Dopo aver completato le regole tra domini, fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Completamento: fasi successive alla creazione di una regola tra domini  
  Dopo avere creato una regola tra domini, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md).  

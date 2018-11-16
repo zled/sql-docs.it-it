@@ -21,12 +21,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ff275d2aad6d9ccf24ed632a8515e7ce8ea3fc2
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: 16d8cdfb5400e213b57dd9f81f85df370662355e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254457"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697209"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -168,7 +168,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   Spostamento esterno delle partizioni  
   
- **SI APPLICA A:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]come prerequisito per la creazione di una tabella esterna, l'amministratore del dispositivo deve configurare la connettività di Hadoop. Per altre informazioni, vedere l'argomento relativo alla configurazione delle connessioni ai dati esterni nella documentazione della piattaforma di strumenti analitici che può essere scaricata da [qui](http://www.microsoft.com/download/details.aspx?id=48241).  
+ **SI APPLICA A:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]come prerequisito per la creazione di una tabella esterna, l'amministratore del dispositivo deve configurare la connettività di Hadoop. Per altre informazioni, vedere l'argomento relativo alla configurazione delle connessioni ai dati esterni nella documentazione della piattaforma di strumenti analitici che può essere scaricata da [qui](https://www.microsoft.com/download/details.aspx?id=48241).  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Poiché i dati della tabella esterna si trovano all'esterno del database, le operazioni di backup e ripristino funzioneranno solo per i dati archiviati nel database. Ciò significa che il backup e il ripristino verranno eseguiti solo per i metadati.  

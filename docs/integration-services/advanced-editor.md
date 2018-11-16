@@ -17,12 +17,12 @@ ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd50e2c507295921952c549d1eeee869b74e0e7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ef5d2976ede4bf9c96ae109acd921d9fa385f6d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731099"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641458"
 ---
 # <a name="advanced-editor"></a>Editor avanzato
   Utilizzare la finestra di dialogo **Editor avanzato** per configurare le proprietà per l'oggetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] selezionato.  
@@ -43,11 +43,11 @@ ms.locfileid: "47731099"
   
  Le proprietà visualizzate variano a seconda del componente. Per ulteriori informazioni sulle proprietà che possono essere visualizzate nell' **Editor avanzato**, vedere gli argomenti seguenti:  
   
--   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate delle trasformazioni](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
--   [Proprietà del percorso](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
+-   [Proprietà del percorso](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
   
  Per ulteriori informazioni sul componente specifico da modificare, vedere la relativa descrizione nella sezione Elementi dei flussi di dati della documentazione Oggetti e concetti di base di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] :  
   

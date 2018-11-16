@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26de643bf01e9ebffca01ff5b1f8aeecc38b7c5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7d96d825c9a1b9a6bc4ea069a9c7b04d79b5412
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741259"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814064"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>Prenotazioni URL per le distribuzioni di più istanze del server di report
   Se si installano più istanze di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nello stesso computer, è necessario prendere in considerazione le modalità di prenotazione degli URL per ogni istanza. All'interno di ogni istanza, il servizio Web ReportServer e [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] devono disporre almeno di una prenotazione URL ciascuno. L'intero set di prenotazioni deve essere univoco in HTTP.SYS.  
@@ -26,8 +26,8 @@ ms.locfileid: "47741259"
   
 |Istanza di SQL Server|Prenotazioni URL predefinita|  
 |-------------------------|-----------------------------|  
-|Predefinita (MSSQLSERVER)|`http://+:80/reportserver`|  
-|Denominata (Istanzadenominatautente)|`http://+:80/reportserver_MyNamedInstance`|  
+|Predefinita (MSSQLSERVER)|`https://+:80/reportserver`|  
+|Denominata (Istanzadenominatautente)|`https://+:80/reportserver_MyNamedInstance`|  
   
  Per l'istanza denominata, la directory virtuale include il nome dell'istanza. Sia l'istanza predefinita che quella denominata restano in attesa sulla stessa porta, ma i nomi delle directory virtuali univoci determinano il server di report che ottiene la richiesta.  
   
@@ -38,8 +38,8 @@ ms.locfileid: "47741259"
   
 |Istanza predefinita di un server di report (MSSQLSERVER)|ReportServer_Istanzadenominatautente|Univocità|  
 |----------------------------------------------------|-----------------------------------|----------------|  
-|`http://+:80/reportserver`|`http://+:8888/reportserver`|Ogni istanza resta in attesa su una porta diversa.|  
-|`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|Ogni istanza risponde a nomi di server diversi (nome completo di dominio e nome del computer).|  
+|`https://+:80/reportserver`|`https://+:8888/reportserver`|Ogni istanza resta in attesa su una porta diversa.|  
+|`https://www.contoso.com/reportserver`|`https://SRVR-46/reportserver`|Ogni istanza risponde a nomi di server diversi (nome completo di dominio e nome del computer).|  
   
 ## <a name="uniqueness-requirements"></a>Requisiti di univocità  
  Le tecnologie sottostanti utilizzate da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impongono alcuni requisiti relativi ai nomi univoci. Per HTTP.SYS è necessario che tutti gli URL all'interno del relativo repository siano univoci. È possibile variare la porta, il nome host o nome della directory virtuale per creare un URL univoco. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] è necessario che le identità dell'applicazione siano univoche all'interno dello stesso processo. Questo requisito influisce sui nomi delle directory virtuali, poiché specifica che non è possibile duplicare un nome di directory virtuale all'interno della stessa istanza del server di report.  

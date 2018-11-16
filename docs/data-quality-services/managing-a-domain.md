@@ -12,12 +12,12 @@ ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e414944e29abfebdd665fdcaa57bf45d39023daf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2730c37ba3afd24a0bbc29dece7a25dd15496bac
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807329"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700889"
 ---
 # <a name="managing-a-domain"></a>Gestione di un dominio
 
@@ -55,7 +55,7 @@ ms.locfileid: "47807329"
 |Modificare o evidenziare i valori in una Knowledge Base.|[Modificare i valori di dominio](../data-quality-services/change-domain-values.md)|  
 |Utilizzare regole di convalida e di standardizzazione|[Creare una regola di dominio](../data-quality-services/create-a-domain-rule.md)|  
 |Utilizzare relazioni per correggere un termine che forma parte di un valore in un dominio|[Creare relazioni basate su termini](../data-quality-services/create-term-based-relations.md)|  
-|Completare, chiudere o annullare l'attività di gestione del dominio|[Termine dell'attività di gestione del dominio](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|Completare, chiudere o annullare l'attività di gestione del dominio|[Termine dell'attività di gestione del dominio](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
 ## <a name="related-tasks"></a>Attività correlate  
   

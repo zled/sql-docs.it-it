@@ -17,12 +17,12 @@ ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb90ba901620d1280b49fda959a958ae9c93a81f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c620b8da5b94e3437ecbf17f889c8caa518e743a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827125"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640188"
 ---
 # <a name="execute-t-sql-statement-task"></a>Attività Esegui istruzione T-SQL
   L'attività Esegui istruzione T-SQL consente di eseguire istruzioni Transact-SQL. Per altre informazioni, vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/transact-sql-reference-database-engine.md) e [Query di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-queries.md).  
@@ -38,11 +38,11 @@ ms.locfileid: "47827125"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flusso di controllo](../../integration-services/control-flow/control-flow.md)   
- [MERGE nei pacchetti di Integration Services](../../integration-services/control-flow/merge-in-integration-services-packages.md)  
+ [MERGE in Integration Services Packages](../../integration-services/control-flow/merge-in-integration-services-packages.md)  
   
   

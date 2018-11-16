@@ -21,12 +21,12 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a04cd6d732622e91d5080ed77a2eba4d62d71a12
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 708b8c242098251211e3f0dc17df003669b68991
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630185"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696639"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocolli e librerie di rete
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47630185"
 ## <a name="default-sql-server-network-configuration"></a>Configurazione di rete predefinita di SQL Server  
  Un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene configurata per la porta TCP/IP 1433 e la named pipe \\\\\pipe\sql\query. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono configurate per le porte dinamiche TCP, con un numero di porta assegnato dal sistema operativo.  
   
- Se non è possibile utilizzare indirizzi di porta dinamici (ad esempio, quando le connessioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono passare tramite un server firewall configurato per l'utilizzo di indirizzi di porte specifici). Selezionare un numero di porta non assegnato. Le assegnazioni dei numeri di porta vengono gestite da IANA (Internet Assigned Numbers Authority) e sono elencate in [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844).  
+ Se non è possibile utilizzare indirizzi di porta dinamici (ad esempio, quando le connessioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono passare tramite un server firewall configurato per l'utilizzo di indirizzi di porte specifici). Selezionare un numero di porta non assegnato. Le assegnazioni dei numeri di porta vengono gestite da IANA (Internet Assigned Numbers Authority) e sono elencate in [https://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844).  
   
  Per migliorare la sicurezza, la connettività di rete non viene abilitata completamente durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per abilitare, disabilitare e configurare i protocolli di rete al termine dell'installazione, utilizzare l'area Configurazione di rete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

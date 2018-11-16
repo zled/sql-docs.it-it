@@ -13,12 +13,12 @@ ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2d1c191ae176eb70a79c2546f44c0cef2743433
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 82e9cfe7afa18692376f113d31c07771a36e045d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033668"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674320"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>Riduzione delle segnalazioni non significative nei criteri di utilizzo della CPU (Utilità SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51033668"
   
 -   Aumentare la tolleranza per le violazioni percentuale di un incremento al 30%. Una sola violazione in 1 ora sarebbe 1 punto dati in una dimensione di esempio di 4. In questo caso, i criteri tollererebbero 1 violazione all'ora, ma segnalerebbero un sovrautilizzo per 2 o più violazioni (>30% dei punti dati) in un periodo di raccolta di 1 ora.  
   
--   Aumentare le soglie dei criteri per l'utilizzo del processore da parte dell'istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dell'applicazione del livello dati. Per altre informazioni su come modificare i criteri di utilizzo della CPU globali per le istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o applicazioni livello dati, vedere [Amministrazione utilità &#40;Utilità SQL Server&#41;](http://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d). Per altre informazioni su come modificare i criteri di utilizzo della CPU per le singole istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Dettagli di istanze gestite &#40;Utilità SQL Server&#41;](http://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2). Per altre informazioni su come modificare i criteri di utilizzo della CPU per le singole applicazioni livello dati, vedere [Dettagli di Applicazioni di livello dati distribuite &#40;Utilità SQL Server&#41;](http://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+-   Aumentare le soglie dei criteri per l'utilizzo del processore da parte dell'istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e dell'applicazione del livello dati. Per altre informazioni su come modificare i criteri di utilizzo della CPU globali per le istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o applicazioni livello dati, vedere [Amministrazione utilità &#40;Utilità SQL Server&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d). Per altre informazioni su come modificare i criteri di utilizzo della CPU per le singole istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Dettagli di istanze gestite &#40;Utilità SQL Server&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2). Per altre informazioni su come modificare i criteri di utilizzo della CPU per le singole applicazioni livello dati, vedere [Dettagli di Applicazioni di livello dati distribuite &#40;Utilità SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-underutilized"></a>Frequenza di violazione dei criteri di utilizzo del processore prima che venga segnalato un sottoutilizzo  
  Il periodo di tempo di valutazione e la tolleranza per le violazioni percentuali sono configurabili utilizzando le impostazioni della scheda **Criteri** nel nodo **Amministrazione utilità** di Esplora utilità. Per modificare i criteri, utilizzare i dispositivi di scorrimento a destra delle descrizioni dei criteri, quindi fare clic su **Applica**. È inoltre possibile ripristinare i valori predefiniti o annullare le modifiche utilizzando i pulsanti nella parte inferiore della visualizzazione.  
@@ -56,10 +56,10 @@ ms.locfileid: "51033668"
   
 -   La percentuale predefinita di punti dati in violazione prima che venga segnalato un sottoutilizzo della CPU è 90%. I valori validi sono compresi tra 0% e 100%.  
   
- Se si utilizzano i valori predefiniti, ogni settimana vengono raccolti 672 punti dati, ma la soglia dei criteri è 0%. Pertanto, per impostazione predefinita, questi criteri non generano violazioni di sottoutilizzo del processore. Per altre informazioni su come modificare i criteri di utilizzo della CPU globali per le istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o applicazioni livello dati, vedere [Amministrazione utilità &#40;Utilità SQL Server&#41;](http://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d). Per altre informazioni su come modificare i criteri di utilizzo della CPU per le singole istanze di SQL Server, vedere [Dettagli di istanze gestite &#40;Utilità SQL Server&#41;](http://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2). Per altre informazioni su come modificare i criteri di utilizzo della CPU per le singole applicazioni livello dati, vedere [Dettagli di Applicazioni di livello dati distribuite &#40;Utilità SQL Server&#41;](http://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+ Se si utilizzano i valori predefiniti, ogni settimana vengono raccolti 672 punti dati, ma la soglia dei criteri è 0%. Pertanto, per impostazione predefinita, questi criteri non generano violazioni di sottoutilizzo del processore. Per altre informazioni su come modificare i criteri di utilizzo della CPU globali per le istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o applicazioni livello dati, vedere [Amministrazione utilità &#40;Utilità SQL Server&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d). Per altre informazioni su come modificare i criteri di utilizzo della CPU per le singole istanze di SQL Server, vedere [Dettagli di istanze gestite &#40;Utilità SQL Server&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2). Per altre informazioni su come modificare i criteri di utilizzo della CPU per le singole applicazioni livello dati, vedere [Dettagli di Applicazioni di livello dati distribuite &#40;Utilità SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Amministrazione utilità &#40;Utilità SQL Server&#41;](http://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)   
+ [Amministrazione utilità &#40;Utilità SQL Server&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)   
  [Monitoraggio di istanze di SQL Server in Utilità SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Modificare una definizione dei criteri di integrità delle risorse &#40;Utilità SQL Server&#41;](../../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)   
  [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  

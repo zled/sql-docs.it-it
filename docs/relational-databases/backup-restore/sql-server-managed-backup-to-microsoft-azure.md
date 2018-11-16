@@ -11,12 +11,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 85df2401dc5827a2e476fa62178586ee834d188d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08d95d5ba1f6a0c1a46218dde190e09af2452eae
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751649"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677860"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Backup gestito di SQL Server in Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ ms.locfileid: "47751649"
   
 |Prerequisiti|Descrizione|  
 |------------------|-----------------|  
-|**Account di Microsoft Azure**|È possibile iniziare a usare Azure con una [versione di valutazione gratuita](http://azure.microsoft.com/pricing/free-trial/) prima di esaminare le [opzioni per l'acquisto](http://azure.microsoft.com/pricing/purchase-options/).|  
-|**Account di archiviazione di Microsoft Azure**|I backup vengono archiviati nel servizio di archiviazione BLOB Azure associato a un account di archiviazione Azure. Per istruzioni dettagliate per creare un account di archiviazione, vedere [Informazioni sugli account di archiviazione Azure](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
-|**Contenitore BLOB**|I BLOB sono organizzati in contenitori. L'utente specifica il contenitore di destinazione per i file di backup. È possibile creare un contenitore nel [portale di gestione di Azure](https://manage.windowsazure.com/)oppure con il comando di **Azure PowerShell**[New-AzureStorageContainer](http://azure.microsoft.com/documentation/articles/powershell-install-configure/) .|  
-|**Firma di accesso condiviso**|L'accesso al contenitore di destinazione è controllato da una firma di accesso condiviso (SAS, Shared Access Signature). Per una panoramica su SAS, vedere [Firme di accesso condiviso, parte 1: conoscere il modello di firma di accesso condiviso](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). È possibile creare un token della firma di accesso condiviso nel codice o con il comando di PowerShell **New-AzureStorageContainerSASToken** . Per un esempio di script di PowerShell che semplifica questo processo, vedere [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Semplificazione della creazione di credenziali SQL con i token della firma di accesso condiviso in Archiviazione di Azure con Powershell). Il token della firma di accesso condiviso può essere archiviato in **Credenziali SQL** ed essere usato con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|**Account di Microsoft Azure**|È possibile iniziare a usare Azure con una [versione di valutazione gratuita](https://azure.microsoft.com/pricing/free-trial/) prima di esaminare le [opzioni per l'acquisto](https://azure.microsoft.com/pricing/purchase-options/).|  
+|**Account di archiviazione di Microsoft Azure**|I backup vengono archiviati nel servizio di archiviazione BLOB Azure associato a un account di archiviazione Azure. Per istruzioni dettagliate per creare un account di archiviazione, vedere [Informazioni sugli account di archiviazione Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
+|**Contenitore BLOB**|I BLOB sono organizzati in contenitori. L'utente specifica il contenitore di destinazione per i file di backup. È possibile creare un contenitore nel [portale di gestione di Azure](https://manage.windowsazure.com/)oppure con il comando di **Azure PowerShell**[New-AzureStorageContainer](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) .|  
+|**Firma di accesso condiviso**|L'accesso al contenitore di destinazione è controllato da una firma di accesso condiviso (SAS, Shared Access Signature). Per una panoramica su SAS, vedere [Firme di accesso condiviso, parte 1: conoscere il modello di firma di accesso condiviso](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). È possibile creare un token della firma di accesso condiviso nel codice o con il comando di PowerShell **New-AzureStorageContainerSASToken** . Per un esempio di script di PowerShell che semplifica questo processo, vedere [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Semplificazione della creazione di credenziali SQL con i token della firma di accesso condiviso in Archiviazione di Azure con Powershell). Il token della firma di accesso condiviso può essere archiviato in **Credenziali SQL** ed essere usato con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |**SQL Server Agent**|Per il corretto funzionamento di [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è necessario che il servizio SQL Server Agent sia in esecuzione. È consigliabile impostare l'opzione per l'avvio automatico.|  
   
 ## <a name="components"></a>Components  

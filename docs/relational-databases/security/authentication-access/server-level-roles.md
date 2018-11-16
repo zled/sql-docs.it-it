@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9995eeab10fcb0e2b681886cb8ad49fbeb37fac0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2466e5b1cff9efb055d348a7e72729fa5208156
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856229"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661330"
 ---
 # <a name="server-level-roles"></a>Ruoli a livello di server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47856229"
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  L'autorizzazione **CONTROL SERVER** è simile ma non identica al ruolo predefinito del server **sysadmin** . Le autorizzazioni non implicano le appartenenze ai ruoli e le appartenenze ai ruoli non concedono autorizzazioni. Ad esempio, **CONTROL SERVER** non implica o l'appartenenza al ruolo predefinito del server **sysadmin**. Talvolta, tuttavia, è possibile equiparare ruoli e autorizzazioni equivalenti. La maggior parte dei comandi **DBCC** e molte stored procedure di sistema richiedono l'appartenenza al ruolo predefinito del server **sysadmin**. Per un elenco delle 171 stored procedure di sistema che richiedono l'appartenenza a **sysadmin** , vedere il post di blog di Andreas Wolter sulle [avvertenze relative ad autorizzazioni, procedure di sistema, DBCC, creazione automatica dello schema ed escalation dei privilegi di CONTROL SERVER e sysadmin/sa](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
+>  L'autorizzazione **CONTROL SERVER** è simile ma non identica al ruolo predefinito del server **sysadmin** . Le autorizzazioni non implicano le appartenenze ai ruoli e le appartenenze ai ruoli non concedono autorizzazioni. Ad esempio, **CONTROL SERVER** non implica o l'appartenenza al ruolo predefinito del server **sysadmin**. Talvolta, tuttavia, è possibile equiparare ruoli e autorizzazioni equivalenti. La maggior parte dei comandi **DBCC** e molte stored procedure di sistema richiedono l'appartenenza al ruolo predefinito del server **sysadmin**. Per un elenco delle 171 stored procedure di sistema che richiedono l'appartenenza a **sysadmin** , vedere il post di blog di Andreas Wolter sulle [avvertenze relative ad autorizzazioni, procedure di sistema, DBCC, creazione automatica dello schema ed escalation dei privilegi di CONTROL SERVER e sysadmin/sa](https://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
   
 ## <a name="server-level-permissions"></a>Autorizzazioni a livello di server  
  Ai ruoli del server definiti dall'utente è possibile aggiungere solo autorizzazioni a livello di server. Per elencare le autorizzazioni a livello di server, eseguire la seguente istruzione. Di seguito sono elencate le autorizzazioni a livello di server:  

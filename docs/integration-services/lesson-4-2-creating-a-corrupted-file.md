@@ -11,12 +11,12 @@ ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a348823679ab464bb35520d309d5c8cc50b3ae2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b77bcdee3a2382bef57d6b8c2ceb791da983d399
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829631"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637568"
 ---
 # <a name="lesson-4-2---creating-a-corrupted-file"></a>Lezione 4-2 - Creazione di un file danneggiato
 Per illustrare la configurazione e la gestione degli errori di trasformazione, è necessario creare un file flat di esempio che nel corso dell'elaborazione generi l'errore di un componente.  
@@ -29,7 +29,7 @@ In questa attività verrà creata una copia di un file flat di esempio esistente
   
     I dati di esempio sono inclusi nei pacchetti di lezioni di SSIS. Per scaricare i dati di esempio e i pacchetti di lezioni, effettuare le operazioni seguenti.  
   
-    1.  Passare alla pagina relativa agli [esempi di prodotti di Integration Services](http://go.microsoft.com/fwlink/?LinkID=267527).  
+    1.  Passare alla pagina relativa agli [esempi di prodotti di Integration Services](https://go.microsoft.com/fwlink/?LinkID=267527).  
   
     2.  Fare clic sulla scheda **DOWNLOADS** .  
   

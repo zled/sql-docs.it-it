@@ -14,12 +14,12 @@ ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bbfede87cf23da5e8867d33f4b8bad35b6af9c50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679669"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677250"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introduzione a SSMA per MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) per MySQL consente di convertire gli schemi di database MySQL in schemi di SQL Server o database SQL di Azure, caricare gli schemi risultanti in SQL Server o database SQL di Azure e la migrazione dei dati da MySQL a SQL Server o database SQL di Azure.  
@@ -73,7 +73,7 @@ SQL Server o Azure SQL DB metadati Explorer mostra le informazioni relative a un
   
 È possibile utilizzare questa finestra di esplorazione di metadati per selezionare gli oggetti di database convertiti MySQL e quindi sincronizzare gli oggetti con l'istanza di SQL Server o database SQL di Azure.  
   
-Per altre informazioni, vedere [sincronizzazione (MySQL a SQL Server / database SQL di Azure)](http://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
+Per altre informazioni, vedere [sincronizzazione (MySQL a SQL Server / database SQL di Azure)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
   
 ### <a name="metadata"></a>Metadati  
 A destra di ogni Visualizzatore metadati sono schede che descrivono l'oggetto selezionato. Ad esempio, se si seleziona una tabella nel Visualizzatore metadati MySQL, verranno visualizzate nove schede: **tabella**, **SQL**, **Mapping di tipo**, **dati**,  **Le impostazioni**, **Mapping di set di caratteri**, **modalità SQL**, **proprietà**, e **Report**. Il **Report** scheda contiene informazioni solo dopo aver creato un report che contiene l'oggetto selezionato. Se si seleziona una tabella in Esplora i metadati di SQL Server, verranno visualizzate tre schede: **tabella**, **SQL** e **dati**.  

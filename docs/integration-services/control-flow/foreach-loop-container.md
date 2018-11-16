@@ -31,12 +31,12 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 71f8cb6faeb5010cc39a05e2611753a04de812e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcaca36529f0a3592a96b943184ef7f26ab59d52
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822429"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642237"
 ---
 # <a name="foreach-loop-container"></a>Contenitore Ciclo Foreach
   Il contenitore Ciclo Foreach definisce un flusso di controllo ripetuto all'interno di un pacchetto. L'implementazione del ciclo è simile alla struttura del ciclo **Foreach** nei linguaggi di programmazione. In un pacchetto per l'esecuzione del ciclo viene utilizzato un enumeratore Foreach.  Il contenitore Ciclo Foreach ripete il flusso di controllo per ogni membro di un enumeratore specificato.  
@@ -108,9 +108,9 @@ ms.locfileid: "47822429"
   
 2.  Aggiungere attività e contenitori al contenitore Ciclo Foreach. Per altre informazioni, vedere [Aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
-3.  Connettere le attività e i contenitori inclusi nel contenitore Ciclo Foreach tramite vincoli di precedenza. Per altre informazioni, vedere [Connessione di attività e contenitori tramite un vincolo di precedenza predefinito](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75).  
+3.  Connettere le attività e i contenitori inclusi nel contenitore Ciclo Foreach tramite vincoli di precedenza. Per altre informazioni, vedere [Connessione di attività e contenitori tramite un vincolo di precedenza predefinito](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75).  
   
-4.  Configurare il contenitore Ciclo Foreach. Per altre informazioni, vedere [Configurazione di un contenitore Ciclo Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+4.  Configurare il contenitore Ciclo Foreach. Per altre informazioni, vedere [Configurazione di un contenitore Ciclo Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
 
 ## <a name="configure-a-foreach-loop-container"></a>Configurare un contenitore Ciclo Foreach
 Questa procedura descrive la configurazione di un contenitore Ciclo Foreach, incluse le espressioni di proprietà a livello di enumeratore e contenitore.  
@@ -178,7 +178,7 @@ Questa procedura descrive la configurazione di un contenitore Ciclo Foreach, inc
 ## <a name="general-page---foreach-loop-editor"></a>Pagina Generale - Editor ciclo Foreach
 Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Foreach** per assegnare un nome e una descrizione al contenitore Ciclo Foreach che utilizza un enumeratore specificato per ripetere un flusso di lavoro per ogni membro di una raccolta.  
   
- Per informazioni sul contenitore Ciclo Foreach e su come configurarlo, vedere [Contenitore Ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md) e [Configurazione di un contenitore Ciclo Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+ Per informazioni sul contenitore Ciclo Foreach e su come configurarlo, vedere [Contenitore Ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md) e [Configurazione di un contenitore Ciclo Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
 ### <a name="options"></a>Opzioni  
  **Nome**  
@@ -193,7 +193,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
 ## <a name="collection-page---foreach-loop-editor"></a>Pagina Raccolta - Editor ciclo Foreach
  Usare la pagina **Raccolta** della finestra di dialogo **Editor ciclo Foreach** per specificare il tipo di enumeratore e configurare l'enumeratore.  
   
- Per informazioni sul contenitore Ciclo Foreach e su come configurarlo, vedere [Contenitore Ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md) e [Configurazione di un contenitore Ciclo Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+ Per informazioni sul contenitore Ciclo Foreach e su come configurarlo, vedere [Contenitore Ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md) e [Configurazione di un contenitore Ciclo Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
 ### <a name="static-options"></a>Opzioni statiche  
  **Enumeratore**  
@@ -281,7 +281,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **Colonne**  
  Fare clic su questo pulsante per configurare il tipo di dati delle colonne nell'elemento.  
   
- **Argomenti correlati** [Riferimento all'interfaccia utente della finestra di dialogo Colonne For Each Item](http://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
+ **Argomenti correlati** [Riferimento all'interfaccia utente della finestra di dialogo Colonne For Each Item](https://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
   
 #### <a name="enumerator--foreach-ado-enumerator"></a>Enumeratore = Foreach ADO Enumerator  
  Foreach ADO Enumerator consente di enumerare le righe o le tabelle in un oggetto ADO o ADO.NET archiviato in una variabile. Se il Ciclo Foreach include ad esempio un'attività Script che scrive un set di dati in una variabile, è possibile utilizzare Foreach ADO Enumerator per enumerare le righe nel set di dati. Se la variabile contiene un set di dati ADO.NET, è possibile configurare l'enumeratore in modo da enumerare le righe in più tabelle o in modo da enumerare le tabelle.  
@@ -292,7 +292,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
 > [!NOTE]  
 >  Il tipo di dati della variabile deve essere Oggetto. In caso contrario si verificherà un errore.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **Rows in first table** (Righe nella prima tabella)  
  Selezionare questa opzione per enumerare solo le righe nella prima tabella.  
@@ -320,7 +320,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **Imposta restrizioni**  
  Consente di impostare le restrizioni da applicare allo schema specificato.  
   
- **Argomenti correlati** [Finestra di dialogo Restrizioni schema](http://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
+ **Argomenti correlati** [Finestra di dialogo Restrizioni schema](https://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
   
 #### <a name="enumerator--foreach-from-variable-enumerator"></a>Enumeratore = Foreach From Variable Enumerator  
  Foreach From Variable Enumerator consente di enumerare gli oggetti enumerabili nella variabile specificata. Se il Ciclo Foreach include ad esempio un'attività Esegui SQL che esegue una query e archivia il risultato in una variabile, è possibile utilizzare Foreach From Variable Enumerator per enumerare i risultati della query.  
@@ -328,14 +328,14 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **Variabile**  
  Selezionare una variabile nell'elenco oppure fare clic su \<**Nuova variabile**> per crearne una nuova.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumeratore = Foreach NodeList Enumerator  
  Foreach Nodelist Enumerator consente di enumerare il set di nodi XML ottenuto dall'applicazione di un'espressione XPath a un file XML. Se il Ciclo Foreach include ad esempio un'attività Script, è possibile utilizzare Foreach NodeList Enumerator per passare un valore che risponda ai criteri dell'espressione XPath dal file XML all'attività Script.  
   
  L'espressione XPath che viene applicata al file XML è l'operazione XPath esterna, archiviata nella proprietà OuterXPathString. Se il tipo di enumerazione XPath è impostato su **ElementCollection**, l'enumeratore Foreach NodeList può applicare un'espressione XPath interna, archiviata nella proprietà InnerXPathString, a una raccolta di elementi.  
   
- Per ulteriori informazioni sull'utilizzo di documenti e dati XML, vedere "[Employing XML in the .NET Framework (utilizzo di XML in .NET Framework)](http://go.microsoft.com/fwlink/?LinkId=56214)" in MSDN Library.  
+ Per ulteriori informazioni sull'utilizzo di documenti e dati XML, vedere "[Employing XML in the .NET Framework (utilizzo di XML in .NET Framework)](https://go.microsoft.com/fwlink/?LinkId=56214)" in MSDN Library.  
   
  **DocumentSourceType**  
  Consente di selezionare il tipo di origine del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
@@ -355,7 +355,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
   
  Se la proprietà **DocumentSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **EnumerationType**  
  Consente di selezionare un tipo di enumeratore nell'elenco. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
@@ -385,7 +385,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
   
  Se la proprietà **OuterXPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **InnerElementType**  
  Se la proprietà **EnumerationType** è impostata su **ElementCollection**, selezionare il tipo di elemento interno nell'elenco.  
@@ -408,7 +408,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
   
  Se la proprietà **InnerXPathStringSourceType** è impostata su **Variabile**, selezionare una variabile esistente oppure fare clic su \<**Nuova variabile**> per creare una nuova variabile.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 #### <a name="enumerator--foreach-smo-enumerator"></a>Enumeratore = Foreach SMO Enumerator  
  Foreach SMO Enumerator consente di enumerare gli oggetti SQL Server Management Objects (SMO). Se il Ciclo Foreach include ad esempio un'attività Esegui SQL, è possibile usare l'enumeratore Foreach SMO per enumerare le tabelle nel database **AdventureWorks** ed eseguire query che contino il numero di righe in ogni tabella.  
@@ -424,7 +424,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **Sfoglia**  
  Consente di selezionare l'enumerazione SMO.  
   
- **Argomenti correlati:** [Finestra di dialogo Seleziona enumerazione SMO](http://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
+ **Argomenti correlati:** [Finestra di dialogo Seleziona enumerazione SMO](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
   
 ####  <a name="ForeachHDFSFile"></a> Enumeratore = Enumeratore Foreach di file HDFS  
  **Foreach HDFS File Enumerator** consente a un pacchetto SSIS di enumerare i file HDFS nel percorso HDFS specificato. Il nome di ogni file HDFS può essere archiviato in una variabile e usato nelle attività interne al contenitore Ciclo Foreach.  
@@ -453,7 +453,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
 ####  <a name="ForeachAzureBlob"></a> Enumeratore = Enumeratore Foreach BLOB di Azure  
  **Azure Blob Enumerator** consente a un pacchetto SSIS di enumerare i file BLOB nel percorso BLOB specificato. È possibile archiviare il nome del file BLOB enumerato in una variabile e usarlo nelle attività interne al Contenitore Ciclo Foreach.  
   
- **Azure Blob Enumerator** è un componente del Feature Pack di SQL Server Integration Services (SSIS) per Azure per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Scaricare il Feature Pack [qui](http://go.microsoft.com/fwlink/?LinkID=626967).  
+ **Azure Blob Enumerator** è un componente del Feature Pack di SQL Server Integration Services (SSIS) per Azure per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Scaricare il Feature Pack [qui](https://go.microsoft.com/fwlink/?LinkID=626967).  
   
  **Azure storage connection manager** (Gestione connessione di Archiviazione di Azure)  
  Selezionare una gestione connessione di archiviazione di Azure esistente o crearne una nuova che si riferisca a un Account di archiviazione Azure.  
@@ -490,7 +490,7 @@ Specifica se eseguire la ricerca in modo ricorsivo all'interno della directory s
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>Pagina Mapping variabili - Editor ciclo Foreach
  Utilizzare la pagina **Mapping variabili** della finestra di dialogo **Editor ciclo Foreach** per eseguire il mapping delle variabili al valore della raccolta. Il valore della variabile viene aggiornato con i valori della raccolta in ogni iterazione del ciclo.  
   
- Per informazioni sull'uso del contenitore Ciclo Foreach in un pacchetto di Integration Services, vedere [Contenitore Ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md). Per informazioni su come configurarlo, vedere [Configurazione di un contenitore Ciclo Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+ Per informazioni sull'uso del contenitore Ciclo Foreach in un pacchetto di Integration Services, vedere [Contenitore Ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md). Per informazioni su come configurarlo, vedere [Configurazione di un contenitore Ciclo Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
  Nell'esercitazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per la creazione di un pacchetto ETL semplice è inclusa una lezione in cui vengono descritte le procedure di aggiunta e di configurazione di un ciclo Foreach.  
   
@@ -501,7 +501,7 @@ Specifica se eseguire la ricerca in modo ricorsivo all'interno della directory s
 > [!NOTE]  
 >  Dopo il mapping di una variabile, viene aggiunta automaticamente una nuova riga all'elenco **Variabile**.  
   
- **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati**: [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **Index**  
  Se si utilizza l'enumeratore Foreach Item, specificare l'indice della colonna nel valore della raccolta di cui eseguire il mapping alla variabile. Per altri tipi di enumeratore, l'indice è di sola lettura.  
@@ -522,7 +522,7 @@ Usare la finestra di dialogo **Restrizioni schema** per impostare le restrizioni
  **Variabile**  
  Consente di utilizzare una variabile per definire le restrizioni. Selezionare una variabile nell'elenco oppure fare clic su **Nuova variabile** per crearne una nuova.  
   
- **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Argomenti correlati:** [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **Text**  
  Consente di digitare il testo per definire le restrizioni.  

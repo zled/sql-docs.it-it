@@ -1,6 +1,6 @@
 ---
-title: Acquisire e configurare un server di backup - Parallel Data Warehouse | Documenti Microsoft
-description: Questo articolo descrive come configurare un sistema di Windows non strumento come un server di backup per l'utilizzo con le funzionalità di backup e ripristino di sistema della piattaforma Analitica (AP) e Parallel Data Warehouse (PDW).
+title: Acquisire e configurare un server di backup - Parallel Data Warehouse | Microsoft Docs
+description: Questo articolo descrive come configurare un sistema di Windows non appliance come un server di backup per l'uso con le funzionalità di backup e ripristino di sistema di piattaforma Analitica (AP) e Parallel Data Warehouse (PDW).
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,85 +9,85 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4464857e2b1e71a96f87e95d45df0577df987176
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: cba345eb7a5aec9ef857819a1f0499266649f6e4
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539581"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696950"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Acquisire e configurare un server di backup per Parallel Data Warehouse
-Questo articolo descrive come configurare un sistema di Windows non strumento come un server di backup per l'utilizzo con le funzionalità di backup e ripristino di sistema della piattaforma Analitica (AP) e Parallel Data Warehouse (PDW).  
+Questo articolo descrive come configurare un sistema di Windows non appliance come un server di backup per l'uso con le funzionalità di backup e ripristino di sistema di piattaforma Analitica (AP) e Parallel Data Warehouse (PDW).  
   
   
-## <a name="Basics"></a>Nozioni fondamentali sul server backup  
+## <a name="Basics"></a>Nozioni fondamentali di server di backup  
 Il server di backup:  
   
--   Viene fornita e gestito dal proprio team IT.  
+-   Viene fornita e gestita dal team IT.  
   
--   Non richiede alcun strumenti software specifici PDW. PDW non viene installato alcun software sul server di backup.  
+-   Non richiede alcun software PDW specifici o strumenti. PDW non viene installato alcun software nel server di backup.  
   
--   Si trova nel proprio rack non strumento e non può trovarsi all'interno dell'accessorio punti di accesso.  
+-   Si trova nel proprio rack non appliance e non può essere inserito all'interno dell'appliance APS.  
   
--   Può essere connesso alla rete InfiniBand accessorio. I backup possono essere eseguiti su InfiniBand o Ethernet; InfiniBand è consigliato per motivi di prestazioni.  
+-   Possono essere connesse alla rete InfiniBand appliance. I backup possono essere eseguiti tramite; Ethernet o InfiniBand InfiniBand è consigliato per motivi di prestazioni.  
   
--   È nel proprio dominio del cliente, non il dominio applicazione. Non sussiste alcuna relazione di trust tra il dominio del cliente e il dominio applicazione.  
+-   È nel proprio dominio del cliente, non del dominio appliance. Non vi è alcuna relazione di trust tra il dominio del cliente e il dominio di appliance.  
   
--   Ospita una condivisione di file di backup, è una condivisione di file di Windows che utilizza il protocollo di rete a livello di applicazione Server Message Block (SMB). Le autorizzazioni di condivisione file di backup assegnano a un utente di dominio di Windows (in genere si tratta di un utente dedicato per il backup) la possibilità di eseguire backup e ripristino per la condivisione. Le credenziali di nome utente e password dell'utente di dominio di Windows vengono archiviate in PDW in modo che PDW è possibile eseguire backup e ripristinare le operazioni nella condivisione di file di backup.  
+-   Ospita una condivisione file di backup, ovvero una condivisione di file di Windows che utilizza il protocollo di rete a livello di applicazione Server Message Block (SMB). Le autorizzazioni di condivisione file di backup concedere a un utente di dominio di Windows (in genere si tratta di un utente dedicato per il backup) la possibilità di eseguire il backup e ripristinare le operazioni nella condivisione. Le credenziali nome utente e password dell'utente di dominio di Windows vengono archiviate in PDW in modo che PDW può eseguire il backup e ripristinare le operazioni nella condivisione di file di backup.  
   
 ## <a name="Step1"></a>Passaggio 1: Determinare i requisiti di capacità  
-I requisiti di sistema per il server di Backup dipendono quasi completamente il proprio carico di lavoro. Prima di acquisto o il provisioning di un server di backup è necessario stabilire i requisiti di capacità. Il server di Backup non deve essere dedicata solo ai backup, a condizione che gestirà i requisiti di archiviazione e delle prestazioni del carico di lavoro. È inoltre più server di backup per backup e ripristino di ogni database a uno dei diversi server.  
+Requisiti di sistema per il server di Backup è quasi completamente dipendono il proprio carico di lavoro. Prima di richiedere l'acquisto o il provisioning di un server di backup è necessario determinare i requisiti di capacità. Il server di Backup non deve essere dedicata solo ai backup, purché lo gestirà i requisiti di archiviazione e le prestazioni del carico di lavoro. È anche possibile avere più server di backup per backup e ripristino di ogni database a uno dei diversi server.  
   
-Utilizzare il [foglio di lavoro di pianificazione della capacità Backup server](backup-capacity-planning-worksheet.md) per determinare i requisiti di capacità.  
+Usare la [Backup server capacità pianificazione foglio di lavoro](backup-capacity-planning-worksheet.md) per determinare i requisiti di capacità.  
   
 ## <a name="Step2"></a>Passaggio 2: Acquisire il server di backup  
-Ora che è comprendere meglio i requisiti di capacità, è possibile pianificare i server e i componenti di rete che sarà necessario acquistare o effettuare il provisioning. Incorporare il seguente elenco di requisiti al piano di acquisto, quindi acquistare il server o effettuare il provisioning di un server esistente.  
+Ora che meglio comprendere i requisiti di capacità, è possibile pianificare i server e componenti di rete che sarà necessario acquistare o effettuare il provisioning. Incorporare il seguente elenco di requisiti nel piano di acquisto e quindi acquistare il server o effettuare il provisioning di un server esistente.  
   
 ### <a name="software-requirements"></a>Requisiti software  
-Qualsiasi file server che utilizza il protocollo di condivisione File di Windows (SMB).  
+Qualsiasi file server che usa il protocollo di condivisione File di Windows (SMB).  
   
 Si consiglia di Windows Server 2012 o oltre al fine di:  
   
--   Ottenere il miglioramento delle prestazioni di preallocazione di file su SMB.  
+-   Ottenere il miglioramento delle prestazioni di preallocazione dei file tramite SMB.  
   
--   Utilizzare l'inizializzazione di File immediata (IFI) per le operazioni di backup. Il team IT gestisce questa impostazione nel server di backup. Gestione configurazione PDW (dwconfig.exe) non impostato o controllare IFI sul server di backup. Le versioni precedenti di Windows non dispone di IFI, ma possono comunque essere utilizzate come server di backup.  
+-   Usare immediata dei File di inizializzazione immediata per operazioni di backup. Il team IT gestisce questa impostazione nel server di backup. Gestione configurazione PDW (dwconfig.exe) non impostata o control inizializzazione immediata dei file per il server di backup. Le versioni precedenti di Windows non è immediata, ma possono comunque essere utilizzate come server di backup.  
   
 ### <a name="networking-requirements"></a>Requisiti di rete  
-Sebbene non obbligatorio, InfiniBand è il tipo di connessione consigliati per i server di Backup. Per preparare per la connessione al server di caricamento alla rete InfiniBand dispositivo:  
+Sebbene non obbligatorio, InfiniBand è il tipo di connessione consigliato per i server di Backup. Per preparare per la connessione server di caricamento per la rete InfiniBand di appliance:  
   
-1.  Pianificare il server rack abbastanza ravvicinati per il dispositivo in modo da consentire la connessione al dispositivo InfiniBand attiva. Per ulteriori informazioni dalle tecnologie Mellanox InfiniBand, vedere il white paper, [introduzione InfiniBand](http://www.mellanox.com/pdf/whitepapers/IB_Intro_WP_190.pdf).  
+1.  Prevede di installare in rack server abbastanza ravvicinati per l'appliance in modo che è possibile connetterla all'appliance InfiniBand attiva. Per altre informazioni da tecnologie Mellanox InfiniBand, vedere il whitepaper [Introduzione a InfiniBand](https://www.mellanox.com/pdf/whitepapers/IB_Intro_WP_190.pdf).  
   
 2.  Acquistare una scheda di rete InfiniBand FDR Mellanox ConnectX-3 porta singola o doppia. È consigliabile acquistare la scheda di rete con due porte per la tolleranza di errore durante la trasmissione dei dati. Una scheda di rete due porte è necessaria per la disponibilità elevata.  
   
-3.  Acquistare cavi FDR InfiniBand 2 per una scheda a porta doppia o cavo FDR InfiniBand 1 per una scheda di singola porta. I cavi FDR InfiniBand si connetteranno il server di caricamento alla rete InfiniBand accessorio. La lunghezza del cavo dipende la distanza tra il server di caricamento e le opzioni di InfiniBand accessorio, in base al proprio ambiente.  
+3.  Acquistare 2 cavi FDR InfiniBand per una scheda a porta doppia o cable FDR InfiniBand 1 per una scheda di singola porta. I cavi InfiniBand FDR si connetteranno il server di caricamento per la rete InfiniBand di appliance. La lunghezza del cavo dipende la distanza tra il server durante il caricamento e le opzioni di InfiniBand appliance, in base al proprio ambiente.  
   
 ## <a name="Step3"></a>Passaggio 3: Connettere il server alle reti InfiniBand  
-Usare questi passaggi per connettere il server di caricamento alla rete InfiniBand. Se il server non utilizza la rete InfiniBand, ignorare questo passaggio.  
+Usare questi passaggi per connettere il server di caricamento per la rete InfiniBand. Se il server non usa la rete InfiniBand, ignorare questo passaggio.  
   
-1.  Rack server abbastanza ravvicinati per il dispositivo in modo che è possibile connettersi alla rete InfiniBand di dispositivo.  
+1.  Rack server abbastanza ravvicinati per l'appliance in modo che è possibile connetterla alla rete InfiniBand appliance.  
   
-2.  Installare la scheda di rete InfiniBand Mellanox ConnectX-3 FDR InfiniBand nel server durante il caricamento.  
+2.  Installare la scheda di rete InfiniBand FDR Mellanox ConnectX-3 InfiniBand nel server durante il caricamento.  
   
-3.  Utilizzare i cavi FDR per collegare una delle due opzioni InfiniBand nel rack accessorio prima la scheda di rete InfiniBand.  
+3.  Usare i cavi FDR per connettere la scheda di rete InfiniBand a una delle due opzioni InfiniBand nel primo rack appliance.  
   
 4.  Installare e configurare il driver di Windows appropriato per la scheda di rete InfiniBand.  
   
-    -   Driver InfiniBand per Windows vengono sviluppati da OpenFabrics Alliance, un consorzio di settore di fornitori InfiniBand.  Il driver corretto può distribuito con la scheda di rete InfiniBand. In caso contrario, il driver può essere scaricato da www.openfabrics.org.  
+    -   I driver InfiniBand per Windows sono sviluppati dal team di OpenFabrics Alliance, un consorzio di settore di fornitori InfiniBand.  Il driver corretto possa avere stato distribuito con la scheda di rete InfiniBand. In caso contrario, il driver può essere scaricato da www.openfabrics.org.  
   
-5.  Configurare le impostazioni per le schede di rete InfiniBand e DNS. Per istruzioni sulla configurazione, vedere [configurare schede di rete InfiniBand](configure-infiniband-network-adapters.md).  
+5.  Configurare le impostazioni per le schede di rete InfiniBand e DNS. Per istruzioni sulla configurazione, vedere [configurare le schede di rete InfiniBand](configure-infiniband-network-adapters.md).  
   
-## <a name="Step4"></a>Passaggio 4: Configurare la condivisione di file di backup  
-PDW potranno accedere il server di backup tramite una condivisione file UNC. Per impostare la condivisione file:  
+## <a name="Step4"></a>Passaggio 4: Configurare la condivisione file di backup  
+PDW potranno accedere il server di backup tramite una condivisione file UNC. Per configurare la condivisione file:  
   
 1.  Creare una cartella nel server di backup per l'archiviazione dei backup.  
   
-2.  Creare una condivisione di file, la chiamata a una condivisione di backup, per la cartella di backup.  
+2.  Creare una condivisione file, chiamata di una condivisione di backup, per la cartella di backup.  
   
-3.  Definire o creare un account di dominio di Windows nel dominio cliente che si desidera utilizzare ai fini dell'esecuzione di backup e ripristini. Per motivi di sicurezza, è consigliabile utilizzare un account dedicato come l'utente per il backup.  
+3.  Definire o creare un account di dominio Windows nel dominio dei clienti che si desidera utilizzare ai fini dell'esecuzione di backup e ripristini. Per motivi di sicurezza, è consigliabile usare un account dedicato come l'utente di backup.  
   
-4.  Aggiungere le autorizzazioni per il backup condividono in modo che sia possibile accedere solo agli account attendibili e un account di dominio di backup, leggere e scrivere nel percorso di condivisione.  
+4.  Aggiungere le autorizzazioni per il backup condividano in modo che possa accedere solo gli account attendibili e un account di backup del dominio, lettura e scrivere nel percorso di condivisione.  
   
-5.  Aggiungere le credenziali dell'account di dominio di backup a PDW.  
+5.  Aggiungere le credenziali dell'account di dominio di backup in PDW.  
   
     Esempio:  
   
@@ -95,19 +95,19 @@ PDW potranno accedere il server di backup tramite una condivisione file UNC. Per
     EXEC sp_pdw_add_network_credentials '10.192.147.63', 'seattle\david', '********';  
     ```  
   
-    Per ulteriori informazioni, vedere queste stored procedure:  
+    Per altre informazioni, vedere queste stored procedure:  
   
     -   [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
   
     -   [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
 ## <a name="Step5"></a>Passaggio 5: Avviare il backup dei dati  
-A questo punto si è pronti avviare il backup dei dati al server di backup.  
+A questo punto si è pronti avviare il backup dei dati per il server di backup.  
   
-Per il backup dei dati, utilizzare un client di query per connettersi a SQL Server PDW e inviare quindi i BACKUP del DATABASE o ripristinare DATABASE i comandi. Utilizzare il disco = clausola per specificare il percorso di backup e server di Backup.  
+Eseguire il backup dei dati, utilizzare un client di query per connettersi a SQL Server PDW e quindi inviare BACKUP DATABASE o RESTORE DATABASE i comandi. Usare il disco = clausola per specificare il percorso di backup e server di Backup.  
   
 > [!IMPORTANT]  
-> Ricordarsi di utilizzare l'indirizzo IP InfiniBand del server di backup. In caso contrario, verranno copiati i dati su Ethernet anziché InfiniBand.  
+> Ricordarsi di usare l'indirizzo IP InfiniBand del server di backup. In caso contrario, verranno copiati i dati su Ethernet anziché InfiniBand.  
   
 Esempio:  
   
@@ -120,23 +120,23 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 Per altre informazioni, vedere: 
   
--   [DATABASE DI BACKUP](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
+-   [BACKUP DEL DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
 -   [RIPRISTINO DI DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
 ## <a name="Security"></a>Avvisi di sicurezza  
-Il server di backup non è unito al dominio privato per l'applicazione. È in rete e non vi è alcuna relazione di trust tra dominio e dominio accessorio privata.  
+Il server di backup non è aggiunto al dominio privato dell'Appliance. È nella propria rete e senza alcuna relazione di trust tra il proprio dominio e private appliance.  
   
-Poiché i backup PDW non sono archiviati nel dispositivo, il team IT è responsabile per la gestione di tutti gli aspetti della sicurezza del backup. Ad esempio, include la gestione della protezione di dati di backup, la sicurezza del server utilizzato per archiviare i backup e la sicurezza dell'infrastruttura di rete che si connette il server di backup per il dispositivo di punti di accesso.  
+Poiché i backup PDW non vengono archiviati nell'appliance, il tuo team IT è responsabile per la gestione di tutti gli aspetti della sicurezza dei backup. Ad esempio, ciò include la gestione della protezione dei dati di backup, la sicurezza del server utilizzato per archiviare i backup e la sicurezza dell'infrastruttura di rete che si connette il server di backup per l'appliance APS.  
   
 ### <a name="manage-network-credentials"></a>Gestire le credenziali di rete  
   
-L'accesso di rete alla directory di backup è basato sulla sicurezza di condivisione dei file di Windows standard. Prima di eseguire un backup, è necessario creare o designare un account di Windows che verrà utilizzato per l'autenticazione PDW alla directory di backup. L'account di Windows deve avere le autorizzazioni per accedere, creare e scrivere nella directory di backup.  
+L'accesso di rete alla directory di backup è basato sulla sicurezza di condivisione dei file di Windows standard. Prima di eseguire un backup, è necessario creare o designare un account di Windows che verrà usato per l'autenticazione di PDW per la directory di backup. L'account di Windows deve avere le autorizzazioni per accedere, creare e scrivere nella directory di backup.  
   
 > [!IMPORTANT]  
 > Per ridurre i rischi di sicurezza dei dati, è consigliabile impostare un account di Windows dedicato esclusivamente all'esecuzione delle operazioni di backup e ripristino. Concedere all'account le autorizzazioni solo per il percorso di backup.  
   
-Per archiviare il nome utente e password in PDW, utilizzare il [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) stored procedure. PDW Usa Gestione credenziali di Windows per archiviare e crittografare i nomi utente e password nel nodo di controllo e nodi di calcolo. Con il comando BACKUP DATABASE non viene eseguito il backup delle credenziali.  
+Per archiviare il nome utente e la password in PDW, utilizzare il [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) stored procedure. PDW Usa Gestione credenziali di Windows per archiviare e crittografare i nomi utente e password nel nodo di controllo e nodi di calcolo. Con il comando BACKUP DATABASE non viene eseguito il backup delle credenziali.  
   
 Per rimuovere le credenziali di rete da PDW, utilizzare il [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) stored procedure.  
   
@@ -144,10 +144,10 @@ Per elencare tutte le credenziali di rete archiviate in SQL Server PDW, utilizza
   
 ### <a name="secure-communications"></a>Proteggere le comunicazioni  
   
-Operazioni nel server durante il caricamento è possono utilizzare un percorso UNC consente di estrarre dati dall'esterno della rete interna attendibile. Un utente malintenzionato sulla rete o con possibilità di influire sulla risoluzione dei nomi può intercettare o modificare i dati inviati a di PDW. Ciò rappresenta un rischio di divulgazione manomissioni e informazioni. Per aiutare a ridurre il rischio di manomissione:
+Operazioni nel server durante il caricamento è possono usare un percorso UNC per estrarre i dati dall'esterno della rete interna attendibile. Un utente malintenzionato sulla rete o con grado di influenzare la risoluzione dei nomi può intercettare o modificare i dati inviati a di PDW. Ciò comporta un rischio di divulgazione manomissioni e informazioni. Per aiutare a ridurre il rischio di manomissione:
 
 - Richiedere la firma per la connessione. 
-- Nel server di caricamento, impostare l'opzione di criteri di gruppo seguenti in protezione\Criteri Locali\opzioni di protezione: il client di rete Microsoft: Aggiungi firma digitale alle comunicazioni (sempre): abilitato.  
+- Nel server durante il caricamento, impostare l'opzione di criteri di gruppo seguente in protezione\Criteri Locali\opzioni di sicurezza: il client di rete Microsoft: firma digitale alle comunicazioni (sempre): abilitata.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Backup e ripristino](backup-and-restore-overview.md)  

@@ -10,12 +10,12 @@ ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8169375ac349f887d861245911b02a65f965044c
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 99eaef8a8612669f8a155672cccf0cb0c74e7f39
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099632"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656346"
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>Uso di SSMA per la Console Oracle (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per DB2 è accessibile tramite un'applicazione console dalla riga di comando. I file di script formano l'input per l'applicazione per l'esecuzione di comandi. Come applicazione console SSMA consente l'interazione a livello di script, consente di ridurre il ciclo di migrazione e ridimensiona lo sforzo di migrazione.  
@@ -39,5 +39,5 @@ Gli argomenti trattati in questa sezione includono:
 |[Risoluzione dei problemi &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)|Vengono fornite brevi istruzioni sulla risoluzione dei problemi di migrazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Introduzione a SSMA per DB2 Console](http://msdn.microsoft.com/f245c017-023e-4880-8721-8908d339525e)  
+[Introduzione a SSMA per DB2 Console](https://msdn.microsoft.com/f245c017-023e-4880-8721-8908d339525e)  
   

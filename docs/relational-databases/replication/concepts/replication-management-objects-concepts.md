@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f9e682940da2b880265e6d9d9763551bd858339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38ce786d8362f711e238b32059ae3bae4f50006e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749669"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672630"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ ms.locfileid: "47749669"
 >  Sebbene la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> supporti la dichiarazione di transazioni esplicite durante l'impostazione delle proprietà, tali transazioni possono interferire con le transazioni di replica interne e produrre risultati inaspettati. Per questo motivo non devono essere utilizzate con RMO.  
 
 ### <a name="enabling-tls-12-support-for-rmo-components"></a>Abilitazione del supporto TLS 1.2 per i componenti RMO 
- Il supporto TLS 1.2 per i componenti RMO in Windows 2012 e versioni precedenti può essere abilitato installando l'aggiornamento [KB 3140245](http://support.microsoft.com/help/3140245) e creando le chiavi del Registro di sistema come descritto nell'articolo. In Windows 2012 R2 e versioni successive è necessario creare solo le chiavi del Registro di sistema, come descritto precedentemente nell'articolo.
+ Il supporto TLS 1.2 per i componenti RMO in Windows 2012 e versioni precedenti può essere abilitato installando l'aggiornamento [KB 3140245](https://support.microsoft.com/help/3140245) e creando le chiavi del Registro di sistema come descritto nell'articolo. In Windows 2012 R2 e versioni successive è necessario creare solo le chiavi del Registro di sistema, come descritto precedentemente nell'articolo.
  
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrata la memorizzazione nella cache delle modifiche alle proprietà. Le modifiche apportate agli attributi di una pubblicazione transazionale rimangono memorizzate nella cache fino a quando non vengono inviate in modo esplicito al server.  

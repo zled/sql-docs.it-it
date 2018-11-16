@@ -14,16 +14,16 @@ ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 521b6945c993aa699c09dc2dfc398ac07d4bde31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b002fb0c6dcfa17a01f42c65f1946536a915c210
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707609"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601482"
 ---
 # <a name="submitchanges-method-example-vbscript"></a>Esempio del metodo SubmitChanges (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Il frammento di codice seguente viene illustrato come utilizzare il [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) metodo con un [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47707609"
 <SCRIPT Language="VBScript">  
   
      'set RDS properties for control just created  
-    RDS.Server = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+    RDS.Server = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
     RDS.Connect = "Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind';"  
     RDS.SQL = "Select * from Employees"  
     RDS.Refresh  

@@ -14,12 +14,12 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0686cb5079cd0c7810523c152aa8c04eb7ad3f4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96c174676d00e646191aa3620b2e0a884b44616b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778539"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695809"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Informazioni su SQL Server Master Data Services
 
@@ -51,8 +51,8 @@ ms.locfileid: "47778539"
     * Master Data Services Security API Sample (Esempio di API per la sicurezza di Master Data Services)  
   
 ## <a name="sql-server-certification"></a>Certificazione di SQL Server  
-* [Training e certificazione di Microsoft SQL Server](https://www.microsoft.com/en-us/learning/sql-training.aspx)  
-* [Elenco degli esami di certificazione Microsoft](https://www.microsoft.com/en-us/learning/exam-list.aspx)  
+* [Training e certificazione di Microsoft SQL Server](https://www.microsoft.com/learning/sql-training.aspx)  
+* [Elenco degli esami di certificazione Microsoft](https://www.microsoft.com/learning/exam-list.aspx)  
 * [Blog "Born to Learn" di Microsoft (community di training e certificazione)](https://borntolearn.mslearn.net/b/weblog/archive/2016/03)  
   
   

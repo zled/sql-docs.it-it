@@ -18,12 +18,12 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d275ad5ef272dc3bf6db8c5ce0079bcb1a8fea9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4e17af8134194e00fada93fd07904d95f478435
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689519"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638738"
 ---
 # <a name="integration-services-ssis-queries"></a>Query di Integration Services (SSIS)
   L'attività Esegui SQL, l'origine OLE DB, la destinazione OLE DB e la trasformazione Ricerca possono utilizzare query SQL. Nell'attività Esegui SQL, tramite le istruzioni SQL vengono creati, aggiornati ed eliminati dati e oggetti di database e vengono eseguite stored procedure e istruzioni SELECT. Nell'origine OLE DB e nella trasformazione Ricerca, le istruzioni SQL sono solitamente istruzioni SELECT o EXEC. Queste ultime eseguono in genere stored procedure che restituiscono set di risultati.  
@@ -58,13 +58,13 @@ ms.locfileid: "47689519"
   
  È inoltre possibile fornire input diretto digitando la query nella finestra di dialogo dell'attività o del componente del flusso di dati oppure nella finestra Proprietà.  
   
- Per altre informazioni, vedere [Generatore di query](http://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5).  
+ Per altre informazioni, vedere [Generatore di query](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5).  
   
 ## <a name="sql-in-files"></a>SQL nei file  
  L'istruzione SQL dell'attività Esegui SQL può essere inclusa inoltre in un file distinto. È possibile, ad esempio, scrivere query utilizzando strumenti quali l'editor di query in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], salvare la query in un file e quindi leggere la query dal file durante l'esecuzione di un pacchetto. Il file può contenere soltanto le istruzioni SQL da eseguire e commenti. Per eseguire un'istruzione SQL archiviata in un file, è necessario fornire una connessione file che specifica il nome e la posizione del file. Per altre informazioni, vedere [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md).  
   
 ## <a name="sql-in-variables"></a>SQL nelle variabili  
- Se l'origine dell'istruzione SQL nell'attività Esegui SQL è una variabile, è necessario specificare il nome delle variabile contenente la query. Il testo della query è specificato nella proprietà Value della variabile. È necessario impostare la proprietà ValueType della variabile su un tipo di dati string e quindi digitare o copiare l'istruzione SQL nella proprietà Value. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Se l'origine dell'istruzione SQL nell'attività Esegui SQL è una variabile, è necessario specificare il nome delle variabile contenente la query. Il testo della query è specificato nella proprietà Value della variabile. È necessario impostare la proprietà ValueType della variabile su un tipo di dati string e quindi digitare o copiare l'istruzione SQL nella proprietà Value. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
 
 ## <a name="query-builder-dialog-box"></a>Generatore query - finestra di dialogo
 Utilizzare la finestra di dialogo **Generatore query** per creare una query da utilizzare nell'attività Esegui SQL, nell'origine e nella destinazione OLE DB, nonché nella trasformazione Ricerca.  
@@ -83,7 +83,7 @@ Utilizzare la finestra di dialogo **Generatore query** per creare una query da u
   
  Per sapere di più sul linguaggio di query Transact-SQL e la relativa sintassi, vedere [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../t-sql/transact-sql-reference-database-engine.md).  
   
- È inoltre possibile utilizzare variabili in una query per specificare i valori per un parametro di input, acquisire i valori dei parametri di output e memorizzare i codici restituiti. Per sapere di più sull'uso delle variabili nelle query usate dai pacchetti, vedere [Attività Esegui SQL](../integration-services/control-flow/execute-sql-task.md), [Origine OLE DB](../integration-services/data-flow/ole-db-source.md)e [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md). Per sapere di più sull'uso delle variabili nell'attività Esegui SQL, vedere [Parametri e codici restituiti nell'attività Esegui SQL](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) e [Set di risultati nell'attività Esegui SQL](http://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109).  
+ È inoltre possibile utilizzare variabili in una query per specificare i valori per un parametro di input, acquisire i valori dei parametri di output e memorizzare i codici restituiti. Per sapere di più sull'uso delle variabili nelle query usate dai pacchetti, vedere [Attività Esegui SQL](../integration-services/control-flow/execute-sql-task.md), [Origine OLE DB](../integration-services/data-flow/ole-db-source.md)e [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md). Per sapere di più sull'uso delle variabili nell'attività Esegui SQL, vedere [Parametri e codici restituiti nell'attività Esegui SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) e [Set di risultati nell'attività Esegui SQL](https://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109).  
   
  Anche nelle trasformazioni Ricerca e Ricerca fuzzy è possibile utilizzare le variabili con parametri e codici restituiti. Le informazioni relative all'origine OLE DB si applicano anche a queste due trasformazioni.  
   

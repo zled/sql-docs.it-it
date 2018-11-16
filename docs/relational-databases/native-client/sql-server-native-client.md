@@ -11,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c14175fd58e11fd372c0ab523ccbd48e1f856f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ce8d425aeb1c1b66f198efb4b222dc94c6e24ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627409"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677800"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,13 +45,13 @@ Per altre informazioni sul Driver ODBC per SQL Server, vedere [Microsoft ODBC Dr
 
 ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client supporta tre funzionalità aggiunte a ODBC standard in Windows 7 SDK:  
 
--   Esecuzione asincrona nelle operazioni correlate alla connessione. Per altre informazioni, vedere [esecuzione asincrona](http://go.microsoft.com/fwlink/?LinkID=191493).  
+-   Esecuzione asincrona nelle operazioni correlate alla connessione. Per altre informazioni, vedere [esecuzione asincrona](https://go.microsoft.com/fwlink/?LinkID=191493).  
 
--   Estendibilità del tipo di dati C. Per altre informazioni, vedere [tipi di dati C in ODBC](http://go.microsoft.com/fwlink/?LinkID=191495).  
+-   Estendibilità del tipo di dati C. Per altre informazioni, vedere [tipi di dati C in ODBC](https://go.microsoft.com/fwlink/?LinkID=191495).  
 
      Per supportare questa funzionalità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, può restituire SQLGetDescField **SQL_C_SS_TIME2** (per **tempo** tipi) o **SQL_C_SS_TIMESTAMPOFFSET** (per **datetimeoffset**) anziché **SQL_C_BINARY**, se l'applicazione utilizza ODBC 3.8. Per altre informazioni, vedere [supporto dei tipi di dati per ODBC Date e miglioramenti per la fase](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md).  
 
--   La chiamata **SQLGetData** con un buffer di piccole dimensioni più volte per recuperare un valore di parametro di grandi dimensioni. Per altre informazioni, vedere [recupero di parametri di Output tramite SQLGetData](http://go.microsoft.com/fwlink/?LinkID=191494).  
+-   La chiamata **SQLGetData** con un buffer di piccole dimensioni più volte per recuperare un valore di parametro di grandi dimensioni. Per altre informazioni, vedere [recupero di parametri di Output tramite SQLGetData](https://go.microsoft.com/fwlink/?LinkID=191494).  
 
  Negli argomenti seguenti vengono descritte le modifiche nel comportamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
 

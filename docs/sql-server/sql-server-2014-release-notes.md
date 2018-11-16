@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e7a72900cc62e8a517f437975691b858bb1401a5
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: b8b6a33afa780324d6dd3271111a99c4ea68e486
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419496"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699688"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ L'aggiornamento è completamente supportato. In particolare, è possibile:
 1.  Collegare un database SQL Server 2014 CTP 2 a un'istanza di SQL Server 2014 RTM.    
 2.  Ripristinare in un'istanza di SQL Server 2014 RTM un backup di database creato in SQL Server 2014 CTP 2.    
 3.  Aggiornamento sul posto a SQL Server 2014 RTM.
-4.  Aggiornamento in sequenza a SQL Server 2014 RTM. È necessario passare alla modalità di failover manuale prima di avviare l'aggiornamento in sequenza. Per informazioni dettagliate, fare riferimento alla pagina [Aggiornamento dei server dei gruppi di disponibilità con tempi di inattività e perdita dei dati minimi](http://msdn.microsoft.com/library/dn178483.aspx).    
+4.  Aggiornamento in sequenza a SQL Server 2014 RTM. È necessario passare alla modalità di failover manuale prima di avviare l'aggiornamento in sequenza. Per informazioni dettagliate, fare riferimento alla pagina [Aggiornamento dei server dei gruppi di disponibilità con tempi di inattività e perdita dei dati minimi](https://msdn.microsoft.com/library/dn178483.aspx).    
 5.  Non è possibile visualizzare i dati raccolti dai set di raccolta prestazioni delle transazioni installati in SQL Server 2014 CTP 2 tramite SQL Server Management Studio in SQL Server 2014 RTM e viceversa.
   
 #### <a name="downgrading-from-sql-server-2014-rtm-to-sql-server-2014-ctp-2"></a>Downgrade da SQL Server 2014 RTM a SQL Server 2014 CTP 2  
@@ -114,7 +114,7 @@ Questa azione non è supportata.
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>Versione non corretta di StreamInsight Client su supporto/ISO/CAB di SQL Server 2014  
 La versione errata di StreamInsight.msi e StreamInsightClient.msi si trova nel percorso seguente in supporto/ISO/CAB di SQL Server (StreamInsight\\\<Architecture\>\\\<ID Lingua\>).  
   
-**Soluzione alternativa** : scaricare e installare la versione corretta dalla [pagina per il download di SQL Server 2014 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=306709).  
+**Soluzione alternativa** : scaricare e installare la versione corretta dalla [pagina per il download di SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
 ### <a name="ProdDoc"></a>Documentazione del prodotto RTM
   
@@ -158,7 +158,7 @@ SQL Server 2014 Standard presenta le seguenti modifiche:
 -   La memoria massima è aumentata da 64 GB a 128 GB.  
  
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>L'Ottimizzazione guidata per la memoria contrassegna i vincoli predefiniti come incompatibili  
-**Problema:** l'Ottimizzazione guidata per la memoria in SQL Server Management Studio contrassegna tutti i vincoli predefiniti come incompatibili. Non tutti i vincoli predefiniti sono supportati in una tabella ottimizzata per la memoria; l'ottimizzazione guidata non opera una distinzione tra i tipi di vincoli predefiniti supportati e quelli non supportati. Tra i vincoli predefiniti supportati sono incluse tutte le costanti, le espressioni e le funzioni predefinite supportate all'interno di stored procedure compilate in modo nativo. Per visualizzare l'elenco delle funzioni supportate nelle stored procedure compilate in modo nativo, fare riferimento alla pagina [Costrutti supportati in stored procedure compilate in modo nativo](http://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
+**Problema:** l'Ottimizzazione guidata per la memoria in SQL Server Management Studio contrassegna tutti i vincoli predefiniti come incompatibili. Non tutti i vincoli predefiniti sono supportati in una tabella ottimizzata per la memoria; l'ottimizzazione guidata non opera una distinzione tra i tipi di vincoli predefiniti supportati e quelli non supportati. Tra i vincoli predefiniti supportati sono incluse tutte le costanti, le espressioni e le funzioni predefinite supportate all'interno di stored procedure compilate in modo nativo. Per visualizzare l'elenco delle funzioni supportate nelle stored procedure compilate in modo nativo, fare riferimento alla pagina [Costrutti supportati in stored procedure compilate in modo nativo](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
   
 **Soluzione alternativa:** per usare l'ottimizzazione guidata per identificare i blocchi, ignorare i vincoli predefiniti compatibili. Per utilizzare l'Ottimizzazione guidata per la memoria per la migrazione delle tabelle con vincoli predefiniti compatibili, ma senza altri blocchi, attenersi alla procedura seguente:  
   
@@ -323,7 +323,7 @@ Keywords:      Classic
 Description:   Report Server (DENALI) cannot connect to the report server database.  
 ```  
   
-Per ulteriori informazioni, vedere [Suggerimenti e risoluzione dei problemi relativi a SQL Server 2014 Reporting Services](http://go.microsoft.com/fwlink/?LinkID=391254).  
+Per ulteriori informazioni, vedere [Suggerimenti e risoluzione dei problemi relativi a SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).  
   
 #### <a name="required-upgrade-order-for-multi-node-sharepoint-farm-to-sql-server-2014-reporting-services"></a>Ordine obbligatorio per l'aggiornamento della farm di SharePoint a nodi multipli a SQL Server 2014 Reporting Services  
 **Problema:** il rendering del report in una farm a nodi multipli ha esito negativo se le istanze del servizio SharePoint Shared di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vengono aggiornate prima di tutte le istanze del componente aggiuntivo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per prodotti SharePoint.  
@@ -333,7 +333,7 @@ Per ulteriori informazioni, vedere [Suggerimenti e risoluzione dei problemi rela
 1.  aggiornare prima tutte le istanze del componente aggiuntivo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per prodotti SharePoint.    
 2.  quindi, aggiornare tutte le istanze del servizio SharePoint Shared di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-Per ulteriori informazioni, vedere [Suggerimenti e risoluzione dei problemi relativi a SQL Server 2014 Reporting Services](http://go.microsoft.com/fwlink/?LinkID=391254).  
+Per ulteriori informazioni, vedere [Suggerimenti e risoluzione dei problemi relativi a SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).  
   
 ### <a name="AzureVM"></a>SQL Server 2014 RTM in macchine virtuali di Microsoft Azure  
   
@@ -348,7 +348,7 @@ Ciò è dovuto al fatto che i listener del gruppo di disponibilità richiedono l
   
     Questa soluzione consente alla procedura guidata di completare l'aggiunta della replica in Windows Azure.  
   
-2.  Al termine della procedura guidata, sarà necessario completare la configurazione del listener in Windows Azure come descritto in [Configurazione del listener per i gruppi di disponibilità AlwaysOn in Windows Azure](http://msdn.microsoft.com/library/dn376546.aspx)  
+2.  Al termine della procedura guidata, sarà necessario completare la configurazione del listener in Windows Azure come descritto in [Configurazione del listener per i gruppi di disponibilità AlwaysOn in Windows Azure](https://msdn.microsoft.com/library/dn376546.aspx)  
   
 ### <a name="SSAS"></a>Analysis Services (RTM)
   
@@ -359,9 +359,9 @@ Ciò è dovuto al fatto che i listener del gruppo di disponibilità richiedono l
   
 **Soluzione alternativa:**  
   
-1.  Scaricare il provider MSOLAP.5 dal Feature Pack di [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Installare il provider nei server applicazioni in cui viene eseguito Excel Services. Per ulteriori informazioni, vedere la sezione "Microsoft Analysis Services OLE DB Provider per Microsoft SQL Server 2012 SP1" in [Microsoft SQL Server 2012 SP1 Feature Pack](http://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Scaricare il provider MSOLAP.5 dal Feature Pack di [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Installare il provider nei server applicazioni in cui viene eseguito Excel Services. Per ulteriori informazioni, vedere la sezione "Microsoft Analysis Services OLE DB Provider per Microsoft SQL Server 2012 SP1" in [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Registrare MSOLAP.5 come provider attendibile con Excel Services di SharePoint. Per ulteriori informazioni, vedere [Aggiungere MSOLAP.5 come provider di dati attendibile in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+2.  Registrare MSOLAP.5 come provider attendibile con Excel Services di SharePoint. Per ulteriori informazioni, vedere [Aggiungere MSOLAP.5 come provider di dati attendibile in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
 **Altre informazioni:**  
   
@@ -374,9 +374,9 @@ Ciò è dovuto al fatto che i listener del gruppo di disponibilità richiedono l
   
 **Soluzione alternativa:**  
   
-1.  Scaricare il provider MSOLAP.5 dal Feature Pack di [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Installare il provider nei server applicazioni in cui viene eseguito Excel Services. Per ulteriori informazioni, vedere la sezione "Microsoft Analysis Services OLE DB Provider per Microsoft SQL Server 2012 SP1" in [Microsoft SQL Server 2012 SP1 Feature Pack](http://www.microsoft.com/download/details.aspx?id=35580).  
+1.  Scaricare il provider MSOLAP.5 dal Feature Pack di [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Installare il provider nei server applicazioni in cui viene eseguito Excel Services. Per ulteriori informazioni, vedere la sezione "Microsoft Analysis Services OLE DB Provider per Microsoft SQL Server 2012 SP1" in [Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580).  
   
-2.  Registrare MSOLAP.5 come provider attendibile con Excel Services di SharePoint. Per ulteriori informazioni, vedere [Aggiungere MSOLAP.5 come provider di dati attendibile in Excel Services](http://technet.microsoft.com/library/hh758436.aspx).  
+2.  Registrare MSOLAP.5 come provider attendibile con Excel Services di SharePoint. Per ulteriori informazioni, vedere [Aggiungere MSOLAP.5 come provider di dati attendibile in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
 **Altre informazioni:**  
   
@@ -389,7 +389,7 @@ Ciò è dovuto al fatto che i listener del gruppo di disponibilità richiedono l
   
 **Soluzione alternativa:**  
   
-1.  In Microsoft Excel cancellare le proprietà avanzate personalizzate. Vedere la sezione "Soluzione alternativa" dell'articolo della Knowledge Base [KB 2927748](http://support.microsoft.com/kb/2927748).  
+1.  In Microsoft Excel cancellare le proprietà avanzate personalizzate. Vedere la sezione "Soluzione alternativa" dell'articolo della Knowledge Base [KB 2927748](https://support.microsoft.com/kb/2927748).  
   
 **Altre informazioni:**  
   
@@ -411,7 +411,7 @@ Ciò è dovuto al fatto che i listener del gruppo di disponibilità richiedono l
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>Gestione spazio aggiornamenti di SQL Server 2014 segnala problemi di aggiornamento irrilevanti per SQL Server Reporting Services  
 **Problema:** Gestione spazio aggiornamenti di SQL Server fornito con i supporti di SQL Server 2014 segnala erroneamente più errori durante l'analisi del server SQL Server Reporting Services.  
   
-**Soluzione alternativa:** questo problema è stato risolto in Preparazione aggiornamento di SQL Server fornito nel [Feature Pack di SQL Server 2014 per SSUA](http://go.microsoft.com/fwlink/?LinkID=306709).  
+**Soluzione alternativa:** questo problema è stato risolto in Preparazione aggiornamento di SQL Server fornito nel [Feature Pack di SQL Server 2014 per SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>Gestione spazio aggiornamenti di SQL Server 2014 segnala un errore durante l'analisi del server SQL Server Integration Services  
 **Problema:** Gestione spazio aggiornamenti di SQL Server fornito con i supporti di SQL Server 2014 segnala un errore durante l'analisi del server SQL Server Integration Services.  L'errore visualizzato all'utente è il seguente:  
@@ -422,6 +422,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**Soluzione alternativa:** questo problema è stato risolto in Preparazione aggiornamento di SQL Server fornito nel [Feature Pack di SQL Server 2014 per SSUA](http://go.microsoft.com/fwlink/?LinkID=306709).  
+**Soluzione alternativa:** questo problema è stato risolto in Preparazione aggiornamento di SQL Server fornito nel [Feature Pack di SQL Server 2014 per SSUA](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

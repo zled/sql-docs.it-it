@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a548ec574f6ae81b6e365f8f0e9f68db6357102
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 4603333bce62f363a70c82936dfdbb28478f6a0d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643779"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701939"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ CHAR ( integer_expression )
 Valore intero compreso tra 0 e 255. `CHAR` restituisce un valore `NULL` per le espressioni integer non comprese in questo intervallo o quando il valore integer esprime solo il primo byte di un carattere a byte doppio.
 
 > [!NOTE]
-> Alcuni set di caratteri non europei, come [Shift Japanese Industrial Standards](http://www.wikipedia.org/wiki/Shift_JIS), includono caratteri che possono essere rappresentati in uno schema di codifica a byte singolo, ma richiedono la codifica multibyte. Per altre informazioni sui set di caratteri, vedere [Set di caratteri a byte singolo e multibyte](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
+> Alcuni set di caratteri non europei, come [Shift Japanese Industrial Standards](https://www.wikipedia.org/wiki/Shift_JIS), includono caratteri che possono essere rappresentati in uno schema di codifica a byte singolo, ma richiedono la codifica multibyte. Per altre informazioni sui set di caratteri, vedere [Set di caratteri a byte singolo e multibyte](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
   
 ## <a name="return-types"></a>Tipi restituiti
 **char(1)**

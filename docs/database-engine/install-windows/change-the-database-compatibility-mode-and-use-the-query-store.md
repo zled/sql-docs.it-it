@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 2c5aa5be950aa9596af1523a53665514a8b7f6c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb130bbf8c3c2e66bd5b64458ca5f07b83f9b532
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754919"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606771"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Modificare il livello di compatibilità del database e usare Query Store
 
@@ -39,7 +39,7 @@ Da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fino a [!INCLUDE[ssCurrent]
 > - I livelli di compatibilità dei database tempdb, model, msdb e Resource vengono impostati sul livello di compatibilità corrente dopo l'aggiornamento.   
 > - Per il database di sistema master viene mantenuto il livello di compatibilità precedente l'aggiornamento.    
   
-Il processo di aggiornamento per abilitare nuove funzionalità di Query Processor è correlato al modello di manutenzione post-rilascio del prodotto.  Alcune di queste correzioni vengono rilasciate con il [flag di traccia 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).  I clienti che necessitano di correzioni possono acconsentire esplicitamente a esse senza causare regressioni impreviste per altri clienti. Il modello di manutenzione post-rilascio per gli aggiornamenti rapidi di Query Processor è documentato [qui](http://support.microsoft.com/kb/974006). A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] il passaggio a un nuovo livello di compatibilità implica che il flag di traccia 4199 non è più necessario, perché tali correzioni sono ora abilitate per impostazione predefinita nel livello di compatibilità più recente. Come parte del processo di aggiornamento, è pertanto importante verificare che al termine del processo di aggiornamento il flag di traccia 4199 non sia abilitato.  
+Il processo di aggiornamento per abilitare nuove funzionalità di Query Processor è correlato al modello di manutenzione post-rilascio del prodotto.  Alcune di queste correzioni vengono rilasciate con il [flag di traccia 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).  I clienti che necessitano di correzioni possono acconsentire esplicitamente a esse senza causare regressioni impreviste per altri clienti. Il modello di manutenzione post-rilascio per gli aggiornamenti rapidi di Query Processor è documentato [qui](https://support.microsoft.com/kb/974006). A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] il passaggio a un nuovo livello di compatibilità implica che il flag di traccia 4199 non è più necessario, perché tali correzioni sono ora abilitate per impostazione predefinita nel livello di compatibilità più recente. Come parte del processo di aggiornamento, è pertanto importante verificare che al termine del processo di aggiornamento il flag di traccia 4199 non sia abilitato.  
 
 > [!NOTE]
 > Il flag di traccia 4199 tuttavia è ancora necessario per abilitare eventuali nuove correzioni di Query Processor rilasciate dopo la versione RTM, se applicabile.

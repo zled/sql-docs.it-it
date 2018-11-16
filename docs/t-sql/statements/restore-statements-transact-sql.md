@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce8d405d4ae630f7166389d98086237270333e51
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 7ee293543439436615840e720071d11971aed3dc
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252158"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703669"
 ---
 # <a name="restore-statements-transact-sql"></a>Istruzioni RESTORE (Transact-SQL)
 Consente di ripristinare i backup del database SQL eseguiti tramite il comando BACKUP. 
@@ -365,7 +365,7 @@ I dati full-text vengono ripristinati insieme agli altri dati del database duran
 L'istruzione RESTORE consente inoltre di eseguire ripristini in posizioni alternative, ripristini differenziali, ripristini di file e filegroup, nonché ripristini differenziali di file e filegroup di dati full-text. È inoltre possibile utilizzare l'istruzione RESTORE per ripristinare solo i file full-text, come nel caso dei dati di database.  
   
 > [!NOTE] 
-> I cataloghi full-text importati da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] vengono ancora gestiti come file di database. Per tali file, la procedura di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] per l'esecuzione del backup dei cataloghi full-text rimane applicabile, a meno che la sospensione e la ripresa durante l'operazione di backup non siano più necessarie. Per altre informazioni, vedere [Backup e ripristino di cataloghi full-text](http://go.microsoft.com/fwlink/?LinkId=107381).  
+> I cataloghi full-text importati da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] vengono ancora gestiti come file di database. Per tali file, la procedura di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] per l'esecuzione del backup dei cataloghi full-text rimane applicabile, a meno che la sospensione e la ripresa durante l'operazione di backup non siano più necessarie. Per altre informazioni, vedere [Backup e ripristino di cataloghi full-text](https://go.microsoft.com/fwlink/?LinkId=107381).  
   
 ## <a name="metadata"></a>Metadati  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono incluse tabelle cronologiche per backup e ripristini in cui viene tenuta traccia dell'attività di backup e ripristino per ogni istanza del server. Quando si effettua un'operazione di ripristino, vengono modificate anche le tabelle di cronologia di backup. Per informazioni su queste tabelle, vedere [Informazioni sulla cronologia e sull'intestazione del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).  
@@ -745,7 +745,7 @@ FROM URL
 Specifica uno o più dispositivi di backup inseriti sugli URL che verranno usati per l'operazione di ripristino. Il formato URL viene usato per il ripristino dei backup dal servizio di archiviazione di Microsoft Azure. 
 
 > [!IMPORTANT]  
-> Per eseguire il ripristino da più dispositivi durante il ripristino da URL, è necessario usare token di firma di accesso condiviso (SAS). Per esempi di creazione di una firma di accesso condiviso, vedere [Backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) e [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Semplificazione della creazione di credenziali SQL con token di firma di accesso condiviso (SAS) in Archiviazione di Azure con Powershell).  
+> Per eseguire il ripristino da più dispositivi durante il ripristino da URL, è necessario usare token di firma di accesso condiviso (SAS). Per esempi di creazione di una firma di accesso condiviso, vedere [Backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) e [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Semplificazione della creazione di credenziali SQL con token di firma di accesso condiviso (SAS) in Archiviazione di Azure con Powershell).  
   
 *n*  
 Segnaposto che indica la possibilità di specificare fino a 64 dispositivi di backup in un elenco delimitato da virgole.  

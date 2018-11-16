@@ -17,12 +17,12 @@ ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 052681d249d3c93e54c23ebcf2b42cadf5724f2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a695217909641c737b7780fc4f8b80b2cb08152
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855109"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681249"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Impostazioni progetto (Mapping di tipo) (AccessToSQL)
 Le impostazioni di progetto del mapping dei tipi consentono di impostare i mapping dei tipi predefiniti per il progetto SSMA. È anche possibile specificare i mapping dei tipi per singoli oggetti di database. Per altre informazioni, vedere [Mapping tipi di origine e destinazione dati](mapping-source-and-target-data-types-accesstosql.md).  
@@ -75,5 +75,5 @@ Fare clic per reimpostare tutti i mapping dei tipi di dati per le impostazioni p
   
 ## <a name="see-also"></a>Vedere anche  
 [Mapping dei tipi di dati origine e destinazione](mapping-source-and-target-data-types-accesstosql.md)  
-[Reference(Access) dell'interfaccia utente](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Reference(Access) dell'interfaccia utente](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

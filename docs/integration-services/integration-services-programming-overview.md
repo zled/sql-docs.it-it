@@ -21,12 +21,12 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a57146619406891b7f503b8cc20c41f70ecd7e98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45c2be8fa97ad5aaf61aa67e73f52559ffee3859
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849739"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642198"
 ---
 # <a name="integration-services-programming-overview"></a>Panoramica della programmazione di Integration Services
   L'architettura di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] separa lo spostamento e la trasformazione dei dati dal flusso di controllo e dalla gestione dei pacchetti. Due motori distinti definiscono questa architettura, che possono essere automatizzati ed estesi quando si programma [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Il motore di runtime implementa l'infrastruttura del flusso di controllo e di gestione dei pacchetti che consente agli sviluppatori di controllare il flusso di esecuzione e impostare le opzioni per la registrazione, la gestione degli eventi e le variabili. Il motore flusso di dati è un motore speciale, a elevate prestazioni, dedicato esclusivamente all'estrazione, alla trasformazione e al caricamento di dati. Quando si programma [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], si utilizzeranno questi due motori.  
@@ -51,7 +51,7 @@ ms.locfileid: "47849739"
  È possibile programmare pacchetti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], attività personalizzate e componenti in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] o in un altro editor di codice o di testo. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] offre allo sviluppatore numerosi strumenti e funzionalità per semplificare e accelerare i cicli iterativi di codifica, debug e test. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] semplifica la distribuzione. Tuttavia, non è necessario [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] per compilare e ottenere progetti di codice di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK include i compilatori [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] e [!INCLUDE[csprcs](../includes/csprcs-md.md)] e gli strumenti correlati.  
   
 > [!IMPORTANT]  
->  Per impostazione predefinita, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] viene installato con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a differenza di [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK. Se l'SDK non è installato nel computer e la documentazione associata non è inclusa nella documentazione online, non è possibile utilizzare i collegamenti al contenuto dell'SDK presenti in questa sezione. Dopo aver installato [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK, è possibile aggiungere la documentazione associata alla documentazione online e al sommario attenendosi alle istruzioni descritte in [Aggiungere o rimuovere la documentazione del prodotto per SQL Server](http://msdn.microsoft.com/library/ef798cc8-87cf-4d60-a7bf-9e061bdd0052).  
+>  Per impostazione predefinita, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] viene installato con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a differenza di [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK. Se l'SDK non è installato nel computer e la documentazione associata non è inclusa nella documentazione online, non è possibile utilizzare i collegamenti al contenuto dell'SDK presenti in questa sezione. Dopo aver installato [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK, è possibile aggiungere la documentazione associata alla documentazione online e al sommario attenendosi alle istruzioni descritte in [Aggiungere o rimuovere la documentazione del prodotto per SQL Server](https://msdn.microsoft.com/library/ef798cc8-87cf-4d60-a7bf-9e061bdd0052).  
   
  L'attività Script e il componente script di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usano [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) come ambiente di scripting incorporato. VSTA support [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic e [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47849739"
 >  Le API di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] non sono compatibili con linguaggi di scripting basati su COM come VBScript.  
   
 ## <a name="locating-assemblies"></a>Individuazione di assembly  
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] gli assembly [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono stati aggiornati a .NET 4.0. È disponibile una Global Assembly Cache separata per .NET 4 in *\<unità>*:\Windows\Microsoft.NET\assembly. Tutti gli assembly di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] possono essere individuati in questo percorso, generalmente nella cartella GAC_MSIL.  
+ In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]gli assembly [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono stati aggiornati a .NET 4.0. È disponibile una Global Assembly Cache separata per .NET 4 in *\<unità>*:\Windows\Microsoft.NET\assembly. Tutti gli assembly di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] possono essere individuati in questo percorso, generalmente nella cartella GAC_MSIL.  
   
  Come nelle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], i file DLL di estendibilità principali di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili anche in *\<unità>*:\Programmi\Microsoft SQL Server\100\SDK\Assemblies.  
   

@@ -10,12 +10,12 @@ ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 091482cbfc42dabead28ceade0c7840860ae3cc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cca10f2a54a70e91e46bb8b98e9799885b5f175
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776607"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671721"
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>Installazione di SSMA per Sybase Client (SybaseToSQL)
 Il client SSMA è costituito da file di programma vengono utilizzati per connettersi a un server di database di Sybase Adaptive Server Enterprise (ASE) e un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL DB, convertire gli oggetti di database di ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o sintassi di database SQL di Azure, caricare il gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL DB, quindi eseguire la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure.  
@@ -31,7 +31,7 @@ Prima di installare SSMA, assicurarsi che il computer soddisfi i requisiti segue
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 o versione successiva.  
   
--   Il [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework versione 4.0 o versione successiva. È disponibile in .NET Framework versione 4.0 di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporto del prodotto. È inoltre possibile ottenerlo dal [.NET Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=48882).  
+-   Il [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework versione 4.0 o versione successiva. È disponibile in .NET Framework versione 4.0 di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporto del prodotto. È inoltre possibile ottenerlo dal [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).  
   
 -   Il provider Sybase OLEDB/ADO.Net/ODBC e connettività al server di database Sybase ASE che contiene i database da migrare. È possibile installare i provider dal supporto del prodotto di Sybase ASE. Per informazioni sulla connettività, vedere [la connessione a Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
@@ -40,7 +40,7 @@ Prima di installare SSMA, assicurarsi che il computer soddisfi i requisiti segue
 -   4 GB di RAM consigliato.  
   
 ## <a name="installing-the-ssma-for-sybase-client"></a>Installazione di SSMA per Sybase Client  
-SSMA è un download Web. Per scaricare la versione più recente, vedere la [pagina di download di SQL Server Migration Assistant](http://aka.ms/ssmaforsybase).  
+SSMA è un download Web. Per scaricare la versione più recente, vedere la [pagina di download di SQL Server Migration Assistant](https://aka.ms/ssmaforsybase).  
   
 Dopo aver scaricato la versione più recente, è necessario estrarre i file di installazione prima di poter installare SSMA.  
   

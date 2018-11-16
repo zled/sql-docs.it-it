@@ -11,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccc38600559c931e1ce3cd59708b47e581de2557
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a28d59165f7c1a7e733807cb4b86d334604da289
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706569"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672770"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Accesso alle tabelle con ottimizzazione per la memoria utilizzando codice Transact-SQL interpretato
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Quando si accede a una tabella ottimizzata per la memoria da una transazione esp
   
 - Impostare l'opzione di database [MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT](../../t-sql/statements/alter-database-transact-sql-set-options.md) su ON.  
   
-Un hint di tabella del livello di isolamento non è necessario per le tabelle ottimizzate per la memoria a cui accedono query in esecuzione in [modalità autocommit](http://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00).  
+Un hint di tabella del livello di isolamento non è necessario per le tabelle ottimizzate per la memoria a cui accedono query in esecuzione in [modalità autocommit](https://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00).  
   
 ## <a name="see-also"></a>Vedere anche
 

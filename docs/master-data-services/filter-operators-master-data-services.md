@@ -12,12 +12,12 @@ ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e9407e6c678945f6d4f483c4babbe4d4ce37cb0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24b21d901e30af96362198001033d56c51d6c9e4
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798045"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700377"
 ---
 # <a name="filter-operators-master-data-services"></a>Operatori di filtro (Master Data Services)
 
@@ -42,8 +42,8 @@ ms.locfileid: "47798045"
 |**È minore o uguale a**|Restituisce i valori di attributo che sono minori o uguali ai criteri specificati. Ad esempio, per restituire i valori di attributo che iniziano con **3** o un numero minore, digitare **3**.|  
 |**Corrisponde a**|Consente di utilizzare un indice di ricerca fuzzy per filtrare i risultati.<br /><br /> Usare il campo **Livello di somiglianza** per specificare il livello di corrispondenza dei valori degli attributi ai criteri di filtro. L'impostazione predefinita è 30%.<br /><br /> Selezionare una delle opzioni seguenti nell'elenco a discesa **Algoritmo** :<br /><br /> **Levenshtein**: distanza basata sul numero di modifiche (ad esempio, aggiunte o eliminazioni) accettate dall'algoritmo per la corrispondenza tra stringhe. Impostazione predefinita. Non è richiesto alcun parametro aggiuntivo.<br /><br /> **Jaccard**: indice il cui funzionamento è ottimale quando si tenta di far corrispondere più stringhe. Questa ricerca supporta un parametro aggiuntivo di distorsione contenimento (vedere di seguito).<br /><br /> **Jaro-Winkler**: distanza utilizzata meglio per l'individuazione di nomi di persona duplicati. Tramite questo metodo vengono restituiti più risultati rispetto a qualsiasi altro metodo. Non supporta la distorsione contenimento.<br /><br /> **Sottosequenza comune più lunga**: il funzionamento è basato su una sottosequenza nella quale le lettere in un modello vengono visualizzate in ordine, anche se possono essere separate (ad esempio, "MSR" è una sottosequenza di "MaSteR"). Questa ricerca supporta un parametro aggiuntivo di distorsione contenimento (vedere di seguito).<br /><br /> <br /><br /> Nota: per l'algoritmo **Jaccard** o **Sottosequenza comune più lunga** aggiungere **Distorsione contenimento**. Si tratta di una soglia di lunghezza fornita in una percentuale decimale compresa tra 0 e 1, con 0,62 come valore predefinito. Una soglia inferiore comporterà l'aumento del numero di corrispondenze possibili restituite.|  
 |**Non corrisponde a**|Consente di utilizzare un indice di ricerca fuzzy per filtrare i risultati. Utilizzare il campo **Livello di somiglianza** per determinare il grado di non corrispondenza dei valori di attributo ai criteri di filtro specificati.|  
-|**Contiene il criterio**|Consente di utilizzare espressioni regolari di .NET Framework per filtrare i risultati in base a un modello specificato. Per ulteriori informazioni su espressioni regolari, vedere [Elementi del linguaggio di espressioni regolari](http://go.microsoft.com/fwlink/?LinkId=164401) in MSDN Library.|  
-|**Non contiene il modello**|Consente di utilizzare le espressioni regolari di .NET Framework per filtrare i risultati che non corrispondono a un modello specificato. Per ulteriori informazioni su espressioni regolari, vedere [Elementi del linguaggio di espressioni regolari](http://go.microsoft.com/fwlink/?LinkId=164401) in MSDN Library.|  
+|**Contiene il criterio**|Consente di utilizzare espressioni regolari di .NET Framework per filtrare i risultati in base a un modello specificato. Per ulteriori informazioni su espressioni regolari, vedere [Elementi del linguaggio di espressioni regolari](https://go.microsoft.com/fwlink/?LinkId=164401) in MSDN Library.|  
+|**Non contiene il modello**|Consente di utilizzare le espressioni regolari di .NET Framework per filtrare i risultati che non corrispondono a un modello specificato. Per ulteriori informazioni su espressioni regolari, vedere [Elementi del linguaggio di espressioni regolari](https://go.microsoft.com/fwlink/?LinkId=164401) in MSDN Library.|  
 |**È NULL**|Restituisce i valori di attributo che sono Null. Il campo **Criteri** viene disabilitato quando si seleziona l'operatore **È NULL** .|  
 |**Non è NULL**|Restituisce i valori di attributo che non sono null. Il campo **Criteri** viene disabilitato quando si seleziona l'operatore **Non è NULL** .|  
   

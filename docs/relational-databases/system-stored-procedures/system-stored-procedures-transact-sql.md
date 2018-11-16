@@ -23,12 +23,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 081a43863385ced49fa1863c4667c8b435be6f99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d44d8031daaac656cb99a7477991dc6c30ce864
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698429"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666510"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Stored procedure di sistema (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47698429"
   
 |Category|Description|  
 |--------------|-----------------|  
-|[Stored procedure di replica geografica attiva](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Consente di gestire per gestire le configurazioni di replica geografica attiva nel Database SQL di Azure|  
+|[Stored procedure di replica geografica attiva](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Consente di gestire per gestire le configurazioni di replica geografica attiva nel Database SQL di Azure|  
 |[Stored procedure di catalogo](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|Consentono di implementare le funzioni del dizionario dei dati ODBC e di isolare le applicazioni ODBC in caso di modifiche alle tabelle di sistema sottostanti.|  
 |[Stored procedure Change Data Capture](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|Consentono di abilitare, disabilitare o creare report relativi a oggetti Change Data Capture.|  
 |[Stored procedure per cursori](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|Consentono di implementare la funzionalità per le variabili di cursore.|  
@@ -48,7 +48,7 @@ ms.locfileid: "47698429"
 |[Stored procedure di posta elettronica database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|Consentono di eseguire le operazioni di posta elettronica da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Piano di manutenzione database Stored procedure](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|Consentono di impostare le attività di manutenzione principali necessarie per gestire le prestazioni dei database.|  
 |[Stored procedure di query distribuite](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|Consentono di implementare e gestire le query distribuite.|  
-|[FileStream e FileTable Stored procedure &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|Utilizzato per configurare e gestire le caratteristiche FILESTREAM e FileTable.|  
+|[FileStream e FileTable Stored procedure &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|Utilizzato per configurare e gestire le caratteristiche FILESTREAM e FileTable.|  
 |[Le regole del firewall Stored procedure &#40;Database SQL di Azure&#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|Consente di configurare il firewall di Database SQL di Azure.|  
 |[Stored procedure per ricerche Full-Text](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|Consentono di implementare ed eseguire query su indici full-text.|  
 |[Stored procedure estese generali](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|Consentono di utilizzare un'interfaccia tra un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e programmi esterni per varie attività di manutenzione.|  
@@ -56,16 +56,16 @@ ms.locfileid: "47698429"
 |[Gestione del Data Warehouse Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|Utilizzato per configurare il data warehouse di gestione.|  
 |[Automazione OLE Stored procedure](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|Consentono di abilitare gli oggetti di automazione standard per l'utilizzo all'interno di un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] standard.|  
 |[Stored procedure della gestione basata su criteri](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|Consentono di implementare la gestione basata su criteri.|  
-|[Stored procedure di PolyBase](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Aggiungere o rimuovere un computer da un gruppo con scalabilità orizzontale PolyBase.|  
+|[Stored procedure di PolyBase](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Aggiungere o rimuovere un computer da un gruppo con scalabilità orizzontale PolyBase.|  
 |[Query Store Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Consente di ottimizzare le prestazioni.|  
 |[Stored procedure di replica](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Consentono di gestire le operazioni di replica.|  
 |[Stored procedure di sicurezza](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|Consentono di gestire la sicurezza.|  
-|[Le Stored procedure di Backup di snapshot](http://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|Usato per eliminare i backup FILE_SNAPSHOT insieme a tutti i relativi snapshot o eliminare uno snapshot di file di backup individuali.|  
-|[Stored procedure di indice spaziale](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|Utilizzato per analizzare e migliorare le prestazioni di indicizzazione degli indici spaziali.|  
+|[Le Stored procedure di Backup di snapshot](https://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|Usato per eliminare i backup FILE_SNAPSHOT insieme a tutti i relativi snapshot o eliminare uno snapshot di file di backup individuali.|  
+|[Stored procedure di indice spaziale](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|Utilizzato per analizzare e migliorare le prestazioni di indicizzazione degli indici spaziali.|  
 |[Stored procedure SQL Server Agent](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)|Consentono a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] di monitorare prestazione e attività.|  
 |[Stored procedure di SQL Server Profiler](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|Consentono a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di gestire attività pianificate e guidate dagli eventi.|  
 |[Stretch Database Stored procedure](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|Usato per gestire l'istanza di stretch database.|  
-|[Le tabelle temporali Stored procedure](http://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|Utilizzo per le tabelle temporali|  
+|[Le tabelle temporali Stored procedure](https://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|Utilizzo per le tabelle temporali|  
 |[Stored procedure per XML](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)|Consentono di gestire il testo XML.|  
   
 > [!NOTE]  

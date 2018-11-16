@@ -11,12 +11,12 @@ ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b21a3002cbe6e89b41ff735ac0ba4506bbaa95b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ef51be2a03ae262006f9782bc3314329333a682
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673597"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662830"
 ---
 # <a name="filestream-ddl-functions-stored-procedures-and-views"></a>DDL, funzioni, stored procedure e viste FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,6 +64,6 @@ ms.locfileid: "47673597"
   
 -   [Accesso ai dati FILESTREAM con OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
--   [API gestita - classe SqlFileStream](http://go.microsoft.com/fwlink/?LinkId=220875)  
+-   [API gestita - classe SqlFileStream](https://go.microsoft.com/fwlink/?LinkId=220875)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbaaa9635a39ab4a0b8f8fcd1a0a4dc8048d6c2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b5d26b38b4fef4f108a67194e4af775154d32a9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645139"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677880"
 ---
 # <a name="how-to-run-sql-server-unit-tests"></a>Procedura: Eseguire unit test di SQL Server
 È possibile eseguire uno unit test di SQL Server in varie modalità, ad esempio usando diverse finestre e la finestra Prompt dei comandi.  
@@ -58,7 +58,7 @@ In questo passaggio vengono eseguiti tutti i test inclusi nell'esecuzione di tes
   
 ## <a name="see-also"></a>Vedere anche  
 [Esecuzione di unit test di SQL Server](../ssdt/running-sql-server-unit-tests.md)  
-[Procedura: eseguire test automatizzati da Microsoft Visual Studio 2010](http://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
-[Esecuzione di test automatizzati dalla riga di comando (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
-[Test dell'applicazione (Visual Studio 2012)](http://msdn.microsoft.com/library/ms182409.aspx)  
+[Procedura: eseguire test automatizzati da Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
+[Esecuzione di test automatizzati dalla riga di comando (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
+[Test dell'applicazione (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182409.aspx)  
   

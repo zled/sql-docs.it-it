@@ -11,12 +11,12 @@ ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dfb63472c5132ad37abbe8832929e10f694f84f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55f67c71bfa1247d9b8df411889091527c95de48
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689409"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703889"
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Attività di installazione per Master Data Services
 
@@ -52,12 +52,12 @@ ms.locfileid: "47689409"
 |Creare un database [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|Utilizzare [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] per creare un database [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] per i dati master.|[Creare un database Master Data Services](../../master-data-services/install-windows/create-a-master-data-services-database.md)|  
 |Creare un'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]|Utilizzare [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] per creare e configurare un'applicazione Web per ospitare [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|[Creare un'applicazione Web Gestione dati master &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)|  
 |Associare un database [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] a un'applicazione Web|Usare [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] per associare l'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] al database [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Associare un'applicazione Web e un database Master Data Services](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)|  
-|Configurare Sicurezza avanzata di Internet Explorer|Quando si installa [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] in un computer Windows Server 2012, può essere necessario configurare Sicurezza avanzata di Internet Explorer per consentire lo scripting per il sito dell'applicazione [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . In caso contrario, il passaggio al sito dell'applicazione [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] nel computer server avrà esito negativo.|[Internet Explorer: configurazione di Sicurezza avanzata](http://go.microsoft.com/fwlink/p/?LinkId=223869)|  
-|Installare [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|Utenti che opereranno con i dati master possono installare [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)].|[http://go.microsoft.com/fwlink/?LinkID=398159](http://go.microsoft.com/fwlink/?LinkID=398159)|  
+|Configurare Sicurezza avanzata di Internet Explorer|Quando si installa [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] in un computer Windows Server 2012, può essere necessario configurare Sicurezza avanzata di Internet Explorer per consentire lo scripting per il sito dell'applicazione [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . In caso contrario, il passaggio al sito dell'applicazione [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] nel computer server avrà esito negativo.|[Internet Explorer: configurazione di Sicurezza avanzata](https://go.microsoft.com/fwlink/p/?LinkId=223869)|  
+|Installare [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|Utenti che opereranno con i dati master possono installare [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)].|[https://go.microsoft.com/fwlink/?LinkID=398159](https://go.microsoft.com/fwlink/?LinkID=398159)|  
 |Abilitare l'integrazione con Data Quality Services (DQS)|Per gli utenti di [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], abilitare l'integrazione con la funzionalità DQS che può essere usata per la corrispondenza di dati simili.|[Abilitare l'integrazione di Data Quality Services con Master Data Services](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)|  
 |Distribuire un modello di esempio|I pacchetti del modello di esempio sono installati con Master Data Services e possono essere distribuiti tramite MDSModelDeploy.exe.|[Distribuzione di esempi MDS in SQL Server](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md)|
   
- Se si riscontrano problemi durante il processo di installazione o la configurazione iniziale, vedere la pagina relativa alla [risoluzione dei problemi di installazione e di configurazione](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-installation-and-configuration-issues-master-data-services.aspx) nella pagina Wiki di TechNet.  
+ Se si riscontrano problemi durante il processo di installazione o la configurazione iniziale, vedere la pagina relativa alla [risoluzione dei problemi di installazione e di configurazione](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-installation-and-configuration-issues-master-data-services.aspx) nella pagina Wiki di TechNet.  
   
  Se non è più necessario utilizzare [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] su un computer, è possibile disinstallare [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] e determinare se rimuovere elementi non interessati dal processo di disinstallazione. Per altre informazioni, vedere [Disinstallare e rimuovere Master Data Services](../../sql-server/install/uninstall-and-remove-master-data-services.md).  
   

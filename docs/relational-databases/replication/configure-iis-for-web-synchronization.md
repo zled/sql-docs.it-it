@@ -15,22 +15,22 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 707ab28617129f16bd3e3bbf142349dcba6ff49b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684879"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665740"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurazione di IIS per la sincronizzazione Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Le procedure descritte in questo argomento rappresentano il secondo passaggio nella configurazione della sincronizzazione Web per la replica di tipo merge. Questo passaggio è successivo all'abilitazione di una pubblicazione per la sincronizzazione Web. Per una panoramica del processo di configurazione, vedere [Configura sincronizzazione Web](../../relational-databases/replication/configure-web-synchronization.md). Al termine delle procedure indicate in questo argomento, procedere al terzo passaggio, che consiste nella configurazione di una sottoscrizione per l'utilizzo della sincronizzazione Web. Questo terzo passaggio è descritto negli argomenti seguenti:  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Procedura: Configurazione di una sottoscrizione per l'utilizzo della sincronizzazione tramite il Web \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Procedura: Configurazione di una sottoscrizione per l'utilizzo della sincronizzazione tramite il Web \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Programmazione [!INCLUDE[tsql](../../includes/tsql-md.md)] della replica: [Procedura: Configurazione di una sottoscrizione per l'utilizzo della sincronizzazione Web (Programmazione Transact-SQL della replica)](http://msdn.microsoft.com/library/ms345206.aspx)  
+-   Programmazione [!INCLUDE[tsql](../../includes/tsql-md.md)] della replica: [Procedura: Configurazione di una sottoscrizione per l'utilizzo della sincronizzazione Web (Programmazione Transact-SQL della replica)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO: [Procedura: Configurazione di una sottoscrizione per l'utilizzo di una sottoscrizione Web (Programmazione RMO)](http://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO: [Procedura: Configurazione di una sottoscrizione per l'utilizzo di una sottoscrizione Web (Programmazione RMO)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  Nella sincronizzazione Web viene utilizzato un computer che esegue [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) per sincronizzare le sottoscrizioni pull con le pubblicazioni di tipo merge. Sono supportate le versioni 5.0, 6.0 e 7.0 di IIS. La Configurazione guidata sincronizzazione Web non è supportata in IIS versione 7.0.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47684879"
   
 4.  Fare clic su **OK**.  
   
- Se non è possibile ottenere un certificato server da un'autorità di certificazione, è possibile specificare un certificato per l'esecuzione di test. Per configurare IIS 6.0 per l'esecuzione di test, installare un certificato mediante l'utilità SelfSSL disponibile nel Resource Kit di IIS 6.0. È possibile scaricare gli strumenti dall' [Area download Microsoft](http://go.microsoft.com/fwlink/?LinkId=30958). Per IIS 5.0, visitare il sito [Supporto Tecnico Microsoft](http://go.microsoft.com/fwlink/?LinkId=46229).  
+ Se non è possibile ottenere un certificato server da un'autorità di certificazione, è possibile specificare un certificato per l'esecuzione di test. Per configurare IIS 6.0 per l'esecuzione di test, installare un certificato mediante l'utilità SelfSSL disponibile nel Resource Kit di IIS 6.0. È possibile scaricare gli strumenti dall' [Area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=30958). Per IIS 5.0, visitare il sito [Supporto Tecnico Microsoft](https://go.microsoft.com/fwlink/?LinkId=46229).  
   
 > [!NOTE]  
 >  Affinché un sito Web possa utilizzare SSL, è necessario che a tale sito sia associato un certificato. SelfSSL associa automaticamente il certificato al sito Web predefinito. Se si dispone già di un certificato oppure si installa successivamente un certificato di un'autorità di certificazione, è necessario associare tale certificato in modo esplicito al sito Web utilizzato nella sincronizzazione Web. Assicurarsi che al sito Web utilizzato per la sincronizzazione delle sottoscrizioni sia associato un solo certificato. Se sono associati più certificati, il Sottoscrittore utilizzerà il primo sito Web disponibile.  

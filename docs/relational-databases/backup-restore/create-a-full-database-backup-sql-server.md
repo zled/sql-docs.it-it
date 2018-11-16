@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 69d6721aae55102a9f48bd1a1bc4cb2d8540c71d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f82b79c8f5484a10e59827b7821038d93142e664
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782419"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677644"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Creazione di un backup completo del database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -276,7 +276,7 @@ Sono stati creati i criteri di accesso archiviati con diritti di lettura, scritt
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          Solo in SQL Server 2014 o versioni successive specificare l'algoritmo di crittografia da utilizzare e il certificato o la chiave asimmetrica da utilizzare per proteggere la crittografia.  
   
-         DESCRIPTION **=** { **'**_testo_**'** | **@**_variabile\_testo_ }  
+         DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
          Specifica il testo in formato libero che descrive il set di backup. La stringa può essere composta da un massimo di 255 caratteri.  
   
          NAME **=** { *nome_set_backup* | **@**_var\_nome\_set\_backup_ }  
@@ -386,7 +386,7 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
 -   [Utilizzare la Creazione guidata piano di manutenzione](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-**[Risoluzione dei problemi di backup in SQL Server e operazioni di ripristino](https://support.microsoft.com/en-us/kb/224071)**          
+**[Risoluzione dei problemi di backup in SQL Server e operazioni di ripristino](https://support.microsoft.com/kb/224071)**          
 [Panoramica del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   

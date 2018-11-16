@@ -5,8 +5,7 @@ ms.date: 07/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - index design guide
@@ -24,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6deaaa7ac9774cc775801ae7946675452cc15a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e26f3436b821c1b6b42dec9f0b5f0c7170da780e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822405"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669600"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Architettura e guida per la progettazione degli indici di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -175,7 +174,7 @@ Non potendo prevedere il tipo di accesso e tantomeno il momento in cui questo si
   
 -   Rendere più rapida ed efficace l'esecuzione delle query. Quando le query accedono a diverse partizioni di un indice, Query Optimizer è in grado di elaborare le singole partizioni contemporaneamente e di escludere quelle non interessate dalla query.  
   
-Per altre informazioni, vedere [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+Per ulteriori informazioni, vedere [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
 ###  <a name="Sort_Order"></a> Linee guida per la progettazione dell'ordinamento dell'indice  
  Quando si definiscono gli indici, è necessario valutare se la colonna chiave dell'indice deve essere archiviata in ordine crescente o decrescente. L'ordine crescente rappresenta l'impostazione predefinita e consente di garantire la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La sintassi delle istruzioni CREATE INDEX, CREATE TABLE e ALTER TABLE supporta le parole chiave ASC (ascending, crescente) e DESC (descending, decrescente) per singole colonne di indici e vincoli.  
@@ -825,7 +824,7 @@ Gli indici non cluster sono uno dei tipi di indice possibili in una tabella otti
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>Architettura dell'indice non cluster in memoria
 
-Gli indici non cluster in memoria sono implementati mediante una struttura di dati albero Bw, inizialmente concepita e descritta da Microsoft Research nel 2011. Un albero Bw è una variazione priva di latch e blocco di un albero B. Per altri dettagli, vedere [Albero Bw: un albero B per nuove piattaforme Hardware](http://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/). 
+Gli indici non cluster in memoria sono implementati mediante una struttura di dati albero Bw, inizialmente concepita e descritta da Microsoft Research nel 2011. Un albero Bw è una variazione priva di latch e blocco di un albero B. Per altri dettagli, vedere [Albero Bw: un albero B per nuove piattaforme Hardware](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/). 
 
 A un livello elevato l'albero Bw può essere interpretato come una mappa di pagine organizzate in base all'ID della pagina (PidMap), una struttura per allocare e riusare gli ID di pagine (PidAlloc) e un set di pagine collegate nella mappa di pagine e tra di loro. Questi tre sottocomponenti di alto livello costituiscono la struttura interna di base di un albero Bw.
 
@@ -892,8 +891,8 @@ Quando si esegue una query su una tabella ottimizzata per la memoria con predica
 [CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
 [Riorganizzare e ricompilare gli indici](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
-[Miglioramento delle prestazioni con le viste indicizzate di SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
-[Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+[Miglioramento delle prestazioni con le viste indicizzate di SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[Tabelle e indici partizionati](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [Creare una chiave primaria](../relational-databases/tables/create-primary-keys.md)    
 [Indici per tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
 [Indici columnstore - Panoramica](../relational-databases/indexes/columnstore-indexes-overview.md)  
@@ -902,4 +901,4 @@ Quando si esegue una query su una tabella ottimizzata per la memoria con predica
 [Funzioni a gestione dinamica e DMV correlate all'indice &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [Indici per le colonne calcolate](../relational-databases/indexes/indexes-on-computed-columns.md)   
 [Indici e ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
-[Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) (Deframmentazione dell'indice adattativo)      
+[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) (Deframmentazione dell'indice adattativo)      

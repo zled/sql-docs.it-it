@@ -12,12 +12,12 @@ ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6414ba876f5f4b763fb0b333c9d241248a555f26
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 3e4142a3492b37df8e161b965639bf8900570c23
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099802"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663920"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Procedura guidata trova database (Seleziona file) (AccessToSQL)
 Nella pagina di selezione file della procedura guidata trova database vengono elencati i file che sono stati trovati durante la ricerca. Per selezionare un file da aggiungere alla SSMA, selezionare la riga che contiene il nome del file. Dopo aver selezionato i file, fare clic **successivo** per visualizzare la pagina di selezione verificare.  
@@ -52,5 +52,5 @@ Data e ora di che creazione del database.
 Data e ora che dell'ultimo aggiornamento il database.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Reference(Access) dell'interfaccia utente](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Reference(Access) dell'interfaccia utente](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

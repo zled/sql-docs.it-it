@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7aee55b262ab1a06f99325f977fe5e5be014f5eb
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b3cb1aef270d2fb512d6234227b5ed6ab8b09a51
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021905"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812864"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurare un server di report in modalità nativa per gli amministratori locali (SSRS)
   Per la distribuzione di un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in uno dei seguenti sistemi operativi sono necessarie ulteriori operazioni di configurazione se si desidera amministrare localmente un'istanza del server di report. Questo argomento spiega come configurare il server di report per l'amministrazione locale. Se il server di report non è ancora stato installato o configurato, vedere [Installare SQL Server 2016 dall'Installazione guidata &#40;programma di installazione&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) e [Gestire un server di report in modalità nativa di Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
@@ -87,7 +87,7 @@ ms.locfileid: "50021905"
   
 8.  Fare clic su **Siti**.  
   
-9. Aggiungere `http://<your-server-name>`.  
+9. Aggiungere `https://<your-server-name>`.  
   
 10. Se non si usa HTTPS per il sito predefinito, deselezionare la casella di controllo **Richiedi verifica server (https:) per tutti i siti compresi nell'area** .  
   
@@ -111,7 +111,7 @@ ms.locfileid: "50021905"
   
 ###  <a name="bkmk_configure_site_settings"></a> Impostazioni sito Gestione report  
   
-1.  Aprire il browser con i privilegi di amministratore e accedere a Gestione report, `http://<server name>/reports`.  
+1.  Aprire il browser con i privilegi di amministratore e accedere a Gestione report, `https://<server name>/reports`.  
   
 2.  Fare clic su **Impostazioni sito** nell'angolo superiore della home page.  
   

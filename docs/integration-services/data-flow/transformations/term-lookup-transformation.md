@@ -24,12 +24,12 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d5221b1474d6880cd7fdac56f5ae13a5f50514c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b3f90acc0f7fefea0ffd142c4b0acd6a8e59549
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827169"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640158"
 ---
 # <a name="term-lookup-transformation"></a>Ricerca termini - trasformazione
   La trasformazione Ricerca termini rileva le corrispondenze tra i termini estratti dal testo in una colonna di input della trasformazione e quelli contenuti in una tabella di riferimento, quindi conta il numero delle occorrenze di un termine della tabella di ricerca nel set di dati di input e scrive tale numero nelle colonne di output della trasformazione, insieme al termine della tabella di riferimento. Questa trasformazione può essere utilizzata per creare un elenco di termini personalizzato basato sul testo di input, completo di statistiche sulla frequenza dei termini.  
@@ -98,7 +98,7 @@ ms.locfileid: "47827169"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -121,7 +121,7 @@ ms.locfileid: "47827169"
  Consente di digitare un alias per ogni colonna di output. Per impostazione predefinita, viene suggerito il nome della colonna. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
   
  **Configura output errori**  
- Usare la finestra di dialogo [Configura output errori](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) per specificare le opzioni di gestione degli errori per le righe che causano errori.  
+ Usare la finestra di dialogo [Configura output errori](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) per specificare le opzioni di gestione degli errori per le righe che causano errori.  
   
 ## <a name="term-lookup-transformation-editor-reference-table-tab"></a>Editor trasformazione Ricerca termini (scheda Tabella di riferimento)
   Usare la scheda **Tabella di riferimento** della finestra di dialogo **Editor trasformazione Ricerca termini** per specificare la connessione alla tabella di riferimento o tabella di ricerca.  
@@ -137,7 +137,7 @@ ms.locfileid: "47827169"
  Consente di selezionare una tabella di ricerca o una vista nel database selezionando un elemento nell'elenco. La tabella o la vista deve contenere una colonna con un elenco di termini esistente da utilizzare per il confronto del testo presente nella colonna di origine.  
   
  **Configura output errori**  
- Usare la finestra di dialogo [Configura output errori](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) per specificare le opzioni di gestione degli errori per le righe che causano errori.  
+ Usare la finestra di dialogo [Configura output errori](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) per specificare le opzioni di gestione degli errori per le righe che causano errori.  
   
 ## <a name="term-lookup-transformation-editor-advanced-tab"></a>Editor trasformazione Ricerca termini (scheda Avanzate)
   Usare la scheda **Avanzate** della finestra di dialogo **Editor trasformazione Ricerca termini** per specificare se la ricerca deve distinguere tra lettere maiuscole e minuscole.  
@@ -147,7 +147,7 @@ ms.locfileid: "47827169"
  Consente di indicare se la ricerca deve distinguere tra lettere maiuscole e minuscole. Il valore predefinito è **False**.  
   
  **Configura output errori**  
- Usare la finestra di dialogo [Configura output errori](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) per specificare le opzioni di gestione degli errori per le righe che causano errori.  
+ Usare la finestra di dialogo [Configura output errori](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) per specificare le opzioni di gestione degli errori per le righe che causano errori.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   

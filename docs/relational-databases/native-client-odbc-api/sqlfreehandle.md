@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74f537c6017a2d8d247200ceccbd0faacb125cac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9203b6b0708b564645ab5da8cf6788452bc195f5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595929"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672320"
 ---
 # <a name="sqlfreehandle"></a>SQLFreeHandle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47595929"
   In modalità di commit manuale, la chiamata **SQLFreeHandle** in un'istruzione handle con una transazione aperta provoca un rollback delle modifiche in sospeso per il database. La chiamata **SQLFreeHandle** in un'istruzione handle sempre chiude tutti i cursori aperti ed Elimina risultati, liberando tutte le risorse associate all'handle di istruzione in sospeso.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQLFreeHandle-funzione](http://go.microsoft.com/fwlink/?LinkId=59345)   
+ [SQLFreeHandle-funzione](https://go.microsoft.com/fwlink/?LinkId=59345)   
  [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

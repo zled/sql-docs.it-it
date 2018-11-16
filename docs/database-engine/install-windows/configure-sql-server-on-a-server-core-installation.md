@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 38fefb6c403008e32d9783ac8a1b2a956a340055
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddee0e6eb08f95b1552ae76291afa22e0d3e171b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691569"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602021"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurare SQL Server in un'installazione Server Core
 
@@ -34,15 +34,15 @@ Non tutte le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-
   
 Per altre informazioni sulla configurazione e sulla gestione di un'installazione Server Core in remoto, vedere gli articoli seguenti:  
   
-- [Installazione Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
+- [Installazione Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
   
-- [Configurare un'installazione Server Core di Windows Server 2016 con Sconfig.cmd](http://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016)  
+- [Configurare un'installazione Server Core di Windows Server 2016 con Sconfig.cmd](https://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016)  
   
-- [Installare i ruoli e le funzionalità server in un server Server Core - Windows Server 2012 R2](http://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
+- [Installare i ruoli e le funzionalità server in un server Server Core - Windows Server 2012 R2](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
   
-- [Gestione di un'installazione Server Core: Panoramica](http://go.microsoft.com/fwlink/?LinkId=245962)  
+- [Gestione di un'installazione Server Core: Panoramica](https://go.microsoft.com/fwlink/?LinkId=245962)  
   
-- [Amministrazione di un'installazione Server Core](http://go.microsoft.com/fwlink/?LinkId=245963)
+- [Amministrazione di un'installazione Server Core](https://go.microsoft.com/fwlink/?LinkId=245963)
   
 ##  <a name="BKMK_InstallSQLUpdates"></a> Installare gli aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 In questa sezione vengono fornite informazioni sull'installazione di aggiornamenti per [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] in un computer con Windows Server Core. Si consiglia agli clienti di valutare e installare tempestivamente gli ultimi aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per assicurarsi che i sistemi dispongano degli aggiornamenti di sicurezza più recenti. Per altre informazioni sulla procedura di installazione di [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] in un computer con Windows Server Core, vedere [Installare SQL Server in Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
@@ -58,7 +58,7 @@ Di seguito sono disponibili due scenari per l'installazione di aggiornamenti del
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione integra gli aggiornamenti più recenti del pacchetto con l'installazione del prodotto principale in modo che quest'ultimo e i relativi aggiornamenti applicabili vengano installati contemporaneamente.  
   
-Dopo avere individuato le versioni più recenti degli aggiornamenti applicabili, questi vengono scaricati e integrati dal programma di installazione con il processo di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrente. Tramite l'aggiornamento del prodotto è possibile includere un aggiornamento cumulativo, un Service Pack o un Service Pack con aggiornamento cumulativo.  
+Dopo che il programma di installazione trova le versioni più recenti degli aggiornamenti applicabili, li scarica e li integra con il processo di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrente. Tramite l'aggiornamento del prodotto è possibile includere un aggiornamento cumulativo, un Service Pack o un Service Pack con aggiornamento cumulativo.  
   
 Specificare i parametri UpdateSource e UpdateEnabled per includere gli aggiornamenti più recenti del prodotto con l'installazione del prodotto principale. Fare riferimento all'esempio seguente per abilitare gli aggiornamenti del prodotto durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
@@ -230,6 +230,6 @@ $Tcp
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare SQL Server in Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
- [Procedure per l'installazione](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
+ [Procedure per l'installazione](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

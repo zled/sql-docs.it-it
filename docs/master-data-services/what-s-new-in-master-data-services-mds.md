@@ -12,12 +12,12 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 962df1579b7d18bcaaf420a3bf79cfbd29940daa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ba960c94e1620b0381796a2e26112af21a3a9a1
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855229"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696840"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novità in Master Data Services (MDS)
 
@@ -33,7 +33,7 @@ ms.locfileid: "47855229"
   
  **Download**  
   
--   Scaricare [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]dalla pagina  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
+-   Per scaricare [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
   
 -   Se si ha un account di Azure,  fare clic **[qui](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** per creare rapidamente una macchina virtuale in cui è già installato [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47855229"
   
     ```  
   
-     Per altre informazioni, vedere [Compressione degli URL](http://www.iis.net/configreference/system.webserver/urlcompression)  
+     Per altre informazioni, vedere [Compressione degli URL](https://www.iis.net/configreference/system.webserver/urlcompression)  
   
 -   I processi di SQL Server Agent seguenti eseguono la manutenzione di indici e log.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47855229"
   
  Un indice con una frammentazione maggiore del 30% viene ricompilato online. Durante la ricompilazione, può verificarsi una riduzione del livello delle prestazioni dell'operazione CRUD nella stessa tabella. Se la riduzione del livello delle prestazioni rappresenta un problema, si consiglia di eseguire la stored procedure durante l'orario non lavorativo. Per ulteriori informazioni sulla frammentazione degli indici, vedere [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
- Per altre informazioni, vedere questo post del blog su Master Data Services relativo al [miglioramento delle prestazioni e della scalabilità in SQL Server 2016](http://go.microsoft.com/fwlink/p/?LinkId=615375).  
+ Per altre informazioni, vedere questo post del blog su Master Data Services relativo al [miglioramento delle prestazioni e della scalabilità in SQL Server 2016](https://go.microsoft.com/fwlink/p/?LinkId=615375).  
   
 ##  <a name="improved-security"></a>Sicurezza migliorata  
   

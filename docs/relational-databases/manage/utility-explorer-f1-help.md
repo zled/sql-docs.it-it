@@ -20,12 +20,12 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 364c3ec544f0a019a81416b1b1c005e91601f94d
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 84db1d36a782fc054129b1ff753b620e82684499
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031288"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675370"
 ---
 # <a name="utility-explorer-f1-help"></a>Guida sensibile al contesto di Gestione Utilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "51031288"
   
  Si noti che quando si fa clic su un collegamento per una categoria di utilizzo, al nodo corrispondente nel riquadro di navigazione Esplora utilità viene aggiunto **(filtrato)** , ovvero **Istanze gestite** viene etichettato **Istanze gestite (filtrato)**. Per visualizzare le impostazioni del filtro, fare clic con il pulsante destro del mouse sul nodo nel riquadro di navigazione e selezionare **Filtro**, quindi fare clic su **Impostazioni filtro**. Per cancellare le impostazioni del filtro, fare clic con il pulsante destro del mouse sul nodo nel riquadro di navigazione e selezionare **Filtro**, quindi fare clic su **Rimuovi filtro**.  
   
- Per altre informazioni sulla visualizzazione dello stato di integrità per singole istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o per visualizzare o modificare impostazioni di configurazione dei criteri, vedere [Dettagli di istanze gestite &#40;Utilità SQL Server&#41;](http://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2).  
+ Per altre informazioni sulla visualizzazione dello stato di integrità per singole istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o per visualizzare o modificare impostazioni di configurazione dei criteri, vedere [Dettagli di istanze gestite &#40;Utilità SQL Server&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2).  
   
  Riepilogo utilità  
  Consente di visualizzare il numero di istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il numero di applicazioni di livello dati gestite dall'utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -95,10 +95,10 @@ ms.locfileid: "51031288"
   
 -   Dati non disponibili - I dati per le applicazioni di livello dati non sono disponibili perché l'istanza gestita di SQL Server che contiene l'applicazione del livello dati non sta registrando dati.  
   
- Le informazioni di stato dettagliate per ogni parametro di integrità sono elencate negli indicatori scorrevoli. La frazione a destra degli indicatori scorrevoli mostra il numero di applicazioni di livello dati incluso in ogni categoria di stato. Per altre informazioni sulla visualizzazione dello stato di integrità per le singole applicazioni di livello dati o per visualizzare o modificare le impostazioni di configurazione dei criteri, vedere [Dettagli di applicazioni di livello dati distribuite &#40;Utilità SQL Server&#41;](http://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+ Le informazioni di stato dettagliate per ogni parametro di integrità sono elencate negli indicatori scorrevoli. La frazione a destra degli indicatori scorrevoli mostra il numero di applicazioni di livello dati incluso in ogni categoria di stato. Per altre informazioni sulla visualizzazione dello stato di integrità per le singole applicazioni di livello dati o per visualizzare o modificare le impostazioni di configurazione dei criteri, vedere [Dettagli di applicazioni di livello dati distribuite &#40;Utilità SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
   
  Cronologia di utilizzo dello spazio di archiviazione utilità  
- La cronologia di utilizzo viene mostrata in un grafico temporale nella parte inferiore del dashboard utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si noti che i dati relativi all'ora mostrano la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) .  
+ La cronologia di utilizzo viene mostrata in un grafico temporale nella parte inferiore del dashboard utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si noti che i dati relativi all'ora mostrano la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Utilizzare i pulsanti di opzione a sinistra dell'area di visualizzazione per modificare il periodo del report per il grafico.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "51031288"
   
  La sequenza di colonne nella visualizzazione Elenco può essere modificata trascinando le colonne verso destra o verso sinistra. È possibile aggiungere o eliminare colonne nella visualizzazione Elenco facendo clic con il pulsante destro del mouse sulle intestazioni di colonna e selezionando o deselezionando le colonne desiderate. Anche il menu di scelta rapida fornisce opzioni per l'ordinamento. È inoltre possibile attivare l'ordinamento facendo clic all'inizio di un nome di colonna.  
   
- Per accedere alle opzioni di filtro per la visualizzazione Elenco di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic con il pulsante destro del mouse sul nodo **Applicazioni livello dati distribuite** nel riquadro di spostamento Esplora utilità e selezionare **Filtro**. Dopo l'implementazione delle impostazioni di filtro, il nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in Esplora utilità sarà identificato dall'etichetta **Deployed Data-tier Applications (filtered)**(Applicazioni livello dati distribuite - con filtro). Per altre informazioni, vedere [Impostazioni filtro &#40;Esplora oggetti ed Esplora utilità&#41;](http://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
+ Per accedere alle opzioni di filtro per la visualizzazione Elenco di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic con il pulsante destro del mouse sul nodo **Applicazioni livello dati distribuite** nel riquadro di spostamento Esplora utilità e selezionare **Filtro**. Dopo l'implementazione delle impostazioni di filtro, il nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in Esplora utilità sarà identificato dall'etichetta **Deployed Data-tier Applications (filtered)**(Applicazioni livello dati distribuite - con filtro). Per altre informazioni, vedere [Impostazioni filtro &#40;Esplora oggetti ed Esplora utilità&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
   
  Per impostazione predefinita, nelle colonne seguenti sono visualizzate informazioni sullo stato di integrità relative a ogni applicazione del livello dati.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "51031288"
   
 -   Modello di recupero: (Con registrazione minima, Con registrazione completa o Con registrazione minima delle operazioni bulk)  
   
--   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Scheda Utilizzo CPU  
  La scheda Utilizzo CPU mostra grafici affiancati con dati cronologici relativi all'applicazione del livello dati e all'utilizzo della CPU del computer.  
@@ -196,7 +196,7 @@ ms.locfileid: "51031288"
 -   1 anno, visualizzato in intervalli di 1 mese.  
   
  Scheda Utilizzo spazio di archiviazione  
- La scheda Utilizzo spazio di archiviazione include una visualizzazione albero con i dettagli relativi all'utilizzo dello spazio di archiviazione per file di database e file di log che appartengono all'applicazione del livello dati selezionata nella visualizzazione Elenco. Si noti che i dati relativi all'ora mostrano la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) .  
+ La scheda Utilizzo spazio di archiviazione include una visualizzazione albero con i dettagli relativi all'utilizzo dello spazio di archiviazione per file di database e file di log che appartengono all'applicazione del livello dati selezionata nella visualizzazione Elenco. Si noti che i dati relativi all'ora mostrano la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  È possibile raggruppare la visualizzazione in base al filegroup o al volume. Per utilizzare la visualizzazione albero filegroup, selezionare il pulsante di opzione **Filegroup** nella selezione **Raggruppa file per:** .  
   
@@ -255,7 +255,7 @@ ms.locfileid: "51031288"
   
 -   Modello di recupero: (Con registrazione minima, Con registrazione completa o Con registrazione minima delle operazioni bulk)  
   
--   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) .
+-   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
 
 ## <a name="managed-instance-details-sql-server-utility"></a>Dettagli di istanze gestite (Utilità SQL Server)
  Le informazioni incluse nella vista Istanze gestite di Esplora utilità forniscono dati di utilizzo per singole istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cronologia di utilizzo della CPU, dettagli sull'utilizzo dello spazio di archiviazione a livello di file e la possibilità di visualizzare e aggiornare le soglie dei criteri. È possibile controllare le soglie dei criteri a livello di volumi di archiviazione e a livello di istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per un computer e per file di database e file di log. È inoltre possibile visualizzare dettagli delle proprietà per singole istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -274,7 +274,7 @@ ms.locfileid: "51031288"
   
  La sequenza di colonne nella visualizzazione Elenco può essere modificata trascinando le colonne verso destra o verso sinistra. È possibile aggiungere o eliminare colonne nella visualizzazione Elenco facendo clic con il pulsante destro del mouse sulle intestazioni di colonna e selezionando o deselezionando le colonne desiderate. Anche il menu di scelta rapida fornisce opzioni per l'ordinamento. È inoltre possibile attivare l'ordinamento facendo clic all'inizio di un nome di colonna.  
   
- Per accedere alle opzioni di filtro per la visualizzazione Elenco dell’utilità, fare clic con il pulsante destro del mouse sul nodo **Istanze gestite** nel riquadro di spostamento Esplora utilità, quindi selezionare **Filtro**. Dopo l'implementazione delle impostazioni del filtro, il nodo **Istanze gestite** in Gestione Utilità verrà identificato dall'etichetta **Istanze gestite (filtrato)**. Per altre informazioni, vedere [Impostazioni filtro &#40;Esplora oggetti ed Esplora utilità&#41;](http://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
+ Per accedere alle opzioni di filtro per la visualizzazione Elenco dell’utilità, fare clic con il pulsante destro del mouse sul nodo **Istanze gestite** nel riquadro di spostamento Esplora utilità, quindi selezionare **Filtro**. Dopo l'implementazione delle impostazioni del filtro, il nodo **Istanze gestite** in Gestione Utilità verrà identificato dall'etichetta **Istanze gestite (filtrato)**. Per altre informazioni, vedere [Impostazioni filtro &#40;Esplora oggetti ed Esplora utilità&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
   
  Per impostazione predefinita, nelle colonne seguenti sono visualizzate informazioni sullo stato di integrità relative a ogni istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -318,7 +318,7 @@ ms.locfileid: "51031288"
   
 -   Lingua:  
   
--   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Ultima ora registrata - Questa colonna restituisce la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Scheda Utilizzo CPU  
  La scheda Utilizzo CPU mostra grafici affiancati con dati cronologici relativi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e all'utilizzo della CPU del computer.  
@@ -336,7 +336,7 @@ ms.locfileid: "51031288"
 -   1 anno, visualizzato in intervalli di 1 mese.  
   
  Scheda Utilizzo spazio di archiviazione  
- La scheda Utilizzo spazio di archiviazione include una visualizzazione albero con dettagli relativi allo spazio di archiviazione. Si noti che i dati relativi all'ora mostrano la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) .  
+ La scheda Utilizzo spazio di archiviazione include una visualizzazione albero con dettagli relativi allo spazio di archiviazione. Si noti che i dati relativi all'ora mostrano la data e l'ora locale del punto di controllo utilità utilizzando il tipo di dati datetime. Per altre informazioni, vedere l'argomento [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Quando si utilizza il modello a oggetti dell'utilità, si noti che SSMS utilizza il tipo di dati datetimeoffset. Per altre informazioni, vedere l'argomento [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  È possibile raggruppare la visualizzazione in base al database o al volume. Per usare la visualizzazione albero del database, selezionare il pulsante di opzione **Database** nella selezione **Raggruppa file per:** . Per visualizzare lo stato di utilizzo dello spazio di archiviazione per i singoli file di database, fare clic sul segno più accanto a un nome di database nella visualizzazione albero. I file di database elencati includono tutti i sistemi e i database utente che appartengono all'istanza gestita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selezionata nella visualizzazione Elenco.  
   
@@ -512,6 +512,6 @@ Scheda **Data warehouse** - Consente di visualizzare i dettagli relativi alla co
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività e funzionalità di Utilità SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Attività e funzionalità di Utilità SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
+ [Attività e funzionalità di Utilità SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

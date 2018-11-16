@@ -20,12 +20,12 @@ ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: db06e014e735e9174cde6364f30ee3870977941d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fb0c0e35b2350bf3b1753434425389eb8f3503d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742089"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696795"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ ON SERVER
 |DROP EVENT \<event_specifier>|Elimina l'evento identificato da *\<event_specifier>*. \<event_specifier> deve essere valido nella sessione eventi.|  
 |ADD TARGET \<event_target_specifier>|Associa la destinazione identificata da \<event_target_specifier> alla sessione dell'evento.|
 |[*event_module_guid*].*event_package_name*.*target_name*|Nome di una destinazione nella sessione dell'evento dove:<br /><br /> -   *event_module_guid* è l'identificatore univoco globale (GUID) del modulo contenente l'evento.<br />-   *event_package_name* è il pacchetto che contiene l'oggetto dell'azione.<br />-   *target_name* è l'azione. Le azioni vengono visualizzate nella vista sys.dm_xe_objects come object_type "target".|  
-|SET { *target_parameter_name*= \<value> [, ...*n*] }|Imposta un parametro di destinazione. I parametri di destinazione vengono visualizzati nella vista sys.dm_xe_object_columns come column_type 'customizable' e object_name = *target_name*.<br /><br /> **NOTA** Se si utilizza il buffer circolare come destinazione, si consiglia di impostare il parametro di destinazione max_memory su 2048 kilobyte (KB) per evitare il possibile troncamento dei dati dell'output XML. Per altre informazioni sull'uso dei diversi tipi di destinazione, vedere [Destinazioni degli eventi estesi di SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  
+|SET { *target_parameter_name*= \<value> [, ...*n*] }|Imposta un parametro di destinazione. I parametri di destinazione vengono visualizzati nella vista sys.dm_xe_object_columns come column_type 'customizable' e object_name = *target_name*.<br /><br /> **NOTA** Se si utilizza il buffer circolare come destinazione, si consiglia di impostare il parametro di destinazione max_memory su 2048 kilobyte (KB) per evitare il possibile troncamento dei dati dell'output XML. Per altre informazioni sull'uso dei diversi tipi di destinazione, vedere [Destinazioni degli eventi estesi di SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  
 |DROP TARGET \<event_target_specifier>|Elimina la destinazione identificata da \<event_target_specifier>. \<event_target_specifier> deve essere valido nella sessione eventi.|  
 |EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** &#124; ALLOW_MULTIPLE_EVENT_LOSS &#124; NO_EVENT_LOSS }|Specifica la modalità di memorizzazione dell'evento da utilizzare per la gestione della perdita di eventi.<br /><br /> **ALLOW_SINGLE_EVENT_LOSS**<br /> Un evento può essere perso dalla sessione. Un evento singolo viene eliminato solo quando tutti i buffer dell'evento sono pieni. La perdita di un singolo evento i buffer sono pieni garantisce un livello accettabile delle prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], riducendo al minimo il rischio di perdita dei dati nel flusso di eventi elaborati.<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS<br /> È possibile che vengano persi i buffer dell'evento pieni contenenti più eventi. Il numero di eventi persi dipende dalla dimensione della memoria allocata alla sessione, dalla partizione della memoria e dalla dimensione degli eventi nel buffer. Questa opzione riduce al minimo l'impatto sulle prestazioni dei server quando i buffer degli eventi vengono riempiti rapidamente, ma numerosi eventi della sessione possono andare persi.<br /><br /> NO_EVENT_LOSS<br /> Non è consentita alcuna perdita di eventi. Questa opzione assicura che tutti gli eventi generati vengano mantenuti. L'utilizzo di questa opzione forza tutte le attività che attivano eventi ad aspettare fino a che lo spazio è disponibile in un buffer degli eventi. Questo può condurre a problemi di prestazione mentre la sessione dell'evento è attiva. Le connessioni utente potrebbero bloccarsi in attesa che gli eventi vengano scaricati dal buffer.|  
 |MAX_DISPATCH_LATENCY = { *seconds* SECONDS &#124; **INFINITE** }|Specifica il tempo necessario all'esecuzione del buffer degli eventi nella memoria prima che vengano resi disponibili nelle destinazioni della sessione. Il valore di latenza minimo è 1 secondo. È tuttavia possibile utilizzare il valore 0 per specificare una latenza infinita. Per impostazione predefinita, questo valore è impostato su 30 secondi.<br /><br /> *seconds* SECONDS<br /> Tempo di attesa, espresso in secondi, prima che venga avviato lo scaricamento dei buffer alle destinazioni. *seconds* è un numero intero.<br /><br /> **INFINITE**<br /> Scarica i buffer nelle destinazioni solo quando i buffer sono pieni o alla chiusura della sessione dell'evento.<br /><br /> **NOTA** MAX_DISPATCH_LATENCY = 0 SECONDS è equivalente a MAX_DISPATCH_LATENCY = INFINITE.|  
@@ -173,7 +173,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
- [Destinazioni degli eventi estesi di SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [Destinazioni degli eventi estesi di SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)   
  [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
  [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: reference
 f1_keywords:
 - vs.toolbox
@@ -16,12 +15,12 @@ ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2583c61252b22c149e687293ae37a351058081a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a948e4a1e787756517482c5b62b46cdab625e6bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659619"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667380"
 ---
 # <a name="toolbox-component-f1-help"></a>Guida sensibile al contesto del componente Casella degli strumenti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,6 +43,6 @@ ms.locfileid: "47659619"
   
 ## <a name="see-also"></a>Vedere anche  
  [Utilizzo della casella degli strumenti](../../ssms/use-the-toolbox.md)   
- [Scegli elementi della Casella degli strumenti &#40;pagina Attività di manutenzione&#41;](http://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  
+ [Scegli elementi della Casella degli strumenti &#40;pagina Attività di manutenzione&#41;](https://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  
   
   

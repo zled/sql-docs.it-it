@@ -5,8 +5,7 @@ ms.date: 08/28/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.options.f1
@@ -14,12 +13,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e2170bef87a87e05454f6092e5829797808d96c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49e6357f4f108b05b0f28442d0e526445a5a5ad7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706559"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659370"
 ---
 # <a name="database-properties-options-page"></a>Proprietà database (pagina Opzioni)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,10 +95,10 @@ ms.locfileid: "47706559"
  In SQL Server 2016 e nel database SQL Azure sono presenti numerose proprietà di configurazione il cui ambito può essere limitato al livello di database. Per altre informazioni su tutte queste impostazioni, vedere [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
  **Stima di cardinalità legacy**  
- Specificare il modello di stima di cardinalità di Query Optimizer per il database primario indipendentemente dal livello di compatibilità del database. Equivale a [Flag di traccia 9481](https://support.microsoft.com/en-us/kb/2801413).  
+ Specificare il modello di stima di cardinalità di Query Optimizer per il database primario indipendentemente dal livello di compatibilità del database. Equivale a [Flag di traccia 9481](https://support.microsoft.com/kb/2801413).  
   
  **Stima di cardinalità legacy per database secondari**  
- Specificare il modello di stima di cardinalità di Query Optimizer per gli eventuali database secondari indipendentemente dal livello di compatibilità del database. Equivale a [Flag di traccia 9481](https://support.microsoft.com/en-us/kb/2801413).  
+ Specificare il modello di stima di cardinalità di Query Optimizer per gli eventuali database secondari indipendentemente dal livello di compatibilità del database. Equivale a [Flag di traccia 9481](https://support.microsoft.com/kb/2801413).  
   
  **Massimo grado di parallelismo**  
  Specificare l'impostazione [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) predefinita per il database primario da usare per le istruzioni.  
@@ -108,16 +107,16 @@ ms.locfileid: "47706559"
  Specificare l'impostazione [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) predefinita per gli eventuali database secondari da usare per le istruzioni.  
   
  **Analisi dei parametri**  
- Abilita o disabilita l'analisi dei parametri sul database primario. Equivale a [Flag di traccia 4136](https://support.microsoft.com/en-us/kb/980653).  
+ Abilita o disabilita l'analisi dei parametri sul database primario. Equivale a [Flag di traccia 4136](https://support.microsoft.com/kb/980653).  
   
  **Analisi dei parametri per i database secondari**  
- Abilita o disabilita l'analisi dei parametri sugli eventuali database secondari. Equivale a [Flag di traccia 4136](https://support.microsoft.com/en-us/kb/980653).  
+ Abilita o disabilita l'analisi dei parametri sugli eventuali database secondari. Equivale a [Flag di traccia 4136](https://support.microsoft.com/kb/980653).  
   
  **Correzioni di Query Optimizer**  
- Abilita o disabilita gli hotfix di ottimizzazione query sul database primario indipendentemente dal livello di compatibilità del database. Equivale a [Flag di traccia 4199](https://support.microsoft.com/en-us/kb/974006).  
+ Abilita o disabilita gli hotfix di ottimizzazione query sul database primario indipendentemente dal livello di compatibilità del database. Equivale a [Flag di traccia 4199](https://support.microsoft.com/kb/974006).  
   
  **Correzioni di Query Optimizer per database secondari**  
- Abilita o disabilita gli hotfix di ottimizzazione query sugli eventuali database secondari indipendentemente dal livello di compatibilità del database. Equivale a [Flag di traccia 4199](https://support.microsoft.com/en-us/kb/974006).  
+ Abilita o disabilita gli hotfix di ottimizzazione query sugli eventuali database secondari indipendentemente dal livello di compatibilità del database. Equivale a [Flag di traccia 4199](https://support.microsoft.com/kb/974006).  
   
 ## <a name="filestream"></a>FILESTREAM  
  **Nome di directory FILESTREAM**  

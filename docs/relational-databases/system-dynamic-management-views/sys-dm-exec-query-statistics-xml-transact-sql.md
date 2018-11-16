@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9fdcbb6bec46043f030172d794cb5238d99a151e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5cb0bdbbbb535293835a0114061d8ca322ec8a8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784661"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675100"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ Questa funzione di sistema funziona in entrambe **standard** e **leggero** infra
   
 **Lightweight** sono disponibile in infrastruttura di analisi statistiche [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e possono essere abilitati:
   -  Con trace flag a livello globale 7412.
-  -  Usando il [ *query_thread_profile* ](http://support.microsoft.com/kb/3170113) degli eventi esteso.
+  -  Usando il [ *query_thread_profile* ](https://support.microsoft.com/kb/3170113) degli eventi esteso.
   
 > [!NOTE]
 > Dopo aver abilitato dal flag di traccia 7412, verrà abilitata a qualsiasi utente dell'infrastruttura anziché standard per la profilatura, ad esempio la vista DMV di analisi le statistiche di esecuzione query profilatura lightweight [DM exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).

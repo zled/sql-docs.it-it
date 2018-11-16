@@ -14,12 +14,12 @@ ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d35f549581e9ac0a12c37cef90f66969aff1659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b42e515c4c124e19ad6079aca6ef68727fea3d2a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633434"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601351"
 ---
 # <a name="shape-commands-in-general"></a>Comandi Shape in generale
 Il data shaping definisce le colonne di una data shaping **Recordset**, le relazioni tra le entità rappresentate dalle colonne e il modo in cui le **Recordset** viene popolato con i dati.  
@@ -46,7 +46,7 @@ Il data shaping definisce le colonne di una data shaping **Recordset**, le relaz
   
  È possibile accedere la **Recordset** componenti del data shaping **Recordset** a livello di codice o tramite un controllo visuale appropriato.  
   
- Microsoft fornisce uno strumento visivo che genera i comandi di forma (vedere la [ambiente Data Designer](http://go.microsoft.com/fwlink/?LinkId=5689) nella documentazione di Visual Basic 6) e un altro che consente di visualizzare gerarchica dei cursori (vedere "utilizzo di Microsoft gerarchici Controllo FlexGrid"nella documentazione di Visual Basic 6).  
+ Microsoft fornisce uno strumento visivo che genera i comandi di forma (vedere la [ambiente Data Designer](https://go.microsoft.com/fwlink/?LinkId=5689) nella documentazione di Visual Basic 6) e un altro che consente di visualizzare gerarchica dei cursori (vedere "utilizzo di Microsoft gerarchici Controllo FlexGrid"nella documentazione di Visual Basic 6).  
   
  Per informazioni sulla navigazione gerarchico **Recordset**, vedere [accesso alle righe in un Recordset gerarchico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   

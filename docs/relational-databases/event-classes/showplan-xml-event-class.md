@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd2770b0509050c105c83cb353451a0b6a6f022c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d35d9986226c300538af79612601628444459e1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603159"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665061"
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47603159"
   
  Quando si include la classe di evento Showplan XML in una traccia, l'overhead generato influisce significativamente sulle prestazioni. La classe Showplan XML consente di archiviare un piano di query che viene creato durante l'ottimizzazione della query. Per ridurre al minimo l'overhead generato, limitare l'utilizzo di questa classe di eventi alle tracce che eseguono il monitoraggio di problemi specifici per brevi periodi di tempo.  
   
- Ai documenti creati tramite Showplan XML è associato uno schema. È possibile trovare questo schema nel [sito Web di Microsoft](http://go.microsoft.com/fwlink/?LinkId=41740)o come parte dell'installazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Ai documenti creati tramite Showplan XML è associato uno schema. È possibile trovare questo schema nel [sito Web di Microsoft](https://go.microsoft.com/fwlink/?LinkId=41740)o come parte dell'installazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="showplan-xml-event-class-data-columns"></a>Colonne di dati della classe di evento Showplan XML  
   

@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a054ef8015379d7360f513ce075c1001bf08d898
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4323fd5542216550013624dc75a6428cd1a8cd0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844969"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663590"
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47844969"
 |**process_kernel_time_ms**|**bigint**|**Si applica a:**  da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Tempo totale in millisecondi impiegato da tutti i thread di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità kernel. Questo valore può essere maggiore di un singolo clock del processore perché è incluso il tempo di tutti i processori nel server. Non ammette i valori NULL.|  
 |**process_user_time_ms**|**bigint**|**Si applica a:**  da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Tempo totale in millisecondi impiegato da tutti i thread di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente. Questo valore può essere maggiore di un singolo clock del processore perché è incluso il tempo di tutti i processori nel server. Non ammette i valori NULL.|  
 |**time_source**|**int**|**Si applica a:**  da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica l'API utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per recuperare il tempo di clock. Non ammette i valori NULL.<br /><br /> 0 = QUERY_PERFORMANCE_COUNTER<br /><br /> 1 = MULTIMEDIA_TIMER|  
-|**time_source_desc**|**nvarchar(60)**|**Si applica a:**  da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Descrive la **time_source** colonna. Non ammette i valori NULL.<br /><br /> QUERY_PERFORMANCE_COUNTER = il [QueryPerformanceCounter](http://go.microsoft.com/fwlink/?LinkId=163095) API recupera il tempo di clock.<br /><br /> MULTIMEDIA_TIMER = il [timer multimediale](http://go.microsoft.com/fwlink/?LinkId=163094) API che recupera il tempo di clock.|  
+|**time_source_desc**|**nvarchar(60)**|**Si applica a:**  da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Descrive la **time_source** colonna. Non ammette i valori NULL.<br /><br /> QUERY_PERFORMANCE_COUNTER = il [QueryPerformanceCounter](https://go.microsoft.com/fwlink/?LinkId=163095) API recupera il tempo di clock.<br /><br /> MULTIMEDIA_TIMER = il [timer multimediale](https://go.microsoft.com/fwlink/?LinkId=163094) API che recupera il tempo di clock.|  
 |**virtual_machine_type**|**int**|**Si applica a:**  da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in un ambiente virtualizzato.  Non ammette i valori NULL.<br /><br /> 0 = NONE<br /><br /> 1 = HYPERVISOR<br /><br /> 2 = OTHER|  
 |**virtual_machine_type_desc**|**nvarchar(60)**|**Si applica a:**  da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Descrive la **virtual_machine_type** colonna. Non ammette i valori NULL.<br /><br /> NONE = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è in esecuzione all'interno di una macchina virtuale.<br /><br /> HYPERVISOR = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in un hypervisor, pertanto è implicata un virtualizzazione assistita da hardware. Quando viene installato il ruolo Hyper_V, l'hypervisor ospita il sistema operativo, così che un'istanza in esecuzione nel sistema operativo host viene eseguita nell'hypervisor.<br /><br /> OTHER = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in una macchina virtuale in cui non viene utilizzato alcun assistente hardware, ad esempio Microsoft Virtual PC.|  
 |**softnuma_configuration**|**int**|**Si applica a:**  da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Specifica che i nodi NUMA modo siano configurati. Non ammette i valori NULL.<br /><br /> 0 = OFF indica predefinito hardware<br /><br /> 1 = l'architettura soft-NUMA automatica<br /><br /> 2 = soft-NUMA manuale tramite del Registro di sistema|  

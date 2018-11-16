@@ -25,12 +25,12 @@ ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4099355964a7b778073493f943ff9962bc24e149
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b52f9aa0131639bdfe68222bba42eae774d2b18f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662939"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698330"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47662939"
   Crea un nuovo gruppo di disponibilità, se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è abilitata per la funzionalità [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
 > [!IMPORTANT]  
->  Eseguire CREATE AVAILABILITY GROUP nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si desidera utilizzare come replica primaria iniziale del nuovo gruppo di disponibilità. Questa istanza del server deve trovarsi in un nodo WSFC (Windows Server Failover Clustering).  
+>  Eseguire CREATE AVAILABILITY GROUP nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si desidera usare come replica primaria iniziale del nuovo gruppo di disponibilità. Questa istanza del server deve trovarsi in un nodo WSFC (Windows Server Failover Clustering).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -84,7 +84,7 @@ CREATE AVAILABILITY GROUP group_name
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
         [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
      } )  
      | SESSION_TIMEOUT = integer  
   
@@ -151,7 +151,7 @@ CREATE AVAILABILITY GROUP group_name
   
 |Level|Condizione di errore|  
 |-----------|-----------------------|  
-|1|Specifica che deve essere avviato un failover automatico quando si verifica una delle condizioni seguenti:<br /><br /> - Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è attivo.<br /><br /> - Il lease del gruppo di disponibilità per la connessione al cluster WSFC scade poiché non viene ricevuto alcun ACK dall'istanza del server. Per altre informazioni, vedere [Funzionamento: timeout lease di SQL Server Always On](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-AlwaysOn-lease-timeout.aspx).|  
+|1|Specifica che deve essere avviato un failover automatico quando si verifica una delle condizioni seguenti:<br /><br /> - Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è attivo.<br /><br /> - Il lease del gruppo di disponibilità per la connessione al cluster WSFC scade poiché non viene ricevuto alcun ACK dall'istanza del server. Per altre informazioni, vedere [Funzionamento: timeout lease di SQL Server Always On](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-AlwaysOn-lease-timeout.aspx).|  
 |2|Specifica che deve essere avviato un failover automatico quando si verifica una delle condizioni seguenti:<br /><br /> - L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non si connette al cluster e viene superata la soglia HEALTH_CHECK_TIMEOUT specificata dall'utente per il gruppo di disponibilità.<br /><br /> - La replica di disponibilità si trova in uno stato di errore.|  
 |3|Specifica che deve essere avviato un failover automatico in caso di errori interni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] critici, ad esempio spinlock orfani, gravi violazioni dell'accesso in scrittura o dumping eccessivo.<br /><br /> Questo è il comportamento predefinito.|  
 |4|Specifica che deve essere avviato un failover automatico in caso di errori interni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con gravità moderata, ad esempio una condizione persistente di memoria insufficiente nel pool di risorse interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -240,7 +240,7 @@ CREATE AVAILABILITY GROUP group_name
  Stringa, ad esempio un nome di sistema, un nome di dominio completo o un indirizzo IP, che identifica in modo univoco il computer di destinazione.  
   
  *port*  
- Numero di porta associato all'endpoint del mirroring dell'istanza del server partner (per l'opzione ENDPOINT_URL) o numero di porta utilizzato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] dell'istanza del server (per l'opzione READ_ONLY_ROUTING_URL).  
+ Numero di porta associato all'endpoint del mirroring dell'istanza del server partner (per l'opzione ENDPOINT_URL) o numero di porta usato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] dell'istanza del server (per l'opzione READ_ONLY_ROUTING_URL).  
   
  AVAILABILITY_MODE **=** { {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY }  
  SYNCHRONOUS_COMMIT o ASYNCHRONOUS_COMMIT specifica se la replica primaria deve attendere la conferma della finalizzazione (scrittura) dei record del log su disco da parte della replica secondaria prima di poter eseguire il commit della transazione in un database primario specifico. Il commit delle transazioni in database diversi della stessa replica primaria può essere eseguito indipendentemente. L'aggiornamento cumulativo 1 di SQL Server 2017 introduce CONFIGURATION_ONLY. La replica CONFIGURATION_ONLY si applica solo ai gruppi di disponibilità con CLUSTER_TYPE = EXTERNAL o CLUSTER_TYPE = NONE. 
@@ -321,7 +321,7 @@ CREATE AVAILABILITY GROUP group_name
   
  Per un'istanza denominata, è possibile ottenere il numero di porta eseguendo una query sulle colonne **port** e **type_desc** della DMV [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). L'istanza del server usa il listener Transact-SQL (**type_desc='TSQL'**).  
   
- Per altre informazioni sul calcolo dell'URL di routing di sola lettura per una replica, vedere [Calcolo di read_only_routing_url per AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-AlwaysOn.aspx).  
+ Per altre informazioni sul calcolo dell'URL di routing di sola lettura per una replica, vedere [Calcolo di read_only_routing_url per AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-AlwaysOn.aspx).  
   
 > [!NOTE]  
 >  Per un'istanza denominata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il listener Transact-SQL deve essere configurato per usare una porta specifica. Per altre informazioni, vedere [Configurazione di un server per l'attesa su una porta TCP specifica &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
@@ -432,7 +432,7 @@ CREATE AVAILABILITY GROUP group_name
  È consigliabile specificare una stringa significativa. Ad esempio, per un gruppo di disponibilità denominato `AG1`un nome host DNS significativo potrebbe essere `ag1-listener`.  
   
 > [!IMPORTANT]  
->  NetBIOS riconosce solo i primi 15 caratteri di dns_name. Se si hanno due cluster WSFC controllati dallo stesso dominio Active Directory e si tenta di creare listener del gruppo di disponibilità in entrambi i cluster usando nomi con più di 15 caratteri e un prefisso a 15 caratteri identico, viene restituito un errore in cui si segnala che non è possibile portare online la risorsa del nome di rete virtuale. Per informazioni sulle regole di denominazione dei prefissi per i nomi DNS, vedere [Assegnare nomi ai domini](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
+>  NetBIOS riconosce solo i primi 15 caratteri di dns_name. Se si hanno due cluster WSFC controllati dallo stesso dominio Active Directory e si tenta di creare listener del gruppo di disponibilità in entrambi i cluster usando nomi con più di 15 caratteri e un prefisso a 15 caratteri identico, viene restituito un errore in cui si segnala che non è possibile portare online la risorsa del nome di rete virtuale. Per informazioni sulle regole di denominazione dei prefissi per i nomi DNS, vedere [Assegnare nomi ai domini](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
  \<listener_option> LISTENER accetta una delle seguenti opzioni \<listener_option>: 
   
@@ -502,7 +502,7 @@ CREATE AVAILABILITY GROUP group_name
 |PRIMARY_ROLE|( ALLOW_CONNECTIONS = READ_WRITE, <br />READ_ONLY_ROUTING_LIST = (COMPUTER03) )|( ALLOW_CONNECTIONS = READ_WRITE, <br />READ_ONLY_ROUTING_LIST = (COMPUTER03) )|( ALLOW_CONNECTIONS = READ_WRITE, <br />READ_ONLY_ROUTING_LIST = NONE )|Nel ruolo primario tutte le repliche rifiutano i tentativi di connessione con finalità di lettura.<br /><br /> Le richieste di connessione con finalità di lettura vengono indirizzate a COMPUTER03 se la replica locale è in esecuzione nel ruolo secondario. Quando tale replica è in esecuzione nel ruolo primario, il routing di sola lettura è disabilitato.<br /><br /> L'argomento è facoltativo.|  
 |SESSION_TIMEOUT|10|10|10|In questo esempio si specifica il valore di timeout della sessione predefinito (10). L'argomento è facoltativo.|  
   
- Infine, nell'esempio si specificano la clausola LISTENER facoltativa per creare un listener per il nuovo gruppo di disponibilità e un nome DNS univoco, `MyAgListenerIvP6`, per questo listener. Le due repliche si trovano in subnet diverse, pertanto per il listener devono essere usati indirizzi IP statici. Per ognuna delle due repliche di disponibilità, tramite la clausola WITH IP si specifica un indirizzo IP statico, `2001:4898:f0:f00f::cf3c` e `2001:4898:e0:f213::4ce2`, per il quale è utilizzato il formato IPv6. In questo esempio si specifica anche utilizza l'argomento PORT facoltativo per indicare la porta `60173` come porta del listener.  
+ Infine, nell'esempio si specificano la clausola LISTENER facoltativa per creare un listener per il nuovo gruppo di disponibilità e un nome DNS univoco, `MyAgListenerIvP6`, per questo listener. Le due repliche si trovano in subnet diverse, pertanto per il listener devono essere usati indirizzi IP statici. Per ognuna delle due repliche di disponibilità, tramite la clausola WITH IP si specifica un indirizzo IP statico, `2001:4898:f0:f00f::cf3c` e `2001:4898:e0:f213::4ce2`, per il quale è usato il formato IPv6. In questo esempio si specifica anche utilizza l'argomento PORT facoltativo per indicare la porta `60173` come porta del listener.  
   
 ```SQL
 CREATE AVAILABILITY GROUP MyAg   

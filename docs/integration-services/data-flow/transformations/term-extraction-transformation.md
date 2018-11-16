@@ -29,12 +29,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd42fe5402c9da251464cfedf670478c4b0d6358
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f20a2bba58605ca7b518fa1a55ba1a75ffb366bb
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730249"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638948"
 ---
 # <a name="term-extraction-transformation"></a>Estrazione termini - trasformazione
   La trasformazione Estrazione termini consente di estrarre termini da un testo in una colonna di input di una trasformazione e quindi scrivere tali termini in una colonna di output della trasformazione. La trasformazione è applicabile solo a testo in lingua inglese, utilizza un dizionario inglese interno e le proprie informazioni sulla lingua inglese.  
@@ -177,7 +177,7 @@ ms.locfileid: "47730249"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -197,7 +197,7 @@ ms.locfileid: "47730249"
  Consente di digitare un nome per la colonna di output che conterrà il punteggio per ogni termine estratto.  
   
  **Configura output errori**  
- Usare la finestra di dialogo [Configura output errori](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) per specificare la gestione degli errori per le righe che causano errori.  
+ Usare la finestra di dialogo [Configura output errori](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) per specificare la gestione degli errori per le righe che causano errori.  
   
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>Editor trasformazione Estrazione termini (scheda Esclusione)
   Utilizzare la scheda **Esclusione** della finestra di dialogo **Editor trasformazione Estrazione termini** per impostare una connessione a una tabella di esclusione e specificare le colonne che contengono termini di esclusione.  
@@ -219,7 +219,7 @@ ms.locfileid: "47730249"
  Consente di selezionare la colonna della tabella o della vista che contiene i termini di esclusione.  
   
  **Configura output errori**  
- Usare la finestra di dialogo [Configura output errori](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) per specificare la gestione degli errori per le righe che causano errori.  
+ Usare la finestra di dialogo [Configura output errori](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) per specificare la gestione degli errori per le righe che causano errori.  
   
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>Editor trasformazione Estrazione termini (Scheda Avanzate)
   Usare la scheda **Avanzate** della finestra di dialogo **Editor trasformazione Estrazione termini** per specificare le proprietà per l'estrazione, ad esempio la frequenza, la lunghezza e le eventuali parole o frasi da estrarre.  
@@ -250,7 +250,7 @@ ms.locfileid: "47730249"
  Consente di specificare se eseguire l'estrazione rilevando la distinzione tra maiuscole e minuscole. Il valore predefinito è **False**.  
   
  **Configura output errori**  
- Usare la finestra di dialogo [Configura output errori](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) per specificare la gestione degli errori per le righe che causano errori.  
+ Usare la finestra di dialogo [Configura output errori](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) per specificare la gestione degli errori per le righe che causano errori.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   

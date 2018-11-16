@@ -19,12 +19,12 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6cc9fbc190645b2f517758b129e92f458dcef316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cbdfeec8b603c4ca474088e0134f9fb2c319c08
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846599"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661128"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Avvio e utilizzo di Ottimizzazione guidata motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -223,7 +223,7 @@ Per altre informazioni, vedere [Ottimizzazione del database tramite un carico di
 >  La sospensione di Ottimizzazione guidata motore di database non è supportata. Se si fa clic sul pulsante della barra degli strumenti **Avvia analisi** dopo aver fatto clic sui pulsanti della barra degli strumenti **Arresta analisi** o **Arresta analisi (con indicazioni)** , Ottimizzazione guidata motore di database avvia una nuova sessione di ottimizzazione.  
   
 ###  <a name="dta"></a> Utilizzare l'utilità dta  
- L'utilità [dta](../../tools/dta/dta-utility.md) fornisce un file eseguibile dal prompt dei comandi che consente di ottimizzare i database utilizzando le funzionalità di Ottimizzazione guidata motore di database in file batch e script. L'utilità **può essere utilizzato con l'interfaccia grafica di Ottimizzazione guidata motore di database e mediante l'utilità del prompt dei comandi** utilizza le voci della cache dei piani, i file di traccia, le tabelle di traccia e gli script [!INCLUDE[tsql](../../includes/tsql-md.md)] come carichi di lavoro. Utilizza inoltre l'input XML conforme a XML Schema di Ottimizzazione guidata motore di database, disponibile presso il [sito Web di Microsoft specificato](http://go.microsoft.com/fwlink/?linkid=43100).  
+ L'utilità [dta](../../tools/dta/dta-utility.md) fornisce un file eseguibile dal prompt dei comandi che consente di ottimizzare i database utilizzando le funzionalità di Ottimizzazione guidata motore di database in file batch e script. L'utilità **può essere utilizzato con l'interfaccia grafica di Ottimizzazione guidata motore di database e mediante l'utilità del prompt dei comandi** utilizza le voci della cache dei piani, i file di traccia, le tabelle di traccia e gli script [!INCLUDE[tsql](../../includes/tsql-md.md)] come carichi di lavoro. Utilizza inoltre l'input XML conforme a XML Schema di Ottimizzazione guidata motore di database, disponibile presso il [sito Web di Microsoft specificato](https://go.microsoft.com/fwlink/?linkid=43100).  
   
  Prima di ottimizzare un carico di lavoro tramite l'utilità **dta** , considerare quanto segue:  
   
@@ -313,7 +313,7 @@ Per altre informazioni, vedere [Ottimizzazione del database tramite un carico di
   
  C:\Programmi\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
- L'XML Schema di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] è inoltre disponibile online in questo [sito Web Microsoft](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
+ L'XML Schema di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] è inoltre disponibile online in questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
  in cui sono disponibili molti XML Schema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Scorrere la pagina verso il basso fino a visualizzare la riga corrispondente a Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   

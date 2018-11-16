@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0203cb3331df3ba5a27ec08e55c10712c9e64d19
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 5bf5375edaa73a280bb2332e21c0bde50d304832
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031010"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813924"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Esportare report (Generatore Report e SSRS)
 
@@ -174,13 +174,13 @@ ms.locfileid: "50031010"
  È inoltre possibile accedere a un report tramite un URL che specifica un'estensione per il rendering come parametro URL ed eseguire il rendering direttamente nel formato specificato senza prima eseguirlo in HTML. Nell'esempio seguente viene eseguito il rendering di un report nel formato Excel:  
   
 ```  
-http://<Report Server Name>/reportserver?/Sales/YearlySalesSummary&rs:Format=Excel&rs:Command=Render  
+https://<Report Server Name>/reportserver?/Sales/YearlySalesSummary&rs:Format=Excel&rs:Command=Render  
 ```  
   
  e quanto segue esegue il rendering di un report di PowerPoint da un'istanza denominata:  
   
 ```  
-http://<Report Server Name/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
+https://<Report Server Name/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
 ```  
   
  Per altre informazioni, vedere [Export a Report Using URL Access](../../reporting-services/export-a-report-using-url-access.md).  

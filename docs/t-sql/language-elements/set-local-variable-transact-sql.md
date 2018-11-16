@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb3f0a99cea35b02b7aa6dce724c279ff729474b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 839ef762a20d413f5e1c61ca45c46ad80a153d99
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759699"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697328"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -186,7 +186,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  L'operatore di assegnazione composto può essere utilizzato in tutti i casi in cui è presente un'assegnazione con un'espressione a destra dell'operatore, incluse variabili e un'istruzione SET in un'istruzione UPDATE, SELECT o RECEIVE.  
   
- Non utilizzare una variabile in un'istruzione SELECT per concatenare valori, ovvero per elaborare valori aggregati. Si potrebbero verificare risultati di query imprevisti. Ciò è dovuto al fatto che non è garantito che tutte le espressioni nell'elenco SELECT, incluse le assegnazioni, siano eseguite esattamente una volta per ciascuna riga di output. Per altre informazioni, vedere [questo articolo della Knowledge Base](http://support.microsoft.com/kb/287515).  
+ Non utilizzare una variabile in un'istruzione SELECT per concatenare valori, ovvero per elaborare valori aggregati. Si potrebbero verificare risultati di query imprevisti. Ciò è dovuto al fatto che non è garantito che tutte le espressioni nell'elenco SELECT, incluse le assegnazioni, siano eseguite esattamente una volta per ciascuna riga di output. Per altre informazioni, vedere [questo articolo della Knowledge Base](https://support.microsoft.com/kb/287515).  
   
 ## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo public. Tutti gli utenti possono usare SET **@***local_variable*.  

@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;modello&gt;. CASE (DMX) | Documenti Microsoft
+title: SELECT FROM &lt;modello&gt;. CASE (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bba9e354eb1925ed4175f720f8008550364dc1a5
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: 4f65aa4dc64e795235286eccd9f3283216ba6f4f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842804"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604234"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM &lt;modello&gt;. CASE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34842804"
 > [!NOTE]  
 >  In DMX (Data Mining Extensions) è possibile attivare il drill-through solo al momento della creazione del modello. È possibile aggiungere il drill-through a un modello esistente utilizzando [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ma per poter visualizzare o eseguire una query sui case, è necessario rielaborare il modello.  
   
- Per ulteriori informazioni su come abilitare il drill-through, vedere [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md), e [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
+ Per altre informazioni su come abilitare il drill-through, vedere [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md), e [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,21 +48,21 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  *model*  
  Identificatore del modello.  
   
- *Espressione della condizione*  
+ *espressione della condizione*  
  Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
  *expression*  
  Facoltativo. Espressione che restituisce un valore scalare.  
   
-## <a name="remarks"></a>Remarks  
- Se il drill-through è attivato sia nella struttura di data mining che nel modello di data mining, gli utenti membri di un ruolo con autorizzazioni drill-through sul modello e sulla struttura possono accedere alle colonne della struttura di data mining che non sono incluse nel modello di data mining. Pertanto, per proteggere dati riservati o informazioni personali, è necessario costruire la vista origine dati per mascherare informazioni personali e concedere **AllowDrillthrough** autorizzazioni su una struttura di data mining solo quando è necessario.  
+## <a name="remarks"></a>Note  
+ Se il drill-through è attivato sia nella struttura di data mining che nel modello di data mining, gli utenti membri di un ruolo con autorizzazioni drill-through sul modello e sulla struttura possono accedere alle colonne della struttura di data mining che non sono incluse nel modello di data mining. Pertanto, per proteggere dati riservati o informazioni personali, è necessario costruire la vista origine dati per mascherare informazioni personali e concedere **AllowDrillthrough** l'autorizzazione per una struttura di data mining solo quando è necessario.  
   
- Il [Lag &#40;DMX&#41; ](../dmx/lag-dmx.md) funzione può essere utilizzata con i modelli time series per restituire o filtrare l'intervallo di tempo tra ogni case e l'ora iniziale.  
+ Il [Lag &#40;DMX&#41; ](../dmx/lag-dmx.md) funzione è utilizzabile con i modelli time series per restituire o filtrare l'intervallo di tempo tra ogni case e l'ora iniziale.  
   
- Utilizzando il [IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md) funzionare nel **in cui** clausola restituisce solo i case associati con il nodo specificato in base alla colonna NODE_UNIQUE_NAME del set di righe dello schema.  
+ Usando il [IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md) funzionare nel **in cui** clausola vengono restituiti solo i case associati con il nodo specificato dalla colonna NODE_UNIQUE_NAME del set di righe dello schema.  
   
 ## <a name="examples"></a>Esempi  
- Gli esempi seguenti sono basati sulla struttura di data mining Targeted Mailing, basata sul [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]database e i modelli di data mining associati. Per ulteriori informazioni, vedere [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Gli esempi seguenti sono basati sulla struttura di data mining Targeted Mailing, basata sul [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]database e i modelli di data mining associati. Per altre informazioni, vedere [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>Esempio 1: Drill-through in case del modello e colonne della struttura  
  Nell'esempio seguente vengono restituite le colonne per tutti i case utilizzati per il test del modello Targeted Mailing. Se la struttura di data mining in base alla quale è compilato il modello non dispone di set di dati di test di controllo, questa query restituisce 0 case. È possibile utilizzare l'elenco di espressioni per restituire solo le colonne necessarie.  
@@ -89,8 +89,8 @@ AND IsInNode('002')
   
 ## <a name="see-also"></a>Vedere anche  
  [SELEZIONARE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
- [Estensioni Data Mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
- [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

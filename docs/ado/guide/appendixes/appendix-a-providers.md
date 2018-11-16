@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5110c06913325421aeeaa2d31295d7e2bc6bf59c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14194998e699fa3d16ab50ab488c8d1577660dcc
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645599"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291527"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Appendice a: i dati e i provider di servizi
 Questa sezione vengono illustrati tre tipi di provider: provider di dati, i provider di servizi e componenti del servizio. I provider possono essere suddivise in due categorie: quelli che forniscono i dati e quelli che forniscono servizi. Oggetto *provider di dati* possiede i propri dati e la espone in formato tabulare per l'applicazione. Oggetto *provider di servizi* incapsula un servizio tramite producono e usano i dati, in modo da integrare le funzionalità nelle applicazioni ADO. Un provider di servizi può inoltre essere definito un *componente servizio*, che è necessario collaborare con altri provider di servizi o componenti.
@@ -54,7 +54,7 @@ Questa sezione vengono illustrati tre tipi di provider: provider di dati, i prov
 ## <a name="provider-specific-dynamic-properties"></a>Proprietà dinamiche specifiche del provider
  Il [le proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolte del [connessione](../../../ado/reference/ado-api/connection-object-ado.md), [comando](../../../ado/reference/ado-api/command-object-ado.md), e [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) gli oggetti includono le proprietà dinamiche specifiche per il provider. Queste proprietà forniscono informazioni sulle funzionalità specifiche per il provider rispetto alle proprietà predefinite che supporta ADO.
 
- Dopo aver stabilito la connessione e la creazione di questi oggetti, usare il [aggiornare](../../../ado/reference/ado-api/refresh-method-ado.md) metodo sul **proprietà** insieme dell'oggetto per ottenere le proprietà specifiche del provider. Consultare la documentazione del provider e il [Guida per programmatori OLE DB](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) per informazioni dettagliate su queste proprietà dinamiche.
+ Dopo aver stabilito la connessione e la creazione di questi oggetti, usare il [aggiornare](../../../ado/reference/ado-api/refresh-method-ado.md) metodo sul **proprietà** insieme dell'oggetto per ottenere le proprietà specifiche del provider. Consultare la documentazione del provider e il [Guida per programmatori OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) per informazioni dettagliate su queste proprietà dinamiche.
 
 ## <a name="service-providers"></a>Provider di servizi
  Per usare un provider di servizi, è necessario specificare una parola chiave. È anche necessario conoscere le proprietà dinamiche specifiche del provider associate a ogni provider di servizi. Dettagli specifici del provider elencati per ogni provider di servizi che è attualmente disponibile da Microsoft:

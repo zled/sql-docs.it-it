@@ -5,8 +5,7 @@ ms.date: 01/05/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction log architecture guide
@@ -23,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 738de181911733a5edd7f973a5c43e2503f63a2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 262e55ab61f3e4ee68e905ea264ae15f450b58ed
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631869"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658072"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guida sull'architettura e gestione del log delle transazioni di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,7 +90,7 @@ Se le dimensioni dei file di log aumentano in modo considerevole a piccoli ma nu
 Per altre informazioni sugli argomenti `FILEGROWTH` e `SIZE` di `ALTER DATABASE`, vedere [Opzioni per file e filegroup ALTER DATABASE & #40; Transact-SQL & #41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!TIP]
-> Per determinare la distribuzione dei file di log virtuali ottimale per le dimensioni correnti del log delle transazioni di tutti i database in un'istanza specifica e gli incrementi della crescita necessari per ottenere le dimensioni richieste, vedere questo [script](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
+> Per determinare la distribuzione dei file di log virtuali ottimale per le dimensioni correnti del log delle transazioni di tutti i database in un'istanza specifica e gli incrementi della crescita necessari per ottenere le dimensioni richieste, vedere questo [script](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
   
  Il log delle transazioni è un file circolare. Si consideri ad esempio un database con un file di log fisico diviso in quattro file di log virtuali. Quando viene creato il database, il file di log logico comincia all'inizio del file di log fisico. Vengono aggiunti nuovi record di log alla fine del log logico, che si espandono verso la fine del log fisico. Il troncamento del log libera tutti i log virtuali i cui record vengono visualizzati tutti davanti al numero minimo di sequenza del file di log (MinLSN, Minimum Log Sequence Number) per il recupero. *MinLSN* è il numero di sequenza del file di log del record di log meno recente necessario per un corretto rollback a livello di database. Il log delle transazioni del database di esempio sarebbe simile a quello illustrato nella figura seguente.  
   
@@ -143,12 +142,12 @@ Per altre informazioni sugli argomenti `FILEGROWTH` e `SIZE` di `ALTER DATABASE`
  Prima di creare il primo backup del log, è necessario creare un backup completo, ad esempio un backup del database oppure il primo di un set di backup di file. Il ripristino di un database solo tramite backup di file può essere un'operazione complessa. Quando possibile, è pertanto consigliabile iniziare con un backup completo del database. Eseguire quindi regolarmente il backup del log delle transazioni. In questo modo, è possibile non solo limitare al minimo il rischio di perdita dei dati, ma anche abilitare il troncamento del log delle transazioni. In genere, il troncamento del log delle transazioni viene eseguito dopo ogni backup del log convenzionale,  
   
 > [!IMPORTANT]
-> È consigliabile eseguire backup del log sufficientemente frequenti da soddisfare i requisiti aziendali e in particolare il requisito relativo alla tolleranza per eventuali perdite di dati, che potrebbero ad esempio verificarsi in seguito al danneggiamento della risorsa di archiviazione dei log. La frequenza appropriata per l'esecuzione dei backup del log viene determinata in base al raggiungimento di un compromesso tra la tolleranza per il rischio di perdita dei dati e la quantità di backup del log che è possibile archiviare, gestire e potenzialmente ripristinare. Considerare gli obiettivi [RTO](http://wikipedia.org/wiki/Recovery_time_objective) e [RPO](http://wikipedia.org/wiki/Recovery_point_objective) richiesti quando si implementa la strategia di ripristino, in particolare la frequenza di backup del log.
+> È consigliabile eseguire backup del log sufficientemente frequenti da soddisfare i requisiti aziendali e in particolare il requisito relativo alla tolleranza per eventuali perdite di dati, che potrebbero ad esempio verificarsi in seguito al danneggiamento della risorsa di archiviazione dei log. La frequenza appropriata per l'esecuzione dei backup del log viene determinata in base al raggiungimento di un compromesso tra la tolleranza per il rischio di perdita dei dati e la quantità di backup del log che è possibile archiviare, gestire e potenzialmente ripristinare. Considerare gli obiettivi [RTO](https://wikipedia.org/wiki/Recovery_time_objective) e [RPO](https://wikipedia.org/wiki/Recovery_point_objective) richiesti quando si implementa la strategia di ripristino, in particolare la frequenza di backup del log.
 > Potrebbe essere sufficiente eseguire un backup del log ogni 15 - 30 minuti. Se nella propria azienda è necessario limitare al minimo il rischio di perdita dei dati, valutare se eseguire i backup del log con una maggiore frequenza. L'esecuzione di backup del log più frequenti offre il vantaggio aggiuntivo di un aumento della frequenza del troncamento del log, con una conseguente riduzione delle dimensioni dei file di log.  
   
 > [!IMPORTANT]
 > Per limitare il numero di backup dei log che è necessario ripristinare, è fondamentale eseguire regolarmente il backup dei dati. Ad esempio, è possibile pianificare un backup completo del database una volta la settima e backup differenziali del database una volta al giorno.  
-> Anche in questo caso considerare gli obiettivi [RTO](http://wikipedia.org/wiki/Recovery_time_objective) e [RPO](http://wikipedia.org/wiki/Recovery_point_objective) richiesti quando si implementa la strategia di ripristino, in particolare la frequenza del backup completo e differenziale del database.
+> Anche in questo caso considerare gli obiettivi [RTO](https://wikipedia.org/wiki/Recovery_time_objective) e [RPO](https://wikipedia.org/wiki/Recovery_point_objective) richiesti quando si implementa la strategia di ripristino, in particolare la frequenza del backup completo e differenziale del database.
 
 Per altre informazioni sui backup del log delle transazioni, vedere [Backup di log delle transazioni &#40; SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md).
   
@@ -253,7 +252,7 @@ Per altre informazioni sul log delle transazioni e sulle procedure consigliate, 
 [Configurare l'opzione di configurazione del server intervallo di recupero](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-[Informazioni sulla registrazione e il recupero in SQL Server di Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
-[Gestione del log delle transazioni di SQL Server di Tony Davis e Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
+[Informazioni sulla registrazione e il recupero in SQL Server di Paul Randall](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    
+[Gestione del log delle transazioni di SQL Server di Tony Davis e Gail Shaw](https://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

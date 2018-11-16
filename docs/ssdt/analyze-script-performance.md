@@ -13,12 +13,12 @@ ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e88dbe70181dfa4000858a48ce4ebe6250a65d52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7386a1bceed8ed79dddf2636ae152d79c460a5ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836209"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675051"
 ---
 # <a name="analyze-script-performance"></a>Analizzare le prestazioni degli script
 Gli strumenti forniti da SQL Server Data Tools consentono di determinare se è possibile migliorare le prestazioni di query, stored procedure o script. Il monitoraggio delle statistiche client quali i tempi di risposta delle query più frequenti consente, ad esempio, di determinare se sono necessarie modifiche alle query o agli indici nelle tabelle. Tali statistiche possono includere l'ora di esecuzione del client, il profilo delle query e i pacchetti/byte inviati e ricevuti.  
@@ -32,7 +32,7 @@ Per attivare o disattivare la raccolta di statistiche client, quando l'Editor Tr
   
 Se le statistiche client sono state abilitate, la scheda **Statistiche** viene visualizzata accanto alla scheda **Messaggio** durante l'esecuzione della query. Se sono state invece disabilitate, la scheda **Statistiche** non compare. Le statistiche delle successive esecuzioni delle query vengono elencate insieme ai valori medi.  
   
-Per altre informazioni sulle statistiche raccolte, vedere [Riquadro statistiche nella finestra di query](http://msdn.microsoft.com/library/aa216969(SQL.80).aspx) e la sezione ["Scheda Statistiche client" di questo argomento](http://msdn.microsoft.com/library/aa833205.aspx).  
+Per altre informazioni sulle statistiche raccolte, vedere [Riquadro statistiche nella finestra di query](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) e la sezione ["Scheda Statistiche client" di questo argomento](https://msdn.microsoft.com/library/aa833205.aspx).  
   
 ## <a name="using-execution-plans"></a>Utilizzo dei piani di esecuzione  
 I piani di esecuzione consentono di visualizzare la modalità di navigazione delle tabelle e di utilizzo degli indici da parte del motore di database per l'accesso o l'elaborazione dei dati di una query o di un'altra istruzione DML, ad esempio un aggiornamento. Questo approccio grafico è particolarmente utile per la comprensione delle caratteristiche relative alle prestazioni di una query.  
@@ -41,7 +41,7 @@ Aprire uno script Transact\-SQL contenente le query da analizzare nell'editor Tr
   
 Dopo l'analisi o l'esecuzione dello script, fare clic sulla scheda **Piano di esecuzione** per visualizzare una rappresentazione grafica dell'output del piano di esecuzione.  
   
-L'output del piano di esecuzione grafico viene letto da destra a sinistra e dall'alto verso il basso. Vengono visualizzate tutte le query del batch analizzato, con il costo di ogni query espresso come percentuale del costo totale del batch. Per visualizzare informazioni aggiuntive, come costi e operazioni per ogni singolo passaggio, passare il mouse sulle [icone degli operatori logici e fisici](http://msdn.microsoft.com/library/ms175913.aspx) nel piano grafico.  
+L'output del piano di esecuzione grafico viene letto da destra a sinistra e dall'alto verso il basso. Vengono visualizzate tutte le query del batch analizzato, con il costo di ogni query espresso come percentuale del costo totale del batch. Per visualizzare informazioni aggiuntive, come costi e operazioni per ogni singolo passaggio, passare il mouse sulle [icone degli operatori logici e fisici](https://msdn.microsoft.com/library/ms175913.aspx) nel piano grafico.  
   
 Per modificare la visualizzazione del piano di esecuzione, fare clic con il pulsante destro del mouse sul **piano di esecuzione** e scegliere **Zoom avanti**, **Zoom indietro**, **Personalizza zoom** o **Adatta alla finestra**. **Zoom avanti** e **Zoom indietro** consentono rispettivamente di ingrandire o ridurre il piano di esecuzione in base a valori di percentuale predefiniti. **Personalizza zoom** consente di definire un ingrandimento personalizzato per la visualizzazione, ad esempio 80 percento.  **Adatta alla finestra** consente di regolare il piano di esecuzione per adattarlo al riquadro Risultati.  
   
@@ -52,5 +52,5 @@ I piani di esecuzione possono essere salvati e riaperti in un secondo momento pe
   
 Per usare l'analisi codice manualmente, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliere **Esegui analisi del codice**. Nella finestra **Elenco errori** vengono visualizzati gli avvisi dell'analisi codice. È possibile fare doppio clic su un avviso per passare al codice di origine contenente il problema. Inoltre, si possono visualizzare informazioni aggiuntive e le possibili correzioni per un avviso usando il menu contestuale **Mostra guida errore**.  
   
-Per altre informazioni sull'analisi codice, vedere [Analisi del codice di database per migliorare la qualità del codice](http://msdn.microsoft.com/library/dd172133.aspx).  
+Per altre informazioni sull'analisi codice, vedere [Analisi del codice di database per migliorare la qualità del codice](https://msdn.microsoft.com/library/dd172133.aspx).  
   

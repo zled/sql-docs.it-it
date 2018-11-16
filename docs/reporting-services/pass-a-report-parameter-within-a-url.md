@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c2a07266abcf2a1ebc10c4a6b37a28ee8179885f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a45460437b050275e2f679d64a5bd6a3fd5c4534
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686049"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812824"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Passare un parametro del report in un URL
   È possibile passare parametri del report a un report includendoli in un URL del report. Questi parametri URL non hanno il prefisso in quanto vengono passati direttamente al motore di elaborazione dei report.  
@@ -49,13 +49,13 @@ parameter=value
  Per specificare ad esempio due parametri, "ReportMonth" e "ReportYear", definiti in un report, utilizzare l'URL seguente relativo a un server di report in modalità nativa:  
   
 ```  
-http://myrshost/ReportServer?/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2&ReportMonth=3&ReportYear=2008  
+https://myrshost/ReportServer?/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2&ReportMonth=3&ReportYear=2008  
 ```  
   
  Ad esempio, per specificare gli stessi due parametri definiti in un report, utilizzare l'URL seguente per un server di report in modalità integrata SharePoint. Si noti `/_vti_bin`:  
   
 ```  
-http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl&ReportMonth=3&ReportYear=2008  
+https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl&ReportMonth=3&ReportYear=2008  
 ```  
   
  Per passare un valore Null per un parametro, utilizzare la sintassi seguente:  
@@ -100,7 +100,7 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
  Nell'esempio di URL seguente viene passato un singolo parametro *SellStartDate* con un valore "7/1/2005 ", per un server di report in modalità nativa.  
   
 ```  
-http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
+https://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  

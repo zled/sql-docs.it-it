@@ -15,12 +15,12 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2aab2b6a4c19ed5cb8d3e1d5ea73af57cb6e506e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a2cb16273cd19ee5ef58c1cfde74d3ba890f9ad
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831659"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641378"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Attività Profiling dati e visualizzatore
   L'attività Profiling dati offre funzionalità di profiling dei dati all'interno del processo di estrazione, trasformazione e caricamento dei dati. L'attività Profiling dati offre i vantaggi seguenti:  
@@ -70,6 +70,6 @@ ms.locfileid: "47831659"
  L'attività Profiling dati non dispone di caratteristiche incorporate che consentono di utilizzare la logica condizionale per connettere questa attività alle attività a valle basate sull'output del profilo. È possibile, tuttavia, aggiungere tale logica in modo semplice, con operazioni di programmazione ridotte, in un'attività Script. L'attività Script, ad esempio, può eseguire una query XPath sul file di output dell'attività Profiling dati. La query può determinare se la percentuale di valori Null in una colonna specifica supera una determinata soglia. Se la percentuale supera la soglia, è possibile interrompere il pacchetto e risolvere il problema nei dati di origine prima di continuare. Per altre informazioni, vedere [Incorporamento di un'attività Profiling dati nel flusso di lavoro del pacchetto](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md).  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Pagina relativa allo schema del profiler dati](http://go.microsoft.com/fwlink/?LinkId=251524)  
+ [Pagina relativa allo schema del profiler dati](https://go.microsoft.com/fwlink/?LinkId=251524)  
   
   

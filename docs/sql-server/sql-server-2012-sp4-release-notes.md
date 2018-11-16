@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e23ae3f88e27f29e32e78c3bafa2ae47005b7573
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 611d882b0711d19e8b9015e0d5081c1a22d0d11d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790189"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701099"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Note sulla versione di SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -24,9 +24,9 @@ Questo argomento contiene le note sulla versione aggregate dei quattro Service P
 
 I Service Pack sono disponibili solo online, non sui supporti di installazione, e possono essere scaricati come indicato di seguito:
 - [SQL Server 2012 SP4 ](https://go.microsoft.com/fwlink/?linkid=846937)
-- [SQL Server 2012 SP3](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)
-- [SQL Server 2012 SP2](http://support.microsoft.com/KB/2958429)
-- [SQL Server 2012 SP1](http://go.microsoft.com/fwlink/p/?LinkID=268158)
+- [SQL Server 2012 SP3](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)
+- [SQL Server 2012 SP2](https://support.microsoft.com/KB/2958429)
+- [SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268158)
 
 ## <a name="service-pack-4-release-notes"></a>Note sulla versione di Service Pack 4
 
@@ -61,41 +61,41 @@ I Service Pack sono disponibili solo online, non sui supporti di installazione, 
 ## <a name="service-pack-3-release-notes"></a>Note sulla versione di Service Pack 3
 
 ### <a name="download-pages"></a>Pagine di download
-- [SQL Server 2012 SP3 Feature Pack](http://go.microsoft.com/fwlink/?linkid=615935)
-- [SQL Server 2012 SP3 Express](http://go.microsoft.com/fwlink/?linkid=692144)
+- [SQL Server 2012 SP3 Feature Pack](https://go.microsoft.com/fwlink/?linkid=615935)
+- [SQL Server 2012 SP3 Express](https://go.microsoft.com/fwlink/?linkid=692144)
 
 Per informazioni più dettagliate per identificare il percorso e il nome del file da scaricare in base alla versione attualmente installata, vedere la sezione "Scegliere il file corretto da scaricare" in [Note sulla versione di SQL Server 2012 Service Pack 3](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information).
 
 ## <a name="service-pack-2-release-notes"></a>Note sulla versione di Service Pack 2
   
 ### <a name="download-pages"></a>Pagine di download 
-- [SQL Server 2012 SP2 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=401008)
-- [SQL Server 2012 SP2 Express](http://go.microsoft.com/fwlink/?LinkID=401007)
+- [SQL Server 2012 SP2 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=401008)
+- [SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)
 
 Usare la tabella seguente per identificare la posizione e il nome del file da scaricare in base alla versione attualmente installata. Le pagine per il download includono informazioni sui requisiti di sistema e istruzioni di base per l'installazione.  
 
 |Versione attualmente installata|Operazione da eseguire|File da scaricare e installare|  
 |---|---|---|   
 |Installazioni a 32 bit:|||  
-|Versione a 32 bit di qualsiasi edizione di SQL Server 2012|Eseguire l'aggiornamento alla versione a 32 bit di SQL Server 2012 SP2|**SQLServer2012SP2-KB2958429-**<arch>**-**<lang id>**.exe** nella [pagina di download di SQL Server 2012 SP2](http://go.microsoft.com/fwlink/?LinkID=401006)|  
-|Versione a 32 bit di SQL Server 2012 RTM Express|Eseguire l'aggiornamento alla versione a 32 bit di SQL Server 2012 Express SP2|**SQLEXPR_**<arch>**_**<lang>**.msi** nella pagina di download di [SQL Server 2012 SP2 Express](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|Versione a 32 bit solo degli strumenti client e di gestibilità per SQL Server 2012 (incluso SQL Server 2012 Management Studio)|Eseguire l'aggiornamento degli strumenti client e di gestibilità alla versione a 32 bit di SQL Server 2012 SP2|**SQLEXPRWT_**<arch>**_**<lang>**.msi** nella pagina di download di [SQL Server 2012 SP2 Express](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|Versione a 32 bit di SQL Server 2012 Management Studio Express|Eseguire l'aggiornamento alla versione a 32 bit di SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_**<arch>**_**<lang>**.msi** nella pagina di download di [SQL Server 2012 SP2 Express](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|Versione a 32 bit di qualsiasi edizione di SQL Server 2012 e versione a 32 bit degli strumenti client e di gestibilità (incluso SQL Server 2012 RTM Management Studio)|Eseguire l'aggiornamento di tutti i prodotti alla versione a 32 bit di SQL Server 2012 SP2|**SQLEXPRADV_**<arch>**_**<lang>**.msi** nella pagina di download di [SQL Server 2012 SP2 Express](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|Versione a 32 bit di uno o più strumenti di [Microsoft SQL Server 2012 RTM Feature Pack](http://www.microsoft.com/download/details.aspx?id=29065) o di [Microsoft SQL Server 2012 SP1 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkID=268266)|Eseguire l'aggiornamento degli strumenti alla versione a 32 bit di Microsoft SQL Server 2012 SP2 Feature Pack|Uno o più strumenti dalla [pagina per il download di Microsoft SQL Server 2012 SP2 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=401008)|  
+|Versione a 32 bit di qualsiasi edizione di SQL Server 2012|Eseguire l'aggiornamento alla versione a 32 bit di SQL Server 2012 SP2|**SQLServer2012SP2-KB2958429-**<arch>**-**<lang id>**.exe** nella [pagina di download di SQL Server 2012 SP2](https://go.microsoft.com/fwlink/?LinkID=401006)|  
+|Versione a 32 bit di SQL Server 2012 RTM Express|Eseguire l'aggiornamento alla versione a 32 bit di SQL Server 2012 Express SP2|**SQLEXPR_**<arch>**_**<lang>**.msi** nella pagina di download di [SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Versione a 32 bit solo degli strumenti client e di gestibilità per SQL Server 2012 (incluso SQL Server 2012 Management Studio)|Eseguire l'aggiornamento degli strumenti client e di gestibilità alla versione a 32 bit di SQL Server 2012 SP2|**SQLEXPRWT_**<arch>**_**<lang>**.msi** nella pagina di download di [SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Versione a 32 bit di SQL Server 2012 Management Studio Express|Eseguire l'aggiornamento alla versione a 32 bit di SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_**<arch>**_**<lang>**.msi** nella pagina di download di [SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Versione a 32 bit di qualsiasi edizione di SQL Server 2012 e versione a 32 bit degli strumenti client e di gestibilità (incluso SQL Server 2012 RTM Management Studio)|Eseguire l'aggiornamento di tutti i prodotti alla versione a 32 bit di SQL Server 2012 SP2|**SQLEXPRADV_**<arch>**_**<lang>**.msi** nella pagina di download di [SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Versione a 32 bit di uno o più strumenti di [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=29065) o di [Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)|Eseguire l'aggiornamento degli strumenti alla versione a 32 bit di Microsoft SQL Server 2012 SP2 Feature Pack|Uno o più strumenti dalla [pagina per il download di Microsoft SQL Server 2012 SP2 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=401008)|  
 |Installazioni a 64 bit:|||  
-|Versione a 64 bit di qualsiasi edizione di SQL Server 2012|Eseguire l'aggiornamento alla versione a 64 bit di SQL Server 2012 SP2|SQLServer2012SP2-KB2958429-<arch>-<langid>.exe nella pagina di download di [SQL Server 2012 SP2](http://go.microsoft.com/fwlink/?LinkID=401006)|  
-|Versione a 64 bit di SQL Server 2012 RTM Express|Eseguire l'aggiornamento alla versione a 64 bit di SQL Server 2012 SP2|**SQLEXPR_**<arch>**_**<lang>**.msi** nella pagina di download di [SQL Server 2012 SP2 Express](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|Versione a 64 bit solo degli strumenti client e di gestibilità per SQL Server 2012 (incluso SQL Server 2012 Management Studio)|Eseguire l'aggiornamento degli strumenti client e di gestibilità alla versione a 64 bit di SQL Server 2012 SP2|**SQLEXPRWT_**<arch>**_**<lang>**.msi** nella pagina di download di [SQL Server 2012 SP2 Express](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|Versione a 64 bit di SQL Server 2012 Management Studio Express|Eseguire l'aggiornamento alla versione a 64 bit di SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_**<arch>**_**<lang>**.msi** nella pagina di download di [SQL Server 2012 SP2 Express](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|Versione a 64 bit di uno o più strumenti di [Microsoft SQL Server 2012 RTM Feature Pack](http://www.microsoft.com/download/details.aspx?id=29065) o di [Microsoft SQL Server 2012 SP1 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkID=268266)|Eseguire l'aggiornamento degli strumenti alla versione a 64 bit di Microsoft SQL Server 2012 SP2 Feature Pack|Uno o più strumenti dalla [pagina per il download di Microsoft SQL Server 2012 SP2 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=401008)|   
+|Versione a 64 bit di qualsiasi edizione di SQL Server 2012|Eseguire l'aggiornamento alla versione a 64 bit di SQL Server 2012 SP2|SQLServer2012SP2-KB2958429-<arch>-<langid>.exe nella pagina di download di [SQL Server 2012 SP2](https://go.microsoft.com/fwlink/?LinkID=401006)|  
+|Versione a 64 bit di SQL Server 2012 RTM Express|Eseguire l'aggiornamento alla versione a 64 bit di SQL Server 2012 SP2|**SQLEXPR_**<arch>**_**<lang>**.msi** nella pagina di download di [SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Versione a 64 bit solo degli strumenti client e di gestibilità per SQL Server 2012 (incluso SQL Server 2012 Management Studio)|Eseguire l'aggiornamento degli strumenti client e di gestibilità alla versione a 64 bit di SQL Server 2012 SP2|**SQLEXPRWT_**<arch>**_**<lang>**.msi** nella pagina di download di [SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Versione a 64 bit di SQL Server 2012 Management Studio Express|Eseguire l'aggiornamento alla versione a 64 bit di SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_**<arch>**_**<lang>**.msi** nella pagina di download di [SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Versione a 64 bit di uno o più strumenti di [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=29065) o di [Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)|Eseguire l'aggiornamento degli strumenti alla versione a 64 bit di Microsoft SQL Server 2012 SP2 Feature Pack|Uno o più strumenti dalla [pagina per il download di Microsoft SQL Server 2012 SP2 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=401008)|   
 
 
 ## <a name="service-pack-1-release-notes"></a>Note sulla versione di Service Pack 1
 
 ### <a name="download-pages"></a>Pagine di download  
-- [SQL Server 2012 SP1 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkID=268158)
-- [SQL Server 2012 SP1 Express](http://go.microsoft.com/fwlink/p/?LinkID=26815)
+- [SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268158)
+- [SQL Server 2012 SP1 Express](https://go.microsoft.com/fwlink/p/?LinkID=26815)
 
 
 Fare riferimento alla tabella seguente per determinare il file da scaricare e installare. Verificare di disporre dei requisiti di sistema corretti prima di installare il Service Pack. I requisiti di sistema sono indicati nelle pagine di download di cui viene fornito il collegamento all'interno della tabella.  
@@ -103,30 +103,30 @@ Fare riferimento alla tabella seguente per determinare il file da scaricare e in
 |Versione attualmente installata|Operazione da eseguire|File da scaricare e installare|  
 |---|---|---|  
 |**Installazioni a 32-bit:**|||  
-|Versione a 32 bit di qualsiasi edizione di SQL Server 2012|Eseguire l'aggiornamento alla versione a 32 bit di SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe in [questa pagina](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|Versione a 32 bit di SQL Server 2012 RTM Express|Eseguire l'aggiornamento alla versione a 32 bit di SQL Server 2012 Express SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe in [questa pagina](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|Versione a 32 bit solo degli strumenti client e di gestibilità per SQL Server 2012 (incluso SQL Server 2012 Management Studio)|Eseguire l'aggiornamento degli strumenti client e di gestibilità alla versione a 32 bit di SQL Server 2012 SP1|SQLManagementStudio_x86_ENU.exe in [questa pagina](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
-|Versione a 32 bit di SQL Server 2012 Management Studio Express|Eseguire l'aggiornamento alla versione a 32 bit di SQL Server 2012 SP1 Management Studio Express|SQLManagementStudio_x86_ENU.exe in [questa pagina](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
-|Versione a 32 bit di qualsiasi edizione di SQL Server 2012 **e** versione a 32 bit degli strumenti client e di gestibilità (incluso SQL Server 2012 RTM Management Studio)|Eseguire l'aggiornamento di tutti i prodotti alla versione a 32 bit di SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe in [questa pagina](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|Versione a 32 bit di uno o più strumenti di [Microsoft SQL Server 2012 RTM Feature Pack](http://www.microsoft.com/download/details.aspx?id=16978)|Eseguire l'aggiornamento degli strumenti alla versione a 32 bit di Microsoft SQL Server 2012 SP1 Feature Pack|Uno o più file di [Microsoft SQL Server 2012 SP1 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkID=268266)|  
-|Nessuna installazione a 32 bit di SQL Server 2012|Installare SQL Server 2012 a 32 bit con SP1 (nuova istanza con SP1 preinstallato)|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **e** SQLServer2012SP1-FullSlipstream-x86-ENU.box in [questa pagina](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|Nessuna installazione a 32 bit di SQL Server 2012 Management Studio|Installare SQL Server 2012 Management Studio a 32 bit con SP1|SQLManagementStudio_x86_ENU.exe in [questa pagina](http://go.microsoft.com/fwlink/p/?LinkId=267905)|  
-|Nessuna versione a 32 bit di SQL Server 2012 RTM Express|Installare SQL Server 2012 Express a 32 bit con SP1|SQLEXPR32_x86_ENU.exe in [questa pagina](http://go.microsoft.com/fwlink/p/?LinkId=267905)|  
-|Installazione a 32 bit di **SQL Server 2008** o **SQL Server 2008 R2**|**Aggiornamento sul posto** a SQL Server 2012 a 32 bit con SP1|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **e** SQLServer2012SP1-FullSlipstream-x86-ENU.box in [questa pagina](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
+|Versione a 32 bit di qualsiasi edizione di SQL Server 2012|Eseguire l'aggiornamento alla versione a 32 bit di SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe in [questa pagina](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
+|Versione a 32 bit di SQL Server 2012 RTM Express|Eseguire l'aggiornamento alla versione a 32 bit di SQL Server 2012 Express SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe in [questa pagina](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
+|Versione a 32 bit solo degli strumenti client e di gestibilità per SQL Server 2012 (incluso SQL Server 2012 Management Studio)|Eseguire l'aggiornamento degli strumenti client e di gestibilità alla versione a 32 bit di SQL Server 2012 SP1|SQLManagementStudio_x86_ENU.exe in [questa pagina](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
+|Versione a 32 bit di SQL Server 2012 Management Studio Express|Eseguire l'aggiornamento alla versione a 32 bit di SQL Server 2012 SP1 Management Studio Express|SQLManagementStudio_x86_ENU.exe in [questa pagina](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
+|Versione a 32 bit di qualsiasi edizione di SQL Server 2012 **e** versione a 32 bit degli strumenti client e di gestibilità (incluso SQL Server 2012 RTM Management Studio)|Eseguire l'aggiornamento di tutti i prodotti alla versione a 32 bit di SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe in [questa pagina](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
+|Versione a 32 bit di uno o più strumenti di [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)|Eseguire l'aggiornamento degli strumenti alla versione a 32 bit di Microsoft SQL Server 2012 SP1 Feature Pack|Uno o più file di [Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)|  
+|Nessuna installazione a 32 bit di SQL Server 2012|Installare SQL Server 2012 a 32 bit con SP1 (nuova istanza con SP1 preinstallato)|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **e** SQLServer2012SP1-FullSlipstream-x86-ENU.box in [questa pagina](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
+|Nessuna installazione a 32 bit di SQL Server 2012 Management Studio|Installare SQL Server 2012 Management Studio a 32 bit con SP1|SQLManagementStudio_x86_ENU.exe in [questa pagina](https://go.microsoft.com/fwlink/p/?LinkId=267905)|  
+|Nessuna versione a 32 bit di SQL Server 2012 RTM Express|Installare SQL Server 2012 Express a 32 bit con SP1|SQLEXPR32_x86_ENU.exe in [questa pagina](https://go.microsoft.com/fwlink/p/?LinkId=267905)|  
+|Installazione a 32 bit di **SQL Server 2008** o **SQL Server 2008 R2**|**Aggiornamento sul posto** a SQL Server 2012 a 32 bit con SP1|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **e** SQLServer2012SP1-FullSlipstream-x86-ENU.box in [questa pagina](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |**Installazioni a 64-bit:**|||  
-|Versione a 64 bit di qualsiasi edizione di SQL Server 2012|Eseguire l'aggiornamento alla versione a 64 bit di SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe in [questa pagina](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|Versione a 64 bit di SQL Server 2012 RTM Express|Eseguire l'aggiornamento alla versione a 64 bit di SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe in [questa pagina](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|Versione a 64 bit solo degli strumenti client e di gestibilità per SQL Server 2012 (incluso SQL Server 2012 Management Studio)|Eseguire l'aggiornamento degli strumenti client e di gestibilità alla versione a 64 bit di SQL Server 2012 SP1|SQLManagementStudio_x64_ENU.exe in [questa pagina](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
-|Versione a 64 bit di SQL Server 2012 Management Studio Express|Eseguire l'aggiornamento alla versione a 64 bit di SQL Server 2012 SP1 Management Studio Express|SQLManagementStudio_x64_ENU.exe in [questa pagina](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
-|Versione a 64 bit di qualsiasi edizione di SQL Server 2012 **e** versione a 64 bit degli strumenti client e di gestibilità (incluso SQL Server 2012 RTM Management Studio)|Eseguire l'aggiornamento di tutti i prodotti alla versione a 64 bit di SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe in [questa pagina](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|Versione a 64 bit di uno o più strumenti di [Microsoft SQL Server 2012 RTM Feature Pack](http://www.microsoft.com/download/en/details.aspx?id=16978)|Eseguire l'aggiornamento degli strumenti alla versione a 64 bit di Microsoft SQL Server 2012 SP1 Feature Pack|Uno o più file di [Microsoft SQL Server 2012 SP1 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkID=268266)|  
-|Nessuna installazione a 64 bit di SQL Server 2012|Installare SQL Server 2012 a 64 bit con SP1 (nuova istanza con SP1 preinstallato)|SQLServer2012SP1-FullSlipstream-x64-ENU.exe **e** SQLServer2012SP1-FullSlipstream-x64-ENU.box in [questa pagina](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|Nessuna installazione a 64 bit di SQL Server 2012 Management Studio|Installare SQL Server 2012 Management Studio a 64 bit con SP1|SQLManagementStudio_x64_ENU.exe in [questa pagina](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
-|Nessuna versione a 64 bit di SQL Server 2012 RTM Express|Installare SQL Server 2012 Express a 64 bit con SP1|SQLEXPR_x64_ENU.exe in [questa pagina](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
-|Installazione a 64 bit di **SQL Server 2008** o **SQL Server 2008 R2**|**Aggiornamento sul posto** a SQL Server 2012 a 64 bit con SP1|SQLServer2012SP1-FullSlipstream-x64-ENU.exe **e** SQLServer2012SP1-FullSlipstream-x64-ENU.box in [questa pagina](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
+|Versione a 64 bit di qualsiasi edizione di SQL Server 2012|Eseguire l'aggiornamento alla versione a 64 bit di SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe in [questa pagina](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
+|Versione a 64 bit di SQL Server 2012 RTM Express|Eseguire l'aggiornamento alla versione a 64 bit di SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe in [questa pagina](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
+|Versione a 64 bit solo degli strumenti client e di gestibilità per SQL Server 2012 (incluso SQL Server 2012 Management Studio)|Eseguire l'aggiornamento degli strumenti client e di gestibilità alla versione a 64 bit di SQL Server 2012 SP1|SQLManagementStudio_x64_ENU.exe in [questa pagina](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
+|Versione a 64 bit di SQL Server 2012 Management Studio Express|Eseguire l'aggiornamento alla versione a 64 bit di SQL Server 2012 SP1 Management Studio Express|SQLManagementStudio_x64_ENU.exe in [questa pagina](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
+|Versione a 64 bit di qualsiasi edizione di SQL Server 2012 **e** versione a 64 bit degli strumenti client e di gestibilità (incluso SQL Server 2012 RTM Management Studio)|Eseguire l'aggiornamento di tutti i prodotti alla versione a 64 bit di SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe in [questa pagina](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
+|Versione a 64 bit di uno o più strumenti di [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=16978)|Eseguire l'aggiornamento degli strumenti alla versione a 64 bit di Microsoft SQL Server 2012 SP1 Feature Pack|Uno o più file di [Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)|  
+|Nessuna installazione a 64 bit di SQL Server 2012|Installare SQL Server 2012 a 64 bit con SP1 (nuova istanza con SP1 preinstallato)|SQLServer2012SP1-FullSlipstream-x64-ENU.exe **e** SQLServer2012SP1-FullSlipstream-x64-ENU.box in [questa pagina](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
+|Nessuna installazione a 64 bit di SQL Server 2012 Management Studio|Installare SQL Server 2012 Management Studio a 64 bit con SP1|SQLManagementStudio_x64_ENU.exe in [questa pagina](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
+|Nessuna versione a 64 bit di SQL Server 2012 RTM Express|Installare SQL Server 2012 Express a 64 bit con SP1|SQLEXPR_x64_ENU.exe in [questa pagina](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
+|Installazione a 64 bit di **SQL Server 2008** o **SQL Server 2008 R2**|**Aggiornamento sul posto** a SQL Server 2012 a 64 bit con SP1|SQLServer2012SP1-FullSlipstream-x64-ENU.exe **e** SQLServer2012SP1-FullSlipstream-x64-ENU.box in [questa pagina](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 
 ### <a name="known-issues-fixed-in-this-service-pack"></a>Problemi noti risolti in questo Service Pack  
-Per un elenco completo dei bug e dei problemi noti risolti in questo Service Pack, vedere [questo articolo della Knowledge Base](http://support.microsoft.com/kb/2674319).   
+Per un elenco completo dei bug e dei problemi noti risolti in questo Service Pack, vedere [questo articolo della Knowledge Base](https://support.microsoft.com/kb/2674319).   
 
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>La reinstallazione di istanze del cluster di failover di SQL Server non riesce se si usa lo stesso indirizzo IP  
 **Problema:** se si specifica un indirizzo IP non corretto durante un'installazione di un'istanza del cluster di failover di SQL Server, l'installazione non riesce. Dopo la disinstallazione dell'istanza con errori, e in caso di tentativo di reinstallazione dell'istanza del cluster di failover di SQL Server con lo stesso nome istanza, e indirizzo IP corretto, l'installazione non viene completata. L'errore è dovuto al gruppo di risorse duplicate lasciato dall'installazione precedente.  
@@ -147,7 +147,7 @@ Per un elenco completo dei bug e dei problemi noti risolti in questo Service Pac
 3.  Fare clic su **Raccolta PowerPivot**.  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Per usare PowerPivot per Excel con Excel 2013, è necessario usare il componente aggiuntivo installato con Excel  
-**Problema:** con Office 2010, PowerPivot per Excel è un componente aggiuntivo autonomo che può essere scaricato da [http://www.microsoft.com/bi/powerpivot.aspx](http://www.microsoft.com/bi/powerpivot.aspx). In alternativa, può essere scaricato anche dall' [Area download Microsoft](http://www.microsoft.com/download/details.aspx?id=29074). Si noti che sono disponibili due versioni del componente aggiuntivo PowerPivot: una fornita con SQL Server 2008 R2 e un'altra con SQL Server 2012. Tuttavia, per Office 2013, PowerPivot per Excel viene fornito con Office e viene installato insieme a Excel. Anche se le versioni SQL Server 2008 R2 e SQL Server 2012 di PowerPivot per Excel 2010 non sono compatibili con Excel 2013, è comunque possibile installare PowerPivot per Excel 2010 nel computer client se si desidera un'esecuzione side-by-side di Excel 2010 ed Excel 2013. In altre parole, le due versioni di Excel possono coesistere, così come i componenti aggiuntivi PowerPivot corrispondenti.  
+**Problema:** con Office 2010, PowerPivot per Excel è un componente aggiuntivo autonomo che può essere scaricato da [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx). In alternativa, può essere scaricato anche dall' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=29074). Si noti che sono disponibili due versioni del componente aggiuntivo PowerPivot: una fornita con SQL Server 2008 R2 e un'altra con SQL Server 2012. Tuttavia, per Office 2013, PowerPivot per Excel viene fornito con Office e viene installato insieme a Excel. Anche se le versioni SQL Server 2008 R2 e SQL Server 2012 di PowerPivot per Excel 2010 non sono compatibili con Excel 2013, è comunque possibile installare PowerPivot per Excel 2010 nel computer client se si desidera un'esecuzione side-by-side di Excel 2010 ed Excel 2013. In altre parole, le due versioni di Excel possono coesistere, così come i componenti aggiuntivi PowerPivot corrispondenti.  
   
 **Soluzione alternativa:** per usare PowerPivot per Excel 2013 è necessario abilitare il componente aggiuntivo COM. In Excel 2013 selezionare **File** | **Opzioni** | **Componenti aggiuntivi**. Nella casella di riepilogo a discesa **Gestisci** selezionare **Componenti aggiuntivi COM** e fare clic su **Vai**. In **Componenti aggiuntivi COM**selezionare **Microsoft Office PowerPivot for Excel 2013** e fare clic su **OK**.  
   
@@ -175,7 +175,7 @@ Nei dettagli interni dell'errore sarà presente un messaggio simile al seguente:
   
 -   "Il valore 'SharePoint Principal' non è supportato per la proprietà della stringa di connessione 'User Identity'".  
   
-**Soluzione alternativa:** installare il pacchetto di installazione di PowerPivot per SharePoint 2013 (**spPowerPivot.msi**) in SharePoint Server 2013. Il pacchetto di installazione è disponibile come parte del Feature Pack di [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Il Feature Pack può essere scaricato dall'Area Download [!INCLUDE[msCoName](../includes/msconame-md.md)] in corrispondenza di [SQL Server 2012 SP1 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkID=268266)(http://go.microsoft.com/fwlink/p/?LinkID=268266).  
+**Soluzione alternativa:** installare il pacchetto di installazione di PowerPivot per SharePoint 2013 (**spPowerPivot.msi**) in SharePoint Server 2013. Il pacchetto di installazione è disponibile come parte del Feature Pack di [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Il Feature Pack può essere scaricato dall'Area Download [!INCLUDE[msCoName](../includes/msconame-md.md)] in corrispondenza di [SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)(http://go.microsoft.com/fwlink/p/?LinkID=268266).  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>I fogli di Power View in una cartella di lavoro di PowerPivot vengono eliminati dopo un aggiornamento dati pianificato  
 **Problema**: nel componente aggiuntivo PowerPivot per SharePoint l'uso di **Scheduled Data Refresh** in una cartella di lavoro con Power View comporterà l'eliminazione di tutti i fogli di Power View.  
@@ -192,7 +192,7 @@ Nei dettagli interni dell'errore sarà presente un messaggio simile al seguente:
 ### <a name="sql-server-express"></a>SQL Server Express  
   
 #### <a name="full-version-of-sql-server-management-studio-available-in-sql-server-2012-express-sp1"></a>Versione completa di SQL Server Management Studio disponibile in SQL Server 2012 Express SP1  
-Nella versione SQL Server 2012 Express Service Pack 1 (SP1) è inclusa la versione completa di SQL Server 2012 Management Studio (che in precedenza era disponibile solo nel DVD di SQL Server 2012), anziché SQL Server 2012 Management Studio Express. Per scaricare e installare SQL Server 2012 Express SP1, vedere la pagina relativa a [SQL Server 2012 Express Service Pack 1](http://go.microsoft.com/fwlink/p/?linkid=267905).  
+Nella versione SQL Server 2012 Express Service Pack 1 (SP1) è inclusa la versione completa di SQL Server 2012 Management Studio (che in precedenza era disponibile solo nel DVD di SQL Server 2012), anziché SQL Server 2012 Management Studio Express. Per scaricare e installare SQL Server 2012 Express SP1, vedere la pagina relativa a [SQL Server 2012 Express Service Pack 1](https://go.microsoft.com/fwlink/p/?linkid=267905).  
   
 ### <a name="change-data-capture-service-and-designer-for-oracle-by-attunity"></a>Servizio Change Data Capture e Designer per Oracle di Attunity  
   
@@ -201,7 +201,7 @@ Nella versione SQL Server 2012 Express Service Pack 1 (SP1) è inclusa la versio
   
 **Soluzione alternativa:** per aggiornare i componenti CDC alla versione più recente:  
   
-1.  Scaricare i file con estensione msi per Change Data Capture Service per Oracle di Attunity dalla pagina di download di [SQL Server 2012 SP1 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkID=268266).  
+1.  Scaricare i file con estensione msi per Change Data Capture Service per Oracle di Attunity dalla pagina di download di [SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266).  
   
 2.  Eseguire il file con estensione msi.  
   
@@ -212,7 +212,7 @@ Questa versione di Data-Tier Application Framework (DACFx) supporta l'aggiorname
   
 **Supporto per Indice XML selettivo**  
   
-In SQL Server 2012 SP1 è incluso il supporto per [Indice XML selettivo (SXI)](http://msdn.microsoft.com/598ecdcd-084b-4032-81b2-eed6ae9f5d44), una nuova funzionalità di SQL Server che fornisce una nuova modalità di indicizzazione della colonna XML con efficienza e prestazioni migliorate.  
+In SQL Server 2012 SP1 è incluso il supporto per [Indice XML selettivo (SXI)](https://msdn.microsoft.com/598ecdcd-084b-4032-81b2-eed6ae9f5d44), una nuova funzionalità di SQL Server che fornisce una nuova modalità di indicizzazione della colonna XML con efficienza e prestazioni migliorate.  
   
 DACFx supporta ora gli indici SXI in tutti gli strumenti client e scenari di applicazione livello dati. SXI è supportato solo nell'ultima versione di SSDT, non è supportato nelle versioni SSDT RTM e di settembre 2012.  
   
@@ -232,7 +232,7 @@ In precedenza, tramite DACFx non è stato possibile mantenere lo stato (WITH CHE
   
 -   Importare BACPAC. Importare un file con estensione bacpac per creare un nuovo database o popolare un database SQL di Windows Azure o SQL Server vuoto.  
   
-La documentazione completa di SqlPackage.exe su MSDN è disponibile [qui](http://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx).  
+La documentazione completa di SqlPackage.exe su MSDN è disponibile [qui](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx).  
   
 **Compatibilità dei pacchetti**  
   
@@ -247,7 +247,7 @@ In questa versione sono disponibili diversi scenari di compatibilità di inoltro
 - [Identificazione della versione e dell'edizione di SQL Server](https://support.microsoft.com/help/321185)
 - [Installare gli aggiornamenti dei servizi di SQL Server 2012](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
 - [Identificazione della versione e dell'edizione di SQL Server](https://support.microsoft.com/help/321185) 
-- [Identificazione della versione e dell'edizione di SQL Server](http://support.microsoft.com/kb/321185)  
-- [Funzionalità supportate dalle edizioni di SQL Server 2014](http://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
+- [Identificazione della versione e dell'edizione di SQL Server](https://support.microsoft.com/kb/321185)  
+- [Funzionalità supportate dalle edizioni di SQL Server 2014](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

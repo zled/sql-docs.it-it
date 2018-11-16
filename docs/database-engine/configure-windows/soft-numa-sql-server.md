@@ -18,12 +18,12 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a9d532ff5cf5da8719156a358ecc44abe3591afc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3757c44ada2f4413693d6124e75bb726f63ac7d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614256"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605391"
 ---
 # <a name="soft-numa-sql-server"></a>Soft-NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ L'istanza A del[!INCLUDE[ssDE](../../includes/ssde-md.md)] è configurata per ut
   
  L'Istanza A, che presenta un I/O significativo, ha ora due thread di I/O e un thread Lazywriter. L'Istanza B, in cui vengono eseguite operazioni con utilizzo elevato del processore, ha solo un thread di I/O e un thread Lazywriter. È possibile assegnare alle istanze quantità di memoria diverse ma, a differenza di quanto avviene con hardware NUMA, entrambe le istanze ricevono memoria dallo stesso blocco di memoria del sistema operativo e non è presente affinità tra memoria e processore.  
   
- Il thread Lazywriter è correlato alla visualizzazione SQLOS dei nodi di memoria NUMA fisici. Pertanto, qualsiasi numero di nodi NUMA fisici presente nell'hardware corrisponderà al numero di thread Lazywriter creati. Per ulteriori informazioni, vedere la pagina relativa al [funzionamento di Soft-NUMA, thread di completamento di I/O, thread di lavoro Lazywriter e nodi di memoria](http://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ Il thread Lazywriter è correlato alla visualizzazione SQLOS dei nodi di memoria NUMA fisici. Pertanto, qualsiasi numero di nodi NUMA fisici presente nell'hardware corrisponderà al numero di thread Lazywriter creati. Per ulteriori informazioni, vedere la pagina relativa al [funzionamento di Soft-NUMA, thread di completamento di I/O, thread di lavoro Lazywriter e nodi di memoria](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
   
 > [!NOTE]
 > Le chiavi del Registro di sistema di **Soft-NUMA** non vengono copiate quando si aggiorna un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

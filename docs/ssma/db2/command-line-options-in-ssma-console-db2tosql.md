@@ -10,12 +10,12 @@ ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8419990abe0870d248ad403fc4d802b1775fe3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a53992485c98e5f4978ca0d6bcdba2747301702f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678959"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659150"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Opzioni della riga di comando nella Console SSMA (DB2ToSQL)
 Microsoft offre un solido set opzioni riga di comando per eseguire e controllare le attività SSMA. Le sezioni che seguono in modo dettagliato lo stesso.  
@@ -120,7 +120,7 @@ Ciò indica la cartella Impostazioni ambiente di progetto SSMA corrente. Questa 
 ### <a name="secure-password-option-psecurepassword"></a>Opzione Password sicura: – p/securepassword  
 Questa opzione indica la password crittografata per le connessioni al server. Differisce da tutte le altre opzioni: l'opzione non viene eseguito qualsiasi script né consente in qualsiasi attività relative alla migrazione, ma consente di gestire la crittografia della password per le connessioni del server usato nel progetto di migrazione.  
   
-È possibile immettere qualsiasi altra opzione o la password come parametro della riga di comando. In caso contrario, viene generato un errore. Per altre informazioni, vedere la [la gestione delle password](http://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) sezione.  
+È possibile immettere qualsiasi altra opzione o la password come parametro della riga di comando. In caso contrario, viene generato un errore. Per altre informazioni, vedere la [la gestione delle password](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) sezione.  
   
 Le seguenti opzioni secondarie sono supportate per `–p/securepassword`:  
   

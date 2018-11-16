@@ -27,12 +27,12 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 7d846878ae012a82f7ff8f6662b8a6095d664cb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd3481d797bca1822255b1ac6cf30a1123c2e669
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831939"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697194"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ Per questo motivo, l'utilizzo dell'opzione PHYSICAL_ONLY può consentire di otte
 DATA_PURITY  
  Consente a DBCC CHECKTABLE di controllare la tabella per individuare valori di colonna non validi o non compresi nell'intervallo dei valori consentiti. Ad esempio, DBCC CHECKTABLE rileva le colonne con valori di data e ora maggiori o minori dell'intervallo accettabile per il tipo di dati **datetime** oppure le colonne di tipi di dati numerici approssimati o **decimal** con valori di precisione o di scala non validi.  
  I controlli di integrità dei valori di colonna sono abilitati per impostazione predefinita e non richiedono l'opzione DATA_PURITY. Per i database aggiornati da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile utilizzare DBCC CHECKTABLE WITH DATA_PURITY per individuare e correggere gli errori in una specifica tabella. I controlli dei valori di colonna nella tabella, tuttavia, non vengono abilitati per impostazione predefinita fino a quando DBCC CHECKDB WITH DATA_PURITY non è stato eseguito senza errori nel database. A questo punto, DBCC CHECKDB e DBCC CHECKTABLE controllano l'integrità dei valori di colonna per impostazione predefinita.  
- Gli errori di convalida rilevati da questa opzione non possono essere corretti utilizzando le opzioni di correzione DBCC. Per informazioni sulla correzione manuale di questi errori, vedere l'articolo 923247 della Knowledge Base [Risoluzione dei problemi errore DBCC 2570 in SQL Server 2005 e versioni successive](http://support.microsoft.com/kb/923247).  
+ Gli errori di convalida rilevati da questa opzione non possono essere corretti utilizzando le opzioni di correzione DBCC. Per informazioni sulla correzione manuale di questi errori, vedere l'articolo 923247 della Knowledge Base [Risoluzione dei problemi errore DBCC 2570 in SQL Server 2005 e versioni successive](https://support.microsoft.com/kb/923247).  
  Se si specifica PHYSICAL_ONLY, i controlli di integrità di colonna non vengono eseguiti.  
     
 MAXDOP  

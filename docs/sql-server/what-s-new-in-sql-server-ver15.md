@@ -1,22 +1,20 @@
 ---
 title: Novità di SQL Server 2019 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/06/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
-ms.technology:
-- server-general
+ms.technology: release-landing
 ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 36a98e8c702b3d3ff772ccf42bdfd56153ddd7fc
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.openlocfilehash: 55cf8c1bc9a7a74928ebe2f5c0c7060c94068e48
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272619"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703909"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novità di SQL Server 2019
 
@@ -25,7 +23,7 @@ ms.locfileid: "51272619"
 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] si basa sulle versioni precedenti per sviluppare SQL Server come piattaforma provvista di scelte per linguaggi di sviluppo, tipi di dati, sistemi operativi ed elaborazione locale o nel cloud. Questo articolo riepiloga le novità di SQL Server 2019. Per altre informazioni e problemi noti, vedere le [Note sulla versione di SQL Server 2019](sql-server-ver15-release-notes.md).
 
 **Per provare SQL Server 2019**
-- [![Download da Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [Scaricare SQL Server 2019 per l'installazione in Windows](http://go.microsoft.com/fwlink/?LinkID=862101)
+- [![Download da Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Scaricare SQL Server 2019 per l'installazione in Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
 - Installazione in Linux per [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) e [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Esecuzione in SQL Server 2019 in Docker](../linux/quickstart-install-connect-docker.md).
 
@@ -147,7 +145,7 @@ Il mascheramento dei dati statico opera a livello di colonna. Selezionare le col
 
 Il mascheramento dei dati è il processo di applicazione di una maschera a un database per nascondere le informazioni sensibili del database e sostituirle con nuovi dati o dati ripuliti. Microsoft offre due opzioni di mascheramento, ovvero il mascheramento dei dati statico e il mascheramento dei dati dinamico. Il mascheramento dei dati dinamico è stato introdotto in SQL Server 2017. Nella tabella seguente vengono messe a confronto questi due soluzioni:
 
-|Mascheramento dei dati statico |Mascheramento dei dati dinamico
+|Mascheramento dei dati statico |Mascheramento dati dinamici
 |:----|:----
 |Applicato a una copia del database <br/><br/>I dati originali non sono recuperabili<br/><br/>Il mascheramento avviene a livello di archiviazione<br/><br/>Tutti gli utenti hanno accesso agli stessi dati mascherati<br/><br/>Pensato per l'accesso continuo a livello di team|Applicato al database originale<br/><br/>I dati originali rimangono intatti<br/><br/>Il mascheramento avviene in tempo reale in fase di query<br/><br/>Il mascheramento varia in base alle autorizzazioni dell'utente <br/><br/>Pensato per l'accesso puntuale da parte di utenti specifici
 
@@ -178,7 +176,7 @@ A seconda del set di caratteri in uso, questa funzionalità può offrire importa
 
   In caso di un errore di creazione indice, senza questa funzionalità la creazione indice online va eseguita di nuovo e l'operazione deve essere riavviata dall'inizio.
 
-In questa versione, la funzionalità ripristinabile viene estesa con l'aggiunta di questa funzionalità alla [ricompilazione dell'indice online ripristinabile](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/), già disponibile.
+In questa versione, la funzionalità ripristinabile viene estesa con l'aggiunta di questa funzionalità alla [ricompilazione dell'indice online ripristinabile](https://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/), già disponibile.
 
 È anche possibile impostare questa funzionalità come valore predefinito per un database specifico usando l'[impostazione predefinita con ambito database per le operazioni DDL online e ripristinabili](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
@@ -264,7 +262,7 @@ Per eseguire l'override dell'impostazione predefinita, includere l'opzione ONLIN
 
 Senza questa funzionalità è necessario specificare le opzioni online e ripristinabili direttamente nell'istruzione DDL dell'indice, ad esempio nell'istruzione di creazione e ricompilazione dell'indice.
 
-Altre informazioni: per altre informazioni sulle operazioni ripristinabili, vedere [Creazione di indici online ripristinabili](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
+Altre informazioni: per altre informazioni sulle operazioni ripristinabili, vedere [Creazione di indici online ripristinabili](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
 
 ### <a id="ha"></a>Gruppi di disponibilità AlwaysOn - Più repliche sincrone (CTP 2.0)
 
@@ -331,7 +329,7 @@ Per informazioni dettagliate, vedere [What's new in SQL Server Machine Learning 
 
 L'infrastruttura leggera di profilatura query (LWP) restituisce dati sulle prestazioni delle query in modo più efficiente rispetto alle tecnologie di profilatura standard. Ora la profilatura leggera è abilitata per impostazione predefinita. È stata introdotta in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. La profilatura leggera offre un meccanismo per la raccolta di statistiche sull'esecuzione query con un sovraccarico previsto pari al 2% della capacità della CPU, rispetto a un sovraccarico che può raggiungere il 75% della capacità della CPU per il meccanismo di profilatura query standard. Nelle versioni precedenti, questa funzionalità era OFF per impostazione predefinita. Gli amministratori di database potevano abilitarla con il [flag di traccia 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
-Per altre informazioni sulla profilatura leggera, vedere [Developers Choice: Query progress – anytime, anywhere](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Scelta degli sviluppatori: Stato query ovunque e in qualsiasi momento).
+Per altre informazioni sulla profilatura leggera, vedere [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Scelta degli sviluppatori: Stato query ovunque e in qualsiasi momento).
 
 ### <a id="polybase"></a>Nuovi connettori PolyBase
 

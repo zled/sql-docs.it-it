@@ -14,12 +14,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d47a73c378ee8bbdae38631031714c98d2bdc730
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: ee7b41d2c6e4584bd2dd48dec09fbe71b5150d13
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100192"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696779"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Autorizzazioni: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -127,7 +127,7 @@ REVOKE
  Un'autorizzazione implicita può anche essere ereditata da un'autorizzazione di copertura o da un'autorizzazione padre. Ad esempio, l'autorizzazione **UPDATE** in una tabella può essere ereditata tramite un'autorizzazione **UPDATE** nello schema che contiene la tabella o un'autorizzazione **CONTROL** nella tabella.  
   
 ### <a name="ownership-chaining"></a>Concatenamento della proprietà  
- Quando più oggetti di database accedono l'uno all'altro in sequenza, questa sequenza è nota come *catena*. Sebbene queste catene non esistono in modo indipendente, quando in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono attraversati i collegamenti contenuti in una catena, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valuta le autorizzazioni per gli oggetti che compongono la catena diversamente da quanto farebbe se accedesse agli oggetti separatamente. Il concatenamento della proprietà ha implicazioni importanti per la gestione della sicurezza. Per altre informazioni sulle catene di proprietà, vedere [Catene di proprietà](http://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) e [Esercitazione: Catene di proprietà e cambio di contesto](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
+ Quando più oggetti di database accedono l'uno all'altro in sequenza, questa sequenza è nota come *catena*. Sebbene queste catene non esistono in modo indipendente, quando in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono attraversati i collegamenti contenuti in una catena, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valuta le autorizzazioni per gli oggetti che compongono la catena diversamente da quanto farebbe se accedesse agli oggetti separatamente. Il concatenamento della proprietà ha implicazioni importanti per la gestione della sicurezza. Per altre informazioni sulle catene di proprietà, vedere [Catene di proprietà](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) e [Esercitazione: Catene di proprietà e cambio di contesto](../../relational-databases/tutorial-ownership-chains-and-context-switching.md).  
   
 ## <a name="permission-list"></a>Elenco delle autorizzazioni  
   
@@ -237,14 +237,14 @@ REVOKE
   
 -   REFRENCES  
   
- Per una definizione di ogni tipo di autorizzazione, vedere [Autorizzazioni (motore di database)](http://msdn.microsoft.com/library/ms191291.aspx).  
+ Per una definizione di ogni tipo di autorizzazione, vedere [Autorizzazioni (motore di database)](https://msdn.microsoft.com/library/ms191291.aspx).  
   
 ### <a name="chart-of-permissions"></a>Grafico delle autorizzazioni  
  Nel poster seguente sono rappresentate graficamente tutte le autorizzazioni. Il poster consente di visualizzare chiaramente la gerarchia nidificata delle autorizzazioni. Ad esempio, l'autorizzazione **ALTER ON LOGIN** può essere concessa singolarmente ma è inclusa anche nel caso in cui venga concessa l'autorizzazione **CONTROL** per l'account di accesso specifico oppure nel caso in cui venga concessa a un account di accesso l'autorizzazione **ALTER ANY LOGIN**.  
   
  ![Poster delle autorizzazioni di sicurezza della piattaforma di strumenti analitici](../../t-sql/statements/media/aps-security-perms-poster.png "Poster delle autorizzazioni di sicurezza della piattaforma di strumenti analitici")  
   
- Per scaricare la versione completa del poster, vedere [SQL Server PDW Permissions](http://go.microsoft.com/fwlink/?LinkId=244249) (Autorizzazioni di SQL Server PDW) nella sezione dei file del sito APS Yammer (oppure richiederla tramite posta elettronica a **apsdoc@microsoft.com**.  
+ Per scaricare la versione completa del poster, vedere [SQL Server PDW Permissions](https://go.microsoft.com/fwlink/?LinkId=244249) (Autorizzazioni di SQL Server PDW) nella sezione dei file del sito APS Yammer (oppure richiederla tramite posta elettronica a **apsdoc@microsoft.com**.  
   
 ## <a name="default-permissions"></a>Autorizzazioni predefinite  
  L'elenco seguente descrive le autorizzazioni predefinite:  

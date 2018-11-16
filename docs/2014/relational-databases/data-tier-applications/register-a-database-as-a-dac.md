@@ -20,12 +20,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d71b277f3717a0406f2f91fbce596ea90389b8da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c5bf53045abe0f93e2ff1e07ec17d31f7d58248b
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067061"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814074"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrare un database come applicazione livello dati
   Usare la **registrazione guidata dell'applicazione livello dati** o uno PowerShell di Windows script per compilare un livello dati (DAC) che descrive gli oggetti in un database esistente e registrare la definizione DAC nel `msdb` database di sistema (**master** in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
@@ -76,7 +76,7 @@ ms.locfileid: "48067061"
 ##  <a name="Set_properties"></a> Pagina Imposta proprietà  
  Utilizzare questa pagina per specificare le proprietà a livello di applicazione livello dati quali il nome dell'applicazione e la versione.  
   
- **Nome applicazione** - Stringa che specifica il nome utilizzato per identificare la definizione dell'applicazione livello dati; il campo viene popolato con il nome del database.  
+ **Nome applicazione** -Stringa che specifica il nome utilizzato per identificare la definizione di applicazione livello dati, il campo viene popolata con il nome del database.  
   
  **Versione** - Valore numerico che identifica la versione dell'applicazione livello dati. La versione DAC viene utilizzata in Visual Studio per identificare la versione della DAC alla quale stanno lavorando gli sviluppatori. Quando si distribuisce un'applicazione livello dati, la versione viene archiviata nel `msdb` del database e può essere visualizzata successivamente nel **Data-tier Applications** nodo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0507fd785dfe6eb61993c30c90b116db423548aa
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 022c63e58d212c5b45f18fcfc60b169dae9be81d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419456"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675900"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Risoluzione dei problemi: Trovare gli errori con la replica transazionale di SQL Server 
 La risoluzione degli errori di replica può risultare frustrante senza una conoscenza di base del funzionamento della replica transazionale. Il primo passaggio per la creazione di una pubblicazione prevede che l'agente di snapshot crei lo snapshot e lo salvi nella cartella degli snapshot. Successivamente, l'agente di distribuzione applica lo snapshot al sottoscrittore. 
@@ -252,7 +252,7 @@ L'agente di distribuzione trova i dati nel database di distribuzione e quindi li
     
 1. Per disabilitare la registrazione dettagliata, seguire gli stessi passaggi precedenti per rimuovere l'intera riga `-Output` aggiunta in precedenza. 
 
-Per altre informazioni, vedere [How to enable replication agents for logging to output files in SQL Server](https://support.microsoft.com/en-us/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se) (Come abilitare gli agenti di replica per la registrazione in file di output in SQL Server). 
+Per altre informazioni, vedere [How to enable replication agents for logging to output files in SQL Server](https://support.microsoft.com/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se) (Come abilitare gli agenti di replica per la registrazione in file di output in SQL Server). 
 
 
 ## <a name="see-also"></a>Vedere anche

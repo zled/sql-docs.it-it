@@ -11,12 +11,12 @@ ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7ac77271546fc6119f60fb218bb8c0d3c96c5a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: deed72fce55d5e80f54ba53596c213288aae249d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822539"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664630"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Procedura dettagliata: estendere la distribuzione del progetto di database per analizzare il piano di distribuzione
 È possibile creare collaboratori alla distribuzione per eseguire azioni personalizzate quando si distribuisce un progetto SQL. È possibile creare un elemento DeploymentPlanModifier o DeploymentPlanExecutor. Utilizzare DeploymentPlanModifier per modificare il piano prima di eseguirlo e DeploymentPlanExecutor per eseguire operazioni mentre il piano è in esecuzione. In questa procedura dettagliata viene creato un elemento DeploymentPlanExecutor denominato DeploymentUpdateReportContributor che crea un report sulle azioni eseguite quando si distribuisce un progetto di database. Poiché questo collaboratore alla compilazione accetta un parametro per controllare se il report viene generato, è necessario eseguire un'operazione necessaria aggiuntiva.  
@@ -46,7 +46,7 @@ Per creare un collaboratore alla distribuzione, è necessario effettuare le atti
   
 -   Creare un progetto Libreria di classi e aggiungere i riferimenti richiesti.  
   
--   Definire una classe denominata DeploymentUpdateReportContributor che erediti da [DeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx).  
+-   Definire una classe denominata DeploymentUpdateReportContributor che erediti da [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx).  
   
 -   Eseguire l'override del metodo OnExecute.  
   
@@ -105,7 +105,7 @@ Per creare un collaboratore alla distribuzione, è necessario effettuare le atti
   
     ```  
   
-    È stato definito il collaboratore alla distribuzione che eredita da DeploymentPlanExecutor. Durante i processi di compilazione e distribuzione, i collaboratori personalizzati vengono caricati da una directory di estensioni standard. I collaboratori all'esecuzione del piano di distribuzione sono identificati da un attributo [ExportDeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute.aspx).  
+    È stato definito il collaboratore alla distribuzione che eredita da DeploymentPlanExecutor. Durante i processi di compilazione e distribuzione, i collaboratori personalizzati vengono caricati da una directory di estensioni standard. I collaboratori all'esecuzione del piano di distribuzione sono identificati da un attributo [ExportDeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanexecutorattribute.aspx).  
   
     Questo attributo è richiesto per consentire di individuare i collaboratori. Dovrebbe essere simile a quanto riportato di seguito:  
   
@@ -249,9 +249,9 @@ Per creare un collaboratore alla distribuzione, è necessario effettuare le atti
             }  
     ```  
   
-    Al metodo OnExecute viene passato un oggetto [DeploymentPlanContributorContext](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) che fornisce accesso a qualsiasi argomento specificato, al modello di database di origine e di destinazione, alle proprietà di compilazione e ai file di estensione. In questo esempio viene ottenuto il modello e vengono chiamate le funzioni helper per restituire informazioni sul modello. Viene utilizzato il metodo helper PublishMessage sulla classe di base per segnalare gli eventuali errori che si verificano.  
+    Al metodo OnExecute viene passato un oggetto [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) che fornisce accesso a qualsiasi argomento specificato, al modello di database di origine e di destinazione, alle proprietà di compilazione e ai file di estensione. In questo esempio viene ottenuto il modello e vengono chiamate le funzioni helper per restituire informazioni sul modello. Viene utilizzato il metodo helper PublishMessage sulla classe di base per segnalare gli eventuali errori che si verificano.  
   
-    I tipi e i metodi aggiuntivi di interesse includono: [TSqlModel](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) e [SqlDeploymentOptions](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
+    I tipi e i metodi aggiuntivi di interesse includono: [TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) e [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
   
     Successivamente, si definisce una classe helper che accede ai dettagli del piano di distribuzione.  
   
@@ -524,11 +524,11 @@ Per creare un collaboratore alla distribuzione, è necessario effettuare le atti
   
     |**Area di codice**|**Tipi utili**|  
     |-----------------|--------------------|  
-    |Membri di classe|[TSqlModel](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
+    |Membri di classe|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
     |Metodo WriteReport|XmlWriter e XmlWriterSettings|  
-    |Metodo ReportPlanOperations|I tipi di interesse includono i seguenti: [DeploymentStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Sono presenti altri passaggi. Per un elenco completo, vedere la documentazione dell'API.|  
-    |GetElementCategory|[TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
-    |GetElementName|[TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
+    |Metodo ReportPlanOperations|I tipi di interesse includono i seguenti: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Sono presenti altri passaggi. Per un elenco completo, vedere la documentazione dell'API.|  
+    |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
+    |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
   
     Compilare la libreria di classi.  
   
@@ -593,7 +593,7 @@ Il secondo metodo consiste nel creare un file targets contenente gli argomenti d
     ```  
     <?xml version="1.0" encoding="utf-8"?>  
   
-    <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+    <Project xmlns="https://schemas.microsoft.com/developer/msbuild/2003">  
       <PropertyGroup>  
     <DeploymentContributors>$(DeploymentContributors);MyDeploymentContributor.DeploymentUpdateReportContributor</DeploymentContributors>  
     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">$(ContributorArguments); DeploymentUpdateReportContributor.GenerateUpdateReport=true;</ContributorArguments>  
@@ -738,10 +738,10 @@ Il progetto può essere pubblicato o distribuito normalmente in Visual Studio. �
     Analizzando il piano di distribuzione quando viene eseguito, è possibile segnalare qualsiasi informazione contenuta nella distribuzione ed è possibile eseguire interventi aggiuntivi basati sui passaggi del piano.  
   
 ## <a name="next-steps"></a>Next Steps  
-È possibile creare strumenti aggiuntivi per eseguire l'elaborazione dei file XML di output. Questo è solo un esempio di [DeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). È anche possibile creare un elemento [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) per modificare un piano di distribuzione prima che sia eseguito.  
+È possibile creare strumenti aggiuntivi per eseguire l'elaborazione dei file XML di output. Questo è solo un esempio di [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). È anche possibile creare un elemento [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) per modificare un piano di distribuzione prima che sia eseguito.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Procedura dettagliata: Estendere la compilazione del progetto del database per generare statistiche del modello](http://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[Procedura dettagliata: estendere la distribuzione del progetto di database per modificare il piano di distribuzione](http://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
-[Personalizzare la compilazione e la distribuzione del database tramite collaboratori alla compilazione e distribuzione](http://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
+[Procedura dettagliata: Estendere la compilazione del progetto del database per generare statistiche del modello](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
+[Procedura dettagliata: estendere la distribuzione del progetto di database per modificare il piano di distribuzione](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
+[Personalizzare la compilazione e la distribuzione del database tramite collaboratori alla compilazione e distribuzione](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
   

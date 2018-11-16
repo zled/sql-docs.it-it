@@ -15,19 +15,19 @@ ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8222a9d4ccf71b012c41a7a5059a46ea3b42e060
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90788ae0c29e293db84f3b6f60fd93af41b99d8b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645839"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637703"
 ---
 # <a name="use-annotations-in-packages"></a>Utilizzo di annotazioni nei pacchetti
   In Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] sono disponibili annotazioni che è possibile utilizzare per ottenere pacchetti autodocumentati, più semplici da capire e gestire. È possibile aggiungere annotazioni alle aree di progettazione dei flussi di controllo, dei flussi di dati e dei gestori di eventi di Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] . Nelle annotazioni può essere contenuto qualsiasi tipo di testo e possono essere utilizzate per aggiungere etichette, commenti e altre informazioni descrittive a un pacchetto. Le annotazioni sono disponibili solo in modalità progettazione. Non possono essere ad esempio scritte nei log.  
   
  Quando si preme INVIO, il testo viene riportato nella riga successiva. Le dimensioni della casella delle annotazioni aumentano automaticamente man mano che si aggiungono le righe di testo. Le annotazioni dei pacchetti vengono rese persistenti come testo non crittografato nella sezione CDATA del file del pacchetto.  
   
- Per altre informazioni sulle modifiche al formato del file del pacchetto, vedere [Formato del pacchetto SSIS](http://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94).  
+ Per altre informazioni sulle modifiche al formato del file del pacchetto, vedere [Formato del pacchetto SSIS](https://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94).  
   
  Quando si salva un pacchetto, Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] salva le annotazioni nel pacchetto.  
   

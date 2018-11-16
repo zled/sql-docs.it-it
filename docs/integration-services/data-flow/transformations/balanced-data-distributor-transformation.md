@@ -13,12 +13,12 @@ ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e58ab2c2b59e1440eaf1d38ba16e7a7293a38d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc9c1ba540e17baddcd1437a9b46d278aecddacf
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698959"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640549"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Trasformazione del server di distribuzione di dati bilanciati
   La trasformazione del server di distribuzione di dati bilanciati (BDD) sfrutta le funzionalità di elaborazione simultanea delle CPU più recenti. Vengono distribuiti in modo uniforme i buffer di righe in entrata in output di thread distinti. Tramite i thread distinti di ogni percorso di output, con il componente BDD vengono migliorate le prestazioni di un pacchetto SSIS in computer con più processori e più core.  
@@ -38,6 +38,6 @@ ms.locfileid: "47698959"
  Si noti che se il collo di bottiglia in un pacchetto SSIS è dovuto alla velocità con cui i dati possono essere letti dall'origine, tramite il componente BDD non è possibile migliorare le prestazioni. Se il collo di bottiglia in un pacchetto SSIS si verifica perché la destinazione non supporta il parallelismo, non è possibile avvalersi del supporto di BDD. Tuttavia, è possibile eseguire tutte le trasformazioni in parallelo e utilizzare la trasformazione Unione input multipli per combinare i dati di output che provengano da percorsi di output differenti della trasformazione BDD prima di inviare i dati alla destinazione.  
   
 > [!IMPORTANT]  
->  Per una presentazione con una demo sull'utilizzo della trasformazione, vedere il [video relativo al server di distribuzione di dati bilanciati](http://go.microsoft.com/fwlink/?LinkID=226278) nella libreria TechNet.  
+>  Per una presentazione con una demo sull'utilizzo della trasformazione, vedere il [video relativo al server di distribuzione di dati bilanciati](https://go.microsoft.com/fwlink/?LinkID=226278) nella libreria TechNet.  
   
   

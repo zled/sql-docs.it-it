@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5246d6b78144e2235dba0c4557c91074f3563142
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9ce1619d4ad2d61a784ace4ea16dc4064569e09
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607235"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658880"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Visualizzazione avanzata dei dati di destinazione da eventi estesi in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Il presente articolo presuppone che si sappia già come creare e avviare una ses
 
 Questo articolo presuppone anche che sia stata installata una versione mensile molto recente di SSMS. La guida all'installazione è disponibile alla pagina:
 
-- [Scaricare SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
+- [Scaricare SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
 
 
 
@@ -65,7 +65,7 @@ Il presente articolo è scritto dal punto di vista di SQL Server. L'articolo usa
 
 Per la documentazione sugli eventi estesi specifica del database SQL di Azure, vedere:
 
-- [Eventi estesi nel database SQL di Azure](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)
+- [Eventi estesi nel database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)
 
 
 

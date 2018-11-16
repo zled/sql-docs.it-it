@@ -17,12 +17,12 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c965c86385141a589a2de9f815f73ad7f9b5990
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f9ea0da85324aa74b7ce9af17ab64b743a8f031
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854490"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638748"
 ---
 # <a name="debugging-data-flow"></a>Debug di un flusso di dati
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] includono funzionalità e strumenti che è possibile usare per la risoluzione dei problemi dei flussi di dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -122,7 +122,7 @@ order by source_component_name desc
   
 #### <a name="to-configure-an-error-output-using-the-configure-error-output-dialog-box"></a>Per configurare un output degli errori tramite la finestra di dialogo Configura output errori  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
 2.  In Esplora soluzioni fare doppio clic sul pacchetto per aprirlo.  
   
@@ -210,7 +210,7 @@ order by source_component_name desc
 9. Nell'area Colonne da visualizzare selezionare le colonne che si desidera visualizzare nel visualizzatore dati. Per impostazione predefinita, nell'elenco **Colonne visualizzate** sono elencate e selezionate tutte le colonne disponibili. Spostare le colonne da non usare nell'elenco **Colonne inutilizzate** selezionandole e facendo clic sulla freccia sinistra.  
   
     > [!NOTE]  
-    >  I valori nella griglia che rappresentano i tipi di dati DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET vengono visualizzati come stringhe in formato ISO 8601. Uno spazio separatore sostituisce il separatore **T** . I valori che rappresentano i tipi di dati DT_DATE e DT_FILETIME includono sette cifre per i secondi frazionari. Poiché il tipo di dati DT_FILETIME memorizza solo tre cifre dei secondi frazionari, nella griglia viene visualizzato zero per le quattro cifre rimanenti. I valori che rappresentano il tipo di dati DT_DBTIMESTAMP includono tre cifre per i secondi frazionari. Per i valori che rappresentano i tipi di dati DT_DBTIME2, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET, il numero di cifre dei secondi frazionari corrisponde alla scala specificata per il tipo di dati della colonna. Per altre informazioni sui formati ISO 8601, vedere [Formati di data e ora](http://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39). Per altre informazioni sui tipi di dati, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
+    >  I valori nella griglia che rappresentano i tipi di dati DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET vengono visualizzati come stringhe in formato ISO 8601. Uno spazio separatore sostituisce il separatore **T** . I valori che rappresentano i tipi di dati DT_DATE e DT_FILETIME includono sette cifre per i secondi frazionari. Poiché il tipo di dati DT_FILETIME memorizza solo tre cifre dei secondi frazionari, nella griglia viene visualizzato zero per le quattro cifre rimanenti. I valori che rappresentano il tipo di dati DT_DBTIMESTAMP includono tre cifre per i secondi frazionari. Per i valori che rappresentano i tipi di dati DT_DBTIME2, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET, il numero di cifre dei secondi frazionari corrisponde alla scala specificata per il tipo di dati della colonna. Per altre informazioni sui formati ISO 8601, vedere [Formati di data e ora](https://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39). Per altre informazioni sui tipi di dati, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
 10. Fare clic su **OK**.  
 
@@ -270,7 +270,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  L'abilitazione del livello di registrazione dettagliata e l'aggiunta di scelte dei dati determinano un aumento delle operazioni di I/O eseguite dalla soluzione di integrazione dei dati. Pertanto, è consigliabile aggiungere le scelte dei dati solo ai fini della risoluzione dei problemi.  
   
 ### <a name="video"></a>Video  
- In questo [video su TechNet](http://technet.microsoft.com/sqlserver/dn600163) viene illustrato come aggiungere o usare le scelte dei dati nel catalogo di SQL Server 2012 SSISDB che facilita il debug dei pacchetti a livello di codice e l'acquisizione dei risultati parziali in fase di esecuzione. Inoltre vengono illustrate la modalità per elencare/rimuovere queste scelte dei dati e le procedure consigliate per l'utilizzo delle scelte dei dati nei pacchetti SSIS.  
+ In questo [video su TechNet](https://technet.microsoft.com/sqlserver/dn600163) viene illustrato come aggiungere o usare le scelte dei dati nel catalogo di SQL Server 2012 SSISDB che facilita il debug dei pacchetti a livello di codice e l'acquisizione dei risultati parziali in fase di esecuzione. Inoltre vengono illustrate la modalità per elencare/rimuovere queste scelte dei dati e le procedure consigliate per l'utilizzo delle scelte dei dati nei pacchetti SSIS.  
  
 ## <a name="see-also"></a>Vedere anche  
  [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md)  

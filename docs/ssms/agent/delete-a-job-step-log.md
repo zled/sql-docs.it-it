@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1b6c0436924c36a7d46273ad50d41543f4417663
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f474c6b2381b4a1779cee982486e3deafaf6a038
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723529"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696559"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -87,10 +87,10 @@ Il log di output dei passaggi di processo eliminati viene eliminato automaticame
     GO  
     ```  
   
-.Per altre informazioni, vedere [sp_delete_jobsteplog (Transact-SQL)](http://msdn.microsoft.com/e9ef4c99-abde-4038-b6a3-a25dcbaf0958).  
+.Per altre informazioni, vedere [sp_delete_jobsteplog (Transact-SQL)](https://msdn.microsoft.com/e9ef4c99-abde-4038-b6a3-a25dcbaf0958).  
   
 ## <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
-Usare i metodi **DeleteJobStepLogs** della classe **Job** tramite un linguaggio di programmazione a scelta, ad esempio Visual Basic, Visual C# o PowerShell. Per altre informazioni, vedere[SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+Usare i metodi **DeleteJobStepLogs** della classe **Job** tramite un linguaggio di programmazione a scelta, ad esempio Visual Basic, Visual C# o PowerShell. Per altre informazioni, vedere[SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   
 ```  
 -- Uses PowerShell to delete all job step log files that have ID values larger than 5.  

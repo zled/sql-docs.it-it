@@ -17,12 +17,12 @@ ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f70970ec872d3c921fa10e3eacb1c54d7c4de2d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3acf5ed94993d50c3c81813cd9ea09db2c231a08
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632209"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600021"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>Provider OLE DB per Internet Publishing
 L'oggetto ADO [Record](../../../ado/reference/ado-api/record-object-ado.md) e [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetti sono utilizzabile con il Provider Microsoft OLE DB per Internet Publishing (Provider di pubblicazione Internet) per accedere e modificare risorse, ad esempio file o cartelle Web gestito da Microsoft FrontPage. Con ADO, è possibile specificare l'origine di un **Record**, **Stream**, o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sia un URL. È possibile caricare, scaricare, spostare, copiare ed eliminare le risorse o modificare direttamente le proprietà delle risorse.  
@@ -36,20 +36,20 @@ L'oggetto ADO [Record](../../../ado/reference/ado-api/record-object-ado.md) e [S
 -   Specificare "URL =" nella stringa di connessione. Esempio:  
   
     ```  
-    objConn.Open "URL=http://servername"  
+    objConn.Open "URL=https://servername"  
     ```  
   
 -   Specificare Msdaipp. DSO per il *Provider* parola chiave della stringa di connessione. Esempio:  
   
     ```  
-    objConn.Open "provider=MSDAIPP.DSO;data source=http://servername"  
+    objConn.Open "provider=MSDAIPP.DSO;data source=https://servername"  
     ```  
   
 -   Specificare Msdaipp. DSO per il [Provider](../../../ado/reference/ado-api/provider-property-ado.md) proprietà delle [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Esempio:  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  
-    objConn.Open "http://servername"  
+    objConn.Open "https://servername"  
     ```  
   
 > [!NOTE]

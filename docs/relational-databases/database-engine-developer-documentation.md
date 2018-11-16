@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cf6458cdb92f11871b27ae007d4207f3628c46b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 500281b84c84e84507660e3961b3d512b939e582
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597650"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668601"
 ---
 # <a name="database-engine-developer-documentation"></a>Documentazione per gli sviluppatori del motore di database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ ms.locfileid: "47597650"
  [Programmazione di stored procedure estese del motore di database](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
  Viene descritto come utilizzare stored procedure estese per creare le proprie routine esterne in un linguaggio di programmazione come C.  
   
- [Programmazione dell'agente di raccolta dati](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)  
+ [Programmazione dell'agente di raccolta dati](https://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)  
  Viene descritto il modello a oggetti dell'agente di raccolta dati.  
   
- [Programmazione della finestra di messaggio eccezione](http://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
+ [Programmazione della finestra di messaggio eccezione](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
  Viene descritto come utilizzare l'interfaccia di programmazione della finestra di messaggio eccezione nelle applicazioni per fornire maggiore controllo sulla messaggistica, offrire agli utenti la possibilità di salvare il contenuto dei messaggi di errore per riferimento futuro, nonché ottenere informazioni sui messaggi.  
   
 ## <a name="see-also"></a>Vedere anche  
