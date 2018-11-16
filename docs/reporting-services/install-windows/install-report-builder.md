@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ebcef28bd5b785bb72059986e39aae34d8af7921
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 916709e73cd7cad750683dca984d9e897b84997d
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021325"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813184"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] è un'app autonoma, installata nel computer in uso dall'utente o da un amministratore. È possibile installarla dall'Area download Microsoft, da un server di report di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] o da un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "50021325"
  
 ## <a name="install-includessrbnoversionincludesssrbnoversionmd-with-system-center-configuration-manager"></a>Installare [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] con System Center Configuration Manager 
   
- Un amministratore può usare anche un software come System Center Configuration Manager per installare automaticamente il programma nel computer. Per informazioni sull'uso del software specifico per l'installazione di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], fare riferimento alla relativa documentazione. Per altre informazioni, vedere il [sito di System Center Configuration Manager](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager).  
+ Un amministratore può usare anche un software come System Center Configuration Manager per installare automaticamente il programma nel computer. Per informazioni sull'uso del software specifico per l'installazione di [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], fare riferimento alla relativa documentazione. Per altre informazioni, vedere il [sito di System Center Configuration Manager](https://www.microsoft.com/cloud-platform/system-center-configuration-manager).  
   
 > [!IMPORTANT]  
 >  Le funzionalità di sicurezza di Windows Vista e Windows 7 richiedono autorizzazioni elevate per l'esecuzione delle operazioni dalla riga di comando. L'installazione non è invisibile all'utente. Per renderla invisibile è necessario eseguire la riga di comando come amministratore.  

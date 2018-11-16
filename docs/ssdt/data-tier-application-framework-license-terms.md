@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 307471c65910c702a7777796e153a599a6a4e59f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13c4320a3e571c6680800fac18f9be75674f61ce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825919"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664990"
 ---
 # <a name="data-tier-application-framework---license-terms"></a>Data-Tier Application Framework - Condizioni di licenza
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ per il presente software, a meno che a tali prodotti non siano associate condizi
     -   trasferire il software o il presente contratto a terzi oppure  
     -   utilizzare il software per fornire hosting di servizi commerciali.  
       
-4.  **COMUNICAZIONI DI TERZI.** Nel software potrà essere incluso codice di terzi che Microsoft, non i terzi, concede in licenza al licenziatario in base alle condizioni stabilite nel presente contratto. Eventuali comunicazioni per il codice di terzi sono incluse solo a scopo informativo. Inoltre, tutti gli script di terze parti, collegati, chiamati o a cui si fa riferimento in questo software, vengono concessi in licenza dalle terze parti proprietarie del codice in questione, non da Microsoft. Per informazioni, vedere le condizioni di utilizzo di ASP.NET Ajax CDN all'indirizzo http://www.asp.net/ajaxlibrary/CDN.ashx.  
+4.  **COMUNICAZIONI DI TERZI.** Nel software potrà essere incluso codice di terzi che Microsoft, non i terzi, concede in licenza al licenziatario in base alle condizioni stabilite nel presente contratto. Eventuali comunicazioni per il codice di terzi sono incluse solo a scopo informativo. Inoltre, tutti gli script di terze parti, collegati, chiamati o a cui si fa riferimento in questo software, vengono concessi in licenza dalle terze parti proprietarie del codice in questione, non da Microsoft. Per informazioni, vedere le condizioni di utilizzo di ASP.NET Ajax CDN all'indirizzo https://www.asp.net/ajaxlibrary/CDN.ashx.  
   
 5.  **COPIA DI BACKUP.** Il licenziatario potrà eseguire una copia di backup del software. che potrà essere utilizzata esclusivamente per reinstallare il software.  
   

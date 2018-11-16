@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc385863afdd0ec6c9c5fb06799f8109f0c9cea7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 403946b29ebda9e8023b8f156daac9fbb9202df4
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645149"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813354"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurare un URL (Gestione configurazione SSRS)
   Per usare [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] o il servizio Web ReportServer, è necessario configurare almeno un URL per ogni applicazione. La configurazione degli URL è obbligatoria se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato installato in modalità "solo file", ovvero se è stata selezionata l'opzione **Installa senza configurare il server** nella pagina Opzioni di installazione Server report dell'Installazione guidata. Se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è stato installato con la configurazione predefinita, gli URL sono già configurati per ogni applicazione.  
@@ -78,7 +78,7 @@ ms.locfileid: "47645149"
   
          `netstat –anp tcp`  
   
-    -   Per informazioni sulle assegnazioni di porta TCP e le differenze tra porte note (da 0 a 1023), porte registrate (da 1024 a 49151) e porte dinamiche o private (da 49152 a 65535), vedere l'articolo [Informazioni sull'assegnazione di porte TCP/IP](http://support.microsoft.com/kb/174904)nel sito Web del supporto tecnico Microsoft.  
+    -   Per informazioni sulle assegnazioni di porta TCP e le differenze tra porte note (da 0 a 1023), porte registrate (da 1024 a 49151) e porte dinamiche o private (da 49152 a 65535), vedere l'articolo [Informazioni sull'assegnazione di porte TCP/IP](https://support.microsoft.com/kb/174904)nel sito Web del supporto tecnico Microsoft.  
   
     -   Se si utilizza Windows Firewall, è necessario aprire la porta. Per istruzioni, vedere [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
@@ -124,9 +124,9 @@ ms.locfileid: "47645149"
 ## <a name="setting-advanced-properties-to-specify-additional-urls"></a>Impostazione di proprietà avanzate per specificare altri URL  
  È possibile riservare più URL per il servizio Web ReportServer o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] specificando porte o nomi host diversi, ovvero un indirizzo IP o un nome di intestazione host che può essere risolto da un DNS in un indirizzo IP assegnato al computer. Creando più URL, è possibile configurare percorsi di accesso diversi per la stessa istanza del server di report. Per attivare l'accesso Intranet ed Extranet a un server di report, ad esempio, è possibile utilizzare l'URL predefinito per l'accesso tramite Intranet e un altro nome host completo per l'accesso Extranet:  
   
--   `http://myserver01/reportserver`  
+-   `https://myserver01/reportserver`  
   
--   `http://www.adventure-works.com/reportserver`  
+-   `https://www.adventure-works.com/reportserver`  
   
  Non è possibile impostare più nomi delle directory virtuali per la stessa istanza dell'applicazione. Di ogni istanza dell'applicazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene eseguito il mapping a un singolo nome di directory virtuale. Se si dispone di più istanze di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nello stesso computer, il nome della directory virtuale per un'applicazione deve includere il nome di istanza per garantire che ogni richiesta raggiunga la destinazione prevista.  
  
@@ -151,7 +151,7 @@ ms.locfileid: "47645149"
   
 2.  Scegliere **Aggiungi**.  
   
-3.  Fare clic su Indirizzo IP o Nome intestazione host. Nel caso di un'intestazione host, assicurarsi di specificare un nome che il servizio DNS sia in grado di risolvere. Se si specifica un nome di dominio pubblico, specificare l'intero URL, incluso `http://www`.  
+3.  Fare clic su Indirizzo IP o Nome intestazione host. Nel caso di un'intestazione host, assicurarsi di specificare un nome che il servizio DNS sia in grado di risolvere. Se si specifica un nome di dominio pubblico, specificare l'intero URL, incluso `https://www`.  
   
 4.  Specificare la porta. Se si specifica una porta personalizzata, l'URL dell'applicazione deve sempre includere il numero di porta.  
   
@@ -165,13 +165,13 @@ ms.locfileid: "47645149"
 ##  <a name="URLExamples"></a> Esempi di configurazioni di URL  
  Nell'elenco seguente sono inclusi alcuni esempi di URL di server di report:  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
--   `http://localhost/reportserver_SQLEXPRESS`  
+-   `https://localhost/reportserver_SQLEXPRESS`  
   
--   `http://sales01/reportserver`  
+-   `https://sales01/reportserver`  
   
--   `http://sales01:8080/reportserver`  
+-   `https://sales01:8080/reportserver`  
   
 -   `https://sales.adventure-works.com/reportserver`  
   
@@ -179,13 +179,13 @@ ms.locfileid: "47645149"
   
  Gli URL usati per accedere a [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] condividono un formato simile e vengono in genere creati nello stesso sito Web che ospita il server di report. L'unica differenza è costituita dal nome di directory virtuale. In questo caso viene usato il nome **reports** , ma è possibile configurare qualsiasi nome:  
   
--   `http://localhost/reports`  
+-   `https://localhost/reports`  
   
--   `http://localhost/reports_SQLEXPRESS`  
+-   `https://localhost/reports_SQLEXPRESS`  
   
--   `http://sales01/reports`  
+-   `https://sales01/reports`  
   
--   `http://sales01:8080/reports`  
+-   `https://sales01:8080/reports`  
   
 -   `https://sales.adventure-works.com/reports`  
   

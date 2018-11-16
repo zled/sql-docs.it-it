@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 620debfd008dc120e171241d0038229e9dce8a04
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a3a822ddfdd954e0811e83ca4c92a2c3dc7e5b90
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028194"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812974"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>Installare SQL Server Reporting Services 2017 e versioni successive
 
@@ -98,15 +98,15 @@ Le prenotazioni URL sono composte da un prefisso, un nome host, una porta e una 
 |Parte|Descrizione|
 |----------|-----------------|
 |Prefisso|Il prefisso predefinito è HTTP. Se in precedenza è stato installato un certificato SSL (Secure Sockets Layer), il programma di installazione tenta di creare prenotazioni URL che usano il prefisso HTTPS.|
-|Nome host|Il nome host predefinito è un carattere jolly complesso (+). Specifica che il server di report accetta le richieste HTTP sulla porta designata per qualsiasi nome host risolto nel computer, tra cui `http://<computername>/reportserver`, `http://localhost/reportserver`, o `http://<IPAddress>/reportserver.`|
+|Nome host|Il nome host predefinito è un carattere jolly complesso (+). Specifica che il server di report accetta le richieste HTTP sulla porta designata per qualsiasi nome host risolto nel computer, tra cui `https://<computername>/reportserver`, `https://localhost/reportserver`, o `https://<IPAddress>/reportserver.`|
 |Port|La porta predefinita è 80. Se si usa un numero di porta diverso da 80, sarà necessario aggiungerlo in modo esplicito all'URL quando si apre il portale Web in una finestra del browser.|
 |Directory virtuale|Per impostazione predefinita, le directory virtuali vengono create nel formato ReportServer per il servizio Web ReportServer e Reports per il portale Web. Per il servizio Web ReportServer, la directory virtuale predefinita è **reportserver**. Per il portale Web, la directory virtuale predefinita è **reports**.|
 
 Di seguito viene fornito un esempio di stringa dell'URL completa:
 
-- `http://+:80/reportserver` consente l'accesso al server di report.
+- `https://+:80/reportserver` consente l'accesso al server di report.
 
-- `http://+:80/reports` consente l'accesso al portale Web.
+- `https://+:80/reports` consente l'accesso al portale Web.
 
 ## <a name="firewall"></a>Firewall
 

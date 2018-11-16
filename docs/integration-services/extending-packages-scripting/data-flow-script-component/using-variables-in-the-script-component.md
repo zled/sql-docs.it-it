@@ -13,15 +13,15 @@ ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a21bdb4d878f49f78f514696e01dcbc8fbcc81eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51dddf0e5fd971aeb2aa1229bb1af2faae744b6e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649981"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638528"
 ---
 # <a name="using-variables-in-the-script-component"></a>Utilizzo di variabili nel componente script
-  Nelle variabili vengono archiviati valori che possono essere utilizzati in fase di esecuzione da un pacchetto e dai relativi contenitori, attività e gestori eventi. Per altre informazioni, vedere [Integration Services &#40;SSIS&#41; Variables](../../../integration-services/integration-services-ssis-variables.md).  
+  Nelle variabili vengono archiviati valori che possono essere utilizzati in fase di esecuzione da un pacchetto e dai relativi contenitori, attività e gestori eventi. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-variables.md).  
   
  È possibile rendere disponibili le variabili esistenti per l'accesso di sola lettura o di lettura/scrittura da parte dello script personalizzato immettendo elenchi di variabili delimitate da virgole nei campi **ReadOnlyVariables** e **ReadWriteVariables** della pagina **Script** dell'**Editor trasformazione Script**. Tenere presente che per i nomi delle variabili viene applicata la distinzione tra maiuscole e minuscole. Usare la proprietà **Value** per leggere e scrivere in singole variabili. Il componente script gestisce automaticamente l'eventuale blocco richiesto mentre lo script modifica le variabili in fase di esecuzione.  
   
@@ -38,6 +38,6 @@ ms.locfileid: "47649981"
   
 ## <a name="see-also"></a>Vedere anche  
  [Variabili di Integration Services &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-variables.md)   
- [Uso di variabili nei pacchetti](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

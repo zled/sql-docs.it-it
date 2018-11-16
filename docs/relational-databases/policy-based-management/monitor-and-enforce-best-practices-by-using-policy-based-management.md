@@ -5,21 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a8e50674429bb332e750222c3b458b53cd339437
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d46e82343f0f145536c38cf7ac457ad39b813d5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719559"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672080"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Monitorare e applicare le procedure consigliate tramite la gestione basata su criteri
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,11 +30,11 @@ ms.locfileid: "47719559"
 |Nome criteri|Regola per le procedure consigliate|  
 |-----------------|------------------------|  
 |Algoritmo di crittografia a chiavi asimmetriche|[Livello di crittografia delle chiavi asimmetriche](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|Percorso di backup e del file di dati|[Posizionamento dei file di backup in dispositivi separati rispetto ai file di database](http://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
+|Percorso di backup e del file di dati|[Posizionamento dei file di backup in dispositivi separati rispetto ai file di database](https://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
 |Percorso dati e file di log|[Posizionamento di dati e file di log in unità distinte](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |Chiusura automatica database|[Impostazione dell'opzione di database AUTO_CLOSE su OFF](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |Compattazione automatica database|[Impostazione dell'opzione di database AUTO_SHRINK su OFF](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|Regole di confronto del database|[Impostazione delle regole di confronto dei database definiti dall'utente in modo che corrispondano a quelle dei database master e modello](http://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
+|Regole di confronto del database|[Impostazione delle regole di confronto dei database definiti dall'utente in modo che corrispondano a quelle dei database master e modello](https://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
 |Verifica pagina di database|[Impostazione dell'opzione di database PAGE_VERIFY su CHECKSUM](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |Stato pagine del database|[Verifica del'integrità di un database contenente pagine sospette](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |Autorizzazioni Guest|[Autorizzazioni Guest nei database utente](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  

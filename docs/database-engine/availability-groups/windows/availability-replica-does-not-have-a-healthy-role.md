@@ -14,12 +14,12 @@ ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 726dbfd9f3c16088af469de9745edfa454c6c00a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aec1a0cc2b6a5f12dce1d8c49c7d2c1b26771e00
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788799"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602821"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>La replica di disponibilità non dispone di un ruolo integro
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47788799"
  Tramite questi criteri viene controllato lo stato del ruolo della replica di disponibilità. I criteri sono in uno stato non integro quando il ruolo della replica di disponibilità non è né primario né secondario. Altrimenti, sono in uno stato integro.  
   
 > [!NOTE]  
->  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili nella pagina relativa alla [replica di disponibilità che non presenta un ruolo integro](http://go.microsoft.com/fwlink/p/?LinkId=220856) su Wiki di TechNet.  
+>  Per questa versione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], le informazioni sulle possibili cause e le soluzioni sono disponibili nella pagina relativa alla [replica di disponibilità che non presenta un ruolo integro](https://go.microsoft.com/fwlink/p/?LinkId=220856) su Wiki di TechNet.  
   
 ## <a name="possible-causes"></a>Possibili cause  
  Il ruolo di questa replica di disponibilità non è integro. La replica non presenta il ruolo primario o quello secondario.  
@@ -46,6 +46,6 @@ ms.locfileid: "47788799"
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Usare il dashboard Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usare il Dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

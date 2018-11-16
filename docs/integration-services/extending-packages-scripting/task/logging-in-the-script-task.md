@@ -22,12 +22,12 @@ ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d3e5480754ecc5f1c8230061500585a7a661fcf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: baa0e4e5cc4134b4efbd84ffbba8a422af7f4e8a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720129"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640029"
 ---
 # <a name="logging-in-the-script-task"></a>Registrazione nell'attività Script
   L'utilizzo della registrazione nei pacchetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] consente di registrare informazioni dettagliate su stato di esecuzione, risultati e problemi, tramite la registrazione di eventi predefiniti o di messaggi definiti dall'utente da analizzare in un secondo momento. L'attività Script può usare il metodo <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> dell'oggetto **Dts** per registrare dati definiti dall'utente. Se la registrazione è abilitata e l'evento **ScriptTaskLogEntry** è selezionato per la registrazione nella scheda **Dettagli** della finestra di dialogo **Configura log SSIS**, una singola chiamata al metodo <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> archivia le informazioni dell'evento in tutti i provider di log configurati per l'attività.  
@@ -95,7 +95,7 @@ public class ScriptMain
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Post di blog [Logging custom events for Integration Services tasks](http://go.microsoft.com/fwlink/?LinkId=165644)(Registrazione di eventi personalizzati per le attività di Integration Services) nel sito Web dougbert.com  
+-   Post di blog [Logging custom events for Integration Services tasks](https://go.microsoft.com/fwlink/?LinkId=165644)(Registrazione di eventi personalizzati per le attività di Integration Services) nel sito Web dougbert.com  
   
 ## <a name="see-also"></a>Vedere anche  
  [Registrazione di Integration Services &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
