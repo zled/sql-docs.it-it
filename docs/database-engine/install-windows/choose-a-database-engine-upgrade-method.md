@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 3d9389f515c6e6558a5df2a39a778e24b9179567
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: ba27a8364afc3d006341079a597cc0edcb6131fb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970782"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665610"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Scegliere un metodo di aggiornamento del motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,17 +30,17 @@ Sono disponibili diversi approcci da considerare quando si intende eseguire l'ag
   
  **Scarica**  
   
--   Per scaricare [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server)**.  
+-   Per scaricare [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], passare a  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server)**.  
   
--   Se si ha un account di Azure,  fare clic **[qui](http://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)** per creare rapidamente una macchina virtuale in cui è già installato [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition.  
+-   Se si ha un account di Azure,  fare clic **[qui](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)** per creare rapidamente una macchina virtuale in cui è già installato [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition.  
   
 > [!NOTE]  
 >  Nell'ambito del piano di aggiornamento, è anche possibile considerare l'aggiornamento del database SQL di Azure o la virtualizzazione dell'ambiente SQL Server. Questi articoli non rientrano nell'ambito di questo articolo, ma di seguito sono riportati alcuni collegamenti:
 >   - [Panoramica di SQL Server in macchine virtuali di Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
->   - [Database SQL di Azure](https://azure.microsoft.com/en-us/services/sql-database/) 
+>   - [Database SQL di Azure](https://azure.microsoft.com/services/sql-database/) 
 >   - [Selezione di un'opzione di SQL Server in Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/).  
   
-##  <a name="UpgradeInPlace"></a> Aggiornamento sul posto  
+## <a name="upgrade-in-place"></a>Aggiornamento sul posto  
  Con questo approccio, il programma di installazione di SQL Server aggiorna l'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistente sostituendo i bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistenti con i bit nuovi di [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] e quindi aggiorna tutti i database utente e di sistema.  Il metodo di aggiornamento sul posto è più semplice, implica tempo di inattività, richiede più tempo per il fallback, se necessario, e non è supportato in tutti gli scenari. Per altre informazioni sugli scenari di aggiornamento sul posto supportati e non supportati, vedere [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
   
  Questo approccio viene spesso usato negli scenari seguenti:  
@@ -61,7 +61,7 @@ Sono disponibili diversi approcci da considerare quando si intende eseguire l'ag
   
  Per i passaggi dettagliati, vedere [Eseguire l'aggiornamento di SQL Server usando l'Installazione guidata &#40;programma di installazione&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
-##  <a name="NewInstallationUpgrade"></a> Migrazione verso una nuova installazione  
+## <a name="migrate-to-a-new-installation"></a>Migrazione verso una nuova installazione  
  Con questo approccio è possibile mantenere l'ambiente corrente mentre si crea un nuovo ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , spesso su hardware nuovo e con una nuova versione del sistema operativo. Dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel nuovo ambiente, è necessario eseguire una procedura per preparare il nuovo ambiente alla migrazione dei database utente esistenti dall'ambiente esistente al nuovo ambiente, riducendo al minimo i tempi di inattività. Questa procedura comprende la migrazione degli elementi seguenti:  
   
 -   **Oggetti di sistema:** alcune applicazioni dipendono da informazioni, entità e/o oggetti esterni all'ambito di un database in modalità a utente singolo. Un'applicazione include in genere dipendenze nei database master e msdb, nonché nel database utente. Qualsiasi elemento archiviato all'esterno di un database utente necessario per il corretto funzionamento di tale database deve essere reso disponibile nell'istanza del server di destinazione. Ad esempio, gli account di accesso per un'applicazione vengono archiviati come metadati nel database master e devono essere ricreati nel server di destinazione. Se il piano di manutenzione di un'applicazione o un database dipende da processi di SQL Server Agent i cui metadati sono archiviati nel database msdb, è necessario ricreare tali processi nell'istanza del server di destinazione. Analogamente, i metadati per un trigger a livello di server vengono archiviati nel database master.  
@@ -80,21 +80,18 @@ Sono disponibili diversi approcci da considerare quando si intende eseguire l'ag
  Dopo la migrazione dei database utente, puntare i nuovi utenti verso la nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando uno dei diversi metodi, ad esempio rinominando il server, usando una voce DNS, modificando le stringhe di connessione.  Il nuovo approccio di installazione riduce rischi e tempi di inattività rispetto all'aggiornamento sul posto e agevola gli aggiornamenti hardware e del sistema operativo in combinazione con l'aggiornamento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Se si ha già una soluzione a disponibilità elevata o altri numerosi ambienti dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Aggiornamenti in sequenza](#RollingUpgrade). Se non si ha una soluzione a disponibilità elevata, è possibile configurare temporaneamente il [mirroring del database](../database-mirroring/setting-up-database-mirroring-sql-server.md) per ridurre maggiormente i tempi di inattività e semplificare l'aggiornamento oppure configurare un [gruppo di disponibilità Always On](http://msdn.microsoft.com/library/hh510260.aspx) come soluzione a disponibilità elevata permanente.  
+>  Se si ha già una soluzione a disponibilità elevata o altri numerosi ambienti dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Aggiornamenti in sequenza](#RollingUpgrade). Se non si ha una soluzione a disponibilità elevata, è possibile configurare temporaneamente il [mirroring del database](../database-mirroring/setting-up-database-mirroring-sql-server.md) per ridurre maggiormente i tempi di inattività e semplificare l'aggiornamento oppure configurare un [gruppo di disponibilità Always On](https://msdn.microsoft.com/library/hh510260.aspx) come soluzione a disponibilità elevata permanente.  
   
  Ad esempio, è possibile usare questo approccio per aggiornare gli elementi seguenti:  
   
--   Un'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su un sistema operativo non supportato.  
+-   Un'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su un sistema operativo non supportato.    
+-   Un'installazione x86 di SQL Server dal momento che [!INCLUDE[ss2016](../../includes/sssql15-md.md)] e versioni successive non supportano le installazioni x86.   
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su un nuovo hardware e/o su una nuova versione del sistema operativo.    
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in combinazione con il consolidamento dei server.   
+-   SQL Server 2005 come [!INCLUDE[ss2016](../../includes/sssql15-md.md)] e versioni successive non supportano l'aggiornamento sul posto di SQL Server 2005. Per altre informazioni, vedere [Aggiornamento da SQL Server 2005](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md).
+
   
--   Un'installazione x86 di SQL Server dal momento che [!INCLUDE[ss2016](../../includes/sssql15-md.md)] e versioni successive non supportano le installazioni x86.  
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su un nuovo hardware e/o su una nuova versione del sistema operativo.  
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in combinazione con il consolidamento dei server.  
-  
--   SQL Server 2005 come [!INCLUDE[ss2016](../../includes/sssql15-md.md)] e versioni successive non supportano l'aggiornamento sul posto di SQL Server 2005. Per altre informazioni, vedere [Aggiornamento da SQL Server 2005](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md).  
-  
- I passaggi necessari per un nuovo aggiornamento di installazione variano leggermente a seconda che si usi l'archiviazione associata o l'archiviazione SAN.  
+I passaggi necessari per un nuovo aggiornamento di installazione variano leggermente a seconda che si usi l'archiviazione associata o l'archiviazione SAN.  
   
 -   **Ambiente di archiviazione associata:** se si dispone di un ambiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che usa l'archiviazione associata, il diagramma seguente e i collegamenti all'interno del diagramma guidano nella procedura necessaria per un nuovo aggiornamento dell'installazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -104,19 +101,14 @@ Sono disponibili diversi approcci da considerare quando si intende eseguire l'ag
   
      ![Nuovo metodo di aggiornamento e installazione tramite collegamento e scollegamento per l'archiviazione SAN](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Nuovo metodo di aggiornamento e installazione tramite collegamento e scollegamento per l'archiviazione SAN")  
   
-##  <a name="RollingUpgrade"></a> Aggiornamenti in sequenza  
+## <a name="rolling-upgrade"></a>Aggiornamenti in sequenza  
  È necessario un aggiornamento in sequenza in ambienti di soluzioni SQL Server che includono più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da aggiornare in un determinato ordine al fine di ottimizzare i tempi di attività, ridurre i rischi e mantenere la funzionalità. Un aggiornamento in sequenza è essenzialmente l'aggiornamento di più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un ordine specifico, ovvero l'aggiornamento sul posto in ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]esistente o l'esecuzione di un nuovo aggiornamento dell'installazione per facilitare l'aggiornamento di hardware e/o sistema operativo come parte del progetto di aggiornamento. Esistono diversi scenari in cui è necessario usare il metodo di aggiornamento in sequenza. Questi scenari sono documentati negli articoli seguenti:  
   
--   Gruppi di disponibilità Always On: per i passaggi dettagliati dell'esecuzione di un aggiornamento in sequenza in questo ambiente, vedere [Aggiornamento delle istanze di replica dei gruppi di disponibilità Always On](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).  
-  
--   Istanze con clustering di failover: per i passaggi dettagliati dell'esecuzione di un aggiornamento in sequenza in questo ambiente, vedere [Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
-  
--   Istanze con mirroring: per i passaggi dettagliati dell'esecuzione di un aggiornamento in sequenza in questo ambiente, vedere [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)(Aggiornamento di istanze con mirroring).  
-  
--   Istanze con log shipping: per i passaggi dettagliati dell'esecuzione di un aggiornamento in sequenza in questo ambiente, vedere [Aggiornamento del log shipping per SQL Server 40 &#41;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md).  
-  
--   Ambiente di replica: per i passaggi dettagliati dell'esecuzione di un aggiornamento in sequenza in questo ambiente, vedere [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md).
-  
+-   Gruppi di disponibilità Always On: per i passaggi dettagliati dell'esecuzione di un aggiornamento in sequenza in questo ambiente, vedere [Aggiornamento delle istanze di replica dei gruppi di disponibilità Always On](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).    
+-   Istanze con clustering di failover: per i passaggi dettagliati dell'esecuzione di un aggiornamento in sequenza in questo ambiente, vedere [Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)    
+-   Istanze con mirroring: per i passaggi dettagliati dell'esecuzione di un aggiornamento in sequenza in questo ambiente, vedere [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)(Aggiornamento di istanze con mirroring).    
+-   Istanze con log shipping: per i passaggi dettagliati dell'esecuzione di un aggiornamento in sequenza in questo ambiente, vedere [Aggiornamento del log shipping per SQL Server 40 &#41;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md).    
+-   Ambiente di replica: per i passaggi dettagliati dell'esecuzione di un aggiornamento in sequenza in questo ambiente, vedere [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md).  
 -   Ambiente SQL Server Reporting Services con scalabilità orizzontale: per i passaggi dettagliati dell'esecuzione di un aggiornamento in sequenza in questo ambiente, vedere [Eseguire l'aggiornamento e la migrazione di Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
 ## <a name="next-steps"></a>Passaggi successivi

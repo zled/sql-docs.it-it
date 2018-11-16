@@ -16,12 +16,12 @@ ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d32af5a596d41dc85a2d04fd9e5a6eb98380be3e
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: e9b113a9ef0ca0905fa90833a5c9568a9318834a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383836"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698811"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Disinstallare un'istanza esistente di SQL Server (programma di installazione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "49383836"
   
 1.  Se il processo di disinstallazione non viene completato correttamente, tentare di eliminare la causa del problema. Gli articoli seguenti possono aiutare a individuare la causa della mancata disinstallazione:  
   
-    -   [Come identificare i problemi del programma di installazione di SQL Server 2008 nei file di log dell'installazione](http://support.microsoft.com/kb/955396/en-us)  
+    -   [Come identificare i problemi del programma di installazione di SQL Server 2008 nei file di log dell'installazione](https://support.microsoft.com/kb/955396/en-us)  
   
     -   [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9a345a40713bdba845e2e2cdd825326c1799c1e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 1dd2e24be0ca0746ad456a43c9005f3e0dd8a30c
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021095"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814094"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Esportazione in Microsoft Word (Generatore report e SSRS)
 
@@ -112,9 +112,9 @@ ms.locfileid: "50021095"
   
  Negli argomenti seguenti vengono fornite ulteriori informazioni sull'impostazione delle opzioni di Word e di Office.  
   
--   Cambiare la lingua di modifica nella finestra di dialogo **Preferenze di lingua di Microsoft Office** o **Opzioni di Word** in Word. Per altre informazioni, vedere [Impostazione delle preferenze di lingua per la modifica, l'interfaccia utente o la Guida](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1).  
+-   Cambiare la lingua di modifica nella finestra di dialogo **Preferenze di lingua di Microsoft Office** o **Opzioni di Word** in Word. Per altre informazioni, vedere [Impostazione delle preferenze di lingua per la modifica, l'interfaccia utente o la Guida](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1).  
   
--   Aggiungere i Language Pack di Office e cambiare la lingua di modifica. Per altre informazioni, vedere [Impostazione delle preferenze di lingua per la modifica, l'interfaccia utente o la Guida](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) e [Opzioni disponibili per Office](http://office.microsoft.com/language/).  
+-   Aggiungere i Language Pack di Office e cambiare la lingua di modifica. Per altre informazioni, vedere [Impostazione delle preferenze di lingua per la modifica, l'interfaccia utente o la Guida](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) e [Opzioni disponibili per Office](https://office.microsoft.com/language/).  
   
 > [!NOTE]  
 >  Quando si cambia la lingua di modifica nella finestra di dialogo **Preferenze di lingua di Microsoft Office** o **Opzioni di Word** in Word, la modifica viene applicata a tutti i programmi di Office.  

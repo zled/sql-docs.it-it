@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6167e81d5f6d9307101994e687b1ecd353793394
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aa67d80d18b6f93393cfccac146765a8df536ed
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609699"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813344"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurare gli URL del server di report (Gestione configurazione SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]gli URL vengono usati per accedere al servizio Web ReportServer e [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Per poter usare una delle due applicazioni, è necessario configurare almeno un URL per il servizio Web e per [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili valori predefiniti per entrambi gli URL dell'applicazione, appropriati per la maggior parte degli scenari di distribuzione, incluse le distribuzioni side-by-side con altri servizi e applicazioni Web.  
@@ -38,9 +38,9 @@ ms.locfileid: "47609699"
 ## <a name="default-urls"></a>URL predefiniti  
  Quando si accede a un server di report o a [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] dal relativo URL, quest'ultimo deve includere il nome host e non l'indirizzo IP. In una rete TCP/IP l'indirizzo IP verrà risolto in un nome host o nel nome di rete del computer. Se per configurare gli URL sono stati utilizzati i valori predefiniti, dovrebbe essere possibile accedere al servizio Web ReportServer utilizzando gli URL che specificano come nome host il nome del computer o localhost:  
   
--   `http://<computername>/reportserver`  
+-   `https://<computername>/reportserver`  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
  Le impostazioni che rendono disponibili questi URL sono incluse nella tabella seguente. Nella tabella vengono indicati i valori predefiniti che consentono la connessione del server di report tramite URL che includono un nome host:  
   

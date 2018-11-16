@@ -13,12 +13,12 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 958446082e1576e14f50d09a9b8b7181bf2f18af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10ad201fd848ba195c5c448dfc1f27c2b6ff058d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771579"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638608"
 ---
 # <a name="data-streaming-destination"></a>Destinazione flusso di dati
   **Destinazione flusso di dati** è un componente di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) che consente al **provider OLE DB per SSIS** di usare l'output di un pacchetto SSIS come set di risultati tabulare. È possibile creare un server collegato che usa il provider OLE DB per SSIS e quindi eseguire una query SQL su tale server per visualizzare i dati restituiti dal pacchetto SSIS.  
@@ -54,7 +54,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
  L'interfaccia di amministrazione consente di pubblicare viste in un database SQL Server. Di conseguenza, si può usare la Pubblicazione guidata del pacchetto SSIS per pubblicare un pacchetto SSIS come vista SQL. A questo punto, selezionare la vista da includere nel feed OData nell'Interfaccia di amministrazione di Power BI. Un amministratore dei dati può usare il feed dal pacchetto SSIS con il componente aggiuntivo Power Query per Excel.  
   
- Per una procedura dettagliata, vedere la pagina relativa alla [pubblicazione di pacchetti SSIS come origini di feed OData](http://go.microsoft.com/fwlink/?LinkID=317367).  
+ Per una procedura dettagliata, vedere la pagina relativa alla [pubblicazione di pacchetti SSIS come origini di feed OData](https://go.microsoft.com/fwlink/?LinkID=317367).  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
@@ -81,6 +81,6 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  Analogamente alla scheda Colonne di input, è possibile modificare i nomi delle colonne di output in questa scheda. Nella visualizzazione albero a sinistra espandere **Input di Destinazione flusso di dati** e quindi espandere **Colonne di input**. Fare clic sul nome della colonna di input e modificare il nome del nome della colonna di output nel riquadro di destra.  
   
 ## <a name="see-also"></a>Vedere anche  
- [pubblicazione di pacchetti SSIS come origini di feed OData](http://go.microsoft.com/fwlink/?LinkID=317367)  
+ [pubblicazione di pacchetti SSIS come origini di feed OData](https://go.microsoft.com/fwlink/?LinkID=317367)  
   
   

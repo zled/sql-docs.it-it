@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 335888ba664751bb20348472736ad697b8fe2b6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad16bb39d693e78f0d6678cbf5d6b1c4abfb5816
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633479"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663271"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47633479"
 |percent_complete|**int**|Percentuale dell'operazione completata. I valori non sono continui e i valori validi sono elencati di seguito. Non è NULL.<br/><br/>0 = operazione non è stato avviato<br/>50 = operazione in corso<br/>100 = operazione completata|  
 |error_code|**int**|Codice che indica l'errore che si è verificato durante un'operazione non riuscita. Se il valore è 0, indica che l'operazione è stata completata correttamente.|  
 |error_desc|**nvarchar(2048)**|Descrizione dell'errore che si è verificato durante un'operazione non riuscita.|  
-|error_severity|**int**|Livello di gravità dell'errore che si è verificato durante un'operazione non riuscita. Per altre informazioni sui livelli di gravità errore, vedere [gravità degli errori del motore di Database](http://go.microsoft.com/fwlink/?LinkId=251052).|  
+|error_severity|**int**|Livello di gravità dell'errore che si è verificato durante un'operazione non riuscita. Per altre informazioni sui livelli di gravità errore, vedere [gravità degli errori del motore di Database](https://go.microsoft.com/fwlink/?LinkId=251052).|  
 |error_state|**int**|Riservato per utilizzi futuri. Non è garantita la compatibilità con le versioni future.|  
 |start_time|**datetime**|Timestamp dell'inizio dell'operazione.|  
 |last_modify_time|**datetime**|Timestamp dell'ultima modifica del record per un'operazione a esecuzione prolungata. In caso di operazioni completate correttamente, in questo campo viene visualizzato il timestamp del completamento dell'operazione.|  

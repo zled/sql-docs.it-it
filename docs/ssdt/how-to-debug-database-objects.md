@@ -11,19 +11,19 @@ ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8652ebfdcdf5604cebc995ef7ecf2a5f3944b9e7
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 6df3fa6dc005aab43e86d847ba76ce5e87678459
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071714"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674140"
 ---
 # <a name="how-to-debug-database-objects"></a>Procedura: Eseguire il debug di oggetti di database
 Uno unit test di SQL Server è costituito dagli elementi seguenti:  
   
 -   Codice dello unit test scritto in Visual C\# o Visual Basic. Questo codice, generato dalla finestra di progettazione unit test di SQL Server, è responsabile dell'invio dello script Transact\-SQL che forma il corpo del test.  
   
--   Una o più condizioni di test, scritte in Visual C\# o Visual Basic. Per eseguire il debug delle condizioni di test, attenersi alla procedura per eseguire il debug di uno unit test come descritto in [Procedura: eseguire il debug durante l'esecuzione di un test (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182484(VS.100).aspx) o [Procedura: eseguire il debug durante l'esecuzione di un test (Visual Studio 2012)](http://msdn.microsoft.com/library/ms182484.aspx).  
+-   Una o più condizioni di test, scritte in Visual C\# o Visual Basic. Per eseguire il debug delle condizioni di test, attenersi alla procedura per eseguire il debug di uno unit test come descritto in [Procedura: eseguire il debug durante l'esecuzione di un test (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) o [Procedura: eseguire il debug durante l'esecuzione di un test (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx).  
   
 -   Uno o più script Transact\-SQL eseguiti sugli oggetti nel database sottoposto a test. Non è possibile eseguire il debug di questi script Transact\-SQL.  
   
@@ -98,5 +98,5 @@ Nelle procedure descritte in questo argomento viene descritto come eseguire il d
   
 ## <a name="see-also"></a>Vedere anche  
 [Esecuzione di unit test di SQL Server](../ssdt/running-sql-server-unit-tests.md)  
-[Debug di Transact-SQL (Visual Studio 2010)](http://go.microsoft.com/fwlink/?LinkId=163975)  
+[Debug di Transact-SQL (Visual Studio 2010)](https://go.microsoft.com/fwlink/?LinkId=163975)  
   
