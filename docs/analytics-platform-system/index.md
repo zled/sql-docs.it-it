@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3fc2230d22131da80ee1250c08b19fc16e4aa651
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 62fefedaa417e73820a7e14df9bf90f6215b9161
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909742"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702449"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Piattaforma di strumenti analitici Microsoft  
 La piattaforma di strumenti analitici Microsoft, una piattaforma dati progettata per il data warehousing e l'analisi di Big Data, offre integrazione completa dei dati, elaborazione di query ad alta velocità, archiviazione con scalabilità elevata e manutenzione semplice per le soluzioni di business intelligence end-to-end.  
@@ -51,6 +51,6 @@ Oltre a raggiungere prestazioni eccellenti per le query, PDW consente facilmente
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui vantaggi di PDW, vedere il white paper [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions (Piattaforma innovativa per soluzioni di Big Data e data warehousing di nuova generazione)](http://msdn.microsoft.com/library/dn520808.aspx) su MSDN.  
+Per altre informazioni sui vantaggi di PDW, vedere il white paper [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions (Piattaforma innovativa per soluzioni di Big Data e data warehousing di nuova generazione)](https://msdn.microsoft.com/library/dn520808.aspx) su MSDN.  
   
 
