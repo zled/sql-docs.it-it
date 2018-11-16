@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,18 +14,18 @@ ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36f6eec4b8203848dc6f4b8c99597f22c9cedeab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5efa6587ade3a15ce4b45b7247da1c3a896f69ee
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625879"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558528"
 ---
 # <a name="customization-file-sql-section"></a>Sezione SQL del file di personalizzazione
 Il **sql** sezione può contenere una nuova stringa SQL che sostituisce la stringa di comando di client. Se non è presente alcuna stringa SQL nella sezione, è possibile che la sezione verrà ignorata.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  La nuova stringa SQL può essere *con parametri*. Ovvero i parametri nel **sql** sezione stringa SQL (designato dal '?' caratteri) possono essere sostituiti dagli argomenti corrispondenti in un *identificatore* nella stringa di comando di client (designato da un elenco delimitato da parentesi). L'identificatore e l'elenco di argomenti si comportano come una chiamata di funzione.  
   
@@ -35,7 +35,7 @@ Il **sql** sezione può contenere una nuova stringa SQL che sostituisce la strin
   
  Se la nuova stringa dell'istruzione SQL non è valida, l'esecuzione dell'istruzione avrà esito negativo. Il client parametro viene ignorato. È possibile farlo intenzionalmente per "disattivare" tutti i comandi SQL client specificando:  
   
-```  
+```console
 [SQL default]   
 SQL = " "  
 ```  

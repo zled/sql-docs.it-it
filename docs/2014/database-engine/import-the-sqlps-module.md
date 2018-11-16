@@ -11,12 +11,12 @@ ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e687fd8c7fcd7c21f8aac9b546492a8f9bd4a644
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e73c0d114744241d18dc7946e852e05b3a2c6e5e
+ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077241"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51629554"
 ---
 # <a name="import-the-sqlps-module"></a>Importare il modulo SQLPS
   Il metodo consigliato per gestire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] da PowerShell consiste nell'importare il modulo `sqlps` in un ambiente Windows PowerShell 2.0. Il modulo carica e registra gli snap-in e gli assembly di gestibilità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -39,17 +39,17 @@ ms.locfileid: "48077241"
 -   Utilizzare i modelli a oggetti per la gestibilità di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , ad esempio Microsoft.SqlServer.Management.Smo, per gestire oggetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  I verbi utilizzati nei nomi di due SQL Server cmdlet (`Encode-Sqlname` e `Decode-Sqlname`) non corrispondono ai verbi approvati per Windows PowerShell 2.0. Ciò non ha alcun effetto sull'operazione, ma Windows PowerShell genera un avviso quando il `sqlps` modulo viene importato in una sessione.  
+>  I verbi utilizzati nei nomi di due SQL Server cmdlet (`Encode-Sqlname` e `Decode-Sqlname`) non corrispondono ai verbi approvati per Windows PowerShell 2.0. Ciò non ha effetto sull'operazione, tuttavia Windows PowerShell genera un avviso quando il modulo `sqlps` viene importato in una sessione.  
   
 ###  <a name="Security"></a> Sicurezza  
- Per impostazione predefinita, Windows PowerShell viene eseguito con i criteri di esecuzione degli script impostati su **Restricted**, che impediscono l'esecuzione degli script di Windows PowerShell. Per caricare il modulo `sqlps`, è possibile utilizzare il cmdlet `Set-ExecutionPolicy` per abilitare l'esecuzione di script firmati o di qualsiasi script. Eseguire solo script da origini attendibili e proteggere tutti i file di input e output utilizzando le autorizzazioni NTFS appropriate. Per altre informazioni sull'abilitazione degli script di Windows PowerShell, vedere [Running Windows PowerShell Scripts](http://www.microsoft.com/technet/scriptcenter/topics/winpsh/manual/run.mspx)(Esecuzione di script di Windows PowerShell).  
+ Per impostazione predefinita, Windows PowerShell viene eseguito con i criteri di esecuzione degli script impostati su **Restricted**, che impediscono l'esecuzione degli script di Windows PowerShell. Per caricare il modulo `sqlps`, è possibile utilizzare il cmdlet `Set-ExecutionPolicy` per abilitare l'esecuzione di script firmati o di qualsiasi script. Eseguire solo script da origini attendibili e proteggere tutti i file di input e output utilizzando le autorizzazioni NTFS appropriate. Per altre informazioni sull'abilitazione degli script di Windows PowerShell, vedere [Running Windows PowerShell Scripts](https://docs.microsoft.com/powershell/scripting/setup/starting-windows-powershell?view=powershell-6#how-to-enable-windows-powershell-ise-on-earlier-releases-of-windows)(Esecuzione di script di Windows PowerShell).  
   
 ##  <a name="LoadSqlps"></a> Caricare il Modulo sqlps  
  **Per caricare il modulo sqlps in Windows PowerShell**  
   
-1.  Usare il `Set-ExecutionPolicy` cmdlet per impostare i criteri di esecuzione degli script appropriati.  
+1.  Utilizzare il cmdlet `Set-ExecutionPolicy` per impostare i criteri di esecuzione degli script appropriati.  
   
-2.  Usare il `Import-Module` cmdlet per importare il modulo sqlps. Specificare il `DisableNameChecking` parametro se si desidera eliminare l'avviso sui `Encode-Sqlname` e `Decode-Sqlname`.  
+2.  Utilizzare il cmdlet `Import-Module` per importare il modulo sqlps. Specificare il parametro `DisableNameChecking` se si desidera eliminare l'avviso su `Encode-Sqlname` e `Decode-Sqlname`.  
   
 ### <a name="example-powershell"></a>Esempio (PowerShell)  
  In questo esempio viene caricato il modulo `sqlps` con verifica del nome disabilitata.  

@@ -44,8 +44,8 @@ Prima di creare il gruppo di disponibilità, è necessario:
    L'esempio seguente illustra `/etc/hosts` su **node1** con aggiunte per **node1**, **node2** e **node3**. In questo documento **node1** fa riferimento al server che ospita la replica primaria. E **node2** e **node3** fare riferimento ai server che ospitano le repliche secondarie.
 
     ```
-    127.0.0.1   localhost localhost4 localhost4.localdomain4
-    ::1       localhost localhost6 localhost6.localdomain6
+    127.0.0.1   localhost localhost4 localhost4.localdomain4
+    ::1       localhost localhost6 localhost6.localdomain6
     10.128.18.12 node1
     10.128.16.77 node2
     10.128.15.33 node3
@@ -77,7 +77,7 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-Per altre informazioni su questa sessione XE, vedere [AlwaysOn eventi estesi](http://msdn.microsoft.com/library/dn135324.aspx).
+Per altre informazioni su questa sessione XE, vedere [AlwaysOn eventi estesi](https://msdn.microsoft.com/library/dn135324.aspx).
 
 ## <a name="create-a-certificate"></a>Creare un certificato
 
@@ -166,6 +166,6 @@ La porta TCP sul firewall deve essere aperta per la porta del listener.
 >[!IMPORTANT]
 >Per la versione di SQL Server 2017 è l'unico metodo di autenticazione supportato per l'endpoint del mirroring `CERTIFICATE`. Il `WINDOWS` opzione verrà abilitata in una versione futura.
 
-Per altre informazioni, vedere [Endpoint del mirroring del database (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
+Per altre informazioni, vedere [Endpoint del mirroring del database (SQL Server)](https://msdn.microsoft.com/library/ms179511.aspx).
 
 

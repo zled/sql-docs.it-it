@@ -38,12 +38,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d57063ee518574adbb5faf2070ef2cfd203885b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8e4fb4a2e8da7ecf32e4bec80f3d18a53a022ac
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745329"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699799"
 ---
 # <a name="search-condition-transact-sql"></a>Condizione di ricerca (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "47745329"
  Nome di colonna, costante, funzione, variabile, sottoquery scalare o qualsiasi combinazione di costanti, funzioni e nomi di colonna collegati da uno o più operatori oppure da una sottoquery. L'espressione può inoltre includere l'espressione CASE.  
   
 > [!NOTE]  
->  Le costanti e le variabili delle stringhe diverse da Unicode usano la tabella codici corrispondente alle regole di confronto predefinite del database. Le conversioni della tabella dei codici possono presentarsi quando si usano unicamente dati di tipo carattere non Unicode e si fa riferimento ai tipi di dati carattere non Unicode **char**, **varchar** e **testo**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte le costanti e le variabili delle stringhe non Unicode nella tabella codici che corrisponde alle regole di confronto della colonna con riferimenti o specificati mediante COLLATE, se tale tabella codici è diversa da quella che corrisponde a regole di confronto predefinite del database. Tutti i caratteri non trovati nella nuova tabella codici verranno convertiti in un carattere simile, se è reperibile un [mapping di migliore approssimazione](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/), altrimenti verrà convertito nel carattere di sostituzione predefinito di "?".  
+>  Le costanti e le variabili delle stringhe diverse da Unicode usano la tabella codici corrispondente alle regole di confronto predefinite del database. Le conversioni della tabella dei codici possono presentarsi quando si usano unicamente dati di tipo carattere non Unicode e si fa riferimento ai tipi di dati carattere non Unicode **char**, **varchar** e **testo**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte le costanti e le variabili delle stringhe non Unicode nella tabella codici che corrisponde alle regole di confronto della colonna con riferimenti o specificati mediante COLLATE, se tale tabella codici è diversa da quella che corrisponde a regole di confronto predefinite del database. Tutti i caratteri non trovati nella nuova tabella codici verranno convertiti in un carattere simile, se è reperibile un [mapping di migliore approssimazione](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/), altrimenti verrà convertito nel carattere di sostituzione predefinito di "?".  
 >  
 > Quando si usano più tabelle codici, le costanti carattere possono essere precedute dalla lettera maiuscola 'N ' e possono essere usate variabili Unicode, per evitare conversioni delle tabelle codici.  
   

@@ -12,12 +12,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 22d878ef603b384ff03ece82350ce3b9bea12117
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75492ffdd6246050c086deea74975921a19156b4
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730292"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702219"
 ---
 # <a name="reference-data-services-in-dqs"></a>Servizi dati di riferimento in DQS
 
@@ -36,11 +36,11 @@ ms.locfileid: "47730292"
 -   La funzionalità supporta l'utilizzo di dati di riferimento da Windows Azure Marketplace e direttamente dai provider di dati di riferimento di terze parti.  
   
 ##  <a name="Marketplace"></a> Utilizzo dei dati di riferimento da Windows Azure Marketplace  
- DQS supporta l'utilizzo di dati di riferimento da Windows Azure Marketplace per consentire ai provider di contenuti di fornire servizi dati di riferimento mediante il servizio Marketplace. Marketplace è un servizio Microsoft che fornisce un singolo marketplace e canale di recapito per dati e applicazioni di alta qualità come servizi cloud. Per altre informazioni su Marketplace, vedere [Learn About Windows Azure Marketplace](http://go.microsoft.com/fwlink/?LinkId=211291) (Informazioni su Windows Azure Marketplace) (http://go.microsoft.com/fwlink/?LinkId=211291).  
+ DQS supporta l'utilizzo di dati di riferimento da Windows Azure Marketplace per consentire ai provider di contenuti di fornire servizi dati di riferimento mediante il servizio Marketplace. Marketplace è un servizio Microsoft che fornisce un singolo marketplace e canale di recapito per dati e applicazioni di alta qualità come servizi cloud. Per altre informazioni su Marketplace, vedere [Learn About Windows Azure Marketplace](https://go.microsoft.com/fwlink/?LinkId=211291) (Informazioni su Windows Azure Marketplace) (https://go.microsoft.com/fwlink/?LinkId=211291).  
   
  La perfetta integrazione tra Marketplace e DQS semplifica i passaggi associati all'individuazione, all'esplorazione e all'acquisizione di informazioni per i progetti Data Quality dall'interno di DQS. I dati vengono utilizzati in DQS e aiutano gli utenti di DQS a ottenere un'elevata qualità dei dati unendo in modo del tutto innovativo le funzionalità di DQS, Marketplace e dei provider di servizi dati di riferimento.  
   
- Per utilizzare dati di riferimento da Marketplace in DQS per l'attività di pulizia, è necessario avere una chiave account Marketplace. La creazione di una chiave account Marketplace è gratuita ed è richiesto un pagamento solo se si richiedono set di dati a pagamento. Non vi sono spese per la sottoscrizione né per l'utilizzo di set di dati gratuiti. Per informazioni dettagliate sulla creazione di una chiave account Marketplace, vedere [Creazione di un account](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936).  
+ Per utilizzare dati di riferimento da Marketplace in DQS per l'attività di pulizia, è necessario avere una chiave account Marketplace. La creazione di una chiave account Marketplace è gratuita ed è richiesto un pagamento solo se si richiedono set di dati a pagamento. Non vi sono spese per la sottoscrizione né per l'utilizzo di set di dati gratuiti. Per informazioni dettagliate sulla creazione di una chiave account Marketplace, vedere [Creazione di un account](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936).  
   
  È inoltre possibile eseguire le seguenti attività Marketplace dall'interno di DQS:  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47730292"
   
 1.  **Configurazione dei dettagli del provider di dati di riferimento in DQS**: prima che sia possibile utilizzare dati di riferimento in DQS, è necessario configurare i dettagli del servizio dati di riferimento in DQS.  
   
-    1.  Se si utilizza Marketplace, fornire una chiave account Marketplace valida, passare alla categoria dati [Data Quality Services](http://go.microsoft.com/fwlink/?LinkId=227587) in Marketplace, quindi effettuare la sottoscrizione ai provider desiderati.  
+    1.  Se si utilizza Marketplace, fornire una chiave account Marketplace valida, passare alla categoria dati [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) in Marketplace, quindi effettuare la sottoscrizione ai provider desiderati.  
   
     2.  Se si utilizza un provider di dati di riferimento online diretto, è necessario aggiungere i dettagli diretti del provider di dati di riferimento in DQS prima che sia possibile utilizzarlo.  
   

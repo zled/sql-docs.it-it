@@ -12,12 +12,12 @@ ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 456458c98ddee8115f715839c6e13c3c3680196a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bad3ae2d22a1aed53cb5da61f631e48bde480d56
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713179"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701919"
 ---
 # <a name="planning-a-sql-server-installation"></a>Pianificazione di un'installazione di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47713179"
   
  Indipendentemente dal metodo di installazione, è necessario confermare l'accettazione delle condizioni di licenza del software come utente singolo o per conto di un'entità, a meno che l'utilizzo del software non sia disciplinato da un contratto separato, ad esempio un contratto multilicenza [!INCLUDE[msCoName](../../includes/msconame-md.md)] o un contratto di terze parti con un fornitore di software indipendente o un OEM.  
   
- Le condizioni di licenza vengono visualizzate per la revisione e l'accettazione nell'interfaccia utente del programma di installazione. Le installazioni automatiche, con i parametri `/Q` o `/QS`, devono includere il parametro `/IAcceptSQLServerLicenseTerms`. Scaricare e leggere separatamente le condizioni di licenza disponibili in [Condizioni e informazioni sulle licenze per Microsoft SQL Server](http://www.microsoft.com/Licensing/product-licensing/sql-server.aspx). Per le condizioni relative ai contratti multilicenza, vedere [Condizioni di licenza e documentazione](http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). Per le versioni precedenti di SQL Server, vedere [Condizioni di Licenza per il software Microsoft](http://go.microsoft.com/fwlink/?LinkID=148209).  
+ Le condizioni di licenza vengono visualizzate per la revisione e l'accettazione nell'interfaccia utente del programma di installazione. Le installazioni automatiche, con i parametri `/Q` o `/QS`, devono includere il parametro `/IAcceptSQLServerLicenseTerms`. Scaricare e leggere separatamente le condizioni di licenza disponibili in [Condizioni e informazioni sulle licenze per Microsoft SQL Server](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx). Per le condizioni relative ai contratti multilicenza, vedere [Condizioni di licenza e documentazione](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). Per le versioni precedenti di SQL Server, vedere [Condizioni di Licenza per il software Microsoft](https://go.microsoft.com/fwlink/?LinkID=148209).  
   
 > [!NOTE]  
 >  A seconda della modalità di ricezione del software, ad esempio attraverso un contratto multilicenza [!INCLUDE[msCoName](../../includes/msconame-md.md)] , l'utilizzo del software potrebbe essere soggetto a condizioni aggiuntive.  

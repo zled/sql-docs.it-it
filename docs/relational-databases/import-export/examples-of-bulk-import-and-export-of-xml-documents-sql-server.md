@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10ed333bd96a0667271f3f5653e9f81ba614d49b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76859771490cf744db4dff1e247188f978426cfa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662579"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670600"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Esempi di importazione ed esportazione bulk di documenti XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47662579"
 Per ulteriori informazioni, vedere gli argomenti seguenti.
 - [Importare ed esportare dati per operazioni bulk usando l'utilità bcp (SQL Server).](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
 - [Importare dati per operazioni bulk usando BULK INSERT o OPENROWSET (BULK...)(SQL Server).](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
-- [Come importare XML in SQL Server con il componente di caricamento bulk XML.](https://support.microsoft.com/en-us/kb/316005)
+- [Come importare XML in SQL Server con il componente di caricamento bulk XML.](https://support.microsoft.com/kb/316005)
 - [Raccolte di XML Schema (SQL Server)](../xml/xml-schema-collections-sql-server.md)
   
 ## <a name="examples"></a>Esempi  

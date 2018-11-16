@@ -11,12 +11,12 @@ ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af4c525e2ce481b8053804d49f194449ed6cf58d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95c26215be0cb55c916d7162896ec7651132f13f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728259"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640968"
 ---
 # <a name="building-packages-programmatically"></a>Compilazione di pacchetti a livello di programmazione
   Se è necessario creare pacchetti in modo dinamico oppure gestire ed eseguire pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] all'esterno dell'ambiente di sviluppo, è possibile modificare i pacchetti a livello di programmazione. Questo approccio rende disponibili diverse opzioni:  
@@ -92,9 +92,9 @@ ms.locfileid: "47728259"
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Esempi CodePlex relativi ai [prodotti di Integration Services](http://go.microsoft.com/fwlink/?LinkID=131204) sul sito Web www.codeplex.com/MSFTISProdSamples  
+-   Esempi CodePlex relativi ai [prodotti di Integration Services](https://go.microsoft.com/fwlink/?LinkID=131204) sul sito Web www.codeplex.com/MSFTISProdSamples  
   
--   Intervento nel blog relativo all'esecuzione del [profiling delle prestazioni delle estensioni personalizzate](http://go.microsoft.com/fwlink/?LinkId=238831) sul sito Web blogs.msdn.com.  
+-   Intervento nel blog relativo all'esecuzione del [profiling delle prestazioni delle estensioni personalizzate](https://go.microsoft.com/fwlink/?LinkId=238831) sul sito Web blogs.msdn.com.  
 
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

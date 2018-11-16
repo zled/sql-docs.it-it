@@ -11,12 +11,12 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37135e6bc1c30ea79e9ecda5ee53e90ea85c5f67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b831b54ed0755c8c7ef55364bdc0f8152f22b54
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761952"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662503"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Colonne e tipo di dati XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ ms.locfileid: "47761952"
   
 -   Archiviazione nativa tramite il tipo di dati **xml** .  
   
-     I dati vengono archiviati in una rappresentazione interna che mantiene il contenuto XML e che contiene informazioni sulla gerarchia di contenimento, l'ordine dei documenti e i valori dell'elemento e dell'attributo. In particolare, viene mantenuto il contenuto InfoSet dei dati XML. Per altre informazioni su InfoSet, vedere [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843). Il contenuto InfoSet potrebbe non essere una copia identica del testo XML, perché non vengono mantenute le informazioni seguenti: spazi vuoti non significativi, ordine degli attributi, prefissi degli spazi dei nomi e dichiarazione XML.  
+     I dati vengono archiviati in una rappresentazione interna che mantiene il contenuto XML e che contiene informazioni sulla gerarchia di contenimento, l'ordine dei documenti e i valori dell'elemento e dell'attributo. In particolare, viene mantenuto il contenuto InfoSet dei dati XML. Per altre informazioni su InfoSet, vedere [https://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843). Il contenuto InfoSet potrebbe non essere una copia identica del testo XML, perché non vengono mantenute le informazioni seguenti: spazi vuoti non significativi, ordine degli attributi, prefissi degli spazi dei nomi e dichiarazione XML.  
   
-     Per il tipo di dati **xml** tipizzato, un tipo di dati **xml** associato a XML Schema, PSVI (Post-Schema Validation InfoSet) aggiunge all'InfoSet le informazioni sul tipo e viene codificato nella rappresentazione interna. Questo consente di migliorare in modo significativo la velocità di analisi. Per altre informazioni, vedere le specifiche relative allo schema XML W3C su [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) e [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871).  
+     Per il tipo di dati **xml** tipizzato, un tipo di dati **xml** associato a XML Schema, PSVI (Post-Schema Validation InfoSet) aggiunge all'InfoSet le informazioni sul tipo e viene codificato nella rappresentazione interna. Questo consente di migliorare in modo significativo la velocità di analisi. Per altre informazioni, vedere le specifiche relative allo schema XML W3C su [https://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) e [https://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871).  
   
 -   Mapping tra archiviazione XML e relazionale  
   
@@ -142,7 +142,7 @@ ms.locfileid: "47761952"
   
 -   Si desidera eseguire il caricamento bulk dei dati XML e scomporli nelle tabelle sottostanti utilizzando la visualizzazione XML.  
   
- Questa tecnica viene utilizzata ad esempio per i dati relazionali esposti come XML per lo scambio di dati e i servizi Web e per i dati XML con schema fisso. Per ulteriori informazioni vedere [MSDN Online Library](http://go.microsoft.com/fwlink/?linkid=31174).  
+ Questa tecnica viene utilizzata ad esempio per i dati relazionali esposti come XML per lo scambio di dati e i servizi Web e per i dati XML con schema fisso. Per ulteriori informazioni vedere [MSDN Online Library](https://go.microsoft.com/fwlink/?linkid=31174).  
   
 #### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Esempio: modellazione di dati tramite un elemento XML Schema con annotazioni (AXSD)  
  Si supponga ad esempio di avere a disposizione dati relazionali relativi a clienti, ordini e voci, che si desidera gestire come XML. Definire una visualizzazione XML applicando uno schema AXSD ai dati relazionali. La visualizzazione XML consente di eseguire il caricamento bulk dei dati XML nelle tabelle, nonché di aggiornare ed eseguire query sui dati relazionali. Questo modello è utile quando è necessario scambiare dati contenenti markup XML con altre applicazioni, senza interrompere le applicazioni SQL.  

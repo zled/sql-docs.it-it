@@ -20,12 +20,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 986d3bf99eb08279dab77ed12ff1b04dccce1538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cb0ba9c72da4fe69988fa580ba3080237b3b078
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818128"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640678"
 ---
 # <a name="execute-package-task"></a>Attività Esegui pacchetto
   L'attività Esegui pacchetto permette di estendere le funzionalità aziendali di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consentendo ai pacchetti di eseguire altri pacchetti nell'ambito di un flusso di lavoro.  
@@ -63,7 +63,7 @@ ms.locfileid: "47818128"
  Per impostazione predefinita, la proprietà ExecuteOutOfProcess dell'attività Esegui pacchetto è impostata su **False**e il pacchetto figlio viene eseguito nello stesso processo del pacchetto padre. Se si imposta questa proprietà su **True**, il pacchetto figlio viene eseguito in un processo separato. In questo modo è possibile che l'avvio del pacchetto figlio sia rallentato. Inoltre, se si imposta la proprietà su **True**, non è possibile eseguire il debug del pacchetto in un'installazione di soli strumenti. È necessario installare [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Installazione di Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
 ## <a name="extending-transactions"></a>Estensione delle transazioni  
- Poiché la transazione utilizzata dal pacchetto padre può essere estesa al pacchetto figlio, è possibile eseguire in un'unica operazione il commit o il rollback di tutte le operazioni eseguite dai due pacchetti. È ad esempio possibile eseguire il commit o il rollback degli inserimenti nel database eseguiti dal pacchetto padre a seconda dell'esito degli inserimenti nel database eseguiti dal pacchetto figlio e viceversa. Per altre informazioni, vedere [Transazioni ereditate](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c).  
+ Poiché la transazione utilizzata dal pacchetto padre può essere estesa al pacchetto figlio, è possibile eseguire in un'unica operazione il commit o il rollback di tutte le operazioni eseguite dai due pacchetti. È ad esempio possibile eseguire il commit o il rollback degli inserimenti nel database eseguiti dal pacchetto padre a seconda dell'esito degli inserimenti nel database eseguiti dal pacchetto figlio e viceversa. Per altre informazioni, vedere [Transazioni ereditate](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c).  
   
 ## <a name="propagating-logging-details"></a>Propagazione dei dettagli di registrazione  
  Il pacchetto figlio eseguito dall'attività Esegui pacchetto invia sempre i dettagli di registrazione al pacchetto padre, anche se non è configurato per l'utilizzo della registrazione. I dettagli ricevuti dal pacchetto figlio verranno tuttavia registrati solo se l'attività Esegui pacchetto è configurata per l'utilizzo della registrazione. Per altre informazioni, vedere [registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
@@ -114,7 +114,7 @@ ms.locfileid: "47818128"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="configuring-the-execute-package-task-programmatically"></a>Configurazione dell'attività Esegui pacchetto a livello di codice  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic sull'argomento seguente:  

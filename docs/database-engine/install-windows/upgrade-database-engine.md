@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 02f454ba26701263b98ba86d22bb98943ed2a498
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99d1b87ac5584f05911ebfb16387babc408e26f5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613430"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600931"
 ---
 # <a name="upgrade-database-engine"></a>Aggiornare il motore di database
 
@@ -36,6 +36,6 @@ ms.locfileid: "47613430"
   
 4.  [Modificare la modalità di compatibilità del database e usare l'archivio query](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) Uno dei passaggi da eseguire dopo aver aggiornato [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prevede l'abilitazione di nuove funzionalità modificando la modalità di compatibilità del database e usando quindi l'archivio query per monitorare le prestazioni. Questo articolo descrive il processo e propone un flusso di lavoro consigliato.  
   
-5.  [Vantaggi delle nuove funzionalità di SQL Server](http://www.microsoft.com/sql-server/sql-server-2017) Infine, dopo aver completato i passaggi precedenti, si è pronti per sfruttare i vantaggi offerti dai nuovi miglioramenti specifici del motore di database. Questo articolo suggerisce alcuni di questi miglioramenti e fornisce collegamenti ad altre informazioni.  
+5.  [Vantaggi delle nuove funzionalità di SQL Server](https://www.microsoft.com/sql-server/sql-server-2017) Infine, dopo aver completato i passaggi precedenti, si è pronti per sfruttare i vantaggi offerti dai nuovi miglioramenti specifici del motore di database. Questo articolo suggerisce alcuni di questi miglioramenti e fornisce collegamenti ad altre informazioni.  
   
   

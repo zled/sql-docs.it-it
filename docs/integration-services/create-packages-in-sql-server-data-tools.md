@@ -16,12 +16,12 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7b7e61e278efe9040ad070452ce57535f33b26d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 199029eee15d44e3aba5b65c894de58b1ca2129c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847059"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639708"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Creare pacchetti in SQL Server Data Tools
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]è possibile creare un nuovo pacchetto con uno dei metodi seguenti:  
@@ -44,9 +44,9 @@ ms.locfileid: "47847059"
   
      L'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] crea un pacchetto completo per un'importazione o un'esportazione semplice. Questa procedura guidata consente di configurare le connessioni, l'origine e la destinazione e di aggiungere tutte le trasformazioni dei dati necessarie per eseguire immediatamente l'importazione o l'esportazione. È facoltativamente possibile salvare il pacchetto per eseguirlo nuovamente in un secondo momento o rifinire e migliorare il pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Se si salva il pacchetto, tuttavia, è necessario aggiungerlo a un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] esistente prima che sia possibile modificarlo o eseguirlo in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
- I pacchetti creati in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] tramite Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] vengono salvati nel file system. Per salvare un pacchetto in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o nell'archivio pacchetti, è necessario salvare una copia del pacchetto. Per altre informazioni, vedere [Salvataggio di una copia di un pacchetto](http://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31).  
+ I pacchetti creati in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] tramite Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] vengono salvati nel file system. Per salvare un pacchetto in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o nell'archivio pacchetti, è necessario salvare una copia del pacchetto. Per altre informazioni, vedere [Salvataggio di una copia di un pacchetto](https://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31).  
 
- Per un video che illustra come creare un pacchetto di base usando il modello di pacchetto predefinito, vedere [Creazione di un pacchetto di base (video su SQL Server)](http://go.microsoft.com/fwlink/?LinkId=131023).  
+ Per un video che illustra come creare un pacchetto di base usando il modello di pacchetto predefinito, vedere [Creazione di un pacchetto di base (video su SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131023).  
 
 ## <a name="get-sql-server-data-tools"></a>Ottenere SQL Server Data Tools
 Per installare SQL Server Data Tools (SSDT), vedere [Scaricare SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).

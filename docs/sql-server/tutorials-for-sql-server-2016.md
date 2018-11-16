@@ -10,19 +10,19 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 5ad1d1c83e2b736be9ea0dde4067316f08dd0646
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: f1b3d7cf26ad49a690d3c93dcf8b742c28caa303
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419146"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701222"
 ---
 # <a name="tutorials-for-sql-server"></a>Esercitazioni di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fornisce esercitazioni che consentono l'apprendimento di nuove tecnologie e funzionalità. In genere le esercitazioni per le versioni precedenti possono essere usate con le versioni più recenti. Quando le esercitazioni riguardano una nuova funzionalità viene indicata la versione minima necessaria per il completamento dell'esercitazione.  
      
 -   Se in un'esercitazione viene usato uno dei database di [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] è necessario scaricare e usare la versione più recente da CodePlex. Per altre informazioni, vedere [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) (Script e database AdventureWorks per SQL Server 2016 CTP3).    
--   Scaricare una cartella di lavoro di [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e i report di [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] da usare con le esercitazioni di [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , vedere la pagina relativa agli [esempi di Power View per SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=220734).  
+-   Scaricare una cartella di lavoro di [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e i report di [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] da usare con le esercitazioni di [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , vedere la pagina relativa agli [esempi di Power View per SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=220734).  
 - Vedere il nuovo database di esempio [Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md) disponibile nel repository [sql-server-samples](https://github.com/Microsoft/sql-server-samples) di GitHub. 
 
  
@@ -32,7 +32,7 @@ ms.locfileid: "49419146"
 |--------------|---------------|  
 |[Esercitazioni su Analysis Services &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|Viene illustrato come sviluppare e distribuire modelli tabulari o multidimensionali di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Viene inoltre illustrato come usare strumenti quali PowerPivot per analizzare i dati nei modelli.|  
 |[Esercitazioni del motore di database](../relational-databases/database-engine-tutorials.md)|Viene illustrato come connettersi a un'istanza del motore di database e, successivamente, compilare ed eseguire istruzioni Transact-SQL.|  
-|[Esercitazioni sulla gestione di informazioni aziendali](http://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Informazioni sulla gestione delle informazioni in un'organizzazione utilizzando le tecnologie Microsoft EIM.|  
+|[Esercitazioni sulla gestione di informazioni aziendali](https://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Informazioni sulla gestione delle informazioni in un'organizzazione utilizzando le tecnologie Microsoft EIM.|  
 |[Esercitazioni su Integration Services](../integration-services/integration-services-tutorials.md)|Viene illustrato come creare e distribuire pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Esercitazioni sulla replica](../relational-databases/replication/replication-tutorials.md)|Viene illustrato come installare ed eseguire le topologie di replica tramite [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Viene illustrato come creare report di base e sottoscrizioni.|  
@@ -44,7 +44,7 @@ ms.locfileid: "49419146"
   
  - [Esercitazioni di SQL Server 2012](https://msdn.microsoft.com/library/hh231699(v=sql.110).aspx)  
   
- - [Esercitazioni di SQL Server 2008 R2](http://msdn.microsoft.com/library/ms167593.aspx)   
+ - [Esercitazioni di SQL Server 2008 R2](https://msdn.microsoft.com/library/ms167593.aspx)   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

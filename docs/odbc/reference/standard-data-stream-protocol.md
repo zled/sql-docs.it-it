@@ -1,7 +1,7 @@
 ---
 title: Dati standard Stream protocollo | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/14/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,14 @@ ms.assetid: 1d234d17-2927-4c98-9fae-550c1370f829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 104adecc7e922ae4d7645a67e2d635523c8ae79a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a736f60b66756a8ef8e5cce2daf46550042f5695
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692239"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668730"
 ---
 # <a name="standard-data-stream-protocol"></a>Protocollo del flusso di dati standard
-Un protocollo di flusso di dati standard è un modo per accedere ai dati nel DBMS eterogenei. In effetti, i protocolli di flusso di dati standard già esistono: lo standard ANSI/ISO Database RDA (Remote Access) ([ISO/IEC 9579:2000](http://www.iso.org/iso/catalogue_detail.htm?csnumber=30615)) di IBM DRDA Distributed Relational Database Architecture () e ([ http://www.netstoreusa.com/cbbooks/007/0070351384.shtml ](http://www.netstoreusa.com/cbbooks/007/0070351384.shtml)). Anche se entrambi i sistemi mostrano promise, nessuno dei due viene ampiamente implementata oggi.
+Un protocollo di flusso di dati standard è un modo per accedere ai dati nel DBMS eterogenei. In effetti, un protocollo di flusso di dati standard esiste già:
+
+- Lo standard ANSI/ISO Database RDA (Remote Access): [ISO/IEC 9579:2000](https://www.iso.org/iso/catalogue_detail.htm?csnumber=30615). Anche se il sistema ANSI/ISO Mostra promise, non viene ampiamente implementato oggi stesso.

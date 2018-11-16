@@ -13,16 +13,16 @@ ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 65dea5ebf2813267ef7e7bb83f2f37209ee2114f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be7123595b823434dd6b9f4a369115d83c0d68ec
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720879"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558498"
 ---
 # <a name="basic-rds-programming-model"></a>Modello di programmazione RDS di base
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Servizi Desktop remoto consente di risolvere applicazioni esistenti nel seguente ambiente: un'applicazione client specifica un programma che verrà eseguito su un server e i parametri necessari per restituire le informazioni desiderate. Il programma richiamato sul server ottiene accesso all'origine dati specificata, recupera le informazioni facoltativamente elabora i dati e quindi restituisce le informazioni risultanti per l'applicazione client in un formato che può facilmente utilizzare. Servizi Desktop remoto fornisce i mezzi per eseguire la sequenza di azioni seguente:  
   

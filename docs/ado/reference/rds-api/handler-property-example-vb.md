@@ -15,27 +15,27 @@ ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d719050da7878f8f5421e632943868fe4b1f75ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c87dcf67e7da0c9ff0abf3aac7676a508a7bcd10
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615840"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601391"
 ---
 # <a name="handler-property-example-vb"></a>Esempio della proprietà Handler (VB)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Questo esempio viene illustrato il [Servizi Desktop remoto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto [gestore](../../../ado/reference/rds-api/handler-property-rds.md) proprietà. (Vedere [personalizzazione di DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md) per altri dettagli.)  
   
  Si supponga che le sezioni seguenti nel file dei parametri, MSDFMAP, si trovano nel server:  
   
 ```  
-[connect AuthorDataBase]  
+[connect AuthorDataBase]  
 Access=ReadWrite  
 Connect="DSN=Pubs"  
-[sql AuthorById]  
-SQL="SELECT * FROM Authors WHERE au_id = ?"  
+[sql AuthorById]  
+SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
  Il codice è simile al seguente. Il comando assegnato al [SQL](../../../ado/reference/rds-api/sql-property.md) corrisponderà a proprietà di ***AuthorById*** identificatore e recupera una riga per autore Michael O'Leary. Il **DataControl** oggetto **Recordset** proprietà viene assegnato a un disconnesso [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) semplicemente per comodità di codifica.  
@@ -51,7 +51,7 @@ Public Sub Main()
     dc.Handler = "MSDFMAP.Handler"  
     dc.ExecuteOptions = 1  
     dc.FetchOptions = 1  
-    dc.Server = "http://MyServer"  
+    dc.Server = "https://MyServer"  
     dc.Connect = "Data Source=AuthorDataBase"  
     dc.SQL = "AuthorById('267-41-2394')"  
     dc.Refresh                  'Retrieve the record  

@@ -16,16 +16,16 @@ ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 325b6f9a6adb53752b8f0229a0333934f179042a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f57dba47697120e2632afebbd24ea6b16270d195
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737289"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599869"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Esempio delle proprietà Recordset e SourceRecordset (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Nell'esempio seguente viene illustrato come impostare i parametri necessari del [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oggetto business predefinito in fase di esecuzione.  
   
@@ -92,7 +92,7 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
    </TR>  
 </TABLE>  
 <HR>  
-<Input Size=70 Name="txtServer" Value="http://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
+<Input Size=70 Name="txtServer" Value="https://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
 <Input Size=70 Name="txtConnect" Value="Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind'"><BR>  
 <Input Size=70 Name="txtSQL" Value="SELECT FirstName, LastName FROM Employees">  
 <HR>  
@@ -103,7 +103,7 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
   
    Dim rdsDF  
    Dim strServer  
-   strServer = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+   strServer = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
   
    Sub Run_OnClick()  
   

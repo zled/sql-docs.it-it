@@ -12,12 +12,12 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f3448583d07f73c23f19c2eec68eb59b71fd06af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0b06b45e9d3f2cfd06fba04a0d24547ec4689ce
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709049"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699789"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Criteri di failover per istanze del cluster di failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "47709049"
  *Valore predefinito  
   
 ####  <a name="respond"></a> Risposta agli errori  
- Una volta rilevata una o più condizioni di errore, il servizio WSFC risponde agli errori in base allo stato del quorum WSFC e alle impostazioni di riavvio e failover del gruppo di risorse di FCI. Se l'istanza FCI ha perso il quorum WSFC, l'intera istanza FCI viene portata offline e perde la disponibilità elevata. Se l'istanza FCI ancora mantiene il quorum WSFC, è possibile che il servizio WSFC risponda prima tentando di riavviare il nodo in errore e quindi eseguendo il failover se i tentativi del riavvio non riescono. Le impostazioni di riavvio e failover vengono configurate nello snap-in Gestione cluster di failover. Per altre informazioni su queste impostazioni, vedere [Proprietà \<risorsa>: scheda Criteri](http://technet.microsoft.com/library/cc725685.aspx).  
+ Una volta rilevata una o più condizioni di errore, il servizio WSFC risponde agli errori in base allo stato del quorum WSFC e alle impostazioni di riavvio e failover del gruppo di risorse di FCI. Se l'istanza FCI ha perso il quorum WSFC, l'intera istanza FCI viene portata offline e perde la disponibilità elevata. Se l'istanza FCI ancora mantiene il quorum WSFC, è possibile che il servizio WSFC risponda prima tentando di riavviare il nodo in errore e quindi eseguendo il failover se i tentativi del riavvio non riescono. Le impostazioni di riavvio e failover vengono configurate nello snap-in Gestione cluster di failover. Per altre informazioni su queste impostazioni, vedere [Proprietà \<risorsa>: scheda Criteri](https://technet.microsoft.com/library/cc725685.aspx).  
   
  Per altre informazioni, vedere [Modalità quorum WSFC e configurazione del voto &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   

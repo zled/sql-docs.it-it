@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 179bc0379e508954c93464b6f1075334756dd250
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: bbeeff135edbc333b6ce8b3e20cf5235710f2dc1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085487"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677680"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi di Red Hat Enterprise Linux per SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Questa guida fornisce istruzioni per creare un cluster di dischi condiviso a due nodi per SQL Server su Red Hat Enterprise Linux. Il livello di clustering si basa su Red Hat Enterprise Linux (RHEL) [componente aggiuntivo a disponibilità elevata](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) costruita basandosi su [Pacemaker](http://clusterlabs.org/). L'istanza di SQL Server è attivo in un nodo o l'altro.
+Questa guida fornisce istruzioni per creare un cluster di dischi condiviso a due nodi per SQL Server su Red Hat Enterprise Linux. Il livello di clustering si basa su Red Hat Enterprise Linux (RHEL) [componente aggiuntivo a disponibilità elevata](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) costruita basandosi su [Pacemaker](https://clusterlabs.org/). L'istanza di SQL Server è attivo in un nodo o l'altro.
 
 > [!NOTE] 
 > L'accesso al componente aggiuntivo Red Hat a disponibilità elevata e alla documentazione richiede una sottoscrizione. 
@@ -30,7 +30,7 @@ Come illustrato nella figura seguente, archiviazione viene presentata a due serv
 
 ![Red Hat Enterprise Linux 7 condiviso del disco Cluster SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Per altre informazioni su configurazione del cluster, le opzioni degli agenti delle risorse e gestione, visitare [documentazione di riferimento RHEL](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Per altre informazioni su configurazione del cluster, le opzioni degli agenti delle risorse e gestione, visitare [documentazione di riferimento RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 
 > [!NOTE] 
@@ -201,8 +201,8 @@ Eseguire i passaggi seguenti in tutti i nodi del cluster.
 
 Per altre informazioni sull'uso di NFS, vedere le risorse seguenti:
 
-* [NFS Server e firewalld | Stack Exchange](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
-* [Montare un Volume NFS | Manuale dell'amministratore di rete Linux](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
+* [NFS Server e firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
+* [Montare un Volume NFS | Manuale dell'amministratore di rete Linux](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
 * [Configurazione del server NFS](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/s1-nfs-server-export.html)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Montare directory dei file di database in modo che punti all'archiviazione condivisa
@@ -389,7 +389,7 @@ A questo punto, entrambe le istanze di SQL Server configurate per eseguire con i
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-* [Cluster da zero](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Guida da Pacemaker
+* [Cluster da zero](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Guida da Pacemaker
 
 ## <a name="next-steps"></a>Passaggi successivi
 

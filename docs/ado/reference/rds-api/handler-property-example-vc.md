@@ -15,16 +15,16 @@ ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9c944535ead264b8ab65b59aa969d0fddf29f10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61403b9a720a456c08b121be4f36cef0d59ced17
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696530"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606981"
 ---
 # <a name="handler-property-example-vc"></a>Esempio della proprietà Handler (VC++)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Questo esempio viene illustrato il [Servizi Desktop remoto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto [gestore](../../../ado/reference/rds-api/handler-property-rds.md) proprietà. (Vedere [personalizzazione di DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md) per altri dettagli.)  
   
@@ -78,7 +78,7 @@ void HandlerX() {
       dc->Handler = "MSDFMAP.Handler";  
       dc->ExecuteOptions = 1;  
       dc->FetchOptions = 1;  
-      dc->Server = "http://MyServer";  
+      dc->Server = "https://MyServer";  
       dc->Connect = "Data Source=AuthorDatabase";  
       dc->SQL = "AuthorById('267-41-2394')";  
   

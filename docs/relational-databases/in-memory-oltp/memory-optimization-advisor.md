@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3202bef4631477b1dcb25bda412773830f7f0ccc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ffa4178e4e0f5fc26dc7545edce4cf5326c17a5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724889"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671408"
 ---
 # <a name="memory-optimization-advisor"></a>Ottimizzazione guidata per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47724889"
   
 -   Eseguire la migrazione di una tabella e dei dati a una tabella ottimizzata per la memoria (in assenza di funzionalità non supportate).  
     
- Per informazioni sulle metodologie di migrazione, vedere [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx)(OLTP in memoria: considerazioni sui modelli di carico di lavoro comuni e sulla migrazione).  
+ Per informazioni sulle metodologie di migrazione, vedere [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(OLTP in memoria: considerazioni sui modelli di carico di lavoro comuni e sulla migrazione).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Procedura dettagliata per l'utilizzo di Ottimizzazione guidata per la memoria  
  In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella che si vuole convertire, quindi selezionare **Ottimizzazione guidata per la memoria**. Verrà visualizzata la pagina introduttiva per **Ottimizzazione guidata per la memoria della tabella**.  
@@ -99,7 +99,7 @@ ms.locfileid: "47724889"
   
  Se non esiste una chiave primaria e viene eseguita la migrazione della tabella in una tabella non durevole, questa schermata non verrà visualizzata.  
   
- Per le colonne testuali (le colonne con i tipi **char**, **nchar**, **varchar**e **nvarchar**) è necessario selezionare le regole di confronto appropriate. OLTP in memoria supporta solo le regole di confronto BIN2 per le colonne in una tabella ottimizzata per la memoria e non supporta le regole di confronto con i caratteri supplementari. Per informazioni sulle regole di confronto supportate e sull'impatto potenziale di una modifica a una regola di confronto, vedere [Collations and Code Pages](http://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) .  
+ Per le colonne testuali (le colonne con i tipi **char**, **nchar**, **varchar**e **nvarchar**) è necessario selezionare le regole di confronto appropriate. OLTP in memoria supporta solo le regole di confronto BIN2 per le colonne in una tabella ottimizzata per la memoria e non supporta le regole di confronto con i caratteri supplementari. Per informazioni sulle regole di confronto supportate e sull'impatto potenziale di una modifica a una regola di confronto, vedere [Collations and Code Pages](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) .  
   
  È possibile configurare i seguenti parametri per la chiave primaria:  
   
@@ -113,7 +113,7 @@ ms.locfileid: "47724889"
   
 -   L'indice NON CLUSTER. Questo tipo di indice è ideale per gli indici con molte query di intervallo. È possibile configurare l'ordinamento per ciascuna colonna nell'elenco **Colonna di ordinamento e ordine** .  
   
- Per individuare il tipo di indice più adatto alla chiave primaria, vedere [Indici hash](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
+ Per individuare il tipo di indice più adatto alla chiave primaria, vedere [Indici hash](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
   
  Una volta selezionate le opzioni per la chiave primaria, fare clic su **Avanti** .  
   

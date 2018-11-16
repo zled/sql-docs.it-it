@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: f9d3d446e629fd4898db71b0001f2b9f487f44c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4128ed5937688ebd681c0fd99f7d346d66b0f263
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666035"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600741"
 ---
 # <a name="upgrade-master-data-services"></a>Aggiornare Master Data Services
 
@@ -43,7 +43,7 @@ ms.locfileid: "47666035"
   
 -   Per impostazione predefinita, in [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] i file sono installati in *unità*:\Programmi\Microsoft SQL Server\140\Master Data Services.  
 
--   Per impostazione predefinita, in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] i file sono installati in *unità*:\Programmi\Microsoft SQL Server\130\Master Data Services.  
+-   Per impostazione predefinita, in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]i file sono installati in *unità*:\Programmi\Microsoft SQL Server\130\Master Data Services.  
   
 -   Per impostazione predefinita, in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]i file sono installati in *unità*:\Programmi\Microsoft SQL Server\120\Master Data Services.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47666035"
         > [!IMPORTANT]  
         >  L'applicazione Web MDS esistente di una versione precedente di SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) è disponibile per la selezione nella versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di Gestione configurazione Master Data Services. Non è necessario selezionare l'applicazione Web esistente, è invece necessario creare un'applicazione Web [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] per MDS. In caso contrario, verrà visualizzato un errore quando si tenta di associare l'applicazione Web al database MDS aggiornato, indicante che non è possibile accedere alla pagina richiesta perché i dati di configurazione correlati per la pagina non sono validi.  
         >   
-        >  Per usare lo stesso nome (alias) dell'applicazione Web ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) esistente per l'applicazione Web MDS, è necessario prima di tutto eliminare l'applicazione Web e il pool di applicazioni associato da IIS, quindi creare un'applicazione Web con lo stesso nome usando la versione [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] di Gestione configurazione Master Data Services. Per informazioni sulla rimozione di un'applicazione Web e di pool di applicazioni da IIS, vedere [Rimuovere un'applicazione (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) e [Rimuovere un pool di applicazioni (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538).  
+        >  Per usare lo stesso nome (alias) dell'applicazione Web ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) esistente per l'applicazione Web MDS, è necessario prima di tutto eliminare l'applicazione Web e il pool di applicazioni associato da IIS, quindi creare un'applicazione Web con lo stesso nome usando la versione [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] di Gestione configurazione Master Data Services. Per informazioni sulla rimozione di un'applicazione Web e di pool di applicazioni da IIS, vedere [Rimuovere un'applicazione (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) e [Rimuovere un pool di applicazioni (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538).  
   
 4.  Associare la nuova applicazione Web al database MDS aggiornato.  
   

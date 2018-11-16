@@ -35,12 +35,12 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 78cf2eae42192abf6b926b753595ed26cf4190bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00c334d707886efdcfa00860def58f0c662a7cb6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705449"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704119"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD
     
 REPAIR_ALLOW_DATA_LOSS  
  Tenta di riparare tutti gli errori rilevati. Le operazioni di correzione possono comportare la perdita di dati.  
-    
+    
 > [!WARNING]
 > L'opzione REPAIR_ALLOW_DATA_LOSS è una funzionalità supportata ma non sempre può rappresentare l'opzione migliore per portare un database in uno stato coerente dal punto di vista fisico. Se ha esito positivo, l'opzione REPAIR_ALLOW_DATA_LOSS può comportare una perdita di dati. Infatti, può comportare una perdita maggiore di dati rispetto al ripristino del database dall'ultimo backup valido. 
 >
@@ -117,12 +117,12 @@ REPAIR_REBUILD
  Questo argomento non consente di correggere errori relativi ai dati FILESTREAM.  
     
 > [!IMPORTANT] 
-> Poiché tutte le operazioni eseguite da DBCC CHECKDB con qualsiasi opzione di ripristino (REPAIR) vengono registrate e possono essere recuperate completamente, [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia sempre di usare CHECKDB con le opzioni di ripristino (REPAIR) in una transazione (eseguire BEGIN TRANSACTION) in modo da consentire all'utente di verificare se accettare o meno i risultati dell'operazione. L'utente potrà quindi eseguire il commit di tutte le operazioni effettuate dall'operazione di ripristino con l'istruzione COMMIT TRANSACTION. Se l'utente non vuole accettare i risultati dell'operazione, potrà eseguire un'istruzione ROLLBACK TRANSACTION per annullare gli effetti delle operazioni di ripristino.    
+> Poiché tutte le operazioni eseguite da DBCC CHECKDB con qualsiasi opzione di ripristino (REPAIR) vengono registrate e possono essere recuperate completamente, [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia sempre di usare CHECKDB con le opzioni di ripristino (REPAIR) in una transazione (eseguire BEGIN TRANSACTION) in modo da consentire all'utente di verificare se accettare o meno i risultati dell'operazione. L'utente potrà quindi eseguire il commit di tutte le operazioni effettuate dall'operazione di ripristino con l'istruzione COMMIT TRANSACTION. Se l'utente non vuole accettare i risultati dell'operazione, potrà eseguire un'istruzione ROLLBACK TRANSACTION per annullare gli effetti delle operazioni di ripristino.    
 >     
 > Per correggere gli errori, è consigliabile eseguire un ripristino da un backup. Le operazioni di correzione non tengono conto degli eventuali vincoli esistenti per le tabelle o tra le tabelle. Se la tabella specificata è interessata da uno o più vincoli, è consigliabile eseguire DBCC CHECKCONSTRAINTS dopo l'operazione di correzione. Se è necessario utilizzare REPAIR, eseguire DBCC CHECKDB senza opzioni di correzione per individuare il livello di correzione da applicare. Se si utilizza il livello REPAIR_ALLOW_DATA_LOSS, è consigliabile eseguire il backup del database prima di utilizzare DBCC CHECKDB con questa opzione.    
     
 ALL_ERRORMSGS  
- Visualizza tutti gli errori segnalati per oggetto. Tutti i messaggi di errore vengono visualizzati per impostazione predefinita. La specifica o l'omissione di questa opzione non ha alcun effetto. I messaggi di errore vengono ordinati in base all'ID oggetto, ad eccezione dei messaggi generati dal [database tempdb](../../relational-databases/databases/tempdb-database.md).     
+ Visualizza tutti gli errori segnalati per oggetto. Tutti i messaggi di errore vengono visualizzati per impostazione predefinita. La specifica o l'omissione di questa opzione non ha alcun effetto. I messaggi di errore vengono ordinati in base all'ID oggetto, ad eccezione dei messaggi generati dal [database tempdb](../../relational-databases/databases/tempdb-database.md).     
 
 EXTENDED_LOGICAL_CHECKS  
  Se il livello di compatibilità è 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) o maggiore, esegue controlli di consistenza logica in una vista indicizzata, indici XML e indici spaziali, dove presenti.  
@@ -133,7 +133,7 @@ NO_INFOMSGS
     
 TABLOCK  
  Consente a DBCC CHECKDB di ottenere blocchi invece di utilizzare uno snapshot di database interno, incluso un blocco esclusivo (X) sul database di breve durata. TABLOCK consente l'esecuzione più rapida di DBCC CHECKDB in database con carico di lavoro elevato, ma comporta una diminuzione del livello di concorrenza del database durante l'esecuzione del comando.  
-    
+    
 > [!IMPORTANT] 
 > TABLOCK limita i controlli eseguiti. DBCC CHECKCATALOG non viene eseguito sul database e i dati di [!INCLUDE[ssSB](../../includes/sssb-md.md)] non vengono convalidati.
     
@@ -155,11 +155,11 @@ Questo argomento implica sempre l'utilizzo dell'opzione NO_INFOMSGS e non è con
 DATA_PURITY  
  Consente a DBCC CHECKDB di controllare il database per i valori di colonna che non sono validi o non sono compresi nell'intervallo dei valori consentiti. Ad esempio, DBCC CHECKDB rileva le colonne con valori di data e ora maggiori o minori dell'intervallo accettabile per il tipo di dati **datetime** oppure le colonne di tipi di dati numerici approssimati o **decimal** con valori di precisione o di scala non validi.  
  I controlli di integrità dei valori di colonna sono abilitati per impostazione predefinita e non richiedono l'opzione DATA_PURITY. Per i database aggiornati da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i controlli dei valori di colonna non sono abilitati per impostazione predefinita fino a quando DBCC CHECKDB WITH DATA_PURITY non è stato eseguito senza errori nel database. A questo punto, DBCC CHECKDB controlla l'integrità dei valori di colonna per impostazione predefinita. Per ulteriori informazioni su come l'aggiornamento del database da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può influire su CHECKDB, vedere la sezione Osservazioni di seguito in questo argomento.  
-    
+    
 > [!WARNING]
 > Se si specifica PHYSICAL_ONLY, i controlli di integrità di colonna non vengono eseguiti.
     
- Gli errori di convalida rilevati da questa opzione non possono essere corretti utilizzando le opzioni di correzione DBCC. Per informazioni sulla correzione manuale di questi errori, vedere l'articolo 923247 della Knowledge Base [Risoluzione dei problemi errore DBCC 2570 in SQL Server 2005 e versioni successive](http://support.microsoft.com/kb/923247).  
+ Gli errori di convalida rilevati da questa opzione non possono essere corretti utilizzando le opzioni di correzione DBCC. Per informazioni sulla correzione manuale di questi errori, vedere l'articolo 923247 della Knowledge Base [Risoluzione dei problemi errore DBCC 2570 in SQL Server 2005 e versioni successive](https://support.microsoft.com/kb/923247).  
     
  MAXDOP  
  **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
@@ -167,7 +167,7 @@ DATA_PURITY
  Esegue l'override dell'opzione di configurazione **Massimo grado di parallelismo** di **sp_configure** per l'istruzione. MAXDOP può superare il valore configurato con sp_configure. Se MAXDOP supera il valore configurato con Resource Governor, il [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] usa il valore MAXDOP di Resource Governor descritto in [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). Quando si utilizza l'hint per la query MAXDOP sono valide tutte le regole semantiche utilizzate con l'opzione di configurazione max degree of parallelism. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
  
 > [!WARNING] 
-> Se MAXDOP è impostato su zero, SQL Server sceglie il grado massimo di parallelismo.    
+> Se MAXDOP è impostato su zero, SQL Server sceglie il grado massimo di parallelismo.    
 
 ## <a name="remarks"></a>Remarks    
 DBCC CHECKDB non esamina gli indici disabilitati. Per altre informazioni sugli indici disabilitati, vedere [Disabilitare indici e vincoli](../../relational-databases/indexes/disable-indexes-and-constraints.md).    

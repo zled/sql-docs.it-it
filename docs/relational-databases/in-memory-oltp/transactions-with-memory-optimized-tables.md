@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51adb868b7504010956ab560904b3739f1cf137b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f84b4801446fd970c0d1e42054782d533b18574
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831819"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670720"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transazioni in tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -317,6 +317,6 @@ go
   
 - [sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
-- [Livelli di isolamento basati sul controllo delle versioni delle righe nel Motore di database](http://msdn.microsoft.com/library/ms177404.aspx)  
+- [Livelli di isolamento basati sul controllo delle versioni delle righe nel Motore di database](https://msdn.microsoft.com/library/ms177404.aspx)  
   
 - [Controllo della durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md)   

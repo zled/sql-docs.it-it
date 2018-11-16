@@ -1,42 +1,58 @@
 ---
-title: Configurare un client Python per l'uso con SQL Server Machine Learning | Microsoft Docs
-description: Configurare un ambiente locale di Python per le connessioni remote a servizi di SQL Server Machine Learning con Python.
+title: Configurare un client di analisi scientifica dei dati per lo sviluppo Python in SQL Server Machine Learning | Microsoft Docs
+description: Configurare un ambiente Python locale (Notebook di Jupyter o PyCharm) per le connessioni remote a servizi di SQL Server Machine Learning con Python.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/25/2018
+ms.date: 11/09/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b328d6c44dd8f75e3d74a3abe74f3324f31e1409
-ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
+ms.openlocfilehash: c3db7d215be8a43370969903adb9cf9518e9183c
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216625"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704099"
 ---
-# <a name="set-up-a-python-client-for-use-with-sql-server-machine-learning"></a>Configurare un client Python per l'uso con SQL Server Machine Learning
+# <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configurare un client di analisi scientifica dei dati per lo sviluppo Python in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Integrazione di Python è disponibile a partire da SQL Server 2017 o versioni successive quando si include l'opzione di Python in un [installazione di Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md). 
 
-In questo articolo, informazioni su come configurare una workstation di sviluppo client di Python in modo che sia possibile connettersi a un Server SQL remoto abilitata per l'integrazione di Python e apprendimento automatico. Questo esercizio Usa i notebook di Jupyter per eseguire il codice Python. Dopo aver completato i passaggi descritti in questo articolo, si avranno le stesse librerie di Python come quelli in SQL Server. Inoltre, si saprà come trasferire i calcoli da una sessione di Python locale a una sessione remota di Python in SQL Server.
+Per creare e distribuire soluzioni di Python in SQL Server, installare Microsoft [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) e altre librerie di Python sulla workstation client. La libreria revoscalepy, che è anche nell'istanza del Server SQL remoto, coordina le richieste di elaborazione tra i due sistemi. 
+
+In questo articolo, informazioni su come configurare una workstation di sviluppo Python in modo che sia possibile connettersi a un Server SQL remoto abilitata per l'integrazione di Python e apprendimento automatico. Dopo aver completato i passaggi descritti in questo articolo, si avranno le stesse librerie di Python come quelli in SQL Server. Inoltre, si saprà come trasferire i calcoli da una sessione di Python locale a una sessione remota di Python in SQL Server.
+
+![Componenti client-server](media/sqlmls-python-client-revo.png "sessioni locali che remote di Python e le librerie")
+
+È possibile usare i notebook di Jupyter incorporato, come descritto in questo articolo, o [collegare le librerie](#install-ide) PyCharm o qualsiasi altro IDE che in genere si usa.
 
 > [!Tip]
-> Per una dimostrazione video degli esercizi in questo articolo, vedere [eseguire R e Python in modalità remota in Server SQL da notebook di Jupyter](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
+> Per una dimostrazione video di questi esercizi, vedere [eseguire R e Python in modalità remota in Server SQL da notebook di Jupyter](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
 
 > [!Note]
-> Un'alternativa all'installazione delle sole librerie client usa un server autonomo. È possibile che alcuni clienti preferiscono per altro lavoro scenario end-to-end usare autonoma server come un rich client. Se si dispone di un [server autonomo](../install/sql-machine-learning-standalone-windows-install.md) come specificato durante l'installazione di SQL Server, si dispone di un server di Python che è completamente disaccoppiato da un'istanza di motore di database di SQL Server. Un server standalon include la distribuzione di base open source di Anaconda e le librerie specifiche di Microsoft. È possibile trovare l'eseguibile di Python in questa posizione: `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`. Come convalida dell'installazione e rich client, aprire una [notebook di Jupyter](#python-tools) per eseguire i comandi usano il Python.exe nel server.
+> Un'alternativa all'installazione della libreria client usa un [server autonomo](../install/sql-machine-learning-standalone-windows-install.md) come un rich client, alcuni clienti preferiscono per lavoro scenario più approfondita. Un server autonomo è completamente separato da SQL Server, ma perché contiene le stesse librerie di Python, è possibile utilizzarlo come un client per analitica nel database di SQL Server. È anche possibile usarlo per lavoro non correlate a SQL, inclusa la possibilità di importare e modellare i dati da altre piattaforme di dati. Se si installa un server autonomo, è possibile trovare l'eseguibile di Python in questa posizione: `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`. Per convalidare l'installazione [apre un notebook di Jupyter](#python-tools) per eseguire i comandi usando il Python.exe in quella posizione.
+
+## <a name="commonly-used-tools"></a>In genere utilizzato gli strumenti
+
+Se sei uno sviluppatore di Python per SQL o dagli sviluppatori SQL familiarità con Python e analitica nel database, è necessario uno strumento di sviluppo Python sia un editor di query T-SQL, ad esempio [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) tenta di eseguire tutti i le funzionalità di analitica nel database.
+
+Per lo sviluppo Python, è possibile usare i notebook di Jupyter, che viene fornita in bundle nella distribuzione Anaconda installata tramite SQL Server. Questo articolo illustra come avviare i notebook di Jupyter in modo che sia possibile eseguire codice Python in locale e in modalità remota in SQL Server.
+
+SSMS è un download separato, utile per la creazione ed esecuzione di stored procedure in SQL Server, inclusi quelli che contiene codice Python. Quasi qualsiasi codice Python che si scrive nel notebook di Jupyter può essere incorporato in una stored procedure. È possibile eseguire le altre esercitazioni per apprendere [SQL Server Management Studio e Python incorporato](../tutorials/train-score-using-python-in-tsql.md).
 
 ## <a name="1---install-python-packages"></a>1: installare pacchetti Python
 
-Workstation locale deve avere le stesse versioni di pacchetto di Python come quelli in SQL Server, incluse la distribuzione di base e i pacchetti di specifiche di Microsoft [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) e [microsftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Il [gestione di modelli di Azure ml](https://docs.microsoft.com/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) pacchetto viene installato anche, ma si applica alle attività di operazionalizzazione associata a un contesto di Machine Learning Server autonomo (non-istanza). Per analitica nel database in un'istanza di SQL Server, operazionalizzazione avviene tramite le stored procedure.
+Workstation locale deve avere le stesse versioni di pacchetto di Python come quelli in SQL Server, tra cui la base Anaconda versione 4.2.0 con distribuzione di Python 3.5.2 e pacchetti di specifiche di Microsoft.
 
-1. Scaricare lo script di installazione per installare Anaconda versione 4.2.0 con Python 3.5.2 e i tre elencate in precedenza pacchetti Microsoft.
+Uno script di installazione aggiunge tre librerie specifiche di Microsoft per il client Python. Lo script installa [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), usato per definire oggetti origine dei dati e il contesto di calcolo. Viene installato [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) fornendo algoritmi di machine learning. Il [azureml](https://docs.microsoft.com/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk) pacchetto viene installato anche, ma si applica alle attività di operazionalizzazione associata a un contesto di Machine Learning Server autonomo (non-istanza) e potrebbero essere limitate all'uso di analitica nel database.
 
-  + [https://aka.ms/mls-py](https://aka.ms/mls-py) Se SQL Server 2017 non è associato (caso comune). Se non si è certi, scegliere lo script.
+1. Scaricare uno script di installazione.
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) Se l'istanza di SQL Server remoto [associato a Machine Learning Server 9.3](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+  + [https://aka.ms/mls-py](https://aka.ms/mls-py) Installa versione 9.2.1 dei pacchetti Python di Microsoft. Questa versione corrisponde a un'istanza di SQL Server 2017 predefinita. 
+
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) Installa versione 9.3 dei pacchetti Python di Microsoft. Questa versione è una scelta migliore se l'istanza remota di SQL Server 2017 [associato a Machine Learning Server 9.3](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 2. Aprire una finestra di PowerShell con autorizzazioni di amministratore con privilegi elevati (fare doppio clic su **Esegui come amministratore**).
 
@@ -56,7 +72,7 @@ Installazione richiede alcuni minuti. È possibile monitorare lo stato di avanza
 
 ## <a name="2---locate-executables"></a>2 - individuare i file eseguibili
 
-Ancora in PowerShell, passare alla cartella di installazione per verificare il percorso del Python.exe, script e altri pacchetti. 
+Ancora in PowerShell, elencare il contenuto della cartella di installazione per verificare che siano installati Python.exe, script e altri pacchetti. 
 
 1. Immettere `cd \` per passare all'unità radice e quindi immettere il percorso specificato per `-InstallFolder` nel passaggio precedente. Se si omette questo parametro durante l'installazione, il valore predefinito è `cd C:\Program Files\Microsoft\PyForMLS`.
 
@@ -75,19 +91,23 @@ Nei sistemi con più versioni di Python, ricordarsi di usare questa particolare 
 
 Anaconda include notebook di Jupyter. Come passaggio successivo, creare un notebook ed eseguire codice Python che contiene le librerie che appena installato.
 
-1. Al prompt di Powershell, passare alla cartella scripts da aprire notebook di Jupyter:
+1. Al prompt di Powershell, ancora nella directory c:\Programmi\Microsoft Files\Microsoft\PyForMLS, aprire Jupyter notebook dalla cartella degli script:
 
-   ```powershell
-   .\Scripts\jupyter-notebook
-   ```
+  ```powershell
+  .\Scripts\jupyter-notebook
+  ```
 
-  Un blocco appunti dovrebbe aprire nel browser predefinito in `http://localhost:8889/tree`.
+  Un blocco appunti dovrebbe aprire nel browser predefinito in `https://localhost:8889/tree`.
+
+  Un altro modo per iniziare è fare doppio clic su **jupyter notebook.exe**. 
 
 2. Fare clic su **New** e quindi fare clic su **Python 3**.
 
   ![notebook di jupyter con Python 3 nuova selezione](media/jupyter-notebook-new-p3.png)
 
 3. Immettere `import revoscalepy` ed eseguire il comando a uno carico delle librerie specifiche di Microsoft.
+
+4. Immettere ed eseguire `print(revoscalepy.__version__)` per restituire le informazioni sulla versione. Dovrebbe essere 9.2.1 o 9.3.0. È possibile usare una di queste versioni con [revoscalepy sul server](../r/determine-which-packages-are-installed-on-sql-server.md#get-package-vers). 
 
 4. Immettere una serie più complessa di istruzioni. Questo esempio genera le statistiche di riepilogo usando [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) su un set di dati locale. Altre funzioni di ottenere la posizione dei dati di esempio e creare un oggetto origine dati per un file con estensione xdf locale.
 
@@ -113,7 +133,7 @@ Per connettersi a un'istanza di SQL Server per eseguire gli script e caricare i 
 
 Come minimo, l'account usato per eseguire il codice deve disporre dell'autorizzazione di lettura da database si lavora con più di un'autorizzazione speciale EXECUTE ANY EXTERNAL SCRIPT. La maggior parte degli sviluppatori, inoltre, richiedono le autorizzazioni per creare le stored procedure e scrivere dati in tabelle contenenti dati di training o assegnare un punteggio dei dati. 
 
-Chiedere all'amministratore del database per configurare le autorizzazioni seguenti per l'account, nel database in cui si usano Python:
+Chiedere all'amministratore di database di [configurare le autorizzazioni seguenti per l'account](../security/user-permission.md), nel database in cui si usano Python:
 
 + **EXECUTE ANY EXTERNAL SCRIPT** per l'esecuzione di Python nel server.
 + **db_datareader** privilegi per eseguire le query usate per il training del modello.
@@ -123,7 +143,55 @@ Chiedere all'amministratore del database per configurare le autorizzazioni segue
 
 Se il codice richiede i pacchetti non installati per impostazione predefinita con SQL Server, disporre con l'amministratore del database per i pacchetti installati con l'istanza. SQL Server è un ambiente protetto ed esistono restrizioni in cui i pacchetti possono essere installati. Installazione ad hoc dei pacchetti come parte del codice non è consigliabile, anche se si dispone di diritti. Inoltre, considerare sempre con attenzione le implicazioni di sicurezza prima di installare nuovi pacchetti nella raccolta di server.
 
-## <a name="5---test-remote-connection"></a>5: test della connessione remota
+
+<a name="create-iris-remotely"></a>
+
+## <a name="5---create-test-data"></a>5 - creare dati di test
+
+Se si dispone delle autorizzazioni per creare un database nel server remoto, è possibile eseguire il codice seguente per creare il database di demo Iris utilizzato per i passaggi rimanenti in questo articolo.
+
+### <a name="1---create-the-irissql-database-remotely"></a>1 - creare il database irissql in modalità remota
+
+```Python
+import pyodbc
+
+# creating a new db to load Iris sample in
+new_db_name = "irissql"
+connection_string = "Driver=SQL Server;Server=localhost;Database={0};Trusted_Connection=Yes;" 
+                        # you can also swap Trusted_Connection for UID={your username};PWD={your password}
+cnxn = pyodbc.connect(connection_string.format("master"), autocommit=True)
+cnxn.cursor().execute("IF EXISTS(SELECT * FROM sys.databases WHERE [name] = '{0}') DROP DATABASE {0}".format(new_db_name))
+cnxn.cursor().execute("CREATE DATABASE " + new_db_name)
+cnxn.close()
+
+print("Database created")
+```
+
+### <a name="2---import-iris-sample-from-sklearn"></a>2 - importare esempio Iris da SkLearn
+
+```Python
+from sklearn import datasets
+import pandas as pd
+
+# SkLearn has the Iris sample dataset built in to the package
+iris = datasets.load_iris()
+df = pd.DataFrame(iris.data, columns=iris.feature_names)
+```
+
+### <a name="3---use-revoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3 - usare Revoscalepy APIs per creare una tabella e caricare i dati Iris
+
+```Python
+from revoscalepy import RxSqlServerData, rx_data_step
+
+# Example of using RX APIs to load data into SQL table. You can also do this with pyodbc
+table_ref = RxSqlServerData(connection_string=connection_string.format(new_db_name), table="iris_data")
+rx_data_step(input_data = df, output_file = table_ref, overwrite = True)
+
+print("New Table Created: Iris")
+print("Sklearn Iris sample loaded into Iris table")
+```
+
+## <a name="6---test-remote-connection"></a>6: test della connessione remota
 
 Prima di tentare questo passaggio successivo, assicurarsi di avere le autorizzazioni per l'istanza di SQL Server e una stringa di connessione per il [database di esempio Iris](../tutorials/demo-data-iris-in-sql.md). Se il database non esiste e disporre di autorizzazioni sufficienti, è possibile [creare un database con queste istruzioni inline](#create-iris-remotely).
 
@@ -182,20 +250,26 @@ Lo screenshot seguente mostra l'output di tracciato di input e a dispersione.
 
   ![notebook di jupyter che Mostra output di grafico a dispersione](media/jupyter-notebook-scatterplot.png)
 
-## <a name="6---link-ide-to-pythonexe"></a>6 - collegamento IDE Python.exe
 
-Se si esegue semplicemente il debug degli script dalla riga di comando, è possibile ottenere con strumenti Python standard. Tuttavia, se si siano sviluppando nuove soluzioni, potrebbe essere necessaria un ambiente IDE Python completo. Opzioni comuni sono:
+<a name="install-ide"></a>
 
-+ [Visual Studio 2017 Community Edition](https://www.visualstudio.com/vs/features/python/) con Python
-+ [Visual Studio tools for AI](https://docs.microsoft.com/visualstudio/ai/installation)
-+ [Python in Visual Studio Code](https://code.visualstudio.com/docs/languages/python)
-+ Strumenti di terze parti più diffusi, ad esempio PyCharm Spyder ed Eclipse
-
-È consigliabile Visual Studio, perché supporta progetti di database, nonché i progetti di machine learning. Per informazioni sulla configurazione di un ambiente di Python, vedere [gestione di ambienti Python in Visual Studio](https://docs.microsoft.com/visualstudio/python/managing-python-environments-in-visual-studio).
+## <a name="7---link-tools-to-pythonexe"></a>7 - link strumenti Python.exe
 
 Poiché gli sviluppatori lavorano frequentemente con più versioni di Python, non il programma di installazione aggiunge al percorso di Python. Per utilizzare il file eseguibile di Python e librerie installate dal programma di installazione, IDE per il collegamento **Python.exe** nel percorso che offre anche **revoscalepy** e **microsoftml**. 
 
-Per un progetto Python in Visual Studio, un ambiente personalizzato sarebbe specificare i valori seguenti, presupponendo un'installazione predefinita.
+### <a name="jupyter-notebooks"></a>Notebook di Jupyter
+
+Questo articolo usa i notebook di Jupyter incorporato per chiamate di funzione per illustrare **revoscalepy**. Se si ha familiarità con questo strumento, lo screenshot seguente illustra l'interazione di parti e il motivo per cui tutti gli elementi "funziona senza problemi". 
+
+La cartella padre Files\Microsoft\PyForMLS c:\Programmi\Microsoft contiene Anaconda e i pacchetti Microsoft. I notebook di Jupyter è inclusi in Anaconda, nella cartella Scripts, e gli eseguibili di Python vengono registrati automaticamente con i notebook di Jupyter. I pacchetti disponibili nel sito di pacchetti possono essere importati in un notebook, inclusi i tre pacchetti Microsoft usati per l'analisi scientifica dei dati e machine learning.
+
+  ![File eseguibili e librerie](media/jupyter-notebook-python-registration.png)
+
+Se si usa un altro IDE, è necessario collegare le librerie di file eseguibili e la funzione Python per lo strumento. Le sezioni seguenti forniscono istruzioni per gli strumenti di usati comune.
+
+### <a name="visual-studio"></a>Visual Studio
+
+Se hai [Python in Visual Studio](https://code.visualstudio.com/docs/languages/python), usare le opzioni di configurazione seguenti per creare un ambiente di Python che include i pacchetti Python per Microsoft.
 
 | Impostazione di configurazione | Valore |
 |-----------------------|-------|
@@ -203,58 +277,21 @@ Per un progetto Python in Visual Studio, un ambiente personalizzato sarebbe spec
 | **Cesta k interpretu** | C:\Programmi\Microsoft Files\Microsoft\PyForMLS\python.exe |
 | **Interprete con finestra** | C:\Programmi\Microsoft Files\Microsoft\PyForMLS\pythonw.exe |
 
-<a name="create-iris-remotely"></a>
+Per informazioni sulla configurazione di un ambiente di Python, vedere [gestione di ambienti Python in Visual Studio](https://docs.microsoft.com/visualstudio/python/managing-python-environments-in-visual-studio).
 
-## <a name="optional-create-the-iris-database-remotely"></a>Facoltativo: Creare il database di Iris in modalità remota
+### <a name="pycharm"></a>PyCharm
 
-Se si dispone delle autorizzazioni per creare un database nel server remoto, è possibile eseguire il codice seguente per creare il database di esempio Iris usato per gli esempi in questo articolo.
+In PyCharm, impostare l'interprete Python eseguibile installato per Machine Learning Server.
 
-### <a name="1---create-the-irissql-database"></a>1 - creare il database irissql
+1. In un nuovo progetto, in impostazioni, fare clic su **locale aggiungere**.
 
-```Python
-import pyodbc
+2. Immettere `C:\Program Files\Microsoft\PyForMLS\`.
 
-# creating a new db to load Iris sample in
-new_db_name = "irissql"
-connection_string = "Driver=SQL Server;Server=localhost;Database={0};Trusted_Connection=Yes;" 
-                        # you can also swap Trusted_Connection for UID={your username};PWD={your password}
-cnxn = pyodbc.connect(connection_string.format("master"), autocommit=True)
-cnxn.cursor().execute("IF EXISTS(SELECT * FROM sys.databases WHERE [name] = '{0}') DROP DATABASE {0}".format(new_db_name))
-cnxn.cursor().execute("CREATE DATABASE " + new_db_name)
-cnxn.close()
-
-print("Database created")
-```
-
-### <a name="2---import-iris-sample-from-sklearn"></a>2 - importare esempio Iris da SkLearn
-
-```Python
-from sklearn import datasets
-import pandas as pd
-
-# SkLearn has the Iris sample dataset built in to the package
-iris = datasets.load_iris()
-df = pd.DataFrame(iris.data, columns=iris.feature_names)
-```
-
-### <a name="3---use-revoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3 - usare Revoscalepy APIs per creare una tabella e caricare i dati Iris
-
-```Python
-from revoscalepy import RxSqlServerData, rx_data_step
-
-# Example of using RX APIs to load data into SQL table. You can also do this with pyodbc
-table_ref = RxSqlServerData(connection_string=connection_string.format(new_db_name), table="iris_data")
-rx_data_step(input_data = df, output_file = table_ref, overwrite = True)
-
-print("New Table Created: Iris")
-print("Sklearn Iris sample loaded into Iris table")
-```
-
-<a name="install-ide"></a>
+È ora possibile importare **revoscalepy**, **microsoftml**, o **azureml** moduli. È anche possibile scegliere **degli strumenti** > **Console Python** per aprire una finestra interattiva.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Ora che si dispone di strumenti e una connessione attiva a SQL Server, eseguire un'esercitazione per ottenere informazioni dettagliate sul funzioni revoscalepy e il passaggio di contesti di calcolo.
+Ora che si dispone di strumenti e una connessione attiva a SQL Server, espandere le tue competenze mediante [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) per creare ed eseguire stored procedure contenenti codice Python incorporato.
 
 > [!div class="nextstepaction"]
-> [Creare un modello usando revoscalepy e un contesto di calcolo remoto](../tutorials/use-python-revoscalepy-to-create-model.md)
+> [Creare, eseguire il training e usare un modello Python con le stored procedure in SQL Server](../tutorials//train-score-using-python-in-tsql.md)

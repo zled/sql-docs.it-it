@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 0e6be5445533c6d86f5ae7b000bc1b9e7226abc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7018c0f71f51fa482ef0c1fad78b1aac20bf79cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764839"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701063"
 ---
 # <a name="installation-wizard-help"></a>Guida dell'Installazione guidata
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
 -   In qualsiasi applicazione che prevede l'installazione di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , questo deve essere installato come istanza denominata. In questo modo è possibile ridurre al minimo i conflitti quando più applicazioni sono installate nello stesso computer.  
   
  **Istanza predefinita**  
- Selezionare questa opzione per installare un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un computer può ospitare una sola istanza predefinita. Tutte le altre istanze devono essere denominate. Se, tuttavia, è installata un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile aggiungere un'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nello stesso computer.  
+ Selezionare questa opzione per installare un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un computer può ospitare una sola istanza predefinita. Tutte le altre istanze devono essere denominate. Se, tuttavia, è installata un'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile aggiungere un'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nello stesso computer.  
   
  **Istanza denominata**  
  Selezionare questa opzione per creare una nuova istanza denominata. Quando si assegna il nome a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tenere presenti le considerazioni seguenti:  
@@ -81,7 +81,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
      Nei nomi di istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile utilizzare solo i caratteri indicati come validi nella tabella codici corrente di Windows. Se viene utilizzato un carattere Unicode non supportato, si verificherà un errore di installazione.  
   
  **Istanze e funzionalità rilevate**  
- È possibile visualizzare un elenco dei componenti e delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installati sul computer su cui viene eseguito il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ È possibile visualizzare un elenco dei componenti e delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installati sul computer su cui viene eseguito il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **ID istanza** : per impostazione predefinita, come ID istanza viene usato il nome dell'istanza. Tale nome viene utilizzato per identificare le directory di installazione e le chiavi del Registro di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si tratta del caso delle istanze predefinite e delle istanze denominate. Per un'istanza predefinita, il nome di istanza e l'ID istanza sono MSSQLSERVER. Per usare un ID istanza non predefinito, specificarlo nel campo **ID istanza** .  
   
@@ -121,7 +121,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
  **Specifica amministratori**: è necessario specificare almeno un amministratore del server per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli utenti o i gruppi specificati diventeranno membri del ruolo di amministratore del server dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che viene installata e devono essere account utente di dominio Windows nello stesso dominio del computer in cui viene installato il software.  
   
 > [!NOTE]  
->  Controllo account utente è una caratteristica di sicurezza di Windows che richiede a un amministratore di approvare in modo specifico azioni o applicazioni amministrative prima di poterle eseguire. Poiché Controllo account utente è attivato per impostazione predefinita, verrà richiesto di consentire operazioni specifiche che necessitano di privilegi elevati. È possibile configurare Controllo account utente per modificare il comportamento predefinito oppure è possibile personalizzarlo per programmi specifici. Per altre informazioni sul controllo dell'account utente e sulla relativa configurazione, vedere [User Account Control Step by Step Guide](http://go.microsoft.com/fwlink/?linkid=196350) (Guida dettagliata sul controllo dell'account utente in Windows) e [User Account Control (Wikipedia)](http://go.microsoft.com/fwlink/?linkid=196351).  
+>  Controllo account utente è una caratteristica di sicurezza di Windows che richiede a un amministratore di approvare in modo specifico azioni o applicazioni amministrative prima di poterle eseguire. Poiché Controllo account utente è attivato per impostazione predefinita, verrà richiesto di consentire operazioni specifiche che necessitano di privilegi elevati. È possibile configurare Controllo account utente per modificare il comportamento predefinito oppure è possibile personalizzarlo per programmi specifici. Per altre informazioni sul controllo dell'account utente e sulla relativa configurazione, vedere [User Account Control Step by Step Guide](https://go.microsoft.com/fwlink/?linkid=196350) (Guida dettagliata sul controllo dell'account utente in Windows) e [User Account Control (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
   
 ### <a name="see-also"></a>Vedere anche  
  [Configurare gli account del servizio &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md) [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
@@ -174,9 +174,9 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
 |Directory radice dati|Disco locale, file server SMB, archiviazione condivisa* |C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono configurati gli elenchi ACL per le directory di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene disattivata l'ereditarietà come parte della configurazione.|  
 |Directory database utente|Disco locale, file server SMB, archiviazione condivisa*|C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |Le procedure consigliate per le directory dei dati dell'utente dipendono dai requisiti del carico di lavoro e delle prestazioni.|  
 |Directory log database utente|Disco locale, file server SMB, archiviazione condivisa*|C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Assicurarsi che nella directory del log sia disponibile una quantità di spazio adeguata.|  
-|Directory di backup|Disco locale, file server SMB, archiviazione condivisa*|C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup|Impostare le autorizzazioni appropriate in modo da impedire la perdita di dati e assicurarsi che all'account utente per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengano concesse autorizzazioni adeguate per la scrittura nella directory di backup. Non è supportato l'utilizzo di un'unità di cui è stato eseguito il mapping per le directory di backup.|  
+|Directory di backup|Disco locale, file server SMB, archiviazione condivisa*|C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup|Impostare le autorizzazioni appropriate in modo da impedire la perdita di dati e assicurarsi che all'account utente per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengano concesse autorizzazioni adeguate per la scrittura nella directory di backup. Non è supportato l'utilizzo di un'unità di cui è stato eseguito il mapping per le directory di backup.|  
   
- *Anche se i dischi condivisi sono supportati, è consigliabile non usarli per un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ * Benché i dischi condivisi siano supportati, non è consigliabile usarli per un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Nella tabella seguente vengono elencati i tipi di archivio supportati e le directory predefinite per un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurabili dall'utente durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -250,7 +250,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
  Per altre informazioni sulle directory, sui percorsi dei file e sulla denominazione degli ID delle istanze, vedere [Percorsi dei file per le istanze predefinite e denominate di SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
   
     
- [Autorizzazioni NTFS e di condivisione per un file server](http://go.microsoft.com/fwlink/?LinkID=206571) 
+ [Autorizzazioni NTFS e di condivisione per un file server](https://go.microsoft.com/fwlink/?LinkID=206571) 
 
 ## <a name="database-engine-configuration---filestream"></a>Configurazione del Motore di database - Filestream
   Utilizzare questa pagina per abilitare FILESTREAM per l'installazione corrente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. FILESTREAM integra il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con un file system NTFS archiviando dati BLOB (Binary Large Object) binari **varbinary(max)** come file nel file system. [!INCLUDE[tsql](../../includes/tsql-md.md)] offre istruzioni che consentono di inserire, aggiornare ed eseguire query, ricerche e back up dei dati FILESTREAM. Le interfacce del file system Win32 forniscono accesso ai dati tramite flusso.  
@@ -363,7 +363,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
  Per specificare una condivisione file SMB come directory, è necessario immettere manualmente il percorso UNC supportato. La selezione di una condivisione file SMB non è supportata. Il formato di un percorso UNC supportato di una condivisione file SMB è \\\NomeServer\NomeCondivisione\\...  
   
 ### <a name="data-and-log-directories-for--a-stand-alone-instance-of--includessnoversionincludesssnoversion-mdmd"></a>Directory di dati e log per un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- La tabella seguente elenca i tipi di archivio supportati e le directory predefinite per le istanze autonome di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurabili dall'utente durante l'installazione.  
+ Nella tabella seguente vengono elencati i tipi di archivio supportati e le directory predefinite per le istanze autonome di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurabili dall'utente durante l'installazione.  
   
 |Descrizione|Tipo di archivio supportato|Directory predefinita|Indicazioni|  
 |-----------------|----------------------------|-----------------------|---------------------|  
@@ -428,7 +428,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
   
 ### <a name="see-also"></a>Vedere anche  
  [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Autorizzazioni NTFS e di condivisione per un file server](http://go.microsoft.com/fwlink/?LinkID=206571)  
+ [Autorizzazioni NTFS e di condivisione per un file server](https://go.microsoft.com/fwlink/?LinkID=206571)  
 
 ## <a name="database-engine-configuration---user-instance"></a>Configurazione del Motore di database – Istanze utente
 Utilizzare la pagina **Istanze utente** per generare un'istanza distinta del [!INCLUDE[ssDE](../../includes/ssde-md.md)] per gli utenti che non dispongono di autorizzazioni di amministratore, nonché per aggiungere utenti al ruolo di amministratore.  
@@ -443,9 +443,9 @@ Utilizzare la pagina **Istanze utente** per generare un'istanza distinta del [!I
 >  Per gli account di accesso di cui è stato eseguito il provisioning come membri del ruolo predefinito del server **sysadmin** in fase di configurazione, viene effettuato il provisioning come amministratori nel database dei modelli. Gli account rimarranno membri del ruolo predefinito del server **sysadmin** nell'istanza utente, a meno che non vengano rimossi  
   
  Aggiungi utente al ruolo di amministratore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Per impostazione predefinita, questa opzione non è abilitata. Per aggiungere l'utente dell'installazione corrente al ruolo di amministratore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selezionare la casella di controllo.  
+ Per impostazione predefinita, questa opzione non è abilitata. Per aggiungere l'utente dell'installazione corrente al ruolo di amministratore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selezionare la casella di controllo.  
   
- Gli utenti di [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] che sono membri di BUILTIN\Administrators non vengono automaticamente aggiunti al ruolo predefinito del server sysadmin quando si connettono a [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Solo gli utenti di [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] aggiunti esplicitamente a un ruolo di amministratore a livello di server possono amministrare [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Tutti i membri del gruppo Built-In\Users possono connettersi all'istanza di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , ma dispongono di autorizzazioni limitate per l'esecuzione delle operazioni relative al database. Agli utenti che ereditano i privilegi di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] dai gruppi BUILTIN\Administrators e Built-In\Users delle versioni precedenti di Windows devono pertanto essere concessi esplicitamente privilegi amministrativi nelle istanze di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in esecuzione in [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)].  
+ Gli utenti di [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] membri di BUILTIN\Administrators non vengono automaticamente aggiunti al ruolo predefinito del server sysadmin quando si connettono a [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Solo gli utenti di [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] aggiunti esplicitamente a un ruolo di amministratore a livello di server possono amministrare [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Tutti i membri del gruppo Built-In\Users possono connettersi all'istanza di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , ma dispongono di autorizzazioni limitate per l'esecuzione delle operazioni relative al database. Agli utenti che ereditano i privilegi di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] dai gruppi BUILTIN\Administrators e Built-In\Users delle versioni precedenti di Windows devono pertanto essere concessi esplicitamente privilegi amministrativi nelle istanze di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in esecuzione in [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)].  
   
  Per apportare modifiche ai ruoli utente al termine del programma di installazione, utilizzare lo strumento Configurazione superficie di attacco (SQLSAC.exe) di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Per aggiornare l'elenco degli utenti nel ruolo di amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic sul collegamento **Aggiungi nuovo amministratore** .  
   

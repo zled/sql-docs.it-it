@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 930835c23ae211b6c909d62c693959bbbe6f2172
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 177d49376d7ed69c8a6ed14fa68326b1d54003fc
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662189"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603571"
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>Listener, connettività client e failover dell'applicazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47662189"
  Il listener del gruppo di disponibilità è definito dagli elementi seguenti:  
   
  Nome DNS univoco  
- È noto anche come nome di rete virtuale (VNN). Si applicano le regole di denominazione di Active Directory per i nomi host DNS. Per ulteriori informazioni, vedere l'articolo della Knowledge Base [Convenzioni di denominazione di Active Directory per computer, domini, siti e unità organizzative](http://support.microsoft.com/kb/909264) .  
+ È noto anche come nome di rete virtuale (VNN). Si applicano le regole di denominazione di Active Directory per i nomi host DNS. Per ulteriori informazioni, vedere l'articolo della Knowledge Base [Convenzioni di denominazione di Active Directory per computer, domini, siti e unità organizzative](https://support.microsoft.com/kb/909264) .  
   
  Uno o più indirizzi IP virtuali (VIP)  
  Indirizzi IP virtuali configurati per una o più subnet su cui è possibile eseguire il failover del gruppo di disponibilità.  
@@ -237,7 +237,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni Always On di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni Always On di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Introduction to the Availability Group Listener](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/16/introduction-to-the-availability-group-listener/) (Introduzione al listener del gruppo di disponibilità), nel blog del team di SQL Server Always On  
   

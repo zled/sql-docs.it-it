@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aae75f2f665536336fcf745a86675846249b4ab8
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 9a9e4f02d0662150c8f8458da7bde3b5a4838022
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018407"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668030"
 ---
 # <a name="spatial-data-types-overview"></a>Panoramica dei tipi di dati spaziali
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,8 +84,8 @@ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] **FullGlobe** è un tip
 In OGC Simple Features for SQL Specification vengono trattati anelli esterni e interni, ma questa distinzione non è significativa per il tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** . È possibile scegliere qualsiasi anello di un poligono come anello esterno.  
 
 Per ulteriori informazioni sulle specifiche OGC, vedere quanto riportato di seguito:  
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](http://go.microsoft.com/fwlink/?LinkId=93627)  
--   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> Segmenti di arco circolare  
 Tre tipi di cui è possibile creare istanze possono accettare segmenti di arco circolare: **CircularString**, **CompoundCurve**e **CurvePolygon**.  Un segmento di arco circolare è definito da tre punti in un piano bidimensionale. Il terzo punto non può corrispondere al primo punto.  
@@ -173,7 +173,7 @@ Le istanze**CurvePolygon** possono utilizzare istanze **CircularString** e **Com
 ## <a name="see-also"></a>Vedere anche  
 - [Dati spaziali (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 
 - [Guida di riferimento ai metodi per il tipo di dati geometry](https://msdn.microsoft.com/library/bb933973.aspx) 
-- [Guida di riferimento ai metodi per il tipo di dati geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
+- [Guida di riferimento ai metodi per il tipo di dati geography](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
 - [STNumCurves &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
 - [STNumCurves &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
 - [STGeomFromText &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   

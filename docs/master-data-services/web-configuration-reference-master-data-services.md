@@ -14,12 +14,12 @@ ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6f57d1cc99a2966ea220774366cca8aa6e2f8049
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 847e0dd3546062f00a1feb939ec4fa469f693c06
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834963"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702709"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Guida di riferimento alla configurazione Web (Master Data Services)
 
@@ -33,16 +33,16 @@ ms.locfileid: "47834963"
 |Elemento di configurazione|Descrizione|  
 |---------------------------|-----------------|  
 |**masterDataServices**|Elemento Custom. Connette il servizio Web [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] a un database di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
-|**connectionStrings**|Elemento ASP.NET. Per altre informazioni, vedere [Elemento connectionStrings (schema delle impostazioni ASP.NET)](http://go.microsoft.com/fwlink/?LinkId=178347) in MSDN Library.|  
-|**system.web**|Elemento ASP.NET. Per altre informazioni, vedere [Elemento system.web (schema delle impostazioni ASP.NET)](http://go.microsoft.com/fwlink/?LinkId=178348) in MSDN Library.|  
-|**startup**|Elemento .NET Framework. Per altre informazioni, vedere [\<Elemento> startup](http://go.microsoft.com/fwlink/?LinkId=178349) in MSDN Library.|  
-|**runtime**|Elemento .NET Framework. Per altre informazioni, vedere [\<Elemento > runtime](http://go.microsoft.com/fwlink/?LinkId=178350) in MSDN Library.|  
-|**system.codedom**|Elemento .NET Framework. Per altre informazioni, vedere [\<Elemento> system.codedom](http://go.microsoft.com/fwlink/?LinkId=178351) in MSDN Library.|  
-|**system.web.extensions**|Elemento ASP.NET. Per altre informazioni, vedere [Elemento system.web.extensions (schema delle impostazioni ASP.NET)](http://go.microsoft.com/fwlink/?LinkId=178352) in MSDN Library.|  
-|**system.webServer**|Gruppo di sezioni che contiene gli elementi IIS. Per altre informazioni, vedere [system.webServer Section Group \[IIS 7 Settings Schema\]](http://go.microsoft.com/fwlink/?LinkId=178353) (Gruppo di sezioni system.webServer (schema delle impostazioni IIS 7)) in MSDN Library.|  
-|**system.serviceModel**|Elemento WCF. Per altre informazioni, vedere [\<system.serviceModel>](http://go.microsoft.com/fwlink/?LinkId=178354) in MSDN Library.|  
-|**system.diagnostics**|Elemento .NET Framework. Per altre informazioni, vedere [\<Elemento> system.diagnostics](http://go.microsoft.com/fwlink/?LinkId=178355) in MSDN Library.|  
-|**appSettings**|Elemento ASP.NET. Per altre informazioni, vedere [Elemento appSettings (schema delle impostazioni generali)](http://go.microsoft.com/fwlink/?LinkId=178356) in MSDN Library.|  
+|**connectionStrings**|Elemento ASP.NET. Per altre informazioni, vedere [Elemento connectionStrings (schema delle impostazioni ASP.NET)](https://go.microsoft.com/fwlink/?LinkId=178347) in MSDN Library.|  
+|**system.web**|Elemento ASP.NET. Per altre informazioni, vedere [Elemento system.web (schema delle impostazioni ASP.NET)](https://go.microsoft.com/fwlink/?LinkId=178348) in MSDN Library.|  
+|**startup**|Elemento .NET Framework. Per altre informazioni, vedere [\<Elemento> startup](https://go.microsoft.com/fwlink/?LinkId=178349) in MSDN Library.|  
+|**runtime**|Elemento .NET Framework. Per altre informazioni, vedere [\<Elemento > runtime](https://go.microsoft.com/fwlink/?LinkId=178350) in MSDN Library.|  
+|**system.codedom**|Elemento .NET Framework. Per altre informazioni, vedere [\<Elemento> system.codedom](https://go.microsoft.com/fwlink/?LinkId=178351) in MSDN Library.|  
+|**system.web.extensions**|Elemento ASP.NET. Per altre informazioni, vedere [Elemento system.web.extensions (schema delle impostazioni ASP.NET)](https://go.microsoft.com/fwlink/?LinkId=178352) in MSDN Library.|  
+|**system.webServer**|Gruppo di sezioni che contiene gli elementi IIS. Per altre informazioni, vedere [system.webServer Section Group \[IIS 7 Settings Schema\]](https://go.microsoft.com/fwlink/?LinkId=178353) (Gruppo di sezioni system.webServer (schema delle impostazioni IIS 7)) in MSDN Library.|  
+|**system.serviceModel**|Elemento WCF. Per altre informazioni, vedere [\<system.serviceModel>](https://go.microsoft.com/fwlink/?LinkId=178354) in MSDN Library.|  
+|**system.diagnostics**|Elemento .NET Framework. Per altre informazioni, vedere [\<Elemento> system.diagnostics](https://go.microsoft.com/fwlink/?LinkId=178355) in MSDN Library.|  
+|**appSettings**|Elemento ASP.NET. Per altre informazioni, vedere [Elemento appSettings (schema delle impostazioni generali)](https://go.microsoft.com/fwlink/?LinkId=178356) in MSDN Library.|  
   
 ## <a name="masterdataservices-element"></a>Elemento masterdataservices  
  L'elemento **\<masterDataServices>** è un elemento personalizzato usato per connettere un servizio Web [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] a un database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  

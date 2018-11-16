@@ -12,12 +12,12 @@ ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: bc0bdfac0ed1f1c4f992db8ef833d6f092b3fb53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ec3a2f9bcdf43657649263d77eff3b31c9a57a3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677915"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662717"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>Uso dei progetti SSMA (OracleToSQL)
 Eseguire la migrazione di database Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], creare innanzitutto un progetto SSMA. Il progetto è un file che contiene le informazioni seguenti:  
@@ -120,7 +120,7 @@ Quando si apre un progetto, questo viene disconnesso da Oracle e da [!INCLUDE[ss
 3.  Per riconnettersi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]via il **File** dal menu fare clic su **Riconnetti a SQL Server**.  
   
 ## <a name="next-step"></a>Passaggio successivo  
-Il passaggio successivo del processo di migrazione consiste [la connessione al Database Oracle (OracleToSQL)](http://msdn.microsoft.com/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6).  
+Il passaggio successivo del processo di migrazione consiste [la connessione al Database Oracle (OracleToSQL)](https://msdn.microsoft.com/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6).  
   
 ## <a name="see-also"></a>Vedere anche  
 [La migrazione da Oracle database in SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

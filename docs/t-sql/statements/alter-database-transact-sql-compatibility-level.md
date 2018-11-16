@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e08cc23d78be8f617d51bd6d8310eaef5aa1f0e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d923536f678884307be526ddebf0f825774c1093
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666599"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699669"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Livello di compatibilità ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 > 
 > Se si desidera il livello 140 per il database, ma allo stesso tempo si vuole avere il modello di **stima della cardinalità** di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] che corrisponde al livello di compatibilità 110 del database, vedere [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), in particolare la parola chiave `LEGACY_CARDINALITY_ESTIMATION = ON`.
 >  
-> Per informazioni dettagliate su come valutare le variazioni delle prestazioni delle query più importanti tra i due livelli di compatibilità [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] vedere [Prestazioni delle query migliorate con il livello di compatibilità 130 in Database SQL di Azure](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/). Si noti che questo articolo si riferisce al livello di compatibilità 130 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma la stessa metodologia si applica ai passaggi al livello 140 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> Per informazioni dettagliate su come valutare le variazioni delle prestazioni delle query più importanti tra i due livelli di compatibilità [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] vedere [Prestazioni delle query migliorate con il livello di compatibilità 130 in Database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/). Si noti che questo articolo si riferisce al livello di compatibilità 130 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma la stessa metodologia si applica ai passaggi al livello 140 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Eseguire la query seguente per determinare la versione del [!INCLUDE[ssDE](../../includes/ssde-md.md)] a cui si è connessi.   
   
@@ -116,7 +116,7 @@ Per i nuovi progetti di sviluppo o quando un'applicazione esistente richiede l'u
 >
 > Per altre informazioni sulle differenze tra i livelli di compatibilità, vedere le sezioni appropriate più avanti in questo articolo. 
 
-Per aggiornare il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] alla versione più recente, mantenendo il livello di compatibilità del database che esisteva prima dell'aggiornamento e il relativo stato di supporto, è consigliabile eseguire la convalida della superficie di attacco funzionale statica del codice dell'applicazione nel database usando lo strumento [Microsoft Data Migration Assistant](http://www.microsoft.com/download/details.aspx?id=53595) (DMA). L'assenza di errori nell'output dello strumento DMA, relativi a funzionalità mancanti o non compatibili, protegge l'applicazione da regressioni funzionali nella nuova versione di destinazione. Per altre informazioni sullo strumento DMA, vedere [qui](http://blogs.msdn.microsoft.com/datamigration/dma).
+Per aggiornare il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] alla versione più recente, mantenendo il livello di compatibilità del database che esisteva prima dell'aggiornamento e il relativo stato di supporto, è consigliabile eseguire la convalida della superficie di attacco funzionale statica del codice dell'applicazione nel database usando lo strumento [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) (DMA). L'assenza di errori nell'output dello strumento DMA, relativi a funzionalità mancanti o non compatibili, protegge l'applicazione da regressioni funzionali nella nuova versione di destinazione. Per altre informazioni sullo strumento DMA, vedere [qui](https://blogs.msdn.microsoft.com/datamigration/dma).
 
 > [!NOTE] 
 > DMA supporta il livello di compatibilità del database 100 e superiore. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] come versione di origine è escluso. 

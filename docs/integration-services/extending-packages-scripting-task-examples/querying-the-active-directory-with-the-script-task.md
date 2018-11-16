@@ -18,12 +18,12 @@ ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 24815102b3839da21534373d2176259b3b42b73c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24422acdc6ef65bc47594ad18bd31059ebd89077
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710679"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641368"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Esecuzione di query su Active Directory tramite l'attività Script
   Le applicazioni di elaborazione di dati aziendali, ad esempio i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], devono in genere elaborare i dati in modo diverso a seconda del grado, della posizione o di altre caratteristiche dei dipendenti archiviati in Active Directory. Active Directory è un servizio directory di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows che rende disponibile un archivio centralizzato di metadati sugli utenti e su altre risorse dell'organizzazione, come computer e stampanti. Lo spazio dei nomi **System.DirectoryServices** in Microsoft .NET Framework fornisce le classi da usare con Active Directory per indirizzare il flusso di lavoro dell'elaborazione dei dati in base alle informazioni archiviate.  
@@ -109,6 +109,6 @@ public void Main()
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Articolo tecnico [Processing Active Directory Information in SSIS](http://go.microsoft.com/fwlink/?LinkId=199588) (Elaborazione di informazioni di Active Directory in SSIS) nel sito Web social.technet.microsoft.com  
+-   Articolo tecnico [Processing Active Directory Information in SSIS](https://go.microsoft.com/fwlink/?LinkId=199588) (Elaborazione di informazioni di Active Directory in SSIS) nel sito Web social.technet.microsoft.com  
   
   

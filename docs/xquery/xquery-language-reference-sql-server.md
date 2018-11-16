@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 helpviewer_keywords:
 - XQuery
@@ -18,19 +17,19 @@ ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6125bdcff27bc79d8eb850e7baafdd872342adf6
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 3e1f2196b8ba58af2f13dd1b022d62655f2b0aab
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119529"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672260"
 ---
 # <a name="xquery-language-reference-sql-server"></a>Riferimento al linguaggio XQuery (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[tsql](../includes/tsql-md.md)] supporta un subset del linguaggio XQuery utilizzato per l'esecuzione di query di **xml** tipo di dati. Questa implementazione di XQuery è allineata con le specifiche Working Draft di XQuery del luglio 2004. Il linguaggio è sviluppato da WC3 (World Wide Web Consortium), con la partecipazione di tutti i principali fornitori di database e di Microsoft. Poiché le specifiche W3C sono soggette a modifiche prima di diventare raccomandazioni ufficiali, questa implementazione può essere diversa dalla raccomandazione W3C finale. In questo argomento vengono descritte la semantica e la sintassi del subset di XQuery supportato in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- Per altre informazioni, vedere la [specifica del linguaggio XQuery 1.0 W3C](http://go.microsoft.com/fwlink/?LinkId=48846).  
+ Per altre informazioni, vedere la [specifica del linguaggio XQuery 1.0 W3C](https://go.microsoft.com/fwlink/?LinkId=48846).  
   
  Il linguaggio XQuery consente di eseguire query su dati XML strutturati e semistrutturati. Con il **xml** supporto viene fornito nel tipo di dati di [!INCLUDE[ssDE](../includes/ssde-md.md)], i documenti possono essere archiviati in un database e quindi eseguire una query utilizzando XQuery.  
   
@@ -47,7 +46,7 @@ SELECT @x.query('/ROOT/a')
  Nell'esempio seguente, la query viene specificata sulla colonna Instructions della **xml** tipo nella tabella ProductModel nel database AdventureWorks.  
   
 ```sql
-SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
+SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
     /AWMI:root/AWMI:Location[@LocationID=10]  
 ') as Result   
 FROM  Production.ProductModel  
@@ -67,7 +66,7 @@ WHERE ProductModelID=7
 |||  
   
 > [!NOTE]  
->  L'organizzazione di questa sezione è basata sulle specifiche W3C (World Wide Web Consortium ) per XQuery. Alcuni dei diagrammi disponibili in questa sezione provengono da questa specifica. In questa sezione l'implementazione Microsoft di XQuery viene confrontata alla specifica W3C, vengono descritte le differenze fra Microsoft XQuery e la specifica W3C e vengono illustrate le caratteristiche W3C non supportate. La specifica W3C è disponibile all'indirizzo [ http://www.w3.org/TR/2004/WD-xquery-20040723 ](http://go.microsoft.com/fwlink/?LinkId=48846).  
+>  L'organizzazione di questa sezione è basata sulle specifiche W3C (World Wide Web Consortium ) per XQuery. Alcuni dei diagrammi disponibili in questa sezione provengono da questa specifica. In questa sezione l'implementazione Microsoft di XQuery viene confrontata alla specifica W3C, vengono descritte le differenze fra Microsoft XQuery e la specifica W3C e vengono illustrate le caratteristiche W3C non supportate. La specifica W3C è disponibile all'indirizzo [ https://www.w3.org/TR/2004/WD-xquery-20040723 ](https://go.microsoft.com/fwlink/?LinkId=48846).  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   

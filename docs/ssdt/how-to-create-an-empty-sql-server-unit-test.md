@@ -13,12 +13,12 @@ ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cfb567a0e970cdc6f2a1e4b56fd39d39405a84c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a832c9001f60433764a17fbedba0ebb93eb15588
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627590"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681239"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Procedura: Creare uno unit test di SQL Server vuoto
 Includere unit test nel progetto di database per verificare che le modifiche apportate agli oggetti di database non interrompano la funzionalità esistente. Le procedure seguenti illustrano come creare unit test di SQL Server per qualsiasi oggetto di database. SQL Server Data Tools include alcune funzionalità di supporto aggiuntive per trigger, stored procedure e funzioni di database. Per altre informazioni, vedere [Procedura: Creare unit test di SQL Server per funzioni, trigger e stored procedure](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
@@ -96,10 +96,10 @@ Dopo aver configurato il progetto di test e aver creato il database, procedere c
 -   Aggiungere condizioni di test o un'altra istruzione di asserzione per verificare i risultati dello script.  
   
 > [!NOTE]  
-> La condizione di test Senza risultati è la condizione predefinita aggiunta a ogni test. Questa condizione di test viene inclusa per indicare che la verifica del test non è stata implementata. Eliminare tale condizione dal test dopo l'aggiunta di altre condizioni di test. Per altre informazioni, vedere [Procedura: aggiungere condizioni di test a unit test del database](http://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
+> La condizione di test Senza risultati è la condizione predefinita aggiunta a ogni test. Questa condizione di test viene inclusa per indicare che la verifica del test non è stata implementata. Eliminare tale condizione dal test dopo l'aggiunta di altre condizioni di test. Per altre informazioni, vedere [Procedura: aggiungere condizioni di test a unit test del database](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Procedura: Eseguire unit test di SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [Creazione e definizione di unit test di SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Creazione di unit test](http://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
+[Creazione di unit test](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
   

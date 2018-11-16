@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4edaecf62a1f78c90954b60ff0c08ce462993dd3
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 23938f5885fd207aed8143686f7b762d81fc8130
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020345"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813894"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 Nel file [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** vengono archiviate le impostazioni usate dal servizio Web ReportServer e dall'elaborazione in background. Tutte le applicazioni [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono eseguite all'interno di un singolo processo tramite cui è possibile leggere le impostazioni di configurazione archiviate nel file RSReportServer.config. Il file RSReportServer.config viene utilizzato nei server di report sia in modalità nativa, sia in modalità SharePoint. Nelle due modalità non vengono tuttavia utilizzate tutte le stesse impostazioni disponibili nel file di configurazione. La versione per la modalità SharePoint del file è più piccola, poiché molte delle impostazioni per la modalità SharePoint sono archiviate nei database di configurazione di SharePoint anziché nel file. In questo argomento viene descritto il file di configurazione predefinito installato per la modalità nativa e la modalità SharePoint e alcune delle impostazioni e dei comportamenti importanti controllati dal file di configurazione.  
@@ -429,7 +429,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
             <VirtualDirectory>ReportServer</VirtualDirectory>
             <URLs>
                 <URL>
-                    <UrlString>http://+:80</UrlString>
+                    <UrlString>https://+:80</UrlString>
                     <AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>
                     <AccountName>NT SERVICE\ReportServer</AccountName>
                 </URL>
@@ -440,7 +440,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
             <VirtualDirectory>Reports</VirtualDirectory>
             <URLs>
                 <URL>
-                    <UrlString>http://+:80</UrlString>
+                    <UrlString>https://+:80</UrlString>
                     <AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>
                     <AccountName>NT SERVICE\ReportServer</AccountName>
                 </URL>
@@ -770,7 +770,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
       <VirtualDirectory>ReportServer</VirtualDirectory>  
       <URLs>  
         <URL>  
-          <UrlString>http://+:80</UrlString>  
+          <UrlString>https://+:80</UrlString>  
           <AccountSid>  
           </AccountSid>  
           <AccountName>  
@@ -783,7 +783,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
       <VirtualDirectory>Reports</VirtualDirectory>  
       <URLs>  
         <URL>  
-          <UrlString>http://+:80</UrlString>  
+          <UrlString>https://+:80</UrlString>  
           <AccountSid>  
           </AccountSid>  
           <AccountName>  

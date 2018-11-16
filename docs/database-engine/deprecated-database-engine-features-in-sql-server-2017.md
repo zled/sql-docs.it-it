@@ -5,8 +5,7 @@ ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
@@ -17,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 537df591affabf79be0b47aadd0b43a7e424f444
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 92872e5a185d820650d49fe962eff6a8a78aadf3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031350"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606461"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Funzionalità del motore di database deprecate in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ Le funzionalità del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 
 |Category|Funzionalità deprecata|Sostituzione|Nome funzionalità|ID funzionalità|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Backup e ripristino|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continua a essere deprecata. BACKUP { DATABASE &#124; LOG } WITH PASSWORD e BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD non sono più disponibili.|Nessuna.|BACKUP DATABASE o LOG WITH PASSWORD<br /><br /> BACKUP DATABASE o LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|Livelli di compatibilità|Aggiornamento dalla versione 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Quando una versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non viene più [supportata](http://aka.ms/sqllifecycle), il livello di compatibilità del database associato verrà contrassegnato come deprecato. Microsoft continuerà tuttavia a supportare per quanto possibile le applicazioni certificate in qualsiasi livello di compatibilità del database supportato al fine di facilitare gli aggiornamenti. Per informazioni sui livelli di compatibilità supportati, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Livello di compatibilità del database: 100|108|  
+|Livelli di compatibilità|Aggiornamento dalla versione 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Quando una versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non viene più [supportata](https://aka.ms/sqllifecycle), il livello di compatibilità del database associato verrà contrassegnato come deprecato. Microsoft continuerà tuttavia a supportare per quanto possibile le applicazioni certificate in qualsiasi livello di compatibilità del database supportato al fine di facilitare gli aggiornamenti. Per informazioni sui livelli di compatibilità supportati, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Livello di compatibilità del database: 100|108|  
 |Oggetti di database|Possibilità di restituire set di risultati dai trigger|None|Restituzione di risultati da un trigger|12|  
 |Crittografia|Crittografia tramite RC4 o RC4_128 deprecata. Rimozione pianificata nella prossima versione. Decrittografia RC4 e RC4_128 non deprecata.|Utilizzare un'altra crittografia, ad esempio AES.|Algoritmo di crittografia deprecata|253|  
 |Server remoti|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Sostituire i server remoti utilizzando server collegati. sp_addserver può essere usata solo con l'opzione locale.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -126,7 +125,7 @@ Le funzionalità del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 
 |Security|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
 |Security|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
 |Security|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
-|Security|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|Le informazioni restituite da queste stored procedure risultano corrette in [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. L'output non riflette le modifiche apportate alla gerarchia di autorizzazioni implementata in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Per ulteriori informazioni, vedere [Autorizzazioni dei ruoli predefiniti del server](http://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
+|Security|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|Le informazioni restituite da queste stored procedure risultano corrette in [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. L'output non riflette le modifiche apportate alla gerarchia di autorizzazioni implementata in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Per ulteriori informazioni, vedere [Autorizzazioni dei ruoli predefiniti del server](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
 |Security|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|Autorizzazioni specifiche GRANT, DENY e REVOKE.|Autorizzazione ALL|35|  
 |Security|Funzione intrinseca PERMISSIONS|Eseguire una query su sys.fn_my_permissions.|PERMISSIONS|170|  
 |Security|SETUSER|EXECUTE AS|SETUSER|165|  

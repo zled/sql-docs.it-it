@@ -5,8 +5,7 @@ ms.date: 08/10/2016
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -25,21 +24,21 @@ ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 18294a9ecfea469d0f7a2c85dd4ce22ddf419fef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8b4680532843b9f60b6cdab3c0c528aab719dbf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675479"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668663"
 ---
 # <a name="type-system-xquery"></a>Sistema di tipi (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery è un linguaggio fortemente tipizzato per i tipi di schema e tipizzato in modo debole per i dati non tipizzati. I tipi predefiniti di XQuery sono:  
   
--   Tipi predefiniti di XML schema nel **http://www.w3.org/2001/XMLSchema** dello spazio dei nomi.  
+-   Tipi predefiniti di XML schema nel **https://www.w3.org/2001/XMLSchema** dello spazio dei nomi.  
   
--   Tipi definiti nel **http://www.w3.org/2004/07/xpath-datatypes** dello spazio dei nomi.  
+-   Tipi definiti nel **https://www.w3.org/2004/07/xpath-datatypes** dello spazio dei nomi.  
   
  Questo argomento descrive inoltre quanto segue:  
   
@@ -56,7 +55,7 @@ ms.locfileid: "47675479"
   
 ```  
 SELECT Instructions.query('  
-   DECLARE namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+   DECLARE namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    data(/AWMI:root[1]/AWMI:Location[@LocationID=10][1]/@LotSize)[1] instance of xs:decimal  
 ') AS Result  
 FROM Production.ProductModel  
@@ -66,7 +65,7 @@ WHERE ProductModelID=7
  Queste informazioni relative alla tipizzazione vengono fornite dalla raccolta di XML Schema associata alla colonna.  
   
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>Tipi definiti nello spazio dei nomi dei tipi di dati XPath  
- I tipi definiti nel **http://www.w3.org/2004/07/xpath-datatypes** dello spazio dei nomi hanno un prefisso predefinito **xdt**. Per questi tipi sono valide le osservazioni seguenti:  
+ I tipi definiti nel **https://www.w3.org/2004/07/xpath-datatypes** dello spazio dei nomi hanno un prefisso predefinito **xdt**. Per questi tipi sono valide le osservazioni seguenti:  
   
 -   Non è possibile utilizzarli per la creazione di una raccolta di XML Schema. Questi tipi vengono utilizzati nel sistema di tipi XQuery e vengono usati per [XQuery e tipizzazione statica](../xquery/xquery-and-static-typing.md). È possibile eseguire il cast ai tipi atomici, ad esempio, **xdt: untypedAtomic**, nella **xdt** dello spazio dei nomi.  
   
@@ -111,7 +110,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="http://www.w3.org/2001/XMLSchema">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema">  
       <element name="root" type="integer"/>  
 </schema>'  
 GO  
@@ -138,7 +137,7 @@ SELECT @x.query('string(/root[1]) + 3')
   
 ```  
 SELECT Instructions.query('   
-DECLARE namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
+DECLARE namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
              sum(data(//AWMI:Location/@LaborHours))   
 ') AS Result   
 FROM Production.ProductModel   

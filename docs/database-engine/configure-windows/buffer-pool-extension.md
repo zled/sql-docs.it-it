@@ -11,12 +11,12 @@ ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d66f118490cf0a665b94f3b0ae64c43f6179243
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f732c4038940ef2ed5ee511e399f3bcf2efae54f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658199"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606891"
 ---
 # <a name="buffer-pool-extension"></a>Estensione pool di buffer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47658199"
  I seguenti termini sono applicabili alla funzionalità di estensione del pool di buffer.  
   
  Unità SSD  
- Le unità SSD consentono di archiviare dati in memoria (RAM) in modo persistente. Per ulteriori informazioni vedere [questa definizione](http://en.wikipedia.org/wiki/Solid-state_drive).  
+ Le unità SSD consentono di archiviare dati in memoria (RAM) in modo persistente. Per ulteriori informazioni vedere [questa definizione](https://en.wikipedia.org/wiki/Solid-state_drive).  
   
  Buffer  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]un buffer è una pagina da 8 KB in memoria, ovvero delle stesse dimensioni di una pagina di dati o di indice. La cache del buffer è quindi suddivisa in pagine da 8 KB. Una pagina rimane nella cache del buffer fino a quando per Gestione buffer non è necessaria l'area del buffer per leggere un maggior numero di dati. I dati vengono riscritti sul disco solo se vengono modificati. Queste pagine modificate in memoria sono dette pagine dirty. Una pagina è detta clean quando è equivalente alla propria immagine del database sul disco. I dati nella cache del buffer possono essere modificati più volte prima di venire riscritti sul disco.  

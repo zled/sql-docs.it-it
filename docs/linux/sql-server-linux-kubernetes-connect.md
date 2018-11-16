@@ -10,16 +10,16 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7fcad17522f4372e696a26a99d4ce1a4af92ea15
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6352fc7be129f485175b1144d14aa380b2d99e1f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356102"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672000"
 ---
 # <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>Connettersi a SQL Server Always On Availability Group nel Kubernetes
 
-Per connettersi alle istanze di SQL Server in contenitori in un cluster Kubernetes, creare un [servizio di bilanciamento del carico](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). Il servizio di bilanciamento del carico è un endpoint. Include un indirizzo IP e inoltra le richieste per l'indirizzo IP nel POD in esecuzione l'istanza di SQL Server.
+Per connettersi alle istanze di SQL Server in contenitori in un cluster Kubernetes, creare un [servizio di bilanciamento del carico](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). Il servizio di bilanciamento del carico è un endpoint. Include un indirizzo IP e inoltra le richieste per l'indirizzo IP nel POD in esecuzione l'istanza di SQL Server.
 
 Per connettersi a una replica del gruppo di disponibilità, creare un servizio per i tipi di replica diverse. È possibile visualizzare esempi di servizi per i diversi tipi di repliche [sql-server-samples/gruppo di disponibilità-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
 

@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da01e9b3f60004b0418978a0f520816402b23807
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: ed7f25c6151a135ffba2add1c0f9873dabb84198
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970862"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698499"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,7 +77,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
  Nome della tabella da troncare o dalla quale vengono rimosse tutte le righe. *table_name* deve essere un valore letterale. *table_name* non può essere la funzione **OBJECT_ID()** o una variabile.  
   
  WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
  Specifica le partizioni da troncare o da cui vengono rimosse tutte le righe. Se la tabella non è partizionata, l'argomento **WITH PARTITIONS** genera un errore. Se la clausola **WITH PARTITIONS** non viene specificata, viene troncata l'intera tabella.  
   
@@ -157,7 +157,7 @@ GO
   
 ### <a name="b-truncate-table-partitions"></a>B. Troncare le partizioni di una tabella  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
  L'esempio seguente tronca le partizioni specificate di una tabella partizionata. La sintassi `WITH (PARTITIONS (2, 4, 6 TO 8))` consente di troncare i numeri di partizione 2, 4, 6, 7 e 8.  
   

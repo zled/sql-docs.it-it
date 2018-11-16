@@ -19,12 +19,12 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 073b16502e725c36b64427514be04074439070bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77947ba03e3f094077c950981a394a3566e24f0e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633629"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639093"
 ---
 # <a name="data-flow-task"></a>Attività Flusso di dati
   L'attività Flusso di dati incapsula il motore flusso di dati che consente di spostare i dati dalle origini alle destinazioni e offre la possibilità di trasformare, pulire e modificare i dati durante lo spostamento. L'aggiunta di un'attività Flusso di dati al flusso di controllo di un pacchetto consente al pacchetto di estrarre, trasformare e caricare dati.  
@@ -104,7 +104,7 @@ ms.locfileid: "47633629"
   
  Per altre informazioni sull'impostazione di queste proprietà nella finestra **Proprietà** , fare clic sull'argomento seguente:  
   
--   [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>Configurazione a livello di codice dell'attività Flusso di dati  
  Per ulteriori informazioni sull'aggiunta di un'attività Flusso di dati a un pacchetto a livello di codice e sulle impostazioni delle proprietà del flusso di dati, fare clic sull'argomento seguente:  
@@ -112,9 +112,9 @@ ms.locfileid: "47633629"
 -   [Aggiunta dell'attività Flusso di dati a livello di programmazione](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Impostazione delle proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Video relativo al [server di distribuzione di dati bilanciati](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)sul sito technet.microsoft.com.  
+ Video relativo al [server di distribuzione di dati bilanciati](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)sul sito technet.microsoft.com.  
   
   

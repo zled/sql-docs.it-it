@@ -1,5 +1,5 @@
 ---
-title: Registrare le operazioni in Analysis Services | Documenti Microsoft
+title: Log operazioni in Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ba0be2d0a46790f1a330a75c25461983e0b7488a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a4332497abe58a610a4ebba2d1c92b24aa9f5bd6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018608"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701639"
 ---
 # <a name="log-operations-in-analysis-services"></a>Registrare le operazioni in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,8 +36,6 @@ ms.locfileid: "34018608"
   
 -   [Suggerimenti e procedure consigliate](#bkmk_tips)  
   
-> [!NOTE]  
->  Per informazioni sulla registrazione, potrebbe essere utile interessarsi alle operazioni di traccia che mostrano i percorsi di elaborazione e di esecuzione delle query. Oggetti di traccia per analisi ad hoc e prolungate (come il controllo dell'accesso ai cubi) e consigli sull'uso ottimale dell'Utilità Traccia eventi, di SQL Server Profiler e di xEvents sono disponibili accedendo ai collegamenti forniti nella pagina: [Monitorare un'istanza di Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md).  
   
 ##  <a name="bkmk_location"></a> Posizione e tipi di log  
  Analysis Services fornisce i log descritti di seguito.  
@@ -46,7 +44,7 @@ ms.locfileid: "34018608"
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Log degli errori|Monitoraggio della routine e risoluzione dei problemi di base|Sì|  
 |Tabella OlapQueryLog in un database relazionale|Log di query|Raccolta di input per l'Ottimizzazione guidata basata sulle statistiche di utilizzo|no|  
-|File SQLDmp\<guid >. mdmp|Arresti anomali ed eccezioni|Risoluzione dei problemi completa|no|  
+|File SQLDmp\<guid > i file con estensione mdmp|Arresti anomali ed eccezioni|Risoluzione dei problemi completa|no|  
   
  Per altre risorse di informazioni non incluse nel presente argomento, è consigliabile consultare il collegamento seguente: [Initial data collection tips from Microsoft Support](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)(Suggerimenti per la raccolta dati iniziale forniti dal supporto tecnico Microsoft).  
   
@@ -55,7 +53,7 @@ ms.locfileid: "34018608"
   
  Dove possibile, è consigliabile impostare le proprietà di registrazione nella pagina delle proprietà del server di Management Studio. Anche se in alcuni casi sarà necessario modificare il file msmdsrv.ini direttamente per configurare le impostazioni che non sono visibili negli strumenti di amministrazione.  
   
- ![Sezione del file di configurazione che mostra le impostazioni del registro](../../analysis-services/instances/media/ssas-logfilesettings.png "sezione del file di configurazione che mostra le impostazioni del log")  
+ ![Sezione del file di configurazione con le impostazioni del registro](../../analysis-services/instances/media/ssas-logfilesettings.png "sezione del file di configurazione con le impostazioni del log")  
   
 ##  <a name="bkmk_msmdsrv"></a> File di log del servizio MSMDSRV  
  Analysis Services registra le operazioni del server nel file msmdsrv.log, uno per ogni istanza, che si trova in \Programmi\Microsoft SQL Server\\<istanza\>\Olap\Log.  
@@ -99,7 +97,7 @@ ms.locfileid: "34018608"
 ##  <a name="bkmk_querylog"></a> Log di query  
  Log di query è in realtà un nome improprio, perché l'attività di query MDX o DAX degli utenti non viene registrata. Raccoglie invece i dati sulle query generate da Analysis Services, che verranno usati successivamente come input di dati nell'Ottimizzazione guidata basata sulle statistiche di utilizzo. I dati raccolti nel log di query non vengono usati per l'analisi diretta. In particolare, i set di dati vengono descritti in matrici di bit, con uno zero o un uno che indica le parti del set di dati incluso nella query. Questi dati saranno usati per la procedura guidata.  
   
- Per il monitoraggio delle query e la risoluzione dei problemi, molti sviluppatori e amministratori usano uno strumento della community, **ASTrace**, per monitorare le query. È anche possibile usare SQL Server Profiler, XEvent o una traccia di Analysis Services. Per i collegamenti correlati alle tracce, vedere [Monitorare un'istanza di Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md) .  
+ Per il monitoraggio delle query e la risoluzione dei problemi, molti sviluppatori e amministratori usano uno strumento della community, **ASTrace**, per monitorare le query. È anche possibile usare SQL Server Profiler, XEvent o una traccia di Analysis Services.
   
  Quando è necessario usare il log di query? È consigliabile abilitare il log di query come parte del processo di ottimizzazione delle prestazioni di esecuzione delle query che include l'Ottimizzazione guidata basata sulle statistiche di utilizzo. Il log di query non esiste fino a quando non viene abilitata la funzionalità, non vengono create le strutture di dati per supportarla e non vengono impostate le proprietà usate da Analysis Services per individuare e popolare il log.  
   
@@ -117,7 +115,7 @@ ms.locfileid: "34018608"
   
  Le impostazioni del log di query sono a livello di server. Le impostazioni specificate verranno usate da tutti i database in esecuzione in questo server.  
   
- ![Eseguire una query in Management Studio le impostazioni del log](../../analysis-services/instances/media/ssas-querylogsettings.png "impostazioni di log di Query in Management Studio")  
+ ![Query sulle impostazioni del registro in Management Studio](../../analysis-services/instances/media/ssas-querylogsettings.png "impostazioni di log di Query in Management Studio")  
   
  Dopo aver specificato le impostazioni di configurazione, eseguire una query MDX più volte. Se il campionamento è impostato su 10, eseguire la query 11 volte. Verificare che la tabella sia stata creata. In Management Studio connettersi al motore di database relazionale, aprire la cartella del database, aprire la cartella **Tabelle** e verificare che **OlapQueryLog** sia presente. Se la tabella non viene visualizzata immediatamente, aggiornare la cartella per visualizzare le eventuali modifiche al contenuto.  
   
@@ -152,7 +150,7 @@ ms.locfileid: "34018608"
   
  L'impostazione di configurazione che verrà modificata con maggiore probabilità è **CreateAndSendCrashReports** , usata per determinare se verrà generato o meno un file di dump di memoria.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |0|Disattiva il file di dump di memoria. Tutte le altre impostazioni nella sezione Eccezioni vengono ignorate.|  
 |1|(Impostazione predefinita) Abilita ma non invia il file di dump di memoria.|  
@@ -181,7 +179,7 @@ ms.locfileid: "34018608"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione di un'istanza di Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
- [Introduzione al monitoraggio di Analysis Services con SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
+ [Introduzione al monitoraggio di Analysis Services tramite SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
  [Proprietà del server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   
   

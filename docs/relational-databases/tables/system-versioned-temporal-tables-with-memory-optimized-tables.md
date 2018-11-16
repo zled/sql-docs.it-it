@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2ed8247257e6687c71b9f516d68014a475cbc2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bd467691d8b96a823013fa3f9f45655b0857cf0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614439"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658077"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tabelle temporali con controllo delle versioni di sistema con tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Le tabelle temporali con controllo delle versioni di sistema per [tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) sono progettate per offrire una soluzione economica per scenari in cui sono necessari [controllo dei dati e analisi temporizzate](http://msdn.microsoft.com/library/mt631669.aspx) su dati raccolti con carichi di lavoro OLTP in memoria. Queste tabelle garantiscono elevata velocità effettiva transazionale, concorrenza senza blocco e, allo stesso tempo, possibilità di archiviare grandi quantità di dati cronologici che possono essere facilmente sottoposti a query.  
+  Le tabelle temporali con controllo delle versioni di sistema per [tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) sono progettate per offrire una soluzione economica per scenari in cui sono necessari [controllo dei dati e analisi temporizzate](https://msdn.microsoft.com/library/mt631669.aspx) su dati raccolti con carichi di lavoro OLTP in memoria. Queste tabelle garantiscono elevata velocità effettiva transazionale, concorrenza senza blocco e, allo stesso tempo, possibilità di archiviare grandi quantità di dati cronologici che possono essere facilmente sottoposti a query.  
   
 ## <a name="overview"></a>Panoramica  
  Le tabelle temporali con controllo delle versioni di sistema mantengono in automatico una cronologia completa delle modifiche ai dati ed espongono pratiche estensioni di Transact-SQL per l'analisi temporizzata. In uno scenario tipico, la cronologia dei dati viene mantenuta per un periodo di tempo molto lungo (più mesi, anche anni), anche se non viene sottoposta spesso a query.  

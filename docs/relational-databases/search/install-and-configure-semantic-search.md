@@ -14,12 +14,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d39af6af5eb04c9e8e8c340a71f0e8b1cb179fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffd79ef6abe6bd0e143d2ec84d72ebcc7476f3df
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790991"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675880"
 ---
 # <a name="install-and-configure-semantic-search"></a>Installazione e configurazione della ricerca semantica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ GO
   
         1.  Individuare il pacchetto di Windows Installer denominato **SemanticLanguageDatabase.msi** sui supporti di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-        2.  Scaricare il pacchetto di installazione dalla pagina [Microsoft® SQL Server® 2016 Semantic Language Statistics](https://www.microsoft.com/en-us/download/details.aspx?id=52681) nell'Area download [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+        2.  Scaricare il pacchetto di installazione dalla pagina [Microsoft® SQL Server® 2016 Semantic Language Statistics](https://www.microsoft.com/download/details.aspx?id=52681) nell'Area download [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 2.  Eseguire il pacchetto di Windows Installer **SemanticLanguageDatabase.msi** per estrarre il database e il file di log.  
   
@@ -146,6 +146,6 @@ GO
 ## <a name="install-optional-support-for-newer-document-types"></a>Installare supporto facoltativo per i tipi di documento più nuovi  
   
 ###  <a name="office"></a> Installare i filtri più recenti per tipi di documento di Microsoft Office e altri documenti Microsoft  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati i word breaker e gli stemmer [!INCLUDE[msCoName](../../includes/msconame-md.md)] più recenti, ma non vengono installati i filtri più recenti per i documenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office e altri tipi di documento [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Questi filtri sono necessari per l'indicizzazione di documenti creati con le versioni recenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office e di altre applicazioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Per scaricare i filtri più recenti, vedere [Microsoft Office 2010 Filter Pack](http://go.microsoft.com/fwlink/?LinkId=218293). (Non sembra essere disponibile una versione del Filter Pack per Office 2013 o Office 2016.)
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati i word breaker e gli stemmer [!INCLUDE[msCoName](../../includes/msconame-md.md)] più recenti, ma non vengono installati i filtri più recenti per i documenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office e altri tipi di documento [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Questi filtri sono necessari per l'indicizzazione di documenti creati con le versioni recenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office e di altre applicazioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Per scaricare i filtri più recenti, vedere [Microsoft Office 2010 Filter Pack](https://go.microsoft.com/fwlink/?LinkId=218293). (Non sembra essere disponibile una versione del Filter Pack per Office 2013 o Office 2016.)
   
   

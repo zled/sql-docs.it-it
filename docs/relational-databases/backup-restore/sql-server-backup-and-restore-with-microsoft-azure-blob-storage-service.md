@@ -11,26 +11,26 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d5233b6dc234f09bca8632e10642deafd5939010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcaee46bd8a7b84d72fda23d3bf7e5ffcb99050d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805459"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660122"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   ![Immagine del backup con il servizio BLOB di Azure](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Immagine del backup con il servizio BLOB di Azure")  
   
- Questo argomento illustra l'esecuzione di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel [servizio di archiviazione BLOB di Microsoft Azure](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)e il ripristino dallo stesso servizio. È anche presente un riepilogo dei vantaggi dell'uso del servizio BLOB di Microsoft Azure per archiviare i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Questo argomento illustra l'esecuzione di backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel [servizio di archiviazione BLOB di Microsoft Azure](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)e il ripristino dallo stesso servizio. È anche presente un riepilogo dei vantaggi dell'uso del servizio BLOB di Microsoft Azure per archiviare i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  SQL Server supporta l'archiviazione di backup nel servizio di archiviazione BLOB di Microsoft Azure nei modi seguenti:  
   
 -   **Gestione dei backup in Microsoft Azure:** usando gli stessi metodi usati per eseguire il backup su DISK e TAPE, è ora possibile eseguire il backup nel servizio di archiviazione Microsoft Azure specificando l'URL come destinazione di backup. È possibile utilizzare questa funzionalità per eseguire il backup manualmente o per configurare la propria strategia di backup allo stesso modo di una risorsa di archiviazione locale o di altre soluzioni esterne. Questa funzionalità viene definita anche **Backup di SQL Server nell'URL**. Per ulteriori informazioni, vedere [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). Questa funzionalità è disponibile in SQL Server 2012 SP1 CU2 o versione successiva. Questa funzionalità è stata migliorata in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] per garantire prestazioni e funzionalità superiori tramite l'uso di BLOB in blocchi, firme di accesso condiviso e striping.  
   
     > [!NOTE]  
-    >  Per le versioni di SQL Server precedenti a SQL Server 2012 SP1 CU2, è possibile usare il componente aggiuntivo dello strumento per il backup di SQL Server in Microsoft Azure per creare i backup nel servizio di archiviazione Microsoft Azure in modo rapido e semplice. Per ulteriori informazioni, vedere l' [Area download](http://go.microsoft.com/fwlink/?LinkID=324399).  
+    >  Per le versioni di SQL Server precedenti a SQL Server 2012 SP1 CU2, è possibile usare il componente aggiuntivo dello strumento per il backup di SQL Server in Microsoft Azure per creare i backup nel servizio di archiviazione Microsoft Azure in modo rapido e semplice. Per ulteriori informazioni, vedere l' [Area download](https://go.microsoft.com/fwlink/?LinkID=324399).  
   
 -   **Backup di snapshot di file per i file di database in Archiviazione BLOB di Azure** : con l'uso degli snapshot di Azure, i backup degli snapshot di file di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantiscono backup e ripristini quasi istantanei per i file di database archiviati usando il servizio di archiviazione BLOB di Azure. Questa funzionalità consente di semplificare i criteri di backup e ripristino e supporta il ripristino temporizzato. Per altre informazioni, vedere [Backup di snapshot di file per i file di database in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Questa funzionalità è disponibile in SQL Server 2016 o versione successiva.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "47805459"
 ##  <a name="Billing"></a> Considerazioni sui costi di Microsoft Azure:  
  Conoscendo i costi correlati all'archiviazione di Microsoft Azure è possibile prevedere il costo della creazione e dell'archiviazione dei backup in Microsoft Azure.  
   
- Per stimare i costi, è possibile usare il [calcolatore dei costi di Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=277060) .  
+ Per stimare i costi, è possibile usare il [calcolatore dei costi di Microsoft Azure](https://go.microsoft.com/fwlink/?LinkId=277060) .  
   
- **Archiviazione:** i costi dipendono dallo spazio utilizzato e vengono calcolati in base a una scala graduata e al livello di ridondanza. Per altri dettagli e informazioni aggiornate, vedere la sezione sulla **gestione dei dati** nell'articolo [Dettagli prezzi](http://go.microsoft.com/fwlink/?LinkId=277059) .  
+ **Archiviazione:** i costi dipendono dallo spazio utilizzato e vengono calcolati in base a una scala graduata e al livello di ridondanza. Per altri dettagli e informazioni aggiornate, vedere la sezione sulla **gestione dei dati** nell'articolo [Dettagli prezzi](https://go.microsoft.com/fwlink/?LinkId=277059) .  
   
- **Trasferimenti di dati:** i trasferimenti in entrata dei dati in Microsoft Azure sono gratuiti. Per i trasferimenti in uscita viene addebitato il costo relativo all'utilizzo della larghezza di banda e il calcolo viene effettuato in base a una scala graduata specifica per l'area. Per ulteriori informazioni, vedere la sezione [Trasferimenti di dati](http://go.microsoft.com/fwlink/?LinkId=277061) nell'articolo Dettagli prezzi.  
+ **Trasferimenti di dati:** i trasferimenti in entrata dei dati in Microsoft Azure sono gratuiti. Per i trasferimenti in uscita viene addebitato il costo relativo all'utilizzo della larghezza di banda e il calcolo viene effettuato in base a una scala graduata specifica per l'area. Per ulteriori informazioni, vedere la sezione [Trasferimenti di dati](https://go.microsoft.com/fwlink/?LinkId=277061) nell'articolo Dettagli prezzi.  
   
 ## <a name="see-also"></a>Vedere anche  
 

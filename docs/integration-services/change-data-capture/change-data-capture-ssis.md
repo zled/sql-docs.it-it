@@ -14,12 +14,12 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57ceb8a68ec89d1bb0f5e78109445719d84d731a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff152320679a4a315da2630ecb426ce9ba2cc7b3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804659"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641148"
 ---
 # <a name="change-data-capture-ssis"></a>Change Data Capture (SSIS)
   Change Data Capture in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]offre una soluzione efficace alla sfida posta dall'esecuzione di caricamenti incrementali da tabelle di origine in data mart e data warehouse.  
@@ -96,9 +96,9 @@ ms.locfileid: "47804659"
 ## <a name="samples-of-change-data-capture-packages"></a>Esempi di pacchetti Change Data Capture  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre due esempi che illustrano come usare la funzionalità Change Data Capture nei pacchetti. Per altre informazioni, vedere gli argomenti seguenti:  
   
--   [File Leggimi relativo al pacchetto di esempio di un intervallo di tempo specificato in Change Data Capture](http://go.microsoft.com/fwlink/?LinkId=133507)  
+-   [File Leggimi relativo al pacchetto di esempio di un intervallo di tempo specificato in Change Data Capture](https://go.microsoft.com/fwlink/?LinkId=133507)  
   
--   [File Leggimi relativo al pacchetto di esempio dall'ultima richiesta in Change Data Capture](http://go.microsoft.com/fwlink/?LinkId=133508)  
+-   [File Leggimi relativo al pacchetto di esempio dall'ultima richiesta in Change Data Capture](https://go.microsoft.com/fwlink/?LinkId=133508)  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
@@ -119,6 +119,6 @@ ms.locfileid: "47804659"
 -   [Esecuzione di un caricamento incrementale di più tabelle](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Intervento nel blog sul [carico incrementale con schema progettuale di SSIS](http://go.microsoft.com/fwlink/?LinkId=217679)su sqlblog.com  
+ Intervento nel blog sul [carico incrementale con schema progettuale di SSIS](https://go.microsoft.com/fwlink/?LinkId=217679)su sqlblog.com  
   
   

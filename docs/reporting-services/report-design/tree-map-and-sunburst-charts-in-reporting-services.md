@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a004b0d12d6a34b613c710f2018b9151b38f5d84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c255369e8292aa2b7275a58d5e8375890153a5aa
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612860"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814104"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Grafici mappa ad albero e radiali in Reporting Services
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -177,7 +177,7 @@ In un grafico radiale la gerarchia è rappresentata da una serie di cerchi. Il l
 * [Visualizzazione di progettazione set di dati condiviso &#40;Generatore report&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
 * [Visualizzazione di descrizioni comandi in una serie &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 * [Esercitazione: Mappe ad albero in Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
-* [Treemap: Microsoft Research Data Visualization Apps for Office (Mappa ad albero: App di visualizzazione dati di Microsoft Research per Office)](http://research.microsoft.com/en-us/projects/msrdatavis/treemap.aspx)  
+* [Treemap: Microsoft Research Data Visualization Apps for Office (Mappa ad albero: App di visualizzazione dati di Microsoft Research per Office)](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)  
 <br>  
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

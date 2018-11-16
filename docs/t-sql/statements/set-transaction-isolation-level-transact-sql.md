@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d49e9c7b8b567ff4628e4e2353a6ce0a7a4adc4
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: bbedfe588a66e166f46e9240db65689a2b2a6459
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970562"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700347"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +87,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 -   Se READ_COMMITTED_SNAPSHOT è impostata su ON, [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizza il controllo delle versioni delle righe per presentare a ogni istruzione uno snapshot dei dati consistente dal punto di vista transazionale, rappresentativo dei dati esistenti al momento dell'avvio dell'istruzione. Non vengono utilizzati blocchi per proteggere i dati da aggiornamenti eseguiti da altre transazioni.
 
 > [!IMPORTANT]  
-> La scelta di un livello di isolamento delle transazioni non ha effetto sui blocchi acquisiti per proteggere le modifiche dei dati. Una transazione ottiene sempre un blocco esclusivo su qualsiasi dato da essa modificato, che mantiene fino al suo completamento, indipendentemente dal livello di isolamento impostato per la transazione. Inoltre, un aggiornamento effettuato a livello di isolamento READ_COMMITTED usa blocchi di aggiornamento sulle righe di dati selezionate, mentre un aggiornamento effettuato a livello di isolamento SNAPSHOT usa versioni di riga per selezionare le righe da aggiornare. Per le operazioni di lettura, i livelli di isolamento delle transazioni definiscono essenzialmente il livello di protezione dagli effetti delle modifiche apportate da altre transazioni. Per altre informazioni vedere [Guida per il controllo delle versioni delle righe e il blocco della transazione](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).
+> La scelta di un livello di isolamento delle transazioni non ha effetto sui blocchi acquisiti per proteggere le modifiche dei dati. Una transazione ottiene sempre un blocco esclusivo su qualsiasi dato da essa modificato, che mantiene fino al suo completamento, indipendentemente dal livello di isolamento impostato per la transazione. Inoltre, un aggiornamento effettuato a livello di isolamento READ_COMMITTED usa blocchi di aggiornamento sulle righe di dati selezionate, mentre un aggiornamento effettuato a livello di isolamento SNAPSHOT usa versioni di riga per selezionare le righe da aggiornare. Per le operazioni di lettura, i livelli di isolamento delle transazioni definiscono essenzialmente il livello di protezione dagli effetti delle modifiche apportate da altre transazioni. Per altre informazioni vedere [Guida per il controllo delle versioni delle righe e il blocco della transazione](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).
 
 > [!NOTE]  
 >  L'isolamento dello snapshot supporta dati FILESTREAM. In modalità di isolamento dello snapshot, i dati letti da qualsiasi istruzione in una transazione rappresenteranno la versione consistente dal punto di vista transazionale dei dati presenti all'avvio della transazione.  

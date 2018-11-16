@@ -19,12 +19,12 @@ ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c7ece007386a9048db3ec33322d7da0cab332cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3181a92340ae591167aa2b9e667c3af79d32f9b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855811"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698279"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47855811"
 > [!IMPORTANT]  
 >  In caso di problemi di riservatezza, non utilizzare questa funzione. È possibile intuire il valore del GUID che verrà generato successivamente e accedere ai dati associati a tale GUID.  
   
- NEWSEQUENTIALID è un wrapper sulla funzione [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) di Windows, a cui è [applicata una riproduzione casuale](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/).
+ NEWSEQUENTIALID è un wrapper sulla funzione [UuidCreateSequential](https://go.microsoft.com/fwlink/?LinkId=164027) di Windows, a cui è [applicata una riproduzione casuale](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/).
   
 > [!WARNING]  
 >  La funzione UuidCreateSequential ha dipendenze hardware. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si possono sviluppare cluster di valori sequenziali quando i database (ad esempio, i database indipendenti) vengono spostati in altri computer. Quando si usa Always On in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], si possono sviluppare cluster di valori sequenziali se si effettua il failover del database in un computer diverso.  

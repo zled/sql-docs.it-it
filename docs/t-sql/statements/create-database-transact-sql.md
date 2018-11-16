@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5263a785fff56a2f1c375c7615a725f931582cfe
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 95823c0c63e65532213e1a195b978e98df9d9986
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100522"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701049"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -194,7 +194,7 @@ CREATE DATABASE database_snapshot_name
  COLLATE *collation_name*  
  Specifica le regole di confronto predefinite per il database. È possibile usare nomi di regole di confronto di Windows o SQL. Se collation_name viene omesso, al database vengono assegnate le regole di confronto predefinite dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è possibile specificare un nome di regole di confronto in uno snapshot del database.  
   
- Non è possibile specificare un nome di regole di confronto con le clausole FOR ATTACH o FOR ATTACH_REBUILD_LOG. Per informazioni sulla modifica delle regole di confronto di un database collegato, visitare il [sito Web Microsoft](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
+ Non è possibile specificare un nome di regole di confronto con le clausole FOR ATTACH o FOR ATTACH_REBUILD_LOG. Per informazioni sulla modifica delle regole di confronto di un database collegato, visitare il [sito Web Microsoft](https://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
   
  Per altre informazioni sui nomi delle regole di confronto di Windows e SQL, vedere [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
@@ -509,7 +509,7 @@ Alcune funzionalità del database dipendono dalle caratteristiche o dalle funzio
  A meno che non si specifichi FOR ATTACH, ogni nuovo database eredita le impostazioni delle opzioni di database dal database model. Ad esempio, l'opzione di database auto shrink viene impostata su **true** nel database modello e in tutti i nuovi database creati. Se si modificano le opzioni nel database model, queste nuove impostazioni vengono utilizzate in tutti i nuovi database creati. La modifica delle operazioni nel database model non ha effetto sui database esistenti. Se viene specificata l'opzione FOR ATTACH nell'istruzione CREATE DATABASE, i nuovi database ereditano le impostazioni delle opzioni di database dal database originale.  
   
 ## <a name="viewing-database-information"></a>Visualizzazione delle informazioni sui database  
- Per restituire informazioni su database, file e filegroup, è possibile usare viste del catalogo, funzioni di sistema e stored procedure di sistema. Per altre informazioni, vedere [Viste di sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
+ Per restituire informazioni su database, file e filegroup, è possibile usare viste del catalogo, funzioni di sistema e stored procedure di sistema. Per altre informazioni, vedere [Viste di sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
 ## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione CREATE DATABASE, CREATE ANY DATABASE o ALTER ANY DATABASE.  
@@ -935,13 +935,13 @@ CREATE DATABASE database_name
   
 *database_name* 
  
-Nome del nuovo database. Il nome deve essere univoco in SQL Server ed essere conforme alle regole di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per gli identificatori. Per altre informazioni, vedere [Identificatori](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+Nome del nuovo database. Il nome deve essere univoco in SQL Server ed essere conforme alle regole di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per gli identificatori. Per altre informazioni, vedere [Identificatori](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *Collation_name*  
 
 Specifica le regole di confronto predefinite per il database. È possibile usare nomi di regole di confronto di Windows o SQL. Se non viene specificato, al database vengono assegnate le regole di confronto predefinite, ovvero SQL_Latin1_General_CP1_CI_AS.  
   
-Per altre informazioni sui nomi delle regole di confronto Windows e SQL, vedere [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+Per altre informazioni sui nomi delle regole di confronto Windows e SQL, vedere [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 CATALOG_COLLATION  
 
@@ -1097,7 +1097,7 @@ La sintassi e le regole semantiche seguenti si applicano all'utilizzo dell'argom
   
 - Il nome del server di origine e il nome del server per la destinazione della copia potrebbe essere uguale o diverso. Se corrispondono, questo parametro è facoltativo e il contesto del server della sessione corrente viene usato per impostazione predefinita.  
   
-- I nomi dei database di origine e di destinazione devono essere specificati, univoci e conformi alle regole di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per gli identificatori. Per altre informazioni, vedere [Identificatori](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+- I nomi dei database di origine e di destinazione devono essere specificati, univoci e conformi alle regole di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per gli identificatori. Per altre informazioni, vedere [Identificatori](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 - L'istruzione `CREATE DATABASE` deve essere eseguita nel contesto del database master del server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in cui il nuovo database verrà creato. 
 - Al termine della copia, il database di destinazione deve essere gestito come database indipendente. È possibile eseguire le istruzioni `ALTER DATABASE` e `DROP DATABASE` per il nuovo database indipendentemente dal database di origine. È inoltre possibile copiare il nuovo database in un altro nuovo database.  
@@ -1225,13 +1225,13 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 *database_name* 
  
-Nome del nuovo database. Il nome deve essere univoco in SQL Server ed essere conforme alle regole di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per gli identificatori. Per altre informazioni, vedere [Identificatori](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+Nome del nuovo database. Il nome deve essere univoco in SQL Server ed essere conforme alle regole di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per gli identificatori. Per altre informazioni, vedere [Identificatori](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *Collation_name*  
 
 Specifica le regole di confronto predefinite per il database. È possibile usare nomi di regole di confronto di Windows o SQL. Se non viene specificato, al database vengono assegnate le regole di confronto predefinite, ovvero SQL_Latin1_General_CP1_CI_AS.  
   
-Per altre informazioni sui nomi delle regole di confronto Windows e SQL, vedere [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+Per altre informazioni sui nomi delle regole di confronto Windows e SQL, vedere [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 ## <a name="remarks"></a>Remarks
  
@@ -1307,12 +1307,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 ## <a name="arguments"></a>Argomenti  
 *database_name*  
-Nome del nuovo database. Questo nome deve essere univoco in SQL Server, che può ospitare sia database [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sia database [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Deve anche rispettare le regole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per gli identificatori. Per altre informazioni, vedere [Identificatori](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
+Nome del nuovo database. Questo nome deve essere univoco in SQL Server, che può ospitare sia database [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sia database [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Deve anche rispettare le regole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per gli identificatori. Per altre informazioni, vedere [Identificatori](https://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
 *nome_regole_di_confronto*  
 Specifica le regole di confronto predefinite per il database. È possibile usare nomi di regole di confronto di Windows o SQL. Se non vengono specificate, al database vengono assegnate le regole di confronto predefinite, ovvero SQL_Latin1_General_CP1_CI_AS.  
   
-Per altre informazioni sui nomi delle regole di confronto Windows e SQL, vedere [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
+Per altre informazioni sui nomi delle regole di confronto Windows e SQL, vedere [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx).  
   
 *EDITION*  
 Specifica il livello del servizio del database. Per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] usare 'datawarehouse'.  

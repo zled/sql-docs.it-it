@@ -11,12 +11,12 @@ ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40151df5effd43cd48f005a0ddfd2e5faa673b40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45c7429dfc8824859b06ef16616b0b999a3f6fd0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668899"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666760"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Procedura: Configurare l'esecuzione di unit test di SQL Server
 Con la configurazione del progetto di test è possibile specificare diverse impostazioni tramite cui vengono controllati gli aspetti della modalità di esecuzione degli unit test di SQL Server. Queste impostazioni di configurazione vengono archiviate nel file app.config del progetto di test. Se si modifica direttamente il file, i nuovi valori vengono visualizzati nella finestra di dialogo relativa alla configurazione di test.  
@@ -30,7 +30,7 @@ Tramite queste impostazioni vengono controllate la modalità di connessione del 
 -   **Distribuzione dello schema**. Un progetto di database è una rappresentazione offline del database. Il progetto di database rappresenta la struttura degli oggetti di database, ma non contiene dati. Dopo aver apportato le modifiche allo schema in un progetto di database, è possibile eseguirne il test in un database effettivo. Nel passaggio relativo alla distribuzione dello schema gli oggetti di database che si desidera testare vengono copiati dal progetto di database nel database su cui si eseguono i test. Per altre informazioni sulla distribuzione dello schema, vedere [Distribuire uno schema di database](#DeployingDBSchema).  
   
     > [!NOTE]  
-    > I test non vengono eseguiti nella cartella della soluzione, ma in una cartella distinta sul disco rigido locale. Sebbene sia possibile configurare gli aspetti della distribuzione di test, in genere questa operazione non è necessaria per gli unit test. Per altre informazioni sulla distribuzione di test, vedere [Esecuzione di test](http://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
+    > I test non vengono eseguiti nella cartella della soluzione, ma in una cartella distinta sul disco rigido locale. Sebbene sia possibile configurare gli aspetti della distribuzione di test, in genere questa operazione non è necessaria per gli unit test. Per altre informazioni sulla distribuzione di test, vedere [Esecuzione di test](https://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
   
 ## <a name="SpecifyConnectionStrings"></a>Specificare stringhe di connessione  
   

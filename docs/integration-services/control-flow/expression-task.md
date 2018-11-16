@@ -13,12 +13,12 @@ ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5f2bfc7d8e3f5782851178667305966cc243d8c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f026b827c510713ac45d11fbfad552b39171163d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602644"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640278"
 ---
 # <a name="expression-task"></a>Attività Espressione
   L'Attività Espressione consente di creare e valutare espressioni per l'impostazione di valori di variabili in fase di esecuzione tramite Generatore di espressioni. Quando si modifica l'attività, viene avviato [Expression Builder](../../integration-services/expressions/expression-builder.md) .  
@@ -31,9 +31,9 @@ ms.locfileid: "47602644"
  Per esempi di utilizzo di espressioni per impostare le proprietà, vedere " **Espressioni di proprietà di esempio** in [Use Property Expressions in Packages](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Utilizzo di un'espressione in un componente flusso di dati](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Utilizzo di un'espressione in un componente flusso di dati](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](http://go.microsoft.com/fwlink/?LinkId=746575)sul sito Web pragmaticworks.com  
+ Articolo tecnico relativo al [foglio d'aiuto per le espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=746575)sul sito Web pragmaticworks.com  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 526c3ec119e2ccf397fee2217b696900a47ea621
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4415f3e0a6ebf773a3a781a5547a50a578d9d4f9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791629"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671990"
 ---
 # <a name="clr-integration-architecture----performance"></a>Architettura di integrazione CLR - Prestazioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47791629"
  Il processo di compilazione restituisce un puntatore a funzione che può essere chiamato in fase di esecuzione dal codice nativo. Nel caso di funzioni definite dall'utente a valori scalari, questa chiamata alla funzione avviene su ogni riga. Per ridurre al minimo il costo della transizione tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e CLR, le istruzioni che contengono chiamate gestite prevedono un passaggio di avvio per identificare il dominio dell'applicazione di destinazione. Questo passaggio di identificazione riduce il costo della transizione per ogni riga.  
   
 ## <a name="performance-considerations"></a>Considerazioni sulle prestazioni  
- Nelle sezioni che seguono vengono riepilogate le considerazioni relative alle prestazioni specifiche dell'integrazione con CLR in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni sono reperibili "[Using CLR Integration in SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=50332)" sul sito Web MSDN. Informazioni generali relative alle prestazioni del codice gestito possono essere disponibili in "[miglioramento .NET Application Performance and Scalability](http://go.microsoft.com/fwlink/?LinkId=50333)" sul sito Web MSDN.  
+ Nelle sezioni che seguono vengono riepilogate le considerazioni relative alle prestazioni specifiche dell'integrazione con CLR in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni sono reperibili "[Using CLR Integration in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=50332)" sul sito Web MSDN. Informazioni generali relative alle prestazioni del codice gestito possono essere disponibili in "[miglioramento .NET Application Performance and Scalability](https://go.microsoft.com/fwlink/?LinkId=50333)" sul sito Web MSDN.  
   
 ### <a name="user-defined-functions"></a>Funzioni definite dall'utente  
  Il percorso di chiamata per le funzioni CLR risulta più veloce di quello delle funzioni definite dall'utente [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il codice gestito dispone inoltre di un vantaggio in termini di prestazioni decisamente superiore rispetto a [!INCLUDE[tsql](../../includes/tsql-md.md)] per quanto riguarda il codice procedurale, il calcolo e la manipolazione delle stringhe. Le funzioni CLR che prevedono intense attività di calcolo e che non eseguono l'accesso ai dati vengono scritte meglio in codice gestito. Le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] tuttavia, eseguono l'accesso ai dati più efficientemente rispetto all'integrazione CLR.  

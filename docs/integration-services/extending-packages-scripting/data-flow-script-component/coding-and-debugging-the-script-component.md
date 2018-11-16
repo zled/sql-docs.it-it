@@ -22,12 +22,12 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b45839b56c650252cc01871dd764e56bd579a41f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb86e0b92b34878573b44a6323094e536ff3dc40
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682439"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637635"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codifica e debug del componente script
   In Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] sono disponibili due modalità per il componente script: progettazione metadati e progettazione codice. Quando si apre l'**Editor trasformazione Script**, per il componente viene attivata la modalità di progettazione metadati, che consente di configurare i metadati e impostare le proprietà del componente. Dopo l'impostazione delle proprietà del componente script e la configurazione di input e output nella modalità di progettazione metadati, è possibile passare alla modalità di progettazione codice per scrivere lo script personalizzato. Per altre informazioni sulla modalità di progettazione metadati e sulla modalità di progettazione codice, vedere [Configurazione del componente script nell'editor corrispondente](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md).  
@@ -207,7 +207,7 @@ public class ScriptMain : UserComponent
   
 ## <a name="external-resources"></a>Risorse esterne  
   
--   Intervento del blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661) (Problemi di installazione e configurazione di VSTA per le installazioni SSIS 2008 e R2), in blogs.msdn.com.  
+-   Intervento del blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://go.microsoft.com/fwlink/?LinkId=215661) (Problemi di installazione e configurazione di VSTA per le installazioni SSIS 2008 e R2), in blogs.msdn.com.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione del componente script nell'editor corrispondente](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)  

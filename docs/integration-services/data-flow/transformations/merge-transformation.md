@@ -20,12 +20,12 @@ ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d768351c318d46d0d82b3553f8d12bed7fb817ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8be5561838f5a2072ad330c907d4fac49f8a96e5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795919"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638215"
 ---
 # <a name="merge-transformation"></a>Unione - trasformazione
   La trasformazione Unione consente di combinare due set di dati ordinati in un singolo set di dati. Le righe di ogni set di dati vengono inserite nell'output in base ai valori delle relative colonne chiave.  
@@ -60,7 +60,7 @@ ms.locfileid: "47795919"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare a livello di codice, fare clic su uno degli argomenti seguenti:  
   
--   [Proprietà comuni](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Proprietà comuni](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47795919"
   
 ## <a name="see-also"></a>Vedere anche  
  [Trasformazione Merge join](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
- [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [Trasformazione Unione input multipli](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Flusso di dati](../../../integration-services/data-flow/data-flow.md)   
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

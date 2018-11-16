@@ -24,12 +24,12 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 695e91fbc8ee3a99b4c203e208400069fb07dead
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cf546af42ff08a587c0d786026d2b89efffa296
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820339"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639138"
 ---
 # <a name="integration-services-ssis-connections"></a>Connessioni in Integration Services (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono utilizzate le connessioni per eseguire varie attività e implementare le funzionalità di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] seguenti:  
@@ -110,9 +110,9 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
   
 |Tipo|Descrizione|Argomento|  
 |----------|-----------------|-----------|  
-|ORACLE|Consente di connettersi a un server Oracle \<informazioni versione\>.|La gestione connessione Oracle è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](http://go.microsoft.com/fwlink/?LinkId=251526).|  
-|SAPBI|Consente di connettersi a un sistema SAP NetWeaver BI versione 7.|La gestione connessione SAP BI è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa al [Feature Pack di Microsoft SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=262016).|  
-|TERADATA|Consente di connettersi a un server Teradata \<informazioni versione\>.|La gestione connessione Teradata è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](http://go.microsoft.com/fwlink/?LinkId=251526).|  
+|ORACLE|Consente di connettersi a un server Oracle \<informazioni versione\>.|La gestione connessione Oracle è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
+|SAPBI|Consente di connettersi a un sistema SAP NetWeaver BI versione 7.|La gestione connessione SAP BI è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa al [Feature Pack di Microsoft SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=262016).|  
+|TERADATA|Consente di connettersi a un server Teradata \<informazioni versione\>.|La gestione connessione Teradata è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
   
 ### <a name="custom-connection-managers"></a>Gestioni connessioni personalizzate  
  È inoltre possibile scrivere gestioni connessioni personalizzate. Per ulteriori informazioni, vedere [Developing a Custom Connection Manager](../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md).  
@@ -244,7 +244,7 @@ Utilizzare la finestra di dialogo **Aggiungi gestione connessione SSIS** per sel
   
 1.  Nell'area **Gestioni connessioni** fare clic con il pulsante destro del mouse sulla gestione connessione per cui creare un parametro e scegliere **Imposta parametri**.  
   
-2.  Configurare le impostazioni dei parametri nella finestra di dialogo **Imposta parametri** . Per altre informazioni, vedere [Finestra di dialogo Imposta parametri](http://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
+2.  Configurare le impostazioni dei parametri nella finestra di dialogo **Imposta parametri** . Per altre informazioni, vedere [Finestra di dialogo Imposta parametri](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
 
 ## <a name="delete-a-connection-manager"></a>Eliminare una gestione connessione 
 ###  <a name="DeletePackageLevel"></a> Eliminare una gestione connessione da un pacchetto  
@@ -334,14 +334,14 @@ Tutti i tipi di gestione connessione possono essere configurati nella finestra *
 
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Video sull' [utilizzo del Connettore Microsoft per Oracle di Attunity per migliorare le prestazioni del pacchetto](http://technet.microsoft.com/sqlserver/gg598963.aspx)sul sito Web technet.microsoft.com  
+-   Video sull' [utilizzo del Connettore Microsoft per Oracle di Attunity per migliorare le prestazioni del pacchetto](https://technet.microsoft.com/sqlserver/gg598963.aspx)sul sito Web technet.microsoft.com  
   
--   Articoli di Wiki sulla [connettività di SSIS](http://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity), sul sito Web social.technet.microsoft.com  
+-   Articoli di Wiki sulla [connettività di SSIS](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity), sul sito Web social.technet.microsoft.com  
   
--   Intervento nel blog relativo alla [connessione a MySQL da SSIS](http://go.microsoft.com/fwlink/?LinkId=217669)sul sito blogs.msdn.com.  
+-   Intervento nel blog relativo alla [connessione a MySQL da SSIS](https://go.microsoft.com/fwlink/?LinkId=217669)sul sito blogs.msdn.com.  
   
--   Articolo tecnico relativo all' [estrazione e al caricamento dei dati SharePoint in SQL Server Integration Services](http://go.microsoft.com/fwlink/?LinkId=247826)sul sito Web msdn.microsoft.com.  
+-   Articolo tecnico relativo all' [estrazione e al caricamento dei dati SharePoint in SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=247826)sul sito Web msdn.microsoft.com.  
   
--   Articolo tecnico [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](http://go.microsoft.com/fwlink/?LinkId=233696)(Visualizzazione del messaggio di errore "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" quando si utilizza la gestione connessione Oracle in SSIS) sul sito support.microsoft.com.  
+-   Articolo tecnico [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](https://go.microsoft.com/fwlink/?LinkId=233696) (Visualizzazione del messaggio di errore "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" quando si utilizza la gestione connessione Oracle in SSIS) sul sito support.microsoft.com.  
   
   

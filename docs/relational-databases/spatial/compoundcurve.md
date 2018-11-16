@@ -11,19 +11,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cab23e9c1c0515cd0fd49b191928870aeb2184c7
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 26495b201fcfc29b891a83c4f7cc4011cfd7cbd9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019036"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658920"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **CompoundCurve** è una raccolta di zero o più istanze **CircularString** o **LineString** continue di tipo geometry o geography.  
   
 > [!IMPORTANT]  
->  Per una descrizione dettagliata ed esempi delle nuove funzionalità spaziali di questa versione, compreso il sottotipo **CompoundCurve** , scaricare il white paper [New Spatial Features in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407)(Nuove funzionalità spaziali in SQL Server 2012).  
+>  Per una descrizione dettagliata ed esempi delle nuove funzionalità spaziali di questa versione, compreso il sottotipo **CompoundCurve** , scaricare il white paper [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)(Nuove funzionalità spaziali in SQL Server 2012).  
   
  È possibile creare un'istanza **CompoundCurve** vuota, ma, perché **CompoundCurve** sia valida, è necessario che vengano rispettati i criteri seguenti:  
   

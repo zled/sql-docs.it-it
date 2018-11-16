@@ -16,12 +16,12 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 55588ba56d92ce282ff3dd4b0661248e0449beca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e397d797568d14cd184d8246425db13d9fb2a0b6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746029"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697679"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Istruzioni RESTORE: argomenti (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -253,7 +253,7 @@ CREDENTIAL
  Usato solo quando si ripristina un backup dal servizio Archiviazione BLOB di Microsoft Azure.  
   
 > [!NOTE]  
->  Con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 fino a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], durante il ripristino da URL è possibile eseguire il ripristino solo da un singolo dispositivo. Per eseguire il ripristino da più dispositivi durante il ripristino da URL, è necessario usare le versioni da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658) ed è necessario usare i token di firma di accesso condiviso (SAS). Per altre informazioni, vedere [Abilitare il backup gestito di SQL Server in Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) e [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Semplificazione della creazione di credenziali SQL con token di firma di accesso condiviso (SAS) in Archiviazione di Azure con Powershell).  
+>  Con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 fino a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], durante il ripristino da URL è possibile eseguire il ripristino solo da un singolo dispositivo. Per eseguire il ripristino da più dispositivi durante il ripristino da URL, è necessario usare le versioni da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658) ed è necessario usare i token di firma di accesso condiviso (SAS). Per altre informazioni, vedere [Abilitare il backup gestito di SQL Server in Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) e [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Semplificazione della creazione di credenziali SQL con token di firma di accesso condiviso (SAS) in Archiviazione di Azure con Powershell).  
   
  REPLACE  
  **Supportato da:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  

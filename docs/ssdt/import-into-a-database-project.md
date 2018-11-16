@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 414b8b130ff3e16bf3be092569ce05730d5ea204
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7a570dda05c5fe83227b7f88209eecdc25529e0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716049"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667100"
 ---
 # <a name="import-into-a-database-project"></a>Eseguire l'importazione in un progetto di database
 È possibile utilizzare l'opzione Importa per popolare un progetto con nuovi oggetti da un database attivo o da un file con estensione dacpac o per aggiornare oggetti esistenti con una definizione da uno script. Nei tre percorsi sono presenti differenze di comportamento che vengono descritte di seguito.  
@@ -59,7 +59,7 @@ Tutti gli oggetti dell'origine di importazione che *non* esistono già nel proge
   
 Il processo di importazione da script non includerà gli script di pre-distribuzione o di post-distribuzione, i file refactorlog e le variabili SQLCMD. Questi elementi e altri costrutti non supportati rilevati durante l'importazione verranno inseriti in un file **ScriptsIgnoredOnImport.sql** in una cartella **Script** del progetto.  
   
-Per altre informazioni, vedere il forum del team SSDT all'indirizzo [http://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](http://social.msdn.microsoft.com/Forums/en-US/ssdt/threads).  
+Per altre informazioni, vedere il forum del team SSDT all'indirizzo [https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads).  
   
 ## <a name="bkmk_import_encrypted"></a>Importare oggetti crittografati  
 Quando si importano oggetti crittografati in un progetto di database, non è sempre possibile recuperare l'intero corpo della definizione di oggetto dal server. Per questo motivo, quando viene applicata a questa classe di oggetti, il comportamento dell'importazione può essere diverso.  

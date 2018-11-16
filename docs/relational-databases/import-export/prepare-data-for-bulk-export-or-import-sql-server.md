@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d53226ef1522c7a540bac027df0c3e45fe4f25ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15d6d10b1bc3345da8c626a3b4d6e842aafaf954
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825089"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664810"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>Preparazione dei dati per l'importazione o l'esportazione bulk (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "47825089"
   
      Per eseguire un'importazione bulk di dati da un file di tabella di [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro o Visual FoxPro (con estensione dbf) o da un foglio di lavoro di [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (con estensione xls), è necessario convertire i dati in un file CSV conforme alle restrizioni precedenti. L'estensione del file è in genere csv. È quindi possibile usare il file con estensione csv come file di dati in un'operazione di importazione bulk di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     Nei sistemi a 32 bit è possibile importare dati CSV in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza operazioni di ottimizzazione dell'importazione in blocco usando [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) con il provider OLE DB per Jet. In Jet i file di testo vengono considerati tabelle il cui schema è definito dal file schema.ini, che si trova nella stessa directory dell'origine dati.  Per i dati CSV, uno dei parametri nel file schema.ini sarà "FORMAT=CSVDelimited". Per usare questa soluzione, è necessario acquisire familiarità con le operazioni di Jet Test IISAMm, ovvero la sintassi della relativa stringa di connessione, l'utilizzo del file schema.ini, le opzioni di impostazione del Registro di sistema e così via.  Le origini migliori per tali informazioni sono costituite dalla Guida di Microsoft Access e dagli articoli della Knowledge Base (KB). Per altre informazioni, vedere [Inizializzazione del driver origine dati di testo](https://msdn.microsoft.com/library/office/ff834391.aspx), [Come usare una query distribuita di SQL Server 7.0 con un server collegato a database di Access protetti](http://go.microsoft.com/fwlink/?LinkId=128504), [PROCEDURA: Usare il provider OLE DB Jet 4.0 per la connessione a database ISAM](http://go.microsoft.com/fwlink/?LinkId=128505)e [Come aprire file di testo delimitati mediante IIsam di testo del provider Jet](http://go.microsoft.com/fwlink/?LinkId=128501).  
+     Nei sistemi a 32 bit è possibile importare dati CSV in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza operazioni di ottimizzazione dell'importazione in blocco usando [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) con il provider OLE DB per Jet. In Jet i file di testo vengono considerati tabelle il cui schema è definito dal file schema.ini, che si trova nella stessa directory dell'origine dati.  Per i dati CSV, uno dei parametri nel file schema.ini sarà "FORMAT=CSVDelimited". Per usare questa soluzione, è necessario acquisire familiarità con le operazioni di Jet Test IISAMm, ovvero la sintassi della relativa stringa di connessione, l'utilizzo del file schema.ini, le opzioni di impostazione del Registro di sistema e così via.  Le origini migliori per tali informazioni sono costituite dalla Guida di Microsoft Access e dagli articoli della Knowledge Base (KB). Per altre informazioni, vedere [Inizializzazione del driver origine dati di testo](https://msdn.microsoft.com/library/office/ff834391.aspx), [Come usare una query distribuita di SQL Server 7.0 con un server collegato a database di Access protetti](https://go.microsoft.com/fwlink/?LinkId=128504), [PROCEDURA: Usare il provider OLE DB Jet 4.0 per la connessione a database ISAM](https://go.microsoft.com/fwlink/?LinkId=128505)e [Come aprire file di testo delimitati mediante IIsam di testo del provider Jet](https://go.microsoft.com/fwlink/?LinkId=128501).  
   
  Per l'importazione bulk di dati da un file a una tabella devono inoltre verificarsi le condizioni seguenti:  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47825089"
 >  L'importazione bulk in una vista partizionata non è supportata e avrà pertanto esito negativo.  
   
 ## <a name="external-resources"></a>Risorse esterne  
- [Come importare dati da Excel a SQL Server](http://support.microsoft.com/kb/321686)  
+ [Come importare dati da Excel a SQL Server](https://support.microsoft.com/kb/321686)  
   
 ## <a name="change-history"></a>Cronologia modifiche  
   

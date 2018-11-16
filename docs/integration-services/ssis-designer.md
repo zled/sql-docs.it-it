@@ -25,12 +25,12 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bed5ac354f31b809f7699cea2e9e09f99158928
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e70f5cffad52b660f0006d416dfa027fba355de4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820109"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642128"
 ---
 # <a name="ssis-designer"></a>Progettazione SSIS
   [!INCLUDE[ssIS](../includes/ssis-md.md)] - Progettazione SSIS è uno strumento grafico che è possibile usare per creare e gestire pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] - Progettazione SSIS è disponibile in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] nell'ambito di un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -89,7 +89,7 @@ ms.locfileid: "47820109"
 ### <a name="event-handlers-tab"></a>Scheda Gestori eventi  
  Per costruire gli eventi di un pacchetto, usare l'area di progettazione della scheda **Gestori eventi** . Nella scheda **Gestori eventi** selezionare il pacchetto o l'oggetto del pacchetto per cui si vuole creare un gestore di evento e quindi selezionare l'evento da associare al gestore di evento. Un gestore di evento include un flusso di controllo e flussi di dati facoltativi.  
   
- Per altre informazioni, vedere [Aggiunta di un gestore eventi a un pacchetto](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
+ Per altre informazioni, vedere [Aggiunta di un gestore eventi a un pacchetto](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
   
 ### <a name="package-explorer-tab"></a>Scheda Esplora pacchetti  
  I pacchetti possono essere complessi, ovvero includere numerose attività, gestioni connessioni, variabili e altri elementi. La visualizzazione di esplorazione del pacchetto consente di ottenere un elenco completo degli elementi del pacchetto.  
@@ -104,7 +104,7 @@ ms.locfileid: "47820109"
 #### <a name="connection-managers-area"></a>Area Gestioni connessioni  
  Le gestioni connessioni usate da un pacchetto vengono aggiunte e modificate nell'area **Gestioni connessioni** . [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include le gestioni connessioni per stabilire la connessione a una varietà di origini dati quali file di testo, database OLE DB e provider .NET.  
   
- Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md) e [Creazione di gestioni connessioni](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md) e [Creazione di gestioni connessioni](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
  
 ## <a name="control-flow-tab"></a>Scheda Flusso di controllo
 Utilizzare la scheda **Flusso di controllo** dello strumento Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] per compilare il flusso di controllo in un pacchetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

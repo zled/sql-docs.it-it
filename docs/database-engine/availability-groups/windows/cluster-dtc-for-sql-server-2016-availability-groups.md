@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cdb63eb4a44b3035010336a8143b8bb34e0da8fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd433b33fcf62afd16b27f368507fc2794768fae
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703729"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601381"
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>DTC del cluster per i gruppi di disponibilità di SQL Server 2016
 
@@ -48,7 +48,7 @@ Dopo aver creato la risorsa gruppo di disponibilità, creare una risorsa DTC clu
 |![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Arrestare e disabilitare il servizio DTC locale.|[Configurare la modalità di avvio di un servizio](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
 |![Casella di controllo](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Eseguire ciclicamente il servizio SQL Server per ogni istanza del gruppo di disponibilità.  Eseguire il failover del gruppo di disponibilità in base alle esigenze.|[Eseguire un failover manuale pianificato di un gruppo di disponibilità (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
-- Se il server è Windows Server 2012 R2 è necessario che nel sistema operativo sia applicato [KB 3030373](http://support.microsoft.com/kb/3090973) .
+- Se il server è Windows Server 2012 R2 è necessario che nel sistema operativo sia applicato [KB 3030373](https://support.microsoft.com/kb/3090973) .
 
 - Preparare i server per i gruppi di disponibilità in base agli elenchi di controllo riportati in [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).
 
@@ -64,6 +64,6 @@ Dopo aver creato la risorsa gruppo di disponibilità, creare una risorsa DTC clu
 [Creare un gruppo di disponibilità (Transact-SQL)](create-an-availability-group-transact-sql.md)
 
 
-[Supporto DTC di SQL Server 2016 nei gruppi di disponibilità](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 
+[Supporto DTC di SQL Server 2016 nei gruppi di disponibilità](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 
 
-[Collegamento esterno: Configurare DTC per un'istanza cluster di SQL Server con Windows Server 2008 R2](http://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)
+[Collegamento esterno: Configurare DTC per un'istanza cluster di SQL Server con Windows Server 2008 R2](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)

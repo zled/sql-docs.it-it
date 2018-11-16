@@ -12,12 +12,12 @@ ms.assetid: d8d3a22e-1ff8-48a4-891f-4c8619437e24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12e565fe5ad4c8e47187d50be50d9cd775b78ff3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afe254580b59dbfea6d486b2999f97642c145d7f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751909"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667450"
 ---
 # <a name="mssqlserver605"></a>MSSQLSERVER_605
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ Un livello di gravità pari a 12 indica un potenziale errore transitorio, ovvero
   
 -   Invio di una notifica anomala a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da parte del sistema operativo per informare che è stata completata un'operazione di I/O. Il messaggio di errore viene visualizzato anche se non si è effettivamente verificato alcun danneggiamento di dati.  
   
-Esecuzione di una query con l'hint di Query Optimizer NOLOCK o impostazione del livello di isolamento della transazione su READ UNCOMMITTED. Quando una query che utilizza NOLOCK o READ UNCOMMITTED tenta di leggere dati spostati o modificati da un altro utente, si verifica un errore 605. Per verificare che si tratti di un errore 605 transitorio, eseguire di nuovo la query in un secondo momento. Per altre informazioni, vedere l'articolo [235880](http://support.microsoft.com/kb/235880/en-us) della Knowledge Base relativo alla visualizzazione del messaggio di errore 605 quando si esegue una query con l'hint di ottimizzazione NOLOCK o quando si imposta il livello di isolamento delle transazioni su READ UNCOMMITTED in SQL Server.  
+Esecuzione di una query con l'hint di Query Optimizer NOLOCK o impostazione del livello di isolamento della transazione su READ UNCOMMITTED. Quando una query che utilizza NOLOCK o READ UNCOMMITTED tenta di leggere dati spostati o modificati da un altro utente, si verifica un errore 605. Per verificare che si tratti di un errore 605 transitorio, eseguire di nuovo la query in un secondo momento. Per altre informazioni, vedere l'articolo [235880](https://support.microsoft.com/kb/235880/en-us) della Knowledge Base relativo alla visualizzazione del messaggio di errore 605 quando si esegue una query con l'hint di ottimizzazione NOLOCK o quando si imposta il livello di isolamento delle transazioni su READ UNCOMMITTED in SQL Server.  
   
 In generale, se l'errore si verifica durante l'accesso ai dati ma le successive operazioni DBCC CHECKDB vengono completate senza errori, l'errore 605 era probabilmente transitorio.  
   
