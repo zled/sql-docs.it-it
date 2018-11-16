@@ -252,7 +252,7 @@ ms.locfileid: "48906301"
  ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Torna all'inizio](#bkmk_Top)  
   
 ##  <a name="bkmk_SourceControl"></a> Controllo del codice sorgente  
- [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] può essere integrato con i plug-in di origine. Usare le pagine Progetti e soluzioni della finestra di dialogo Opzioni** per specificare il plug-in e configurare le proprietà.  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] può essere integrato con i plug-in di origine. Usare le pagine Progetti e soluzioni della finestra di dialogo **Opzioni** per specificare il plug-in e configurare le proprietà.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Modelli di report personalizzati  
  Per utilizzare report personalizzati come modelli per nuovi report, è sufficiente copiarli nella cartella ReportProject nel computer in cui è installato [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] . Per impostazione predefinita, questa cartella è \<unità >: \Programmi\Microsoft Visual Studio 10.0\Common7\IDE\Private assemblies\projectitems\reportproject. Quando si aggiunge un nuovo elemento al progetto report, il report personalizzato viene visualizzato nel riquadro dei Modelli.  
