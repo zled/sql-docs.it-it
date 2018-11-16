@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13a8690a7ad088a6b7ecd9c04f71ada9cfc6e62d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 184668ba8dc844be7c0f1eea23ab5f4dfe69843e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846209"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673100"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Gestione di colonne di tipo text e image - Usare colonne data-at-execution
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,20 +34,20 @@ ms.locfileid: "47846209"
   
     -   Per il quarto parametro, inserire un identificatore della colonna definito dal programma.  
   
-2.  Se si chiama [SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407), viene restituito SQL_NEED_DATA, che indica che le colonne data-at-execution sono pronte per l'elaborazione.  
+2.  Se si chiama [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407), viene restituito SQL_NEED_DATA, che indica che le colonne data-at-execution sono pronte per l'elaborazione.  
   
 3.  Per ogni colonna data-at-execution:  
   
-    -   Chiamare [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) per ottenere il puntatore di una matrice di colonna. Verrà restituito SQL_NEED_DATA se è presente un'altra colonna data-at-execution.  
+    -   Chiamare [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) per ottenere il puntatore di una matrice di colonna. Verrà restituito SQL_NEED_DATA se è presente un'altra colonna data-at-execution.  
   
     -   Chiamare [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) una o più volte per inviare i dati della colonna, fino quando non viene inviata la lunghezza.  
   
-4.  Chiamare [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) per indicare che tutti i dati relativi alla colonna data-at-execution finale devono essere inviati. Non verrà restituito SQL_NEED_DATA.  
+4.  Chiamare [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) per indicare che tutti i dati relativi alla colonna data-at-execution finale devono essere inviati. Non verrà restituito SQL_NEED_DATA.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come leggere dati di tipo carattere variabili SQL_LONG mediante SQLGetData. Questo esempio non è supportato in IA64.  
   
- È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384). Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
+ È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384). Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
@@ -189,6 +189,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [La gestione di testo e immagine di procedure relative a colonne &#40;ODBC&#41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+ [La gestione di testo e immagine di procedure relative a colonne &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

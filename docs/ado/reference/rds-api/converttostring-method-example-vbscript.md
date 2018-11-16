@@ -15,16 +15,16 @@ ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b7f1a765d67307eb116c567c9cd5998d27b1ff53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7263e9b320eb84d0f8ae9aaba6005a454a4b5838
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770119"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606831"
 ---
 # <a name="converttostring-method-example-vbscript"></a>Esempio del metodo ConvertToString (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Nell'esempio seguente viene illustrato come convertire un **Recordset** in una stringa con codifica MIME usando la **RDSServer ConvertToString** (metodo). Viene quindi illustrato come la stringa può essere convertita in una **Recordset**. Tagliare e incollare il codice seguente nel blocco note o un altro editor di testo e salvarlo come **ConvertToString**.  
   
@@ -41,7 +41,7 @@ Sub ConvertToStringX()
     Const adcFetchUpFront = 1  
   
     ' Replace value below with your server name to use without ASP.  
-    strServer = "http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+    strServer = "https://<%=Request.ServerVariables("SERVER_NAME")%>">  
   
     Set objDF = RDS1.CreateObject("RDSServer.DataFactory", strServer)  
     Set objRs = objDF.Query(txtConnect.Value,txtQueryRecordset.Value)  

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 45ac371576eff08576354aed04e3d54ac0dc7696
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33b5631fdf834ea9a998f1dd4ae149dfe4cc6109
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740335"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658381"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurare Cluster di Ubuntu e risorsa gruppo di disponibilità
 
@@ -134,7 +134,7 @@ Il comando seguente crea un cluster a tre nodi. Prima di eseguire lo script, sos
 
 ## <a name="configure-fencing-stonith"></a>Configurare l'isolamento (STONITH)
 
-I fornitori del cluster pacemaker richiedono STONITH deve essere abilitata e un dispositivo di fencing configurato per l'installazione del cluster supportate. Quando cluster resource manager non è possibile determinare lo stato di un nodo o di una risorsa in un nodo, l'isolamento consente di visualizzare di nuovo il cluster a uno stato noto. Isolamento a livello di risorsa principalmente assicura che non vi sia alcun danneggiamento dei dati in caso di interruzione tramite la configurazione di una risorsa. È possibile utilizzare l'isolamento a livello di risorsa, ad esempio, con DRBD (Distributed replicati blocco dispositivo) per contrassegnare il disco in un nodo come obsoleta quando il collegamento di comunicazione si arresta. Isolamento a livello di nodo assicura che un nodo non viene eseguita alcuna risorsa. In tal caso, reimpostare il nodo e l'implementazione di Pacemaker di esso viene chiamato STONITH (che è l'acronimo di "girare in altro nodo nell'intestazione"). Pacemaker supporta una vasta gamma di dispositivi fencing, ad esempio, una continuità o gestione schede di interfaccia di per i server. Per altre informazioni, vedere [cluster Pacemaker da zero](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) e [Fencing e Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
+I fornitori del cluster pacemaker richiedono STONITH deve essere abilitata e un dispositivo di fencing configurato per l'installazione del cluster supportate. Quando cluster resource manager non è possibile determinare lo stato di un nodo o di una risorsa in un nodo, l'isolamento consente di visualizzare di nuovo il cluster a uno stato noto. Isolamento a livello di risorsa principalmente assicura che non vi sia alcun danneggiamento dei dati in caso di interruzione tramite la configurazione di una risorsa. È possibile utilizzare l'isolamento a livello di risorsa, ad esempio, con DRBD (Distributed replicati blocco dispositivo) per contrassegnare il disco in un nodo come obsoleta quando il collegamento di comunicazione si arresta. Isolamento a livello di nodo assicura che un nodo non viene eseguita alcuna risorsa. In tal caso, reimpostare il nodo e l'implementazione di Pacemaker di esso viene chiamato STONITH (che è l'acronimo di "girare in altro nodo nell'intestazione"). Pacemaker supporta una vasta gamma di dispositivi fencing, ad esempio, una continuità o gestione schede di interfaccia di per i server. Per altre informazioni, vedere [cluster Pacemaker da zero](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) e [Fencing e Stonith](https://clusterlabs.org/doc/crm_fencing.html) 
 
 Poiché il livello del nodo recinzioni configurazione dipende principalmente dall'ambiente, è disabilitata per questa esercitazione (può essere configurato in un secondo momento). Eseguire lo script seguente nel nodo primario: 
 

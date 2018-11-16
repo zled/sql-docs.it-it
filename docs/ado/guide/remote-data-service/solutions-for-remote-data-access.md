@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,19 +13,19 @@ ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ac979fa1c9baab8de361709606af1c337bf848d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 302a43238c755890e9fd106d8784eabdd0361d88
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612453"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558618"
 ---
 # <a name="solutions-for-remote-data-access"></a>Soluzioni per RDA (Remote Data Access)
 ## <a name="the-issue"></a>Il problema  
  ADO consente all'applicazione direttamente accedere a e modificare origini dati (operazione talvolta denominate un sistema a due livelli). Ad esempio, se la connessione all'origine dati che contiene i dati, che è una connessione diretta in un sistema a due livelli.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Tuttavia, è possibile accedere a origini dati indirettamente attraverso un intermediario, ad esempio Microsoft® Internet Information Services (IIS). Questa disposizione è talvolta definita un sistema a tre livelli. IIS è un sistema client/server che offre un modo efficiente per un'applicazione locale o un client richiamare un programma remoto o server, in Internet o intranet. Il programma del server riesce ad accedere all'origine dati e, facoltativamente, elabora i dati acquisiti.  
   

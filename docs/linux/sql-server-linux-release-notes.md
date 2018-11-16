@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: d1163c58933ab4d2b6d7faa8b643a3401d87d530
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 4760c70f71b798fb31d96c6b36fb91afe6de9667
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270134"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666020"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Note sulla versione di SQL Server 2017 in Linux
 
@@ -78,7 +78,7 @@ Se si aggiornano i pacchetti esistenti di SQL Server, eseguiti il comando di agg
 
 ## <a id="CU12"></a> CU12 (ottobre 2018)
 
-Si tratta della versione 12 di aggiornamento cumulativo (CU12) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3045.24. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/en-us/help/4464082 ](https://support.microsoft.com/en-us/help/4464082).
+Si tratta della versione 12 di aggiornamento cumulativo (CU12) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3045.24. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4464082 ](https://support.microsoft.com/help/4464082).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -92,7 +92,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU11"></a> CU11 (settembre 2018)
 
-Si tratta della versione 11 aggiornamento cumulativo (CU11) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3038.14. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/en-us/help/4462262 ](https://support.microsoft.com/en-us/help/4462262).
+Si tratta della versione 11 aggiornamento cumulativo (CU11) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3038.14. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4462262 ](https://support.microsoft.com/help/4462262).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -106,7 +106,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU10"></a> CU10 (agosto 2018)
 
-Si tratta della versione di aggiornamento cumulativo 10 (CU10) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3037.1. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/en-us/help/4342123 ](https://support.microsoft.com/en-us/help/4342123).
+Si tratta della versione di aggiornamento cumulativo 10 (CU10) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3037.1. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4342123 ](https://support.microsoft.com/help/4342123).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -120,7 +120,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU9-GDR2"></a> CU9-GDR2 (agosto 2018)
 
-Si tratta di un aggiornamento della sicurezza che include anche l'aggiornamento Cumulativo rilasciato in precedenza (CU9) per SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3035.2. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/en-us/help/4293805 ](https://support.microsoft.com/en-us/help/4293805).
+Si tratta di un aggiornamento della sicurezza che include anche l'aggiornamento Cumulativo rilasciato in precedenza (CU9) per SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3035.2. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4293805 ](https://support.microsoft.com/help/4293805).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -134,7 +134,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="GDR2"></a> GDR2 (agosto 2018)
 
-Si tratta di un aggiornamento della sicurezza che include solo le correzioni di sicurezza GDR2 (e GDR1) per SQL Server 2017.  La versione del motore di SQL Server per questa versione è 14.0.2002.14. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/en-us/help/4293803 ](https://support.microsoft.com/en-us/help/4293803).
+Si tratta di un aggiornamento della sicurezza che include solo le correzioni di sicurezza GDR2 (e GDR1) per SQL Server 2017.  La versione del motore di SQL Server per questa versione è 14.0.2002.14. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4293803 ](https://support.microsoft.com/help/4293803).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -148,7 +148,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU9"></a> CU9 (luglio 2018)
 
-Si tratta della versione di aggiornamento cumulativo 9 (CU9) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3030.27. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/en-us/help/4341265 ](https://support.microsoft.com/en-us/help/4341265).
+Si tratta della versione di aggiornamento cumulativo 9 (CU9) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3030.27. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4341265 ](https://support.microsoft.com/help/4341265).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -162,7 +162,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU8"></a> CU8 (giugno 2018)
 
-Si tratta della versione di aggiornamento cumulativo 8 (CU8) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3029.16. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/en-us/help/4338363 ](https://support.microsoft.com/en-us/help/4338363).
+Si tratta della versione di aggiornamento cumulativo 8 (CU8) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3029.16. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4338363 ](https://support.microsoft.com/help/4338363).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -176,7 +176,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU7"></a> CU7 (maggio 2018)
 
-Si tratta della versione di aggiornamento cumulativo 7 (CU7) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3026.27. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/en-us/help/4229789 ](https://support.microsoft.com/en-us/help/4229789).
+Si tratta della versione di aggiornamento cumulativo 7 (CU7) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3026.27. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4229789 ](https://support.microsoft.com/help/4229789).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -236,7 +236,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU4"></a> CU4 (febbraio 2018)
 
-Si tratta della versione di aggiornamento cumulativo 4 (CU4) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3022.28. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/en-us/help/4056498 ](https://support.microsoft.com/en-us/help/4056498).
+Si tratta della versione di aggiornamento cumulativo 4 (CU4) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3022.28. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4056498 ](https://support.microsoft.com/help/4056498).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -253,7 +253,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="GDR1"></a> GDR1 (gennaio 2018)
 
-Si tratta di un aggiornamento della sicurezza che include solo il GDR1 correzioni per la sicurezza per SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.2000.63. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/en-us/help/4057122 ](https://support.microsoft.com/en-us/help/4057122).
+Si tratta di un aggiornamento della sicurezza che include solo il GDR1 correzioni per la sicurezza per SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.2000.63. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4057122 ](https://support.microsoft.com/help/4057122).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 
@@ -267,7 +267,7 @@ Per le installazioni manuali o offline del pacchetto, è possibile scaricare i p
 
 ## <a id="CU3"></a> CU3 (gennaio 2018)
 
-Si tratta della versione di aggiornamento cumulativo 3 (CU3) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3015.40. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/en-us/help/4052987 ](https://support.microsoft.com/en-us/help/4052987).
+Si tratta della versione di aggiornamento cumulativo 3 (CU3) di SQL Server 2017. La versione del motore di SQL Server per questa versione è 14.0.3015.40. Per informazioni sulle correzioni e miglioramenti in questa versione, vedere [ https://support.microsoft.com/help/4052987 ](https://support.microsoft.com/help/4052987).
 
 ### <a name="package-details"></a>Dettagli del pacchetto
 

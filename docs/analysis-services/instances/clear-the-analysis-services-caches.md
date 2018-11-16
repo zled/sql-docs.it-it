@@ -1,5 +1,5 @@
 ---
-title: Cancella la cache di Analysis Services | Documenti Microsoft
+title: Cancella la cache di Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4ed87e37ca9b13af696977a86eeccd34eec81e87
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0b9276d0a8684023d8e6dba1a890b5f1698a017a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016558"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700329"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Cancellare le cache di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -87,7 +87,6 @@ ms.locfileid: "34016558"
     </return>  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Monitorare un'istanza di Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+
   
   

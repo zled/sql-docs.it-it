@@ -12,12 +12,12 @@ ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 56e7a30725a4fcad36ffa2df869ecc559056a29e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e397bf4480dd7a9955fb8c7acbce0d11fd910893
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819229"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663970"
 ---
 # <a name="setting-project-options-mysqltosql"></a>Impostazione delle opzioni progetto (MySQLToSQL)
 Per ogni progetto SSMA, è possibile impostare le opzioni a livello di progetto. Queste opzioni specificano come gli oggetti vengono convertiti, migrazione dei dati e come eseguire il mapping tipi di dati di origine ai tipi di dati di destinazione.  Prima di convertire gli oggetti in SQL Server o SQL Azure o eseguire la migrazione dei dati in SQL Server o SQL Azure, verificare che le opzioni di configurazione siano appropriate per il progetto.  
@@ -55,7 +55,7 @@ Per altre informazioni sulle impostazioni e come vengono applicate le impostazio
   
 -   [Le impostazioni di progetto &#40;migrazione&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
   
--   [Impostazioni progetto (GUI) (SSMA comune)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [Impostazioni progetto (GUI) (SSMA comune)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
 -   [Le impostazioni di progetto &#40;Mapping dei tipi&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
   

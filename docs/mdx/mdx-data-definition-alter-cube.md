@@ -1,5 +1,5 @@
 ---
-title: ALTER CUBE Statement (MDX) | Documenti Microsoft
+title: Istruzione ALTER CUBE Statement (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3b21466e1f8af33faa49a217038fee78ddf9fcc6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: f9a15108875c7e519948f0e73e0a87d08b70c975
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741570"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698299"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Definizione dei dati MDX - ALTER CUBE
 
 
-  Modifica la struttura di un cubo specificato, utilizzato in genere per supportare il writeback della dimensione. Per ulteriori informazioni sull'utilizzo del writeback in un'applicazione, vedere questo post di blog: [compilazione di un'applicazione di Writeback con Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977)  
+  Modifica la struttura di un cubo specificato, utilizzato in genere per supportare il writeback della dimensione. Per altre informazioni sull'utilizzo del writeback in un'applicazione, vedere questo post di blog: [compilazione di un'applicazione di Writeback con Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
   
  Si tenga presente che i writeback delle dimensioni concorrenti possono provocare un deadlock, dove il primo writeback viene bloccato da un commit a causa del blocco condiviso tenuto dal secondo writeback. In tale situazione non viene generato alcun errore ma non potrà essere eseguita alcuna operazione. Infine, viene eseguito il rollback sia del timeout che delle modifiche.  
   
@@ -114,11 +114,11 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  Espressione stringa valida che specifica il nome o la chiave di un membro.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Note  
  Se non si utilizza la clausola WITH DESCENDANTS, i figli del membro eliminato diventano figli del padre di tale membro. Se si utilizza la clausola WITH DESCENDANTS, vengono inoltre eliminati tutti i discendenti e le relative righe nella tabella della dimensione.  
   
 > [!NOTE]  
->  Per informazioni sull'eliminazione di membri calcolati, set denominati, azioni e calcoli di celle, vedere [DROP MEMBER-istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [DROP SET-istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [DROP ACTION-istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), e [rilascio cella CALCULATION-istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+>  Per informazioni sull'eliminazione di membri calcolati, set denominati, azioni e calcoli di celle, vedere [DROP MEMBER-istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [DROP impostare l'istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [DROP ACTION-istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), e [DROP cella CALCULATION-istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## <a name="updating-the-default-dimension-member"></a>Aggiornamento del membro predefinito in una dimensione  
  Questa clausola consente di aggiornare il membro predefinito di un cubo e viene utilizzata nello script di calcolo MDX per definire un membro predefinito. È possibile specificare il membro predefinito per la dimensione del database, la dimensione di un cubo o l'account di accesso di un utente. È inoltre possibile cambiare il membro predefinito durante una sessione.  
@@ -130,7 +130,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  Espressione MDX valida che restituisce un unico membro.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Note  
  L'espressione MDX specificata può essere statica o dinamica.  
   
 ## <a name="moving-a-dimension-member"></a>Spostamento di un membro in una dimensione  
@@ -162,7 +162,7 @@ CELL CALCULATION Calculation_Name
  Espressione scalare MDX valida che definisce il valore della proprietà di un membro calcolato.  
   
 ## <a name="creating-a-cell-calculation"></a>Creazione di una formula per il calcolo di celle  
- Per ulteriori informazioni sulla creazione di una formula di calcolo di celle tramite l'istruzione ALTER CUBE, vedere [DROP cella CALCULATION-istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+ Per altre informazioni sulla creazione di un calcolo di celle tramite l'istruzione ALTER CUBE, vedere [DROP cella CALCULATION-istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzioni di definizione dei dati MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  

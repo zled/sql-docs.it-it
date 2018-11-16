@@ -10,12 +10,12 @@ ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 74ece76fcb02fe77825d0f08e76b262df195d7b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab734e93743d3a3158feb16dba044b58e7f48f23
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768910"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670520"
 ---
 # <a name="connect-to-db2-db2tosql"></a>Connettersi a DB2 (DB2ToSQL)
 Usare la **connettersi a DB2** finestra di dialogo per la connessione al database DB2 che si desidera eseguire la migrazione.  
@@ -70,7 +70,7 @@ Se si usa la modalità stringa di connessione, immettere la stringa di connessio
   
 Le stringhe di connessione sono costituiti da coppie nome / valore di parametro.  
   
--   Per informazioni sulla stringa di connessione OLE DB, vedere [Provider Microsoft OLE DB per DB2](http://go.microsoft.com/fwlink/?LinkId=85640) articolo in MSDN Library.  
+-   Per informazioni sulla stringa di connessione OLE DB, vedere [Provider Microsoft OLE DB per DB2](https://go.microsoft.com/fwlink/?LinkId=85640) articolo in MSDN Library.  
   
 Per le stringhe di connessione di SSMA, sempre includere il parametro del Provider. Inoltre, assicurarsi di includere il parametro Port quando ci si connette a DB2.  
   

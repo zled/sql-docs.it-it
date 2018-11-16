@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 4b05826bd25c711a70914982daf701b15edb1c93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9fdfb466f34e3eb40ad80d53c203f7ee8866f08
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629649"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676905"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Prestazioni le procedure consigliate e linee guida per la configurazione per SQL Server in Linux
 
@@ -36,7 +36,7 @@ Le linee guida seguenti sono inclusi suggerimenti per la configurazione di SQL S
 
 - **Configurare più file di dati di tempdb**
 
-   Poiché SQL Server nell'installazione Linux non offre un'opzione per configurare più file di tempdb, è consigliabile prendere in considerazione la creazione di file di dati tempdb più dopo l'installazione. Per altre informazioni, vedere le indicazioni fornite nell'articolo [consigli per ridurre il conflitto di allocazione nel database tempdb di SQL Server](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d).
+   Poiché SQL Server nell'installazione Linux non offre un'opzione per configurare più file di tempdb, è consigliabile prendere in considerazione la creazione di file di dati tempdb più dopo l'installazione. Per altre informazioni, vedere le indicazioni fornite nell'articolo [consigli per ridurre il conflitto di allocazione nel database tempdb di SQL Server](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d).
 
 ### <a name="advanced-configuration"></a>Configurazione avanzata
 

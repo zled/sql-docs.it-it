@@ -18,12 +18,12 @@ ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 93367529fddf407d0ce133785f850b974ee7847d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ed37d62e887bcb9820496a66d65108cb69fbe10
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682819"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669840"
 ---
 # <a name="clr-table-valued-functions"></a>Funzioni CLR con valori di tabella
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Esempio: Restituzione dei risultati di una query di SQL Server  
- Nell'esempio seguente viene illustrata una funzione con valori di tabella che esegue una query su un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo esempio viene utilizzato il database AdventureWorks Light di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Visualizzare [ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843) per altre informazioni sul download di AdventureWorks.  
+ Nell'esempio seguente viene illustrata una funzione con valori di tabella che esegue una query su un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo esempio viene utilizzato il database AdventureWorks Light di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Visualizzare [ https://www.codeplex.com/sqlserversamples ](https://go.microsoft.com/fwlink/?LinkId=87843) per altre informazioni sul download di AdventureWorks.  
   
  Assegnare al file di codice sorgente il nome FindInvalidEmails.cs o FindInvalidEmails.vb.  
   

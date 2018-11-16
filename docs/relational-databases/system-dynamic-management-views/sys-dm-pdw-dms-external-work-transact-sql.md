@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d96a80edd474b9709e465bfb544ff457ffba5030
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a66255683125b78785a41e77d6f8881012c1480
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843949"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673030"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "47843949"
 |end_time|**datetime**|Ora in cui l'esecuzione è terminata, non è riuscita o è stata annullata.|NULL per i ruoli di lavoro in corso o in coda. In caso contrario, maggiore start_time.|  
 |total_elapsed_time|**int**|Tempo totale impiegato per l'esecuzione, in millisecondi.|Maggiore o uguale a 0.<br /><br /> Se total_elapsed_time supera il valore massimo per un numero intero, total_elapsed_time continuerà a essere il valore massimo. Questa condizione verrà generato l'avviso "il valore massimo è stato superato."<br /><br /> Il valore massimo in millisecondi è equivalente a 24,8 giorni.|  
   
- Per informazioni sul numero massimo di righe mantenuto da questa vista, vedere [i valori massimi vista di sistema](http://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9).  
+ Per informazioni sul numero massimo di righe mantenuto da questa vista, vedere [i valori massimi vista di sistema](https://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste di sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Viste di sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

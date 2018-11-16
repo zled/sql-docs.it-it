@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a8ef2abe539c47e3a66092d12628ee6850e7a58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbe732e9f0d22047146edc3d37a049b7300db0b7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852865"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667782"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47852865"
   
 |*ValuePtr* valore|Description|  
 |----------------------|-----------------|  
-|SQL_DP_ON|Valore predefinito. Dopo avere chiamato [funzione SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360), la preparazione dell'istruzione viene posticipata fino alla **SQLExecute** viene chiamato o operazione della metaproprietà (**SQLDescribeCol** oppure **SQLDescribeParam**) viene eseguito.|  
+|SQL_DP_ON|Valore predefinito. Dopo avere chiamato [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360), la preparazione dell'istruzione viene posticipata fino alla **SQLExecute** viene chiamato o operazione della metaproprietà (**SQLDescribeCol** oppure **SQLDescribeParam**) viene eseguito.|  
 |SQL_DP_OFF|L'istruzione viene preparata, non appena **SQLPrepare** viene eseguita.|  
   
 ### <a name="sqlsoptssregionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -150,7 +150,7 @@ ms.locfileid: "47852865"
  Se un funzione di catalogo diversa SQLTables, SQLColumns o SQLPrimaryKeys viene chiamato quando SQL_SOPT_SS_NAME_SCOPE dispone di un valore diverso da SQL_SS_NAME_SCOPE_TABLE, viene restituito SQL_ERROR. Viene generato un record di diagnostica con SQLSTATE HY010 e il messaggio "Errore nella sequenza della funzione (SQL_SOPT_SS_NAME_SCOPE non è impostato su SQL_SS_NAME_SCOPE_TABLE)".  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLGetStmtAttr](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [Funzione SQLGetStmtAttr](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

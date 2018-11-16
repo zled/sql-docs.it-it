@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 11/06/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: efa3d06feb138445c3e55e5d2ea3da7e60f3da20
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: c25474a30ace6ed6e1ab0560f1b3746a071690ef
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269556"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697039"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Guida introduttiva: Distribuire il cluster di big data di SQL Server in Azure Kubernetes Service (AKS)
 
@@ -56,7 +56,7 @@ Impostare le variabili di ambiente necessarie per la distribuzione di cluster di
 
 Prima di continuare, tenere presenti le linee guida seguenti:
 
-- Nel [finestra di comando](http://docs.microsoft.com/visualstudio/ide/reference/command-window), sono incluse le virgolette nelle variabili di ambiente. Se si usano le virgolette per eseguire il wrapping di una password, le virgolette sono inclusi nella password.
+- Nel [finestra di comando](https://docs.microsoft.com/visualstudio/ide/reference/command-window), sono incluse le virgolette nelle variabili di ambiente. Se si usano le virgolette per eseguire il wrapping di una password, le virgolette sono inclusi nella password.
 - In bash le virgolette non sono inclusi nella variabile. Gli esempi usino le virgolette doppie `"`.
 - È possibile impostare le variabili di ambiente della password con qualsiasi nome desiderato, ma assicurarsi che questi sono sufficientemente complessi e non usare la `!`, `&`, o `'` caratteri.
 - Per la versione CTP 2.1, non modificare le porte predefinite.

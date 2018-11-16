@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3860eae1663b512af1835a0e1268145a742d161a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c31c6c2071d276da9b3ab0e498a090659ba589a7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701459"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673480"
 ---
 # <a name="installation-and-configuration"></a>Installazione e configurazione
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -23,14 +23,14 @@ Le istruzioni sull'installazione e configurazione del database Wide World Import
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (o versione successiva) oppure [Database SQL di Azure](https://azure.microsoft.com/services/sql-database/). Per la versione completa dell'esempio, usare SQL Server Evaluation o Developer o Enterprise Edition.
+- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (o versione successiva) oppure [Database SQL di Azure](https://azure.microsoft.com/services/sql-database/). Per la versione completa dell'esempio, usare SQL Server Evaluation o Developer o Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Per ottenere risultati ottimali usano la versione di giugno 2016 o versione successiva.
 
 ## <a name="download"></a>Scarica
 
 La versione più recente dell'esempio:
 
-[Wide world-importers-delle versioni](http://go.microsoft.com/fwlink/?LinkID=800630)
+[Wide world-importers-delle versioni](https://go.microsoft.com/fwlink/?LinkID=800630)
 
 Scaricare l'esempio WideWorldImporters database backup/bacpac che corrisponde all'edizione di SQL Server o Database SQL di Azure.
 
@@ -90,5 +90,5 @@ Si applica a: Database SQL di Azure
 
 Sicurezza a livello di riga non è abilitata per impostazione predefinita nel download del file bacpac di WideWorldImporters. Per abilitare la sicurezza a livello di riga nel database, eseguire la stored procedure seguente:
 
-    EXECUTE [Application].[Configuration_ApplyAuditing]
+    EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
 

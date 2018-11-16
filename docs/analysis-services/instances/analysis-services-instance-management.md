@@ -1,6 +1,6 @@
 ---
-title: Gestione del Server di Analysis Services | Documenti Microsoft
-ms.date: 05/02/2018
+title: Gestione del Server di SQL Server Analysis Services | Microsoft Docs
+ms.date: 11/15/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,18 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 62c350b13db727b747fc4573b3bb634ac59256f9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 41c689b2dfb122b94204cfbb8d52f9f8e9a1a8fb
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015978"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700439"
 ---
-# <a name="analysis-services-server-management"></a>Gestione di server di Analysis Services
+# <a name="sql-server-analysis-services-server-management"></a>Gestione del server SQL Server Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
-  Un'istanza del server di Analysis Services è una copia del **msmdsrv.exe** eseguibile che viene eseguito come un servizio del sistema operativo. Ogni istanza è completamente indipendente dalle altre istanze nello stesso server, disponendo di impostazioni proprie di configurazione, autorizzazioni, porte, account di avvio, archiviazione di file e proprietà della modalità server.  
+Per Azure Analysis Services, vedere [gestire Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-manage).
+
+  Un'istanza del server di Analysis Services è una copia del **msmdsrv.exe** eseguibile che viene eseguito come servizio di sistema operativo. Ogni istanza è completamente indipendente dalle altre istanze nello stesso server, disponendo di impostazioni proprie di configurazione, autorizzazioni, porte, account di avvio, archiviazione di file e proprietà della modalità server.  
   
- Ogni istanza viene eseguito come servizio Windows, Msmdsrv.exe, nel contesto di sicurezza di un account di accesso definito.  
+ Ogni istanza viene eseguita come servizio Windows, Msmdsrv.exe, nel contesto di sicurezza di un account di accesso definito.  
   
 -   Il nome del servizio dell'istanza predefinita è MSSQLServerOLAPService.  
   
@@ -40,9 +43,9 @@ ms.locfileid: "34015978"
  In generale, la maggior parte delle attività amministrative da eseguire non variano a seconda della modalità. Un amministratore di sistema di Analysis Services può utilizzare le stesse routine e gli stessi script per gestire qualsiasi istanza di Analysis Services nella rete, indipendentemente dalla modalità di installazione.  
   
 > [!NOTE]  
->  L'eccezione è [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. L'amministrazione server di una distribuzione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è sempre all'interno del contesto di una farm SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] si differenzia dalle altre modalità server perché è sempre a istanza singola ed è sempre gestito da Amministrazione centrale SharePoint o dallo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Benché sia possibile, non è consigliabile connettersi a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint in SQL Server Management Studio o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. In una farm SharePoint è presente un'infrastruttura mediante la quale viene sincronizzato lo stato del server e controllata la disponibilità del server. L'utilizzo di altri strumenti può interferire con queste operazioni. Per ulteriori informazioni su [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Amministrazione server, vedere [Power Pivot per SharePoint ](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
+>  L'eccezione è [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint. L'amministrazione server di una distribuzione di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è sempre all'interno del contesto di una farm SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] si differenzia dalle altre modalità server perché è sempre a istanza singola ed è sempre gestito da Amministrazione centrale SharePoint o dallo strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Benché sia possibile, non è consigliabile connettersi a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint in SQL Server Management Studio o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. In una farm SharePoint è presente un'infrastruttura mediante la quale viene sincronizzato lo stato del server e controllata la disponibilità del server. L'utilizzo di altri strumenti può interferire con queste operazioni. Per altre informazioni sulle [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Amministrazione server, vedere [Power Pivot per SharePoint ](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="common-server-management-topics"></a>Argomenti relativi alla gestione di server comune  
   
 |Collegamento|Descrizione dell'attività|  
 |----------|----------------------|  

@@ -19,12 +19,12 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b164c253f9e1bc90f65e143ef3490a4cca9542ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7e1c3534e510e2a18929331918db7b6cf3efa60
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681709"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657460"
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47681709"
   
  Esistono diversi tipi di oggetti di database gestito dell'integrazione con CLR. Per informazioni generali su questi oggetti, vedere [compilazione di oggetti di Database con Common Language Runtime (CLR) Integration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Ogni volta che questi oggetti vengono eseguiti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un' **AppDomain** in cui viene caricato ed eseguito il codice richiesto. Il livello di isolamento per un **AppDomain** uno **AppDomain** per ogni database per proprietario. Vale a dire tutti gli oggetti CLR appartenenti a un utente vengono sempre eseguiti nella stessa **AppDomain** per ogni database (se un utente registra oggetti di database CLR in database diversi, il database CLR gli oggetti verranno eseguiti in domini applicazione diversi). Un' **AppDomain** non viene eliminato al termine dell'esecuzione del codice. ma viene memorizzato nella cache per le future esecuzioni. Ciò migliora le prestazioni.  
   
- Per altre informazioni, vedere [domini applicazione](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ Per altre informazioni, vedere [domini applicazione](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  

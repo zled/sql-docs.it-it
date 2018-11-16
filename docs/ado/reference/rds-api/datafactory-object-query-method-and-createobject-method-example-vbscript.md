@@ -17,16 +17,16 @@ ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 878ffce8b18205dfcd99ec7e374a9eb4609d6f38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d9a3984e956cd9e742bcc8a29accb7fe012b9e8
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735939"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606341"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>Esempio dell'oggetto DataFactory e dei metodi Query e CreateObject (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Questo esempio viene creato un [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) dell'oggetto usando la [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) metodo del [Servizi Desktop remoto. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) oggetto. Per testare questo esempio, tagliare e incollare questo codice tra il \<Body > e \</Body > tag in HTML un normale del documento e denominarlo **DataFactoryVBS**. Lo script identificherà il server.  
   
@@ -112,7 +112,7 @@ to bring back a Recordset. </H4>
     Dim strCnxn  
     Dim strSQL  
   
-    strServer = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+    strServer = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
     strCnxn = "Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind';"  
     strSQL = "Select FirstName, LastName from Employees"  
   

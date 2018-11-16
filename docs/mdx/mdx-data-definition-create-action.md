@@ -1,5 +1,5 @@
 ---
-title: Istruzione CREATE ACTION (MDX) | Documenti Microsoft
+title: Istruzione CREATE ACTION (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 762c2c1cc18d67ccafb05b0f61d213e5215de8b2
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741290"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703089"
 ---
-# <a name="mdx-data-definition---create-action"></a>Definizione dei dati MDX - creare azioni
+# <a name="mdx-data-definition---create-action"></a>Definizione dei dati MDX - CREATE ACTION
 
 
   Crea un'azione che può essere associata a un cubo, a una dimensione, a una gerarchia o a un oggetto subordinato.  
@@ -72,22 +72,22 @@ FOR
  *String_Expression*  
  Espressione stringa valida.  
   
-## <a name="remarks"></a>Remarks  
- Le applicazioni client possono creare ed eseguire azioni non sicure, così come possono utilizzare funzioni non sicure. Per evitare queste situazioni, utilizzare il **Safety Options** proprietà. Per ulteriori informazioni, vedere l'argomento dedicato alle opzioni di sicurezza.  
+## <a name="remarks"></a>Note  
+ Le applicazioni client possono creare ed eseguire azioni non sicure, così come possono utilizzare funzioni non sicure. Per evitare queste situazioni, usare il **opzioni di sicurezza** proprietà. Per ulteriori informazioni, vedere l'argomento dedicato alle opzioni di sicurezza.  
   
 > [!NOTE]  
->  Questa istruzione è stata inclusa per compatibilità con le versioni precedenti. Familiarità con le azioni [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], ad esempio le azioni di drill-through o di un Report, non sono supportati.  
+>  Questa istruzione è stata inclusa per compatibilità con le versioni precedenti. Familiarità con le azioni [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], ad esempio le azioni di drill-through o Report, non sono supportati.  
   
 ## <a name="action-types"></a>Tipi di azioni  
- Nella tabella seguente vengono descritti i diversi tipi di azioni disponibili in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ La tabella seguente descrive i diversi tipi di azioni disponibili in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 |Tipo di azione|Description|  
 |-----------------|-----------------|  
-|**URL**|Viene restituita una stringa costituita da un URL a cui accedere tramite browser Internet.<br /><br /> Nota: Se questa azione non inizia con `http://` o `https://`, l'azione sarà disponibile per il browser a meno che non **SafetyOptions** è impostato su **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
+|**URL**|Viene restituita una stringa costituita da un URL a cui accedere tramite browser Internet.<br /><br /> Nota: Se questa azione non inizia con `https://` oppure `https://`, l'azione sarà disponibile al browser, a meno che **SafetyOptions** è impostato su **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|Viene restituita una stringa costituita da uno script HTML. Tale stringa deve essere salvata in un file che sarà possibile visualizzare utilizzando un browser Internet. In questo caso è possibile che nell'ambito del codice HTML generato venga eseguito un intero script.|  
-|**ISTRUZIONE**|Viene restituita una stringa è un'istruzione che deve essere eseguito mediante l'impostazione di **SetText** metodo di un oggetto comando per la stringa e la chiamata di **ICommand:: Execute**(metodo). Se il comando non riesce, verrà restituito un errore.|  
-|**SET DI DATI**|Viene restituita una stringa è un'istruzione MDX che deve essere eseguita impostando il **SetText** metodo di un oggetto comando per la stringa e la chiamata di **ICommand:: Execute** metodo. L'interfaccia richiesta deve essere l'ID (IID) **IDataset**. Il comando riesce se viene creato un set di dati. L'applicazione client deve consentire all'utente di visualizzare il set di dati restituito.|  
-|**SET DI RIGHE**|Simile a **DATASET**, anziché richiedere un IID di **IDataset**, l'applicazione client deve richiedere un IID di **IRowset**. Il comando riesce se viene creato un set di righe. L'applicazione client deve consentire all'utente di visualizzare il set di righe restituito.|  
+|**ISTRUZIONE**|La stringa restituita è un'istruzione che deve essere eseguito impostando il **SetText** metodo di un oggetto comando per la stringa e la chiamata il **ICommand:: Execute**(metodo). Se il comando non riesce, verrà restituito un errore.|  
+|**SET DI DATI**|La stringa restituita è un'istruzione MDX che deve essere eseguita impostando il **SetText** metodo di un oggetto comando per la stringa e la chiamata il **ICommand:: Execute** (metodo). L'interfaccia richiesta ID (IID) deve essere **IDataset**. Il comando riesce se viene creato un set di dati. L'applicazione client deve consentire all'utente di visualizzare il set di dati restituito.|  
+|**SET DI RIGHE**|Simile a **set di dati**, ma anziché richiedere un IID di **IDataset**, l'applicazione client deve richiedere un IID di **IRowset**. Il comando riesce se viene creato un set di righe. L'applicazione client deve consentire all'utente di visualizzare il set di righe restituito.|  
 |**RIGA DI COMANDO**|L'applicazione client deve eseguire la stringa dell'azione, che è costituita da una riga di comando.|  
 |**PROPRIETARIO**|L'applicazione client può visualizzare o eseguire l'azione esclusivamente se dispone di informazioni personalizzate, non generiche, sull'azione specifica. Le azioni proprietarie non vengono restituite all'applicazione client, a meno che l'applicazione client richiede in modo esplicito, impostando la restrizione appropriata sul **APPLICATION_NAME**.|  
   
@@ -119,7 +119,7 @@ FOR
  L'azione viene applicata solo a celle specifiche.  
   
  Ambito set  
- L'azione viene applicata solo a un set. Il nome, **ActionParameterSet**, è riservato per usi dall'applicazione all'interno dell'espressione dell'azione.  
+ L'azione viene applicata solo a un set. Il nome **ActionParameterSet**, è riservato per usi dall'applicazione all'interno dell'espressione dell'azione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzioni di definizione dei dati MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  

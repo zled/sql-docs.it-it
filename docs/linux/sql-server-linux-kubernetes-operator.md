@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 187517c79f14ddcbf08ffa644e65558fa0a85b38
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: cd3cf1cd36866010843347d5c7a05a8cd39c20ef
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251999"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660600"
 ---
 # <a name="sql-server-always-on-availability-group-kubernetes-operator-parameters"></a>SQL Server Always On gruppo Kubernetes operatore i parametri di disponibilità
 
@@ -57,7 +57,7 @@ L'esempio seguente illustra una distribuzione per il `mssql-operator`.
 
 * `MSSQL_K8S_RETRY_PERIOD_SECONDS`
   * Facoltativo
-  * **Descrizione**: durata di acting [master](http://kubernetes.io/docs/concepts/architecture/master-node-communication/) attenderà prima di rinnovare il lease leader. Deve essere minore di `MSSQL_K8S_LEASE_DURATION_SECONDS`.
+  * **Descrizione**: durata di acting [master](https://kubernetes.io/docs/concepts/architecture/master-node-communication/) attenderà prima di rinnovare il lease leader. Deve essere minore di `MSSQL_K8S_LEASE_DURATION_SECONDS`.
   * **Default**:  `MSSQL_K8S_RENEW_DEADLINE_SECONDS` /2
 
 * `MSSQL_K8S_ACQUIRE_PERIOD_SECONDS` 

@@ -15,12 +15,12 @@ ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a05ec85e3fd22a6190df0e840bd69ca40fcde5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35c1fce22e700ddd7ca2e738449a7b8b4ce4a63a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695739"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601472"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>Chiamata di una stored procedure con Command
 È possibile utilizzare un comando per chiamare una stored procedure. Nell'esempio di codice alla fine di questo argomento si riferisce a una stored procedure nel database di esempio Northwind, chiamato CustOrdersOrders, che viene definito come segue.  
@@ -134,4 +134,4 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Articolo della Knowledge Base 117500](http://go.microsoft.com/fwlink/?LinkId=117500)
+ [Articolo della Knowledge Base 117500](https://go.microsoft.com/fwlink/?LinkId=117500)

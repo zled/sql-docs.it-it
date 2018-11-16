@@ -1,6 +1,6 @@
 ---
-title: Il monitoraggio dello strumento - Analitica Platform System | Documenti Microsoft
-description: Questa Guida al monitoraggio dello strumento descrive gli strumenti e le attività per il monitoraggio del dispositivo di sistema della piattaforma Analitica.
+title: Monitoraggio dell'Appliance - sistema di piattaforma Analitica | Microsoft Docs
+description: Questa Guida al monitoraggio appliance descrive gli strumenti e le attività per monitorare l'appliance del sistema di piattaforma Analitica.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,71 +9,71 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f87734a14337e7e35655439ddf70f0a126147eb7
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 100a587814e62a6455d25e78a3defca973f39bf6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538671"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696089"
 ---
-# <a name="appliance-monitoring-for-analytics-platform-system"></a>Monitoraggio dello strumento per Analitica Platform System
-Questa Guida al monitoraggio dello strumento descrive gli strumenti e le attività per il monitoraggio del dispositivo di sistema della piattaforma Analitica.  
+# <a name="appliance-monitoring-for-analytics-platform-system"></a>Monitoraggio dell'Appliance per il sistema di piattaforma Analitica
+Questa Guida al monitoraggio appliance descrive gli strumenti e le attività per monitorare l'appliance del sistema di piattaforma Analitica.  
   
 ## <a name="Basics"></a>Nozioni di base e gli strumenti di monitoraggio  
-I valori e informazioni che è possibile monitorare lo strumento di SQL Server PDW sono numerose. Ad esempio, di seguito sono tipici di attività di monitoraggio.  
+I valori e informazioni che è possibile monitorare l'appliance di SQL Server PDW sono numerose. Ad esempio, di seguito sono tipiche attività di monitoraggio.  
   
 -   Verifica per qualsiasi avviso emesso da SQL Server PDW.  
   
--   Monitoraggio per l'hardware non riuscito.  
+-   Monitoraggio di hardware non riuscito.  
   
 -   Monitoraggio di problemi di connettività di rete.  
   
 -   Controllare gli errori restituiti agli utenti durante l'elaborazione delle query.  
   
--   Visualizza il numero di sessioni attualmente attive e query.  
+-   Visualizzare il numero di sessioni attualmente attive e query.  
   
--   Verificare lo stato di caricamento, backup e ripristini.  
+-   Controllare lo stato di caricamento, backup e ripristini.  
   
-### <a name="appliance-monitoring-tools"></a>Strumenti di monitoraggio del dispositivo  
-Sono disponibili più strumenti disponibili per il monitoraggio del dispositivo.  
+### <a name="appliance-monitoring-tools"></a>Strumenti di monitoraggio delle Appliance  
+Sono disponibili vari strumenti disponibili per monitorare l'appliance.  
   
 Console di amministrazione  
-SQL Server PDW è una Console di amministrazione. Questo è uno strumento basato sul web che consente di visualizzare informazioni sulle query, caricamenti, backup e ripristino, i blocchi, le sessioni, avvisi e stato dello strumento. Esegue la Console di amministrazione nel dispositivo; gli utenti di connettersi alla Console di amministrazione tramite Internet Explorer. Per altre informazioni, vedere:  
+SQL Server PDW è una Console di amministrazione. Questo è uno strumento basato sul web che consente di visualizzare informazioni sulle query, caricamenti, backup e ripristino, i blocchi, sessioni, gli avvisi e stato dello strumento. La Console di amministrazione viene eseguita nell'appliance; gli utenti di connettersi alla Console di amministrazione tramite Internet Explorer. Per altre informazioni, vedere:  
   
--   [Monitorare il dispositivo tramite la Console di amministrazione &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+-   [Monitorare l'Appliance usando la Console di amministrazione &#40;sistema di piattaforma Analitica&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
 ![Avvisi della Console di amministrazione PDW](./media/appliance-monitoring/SQL_Server_PDW_AdminConsol_Queries.png "SQL_Server_PDW_AdminConsol_Queries")  
   
 Viste di sistema  
-SQL Server PDW include visualizzazioni di sistema completo che consentono di ottenere informazioni dettagliate sull'integrità di dispositivo, stato e delle prestazioni. Per un elenco di viste di sistema per il monitoraggio delle attività, vedere:  
+SQL Server PDW include viste di sistema completi che consentono di ottenere informazioni dettagliate sull'integrità delle appliance, stato e prestazioni. Per un elenco di viste di sistema per il monitoraggio delle attività, vedere:  
   
--   [Monitorare il dispositivo utilizzando viste di sistema &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-system-views.md)  
+-   [Monitorare l'Appliance usando le viste di sistema &#40;sistema di piattaforma Analitica&#41;](monitor-the-appliance-by-using-system-views.md)  
   
 System Center Operations Manager (SCOM)  
-SQL Server PDW è completa integrazione con Systems Center Operations Manager. I management pack per SQL Server PDW sono disponibili come download gratuito. Per ulteriori informazioni sull'utilizzo di System Center per monitorare SQL Server PDW, vedere gli argomenti seguenti:  
+SQL Server PDW è ampia integrazione con Systems Center Operations Manager. I management pack per SQL Server PDW sono disponibili come download gratuito. Per altre informazioni sull'uso di System Center per monitorare SQL Server PDW, vedere gli argomenti seguenti:  
   
--   [Monitorare l'accessorio tramite System Center Operations Manager &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+-   [Monitorare l'Appliance usando System Center Operations Manager &#40;sistema di piattaforma Analitica&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   
 Soluzioni personalizzate  
-Per le situazioni quando System Center non è disponibile con il data center, strumenti di monitoraggio è possibile monitorare il dispositivo utilizzando una soluzione di monitoraggio di terze parti. Installazione degli agenti esterne del software non è attualmente supportata in PDW, ma la maggior parte delle soluzioni di monitoraggio supportano Transact\-integrazione di SQL, in modo che l'amministratore di sistema può implementare Transact diretto\-query SQL del PDW dispositivo.  
+Per le situazioni quando System Center non è disponibile con strumenti di monitoraggio del data center è possibile monitorare l'appliance usando una soluzione di monitoraggio di terze parti. Installazione degli agenti software esterni non è attualmente supportata in PDW, ma la maggior parte delle soluzioni di monitoraggio supportano Transact\-integrazione di SQL, in modo che l'amministratore di sistema possa implementare Transact diretta\-query SQL PDW Appliance.  
   
-Se la soluzione di monitoraggio non supporta direttamente Transact\-query SQL, oppure non dispone di uno strumento di monitoraggio, quindi è possibile utilizzare script per eseguire attività di monitoraggio, ad esempio l'invio di posta elettronica quando viene generato un avviso.  Wiki di TechNet contiene un esempio di soluzione di monitoraggio tramite script.  
+Se la soluzione di monitoraggio non supporta direct Transact\-query SQL, oppure non è uno strumento di monitoraggio, quindi è possibile usare gli script per eseguire attività di monitoraggio, ad esempio l'invio di posta elettronica quando viene generato un avviso.  Wiki di TechNet contiene un esempio di soluzione di monitoraggio tramite script.  
   
--   [PowerShell di esempio di monitoraggio per SQL Server PDW](http://go.microsoft.com/fwlink/?LinkId=248020)  
+-   [PowerShell di esempio di monitoraggio per SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=248020)  
    
 ## <a name="Tasks"></a>Relative attività di monitoraggio  
   
-|Attività di monitoraggio|Description|  
+|Monitoraggio attività|Description|  
 |-------------------|---------------|  
-|Monitorare l'accessorio utilizzando la Console di amministrazione.|[Monitorare il dispositivo tramite la Console di amministrazione &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)|  
-|Monitorare l'accessorio utilizzando viste di sistema.|[Monitorare il dispositivo utilizzando viste di sistema &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-system-views.md)|  
-|Monitoraggio del dispositivo tramite System Center|[Monitorare l'accessorio tramite System Center Operations Manager &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)|  
-|Monitoraggio dello stato del dispositivo.|[Lo stato di integrità dello strumento di monitoraggio &#40;Analitica Platform System&#41;](monitor-appliance-health-state.md)|  
+|Monitorare l'appliance usando la Console di amministrazione.|[Monitorare l'Appliance usando la Console di amministrazione &#40;sistema di piattaforma Analitica&#41;](monitor-the-appliance-by-using-the-admin-console.md)|  
+|Monitorare l'appliance usando le viste di sistema.|[Monitorare l'Appliance usando le viste di sistema &#40;sistema di piattaforma Analitica&#41;](monitor-the-appliance-by-using-system-views.md)|  
+|Monitorare l'appliance usando System Center|[Monitorare l'Appliance usando System Center Operations Manager &#40;sistema di piattaforma Analitica&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)|  
+|Monitorare lo stato dell'appliance.|[Monitoraggio stato di integrità di Appliance &#40;sistema di piattaforma Analitica&#41;](monitor-appliance-health-state.md)|  
 |Monitoraggio heartbeat.|[Inviare commenti e suggerimenti dati di telemetria a Microsoft &#40;SQL Server PDW&#41;](send-telemetry-feedback-to-microsoft-sql-server-pdw.md)|  
-|Tenere traccia degli avvisi di dispositivo.|[Tenere traccia degli avvisi accessorio &#40;Analitica Platform System&#41;](track-appliance-alerts.md)|  
-|Determinare la quantità di capacità è in uso.|[Utilizzo della capacità di visualizzare &#40;Analitica Platform System&#41;](view-capacity-utilization.md)|  
-|Determinare la frequenza di polling del dispositivo.|[Determinare la frequenza di Polling &#40;Analitica Platform System&#41;](determine-polling-frequency.md)|  
-|Quando si verifica un errore del cluster, determinare a quale cluster nodo non è riuscita.|[Determinare quale nodo del Cluster non è stato possibile &#40;Analitica Platform System&#41;](determine-which-cluster-node-failed.md)|  
+|Tenere traccia degli avvisi dell'appliance.|[Tenere traccia degli avvisi di Appliance &#40;sistema di piattaforma Analitica&#41;](track-appliance-alerts.md)|  
+|Determinare la quantità di capacità è in uso.|[Visualizzare l'utilizzo della capacità &#40;sistema di piattaforma Analitica&#41;](view-capacity-utilization.md)|  
+|Determinare la frequenza con cui eseguire il polling dell'appliance.|[Determinare la frequenza di Polling &#40;sistema di piattaforma Analitica&#41;](determine-polling-frequency.md)|  
+|Quando si verifica un errore del cluster, determinare quale cluster nodo non è riuscito.|[Determinare quale nodo del Cluster non riuscita &#40;sistema di piattaforma Analitica&#41;](determine-which-cluster-node-failed.md)|  
 
 
 <!-- MISSING LINKS |Monitor loads.|[Monitor Loads &#40;SQL Server PDW&#41;](../sqlpdw/monitor-loads-sql-server-pdw.md)|  -->  
@@ -82,5 +82,5 @@ Se la soluzione di monitoraggio non supporta direttamente Transact\-query SQL, o
   
 ## <a name="see-also"></a>Vedere anche  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Attività di gestione dello strumento &#40;Analitica Platform System&#41;](appliance-management-tasks.md)  
+[Attività di gestione di Appliance &#40;sistema di piattaforma Analitica&#41;](appliance-management-tasks.md)  
   

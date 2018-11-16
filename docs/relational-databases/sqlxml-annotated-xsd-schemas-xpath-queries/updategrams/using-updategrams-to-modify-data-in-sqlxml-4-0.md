@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8d1c158b9bdd922deb069e6cc95a71dab0e24a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b4b35ddef4844f5c57ae77e4ee4c6d1dcbaf167
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650729"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681209"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>Utilizzo di updategram per modificare dati in SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47650729"
  [La gestione dei problemi di concorrenza di Database negli updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md)  
  Vengono descritti i diversi livelli di protezione possibili per la gestione di problemi di concorrenza negli updategram e sono inclusi alcuni esempi.  
   
- [Le applicazioni di esempio con updategram &#40;SQLXML 4.0&#41;](http://msdn.microsoft.com/library/d2287e10-4007-4ba4-ad84-4e2b6adfede5)  
+ [Le applicazioni di esempio con updategram &#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/d2287e10-4007-4ba4-ad84-4e2b6adfede5)  
  Vengono fornite applicazioni di esempio che utilizzano updategram.  
   
  [Linee guida e limitazioni per gli Updategram XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md)  

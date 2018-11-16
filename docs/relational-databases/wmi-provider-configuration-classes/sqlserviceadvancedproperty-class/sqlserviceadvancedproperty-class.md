@@ -18,12 +18,12 @@ ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: eb62dee3cd772d3b4e4e699fc4ab340f7f36dbbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c76d14e4c3027d4b2b758755ae4dedcffad32f0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603639"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668230"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>Classe SqlServiceAdvancedProperty
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "47603639"
   
  Il [proprietà AdvancedProperties (classe SqlService)](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/advancedproperties-property-sqlservice-class.md) fa riferimento a una matrice di [classe SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) oggetti.  
   
- Il [avvio e arresto dei servizi](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) classe rappresenta le proprietà che sono univoche per il servizio. Queste proprietà non sono presenti nell'elenco di proprietà che è associato il [classe SqlService](http://technet.microsoft.com/library/ms186497.aspx) classe. Il [classe SqlServiceAdvancedProperty](http://technet.microsoft.com/library/ms182447.aspx) consente la rappresentazione di proprietà di stringa, numerici o booleani. È possibile utilizzare questa classe per visualizzare le proprietà univoche del servizio specificato.  
+ Il [avvio e arresto dei servizi](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) classe rappresenta le proprietà che sono univoche per il servizio. Queste proprietà non sono presenti nell'elenco di proprietà che è associato il [classe SqlService](https://technet.microsoft.com/library/ms186497.aspx) classe. Il [classe SqlServiceAdvancedProperty](https://technet.microsoft.com/library/ms182447.aspx) consente la rappresentazione di proprietà di stringa, numerici o booleani. È possibile utilizzare questa classe per visualizzare le proprietà univoche del servizio specificato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Servizi di avvio, arresto e sospensione](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Servizi di avvio, arresto e sospensione](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

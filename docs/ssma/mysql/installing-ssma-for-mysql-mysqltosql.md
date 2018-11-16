@@ -12,12 +12,12 @@ ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6191898b0dbd4c7269a3c741f2e6ace7927b665c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8d642f90aa7c4dffa990977d8e0cb84b5337c7f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776349"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670250"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>Installazione di SSMA per MySQL (MySqlToSql)
 SQL Server Migration Assistant (SSMA) per MySQL è costituito da un'applicazione client che consente di eseguire una migrazione da MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Contiene anche un pacchetto di estensione che supporta la migrazione dei dati e l'uso di funzioni di sistema di MySQL in database migrati.  
@@ -33,7 +33,7 @@ Se si desidera eseguire l'aggiornamento a una versione successiva di SSMA per My
 |-|-|  
 |**Argomento**|**Descrizione**|  
 |[Installazione di SSMA per MySQL Client &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|Include informazioni e istruzioni per installare il client SSMA.|  
-|[Installazione di componenti SSMA in SQL Server (MySQL a SQL)](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Include informazioni e istruzioni per installare il pacchetto di estensione nelle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Installazione di componenti SSMA in SQL Server (MySQL a SQL)](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Include informazioni e istruzioni per installare il pacchetto di estensione nelle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Rimozione di SSMA per MySQL componenti &#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|Vengono fornite istruzioni per la disinstallazione del programma client.|  
   
 ## <a name="see-also"></a>Vedere anche  

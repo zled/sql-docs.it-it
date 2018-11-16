@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55b13d7349d58db37dc8f8ec649fec3a06cffcec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b4dfa4771fa60286e054270cb644c72cabe8e40
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613279"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350355"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Provider Microsoft OLE DB per Microsoft Panoramica del servizio di indicizzazione
 Il Provider Microsoft OLE DB per Microsoft Indexing Service fornisce l'accesso di sola lettura a livello di codice per file system e i dati Web indicizzati dal servizio di indicizzazione Microsoft. Le applicazioni ADO possono eseguire query SQL per recuperare le informazioni sulle proprietà di contenuto e file.
@@ -30,7 +30,7 @@ Il Provider Microsoft OLE DB per Microsoft Indexing Service fornisce l'accesso d
 ## <a name="connection-string-parameters"></a>Parametri della stringa di connessione
  Per connettersi a questo provider, impostare il **Provider =** argomento per il [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà:
 
-```
+```vb
 MSIDXS
 ```
 
@@ -39,7 +39,7 @@ MSIDXS
 ## <a name="typical-connection-string"></a>Stringa di connessione tipica
  Una stringa di connessione tipica per questo provider è:
 
-```
+```vb
 "Provider=MSIDXS;Data Source=myCatalog;Locale Identifier=nnnn;"
 ```
 
@@ -110,7 +110,7 @@ MSIDXS
 |[Aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sì|
 |[Rieseguire una query](../../../ado/reference/ado-api/requery-method.md)|Sì|
 |[Risincronizzazione](../../../ado/reference/ado-api/resync-method.md)|Sì|
-|[Supporta](../../../ado/reference/ado-api/supports-method.md)|Sì|
+|[Supporti](../../../ado/reference/ado-api/supports-method.md)|Sì|
 |[Update](../../../ado/reference/ado-api/update-method.md)|no|
 |[Metodo UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|no|
 

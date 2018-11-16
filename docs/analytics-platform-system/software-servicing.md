@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 79231b6e2867154bc4d826b83a0a4fd27487f438
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 444d7f29e7f65da7e5d98dde310b2c1f8ad8dd4b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909801"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700210"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>Manutenzione software nel sistema di piattaforma Analitica
 Questa sezione vengono riepilogati i requisiti per le Appliance di sistema di piattaforma Analitica, inclusi gli hotfix WSUS e il sistema di piattaforma Analitica di manutenzione software.  
   
 ## <a name="Basics"></a>Nozioni di base di manutenzione software  
-**Windows Server Update Services:** l'appliance del sistema di piattaforma Analitica può essere configurato per ricevere gli aggiornamenti da Windows Server Update Services (WSUS). Questi aggiornamenti includono importanti modifiche al software di appliance. Dopo averli configurati, molti aggiornamenti verranno installati automaticamente e non richiedono interventi di gestione. In genere, vengono configurati gli aggiornamenti WSUS durante la [configurare Windows Server Update Services &#40;WSUS&#41; &#40;sistema di piattaforma Analitica&#41; ](configure-windows-server-update-services-wsus.md) passaggio eseguito durante la nuova configurazione del dispositivo. In caso contrario, questo passaggio di configurazione può essere eseguito in un secondo momento. Per informazioni su WSUS, vedere la [sito Web WSUS Guida](http://go.microsoft.com/fwlink/?LinkId=202417).  
+**Windows Server Update Services:** l'appliance del sistema di piattaforma Analitica può essere configurato per ricevere gli aggiornamenti da Windows Server Update Services (WSUS). Questi aggiornamenti includono importanti modifiche al software di appliance. Dopo averli configurati, molti aggiornamenti verranno installati automaticamente e non richiedono interventi di gestione. In genere, vengono configurati gli aggiornamenti WSUS durante la [configurare Windows Server Update Services &#40;WSUS&#41; &#40;sistema di piattaforma Analitica&#41; ](configure-windows-server-update-services-wsus.md) passaggio eseguito durante la nuova configurazione del dispositivo. In caso contrario, questo passaggio di configurazione può essere eseguito in un secondo momento. Per informazioni su WSUS, vedere la [sito Web WSUS Guida](https://go.microsoft.com/fwlink/?LinkId=202417).  
   
 **Gli aggiornamenti rapidi:** , inoltre, potrebbe essere necessario applicare aggiornamenti rapidi di sistema di piattaforma Analitica. Oggetto *hotfix* è un aggiornamento software che viene creato per un cliente specifico risolvere un problema con il software di sistema di piattaforma Analitica. Ciascun aggiornamento rapido è un file eseguibile che consente di installare la correzione del problema specifico del cliente. Ciascun aggiornamento rapido contiene anche un accumulo di tutti gli aggiornamenti software rilasciati in precedenza per Windows, SQL Server e il sistema di piattaforma Analitica. Se è necessario installare un hotfix, il supporto Microsoft fornirà all'utente di aggiornamento rapido e istruzioni.  
   

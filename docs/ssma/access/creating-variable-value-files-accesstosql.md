@@ -10,12 +10,12 @@ ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 005be9b3009ba8812219a6974fa13465bf786747
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1a2840fbdf8fbafae3b4a8e17c200c32d4da65f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680949"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669780"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Creazione di file di valore della variabile (AccessToSQL)
 Un File con valori di variabile è un file XML che includono i valori dei parametri dei comandi (ad esempio il nome di server di origine o destinazione) che cambiano di frequente tra le migrazioni di server. Quando si verifica un numero elevato di migrazioni del database, più file variabili per archiviare il valore di ogni server di origine vengono creati e fa riferimento a un file di script master con il **– v** passare alla riga di comando. Questo comportamento consente di mantenere valori statici in alcuni file di script con i valori delle variabili in più file di variabili.  
@@ -95,5 +95,5 @@ L'utente può facilmente convalidare il file di valore della variabile in base a
 Il passaggio successivo in costi operativi console consiste [creazione di file di connessione del Server &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Creazione di file di connessione del Server (accesso)](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
+[Creazione di file di connessione del Server (accesso)](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

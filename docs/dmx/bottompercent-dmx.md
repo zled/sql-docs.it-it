@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3bfc4f178752d77fe8eb6807c91ebdc4bd3bb890
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4b678aafac0c189983f69cc6db75bcaa48bd9ccf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002113"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602931"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
  Il **BottomPercent** funzione restituisce le righe più in basso nell'ordine di rango crescente. Il rango è basato sul valore valutato del \<rank expression > argomento per ogni riga, in modo che la somma del \<rank expression > valori corrisponde almeno alla percentuale specificata dal \<% > argomento. **BottomPercent** restituisce il più piccolo numero di elementi possibile mentre soddisfa ancora il valore percentuale specificato.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente crea una query di stima sul modello di associazione compilato nel [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ L'esempio seguente crea una query di stima sul modello di associazione compilato nel [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
  Per comprendere il funzionamento BottomPercent, potrebbe essere utile eseguire prima una query di stima che restituisce solo la tabella nidificata.  
   

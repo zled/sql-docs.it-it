@@ -31,12 +31,12 @@ ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0647d1e0f7dd082b3ce3aab668d8af8d5673efb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3e8921e230f581f60c96e6443d4fa5b71a417b3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795769"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661561"
 ---
 # <a name="creating-user-defined-types---coding"></a>Creazione di tipi definiti dall'utente - Codifica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -621,7 +621,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  Lo scopo del riempimento è assicurare che le impostazioni cultura vengano separate completamente dal valore di valuta, in modo che quando un tipo definito dall'utente viene confrontato con un altro tipo nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)], i byte delle impostazioni cultura vengono confrontati con i byte delle impostazioni cultura e i valori dei byte della valuta vengono confrontati con i valori dei byte della valuta.  
   
- Per l'elenco di codice per il **Currency** definito dall'utente, seguire le istruzioni per l'installazione di CLR i campioni nel [motore di Database di SQL Server Samples](http://msftengprodsamples.codeplex.com/).  
+ Per l'elenco di codice per il **Currency** definito dall'utente, seguire le istruzioni per l'installazione di CLR i campioni nel [motore di Database di SQL Server Samples](https://msftengprodsamples.codeplex.com/).  
   
 ### <a name="currency-attributes"></a>Attributi di Currency  
  Il **valuta** è definito con gli attributi seguenti.  
@@ -745,7 +745,7 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- Per l'elenco di codice per il **Currency** definito dall'utente, vedere [esempi del motore di Database di SQL Server](http://msftengprodsamples.codeplex.com/).  
+ Per l'elenco di codice per il **Currency** definito dall'utente, vedere [esempi del motore di Database di SQL Server](https://msftengprodsamples.codeplex.com/).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un tipo definito dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  

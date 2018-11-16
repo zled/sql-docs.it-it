@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0dbc72cf39e1dee5abad6ceb961f1b437287e5ba
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 1a4b517374e19ab959a8c00b732d62643c32cff3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270024"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657985"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurare immagini del contenitore SQL Server in Docker
 
@@ -62,7 +62,7 @@ docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
 
 La Guida introduttiva nella sezione precedente viene eseguita l'edizione Developer gratuita di SQL Server dall'Hub Docker. La maggior parte delle informazioni si applica comunque Se si desidera eseguire immagini del contenitore, ad esempio le edizioni Enterprise, Standard o Web di produzione. Tuttavia, esistono alcune differenze descritte di seguito.
 
-- È possibile utilizzare SQL Server in un ambiente di produzione solo se si ha una licenza valida. È possibile ottenere una licenza di produzione SQL Server Express gratuita [qui](https://go.microsoft.com/fwlink/?linkid=857693). Licenze di SQL Server edizioni Standard ed Enterprise sono disponibili tramite [Microsoft Volume Licensing](https://www.microsoft.com/en-us/licensing/default.aspx).
+- È possibile utilizzare SQL Server in un ambiente di produzione solo se si ha una licenza valida. È possibile ottenere una licenza di produzione SQL Server Express gratuita [qui](https://go.microsoft.com/fwlink/?linkid=857693). Licenze di SQL Server edizioni Standard ed Enterprise sono disponibili tramite [Microsoft Volume Licensing](https://www.microsoft.com/licensing/default.aspx).
 
 - Le immagini contenitore di SQL Server di produzione devono essere estratti dai [Store Docker](https://store.docker.com). Se si ha già uno, creare un account sul Docker Store.
 

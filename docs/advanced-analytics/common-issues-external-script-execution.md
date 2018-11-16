@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b480c400ae2068bb6701192e77d97672ddeb024e
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: 5f770ce536dcbc29245d1b6e853a2548ab1ec744
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254447"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701449"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Problemi comuni con il servizio Launchpad e l'esecuzione di script esterni in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
  Servizio Trusted Launchpad di SQL Server supporta l'esecuzione di script esterni per R e Python. In SQL Server 2016 R Services, SP1 fornisce il servizio. SQL Server 2017 include il servizio Launchpad come parte dell'installazione iniziali sono.
 
-Diversi problemi possono impedire Launchpad dall'avvio, inclusi i problemi di configurazione o le modifiche o i protocolli di rete mancante. Questo articolo fornisce indicazioni sulla risoluzione dei problemi per molti problemi. Per qualsiasi viene perso, è possibile pubblicare domande per la [forum di Machine Learning Server](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR).
+Diversi problemi possono impedire Launchpad dall'avvio, inclusi i problemi di configurazione o le modifiche o i protocolli di rete mancante. Questo articolo fornisce indicazioni sulla risoluzione dei problemi per molti problemi. Per qualsiasi viene perso, è possibile pubblicare domande per la [forum di Machine Learning Server](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR).
 
 **Si applica a:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
 

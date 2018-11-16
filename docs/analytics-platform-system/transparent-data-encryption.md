@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f30d22725e7d0fd099cf2976af42d74d08a93b22
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: c29383e02746ac3abb60a15d2d0368483d2ee13e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400614"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699446"
 ---
 # <a name="transparent-data-encryption"></a>Transparent Data Encryption
 Per proteggere il database è possibile adottare alcune accortezze, tra cui la progettazione di un sistema sicuro, la crittografia dei dati riservati e la compilazione di un firewall attorno ai server di database. Tuttavia, per uno scenario in cui si appropria i supporti fisici (ad esempio le unità o nastri di backup), un utente malintenzionato può semplicemente ripristinare o collegare il database ed esplorare i dati. Una soluzione per ovviare al problema consiste nel crittografare i dati sensibili nel database e proteggere con un certificato le chiavi usate per la crittografia. In questo modo si impedisce a chi è sprovvisto delle chiavi di usare i dati; tuttavia, questo tipo di protezione deve essere pianificato in anticipo.  
@@ -207,7 +207,7 @@ La chiave di crittografia del database (DEK) è protetto per i certificati archi
   
 Il sistema può accedere alle chiavi senza richiedere intervento umano (ad esempio, fornire una password). Se il certificato non è disponibile, il sistema restituirà un errore per segnalare che non può essere decrittografata la chiave DEK fino a quando non è disponibile il certificato appropriato.  
   
-Quando si sposta un database da un'appliance a un'altra, il certificato usato per proteggere la ' chiave DEK devono essere ripristinati prima di tutto nel server di destinazione. Il database può essere ripristinato come di consueto. Per altre informazioni, vedere la documentazione di SQL Server standard, all'indirizzo [spostare un Database protetto con TDE in un altro Server SQL](http://technet.microsoft.com/library/ff773063.aspx).  
+Quando si sposta un database da un'appliance a un'altra, il certificato usato per proteggere la ' chiave DEK devono essere ripristinati prima di tutto nel server di destinazione. Il database può essere ripristinato come di consueto. Per altre informazioni, vedere la documentazione di SQL Server standard, all'indirizzo [spostare un Database protetto con TDE in un altro Server SQL](https://technet.microsoft.com/library/ff773063.aspx).  
   
 I certificati usati per crittografare DEK devono essere conservati fino a quando non esistono backup di database che li utilizzano. Backup del certificato deve includere la chiave privata del certificato, perché senza la chiave privata non può essere utilizzato un certificato per il ripristino di database. Questi backup chiave privata del certificato vengono archiviati in un file separato, protetto da una password che deve essere fornita per il ripristino di certificato.  
   

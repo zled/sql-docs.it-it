@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb00dc8525e4543df862bbe2bcd3eddfc1a04087
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35b2c1eb2b3e714d8b70b8d65a5f96a7dcee379e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733719"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673730"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "47733719"
 |**is_db_chaining_on**|**bit**|1 = Il concatenamento della proprietà tra database è impostato su ON<br /> 0 = Il concatenamento della proprietà tra database è impostato su OFF|  
 |**is_parameterization_forced**|**bit**|1 = La parametrizzazione è FORCED<br /> 0 = La parametrizzazione è SIMPLE|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = Il database include una chiave master crittografata<br /> 0 = Il database non include una chiave master crittografata|  
-|**is_query_store_on**|**bit**|1 = la query store è abilitato per questo database. Controllare [Sys. database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) per visualizzare lo stato di archivio query.<br /> 0 = la query store non è abilitato<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**is_query_store_on**|**bit**|1 = la query store è abilitato per questo database. Controllare [Sys. database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) per visualizzare lo stato di archivio query.<br /> 0 = la query store non è abilitato<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
 |**is_published**|**bit**|1 = Database di pubblicazione in una topologia di replica snapshot o transazionale<br /> 0 = Il database non è un database di pubblicazione|  
 |**is_subscribed**|**bit**|Questa colonna non viene utilizzata. Restituirà sempre 0, indipendentemente dallo stato del sottoscrittore del database.|  
 |**is_merge_published**|**bit**|1 = Database di pubblicazione in una topologia di replica di tipo merge<br /> 0 = Il database non è un database di pubblicazione in una topologia di replica di tipo merge|  

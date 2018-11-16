@@ -11,12 +11,12 @@ ms.assetid: 6c498d2b-22d6-4661-bc21-2ee708336c8b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e113f931e318c501f69540ec19e97e3ae72b553f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04f2f2c71c3560fe892d63dd5263b8b6f846a241
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130541"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638618"
 ---
 # <a name="process-tabular-model-partitions-ssas-tabular"></a>Elaborare partizioni di modelli tabulari (SSAS tabulare)
   Le partizioni consentono di dividere una tabella in parti logiche. Ogni partizione può quindi essere elaborata (aggiornata) indipendentemente dalle altre. Nelle attività di questo argomento viene descritto come elaborare le partizioni in un database modello tramite la finestra di dialogo **Elabora partizioni** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -27,7 +27,7 @@ ms.locfileid: "48130541"
   
 2.  Nella finestra di dialogo **Partizioni** fare clic sul pulsante Elabora in **Partizioni**.  
   
-3.  Nella casella di riepilogo **Modalità** della finestra di dialogo **Elabora partizione/i** selezionare una delle modalità di elaborazione seguenti:  
+3.  Nel **elabora partizione/i** nella finestra di dialogo il **modalità** listbox, selezionare una delle modalità di elaborazione seguenti:  
   
     |Mode|Description|  
     |----------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "48130541"
 4.  Nella colonna della casella di controllo **Elabora** selezionare le partizioni che si desidera elaborare con la modalità scelta, quindi fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Partizioni di modelli tabulari &#40;tabulare di SSAS&#41;](partitions-ssas-tabular.md)   
- [Creare e gestire partizioni di modelli tabulari &#40;tabulare di SSAS&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [Partizioni di modelli tabulari &#40;SSAS tabulare&#41;](partitions-ssas-tabular.md)   
+ [Creare e gestire partizioni di modelli tabulari &#40;SSAS tabulare&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

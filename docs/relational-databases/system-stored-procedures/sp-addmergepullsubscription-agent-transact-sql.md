@@ -17,12 +17,12 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da16887ff7debf09e69fc72cf464f5838cf6ddc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: abd4893368069217003ca9fa5a6f4dca9e4229de
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749741"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681369"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -158,7 +158,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Account di accesso da utilizzare quando ci si connette a un server di distribuzione per la sincronizzazione. *distributor_login* è obbligatorio se *distributor_security_mode* è impostata su **0**. *distributor_login* viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@distributor_password =** ] **'***distributor_password***'**  
- Password del server di distribuzione. *distributor_password* è obbligatorio se *distributor_security_mode* è impostata su **0**. *distributor_password* viene **sysname**, con un valore predefinito è NULL.  
+ Password del database di distribuzione. *distributor_password* è obbligatorio se *distributor_security_mode* è impostata su **0**. *distributor_password* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
@@ -294,13 +294,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  Nome di un processo esistente dell'agente. *nome_processo* viene **sysname**, con un valore predefinito NULL. Questo parametro viene specificato solo quando la sottoscrizione verrà sincronizzata mediante un processo esistente anziché un nuovo processo creato (impostazione predefinita). Se non si è un membro del **sysadmin** ruolo predefinito del server, è necessario specificare *job_login* e *job_password* quando si specifica *job_name*.  
   
  [  **@dynamic_snapshot_location =** ] **'***dynamic_snapshot_location***'** ]  
- Percorso della cartella in cui vengono letti i file di snapshot se è necessario utilizzare uno snapshot dei dati filtrati. *dynamic_snapshot_location* viene **nvarchar(260)**, con un valore predefinito è NULL. Per altre informazioni, vedere [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Percorso della cartella in cui vengono letti i file di snapshot se è necessario utilizzare uno snapshot dei dati filtrati. *dynamic_snapshot_location* viene **nvarchar(260)**, con un valore predefinito è NULL. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  [  **@use_web_sync =** ] *use_web_sync*  
  Indica che la sincronizzazione Web è abilitata. *use_web_sync* viene **bit**, con un valore predefinito è 0. **1** specifica che la sottoscrizione pull può essere sincronizzata su internet tramite HTTP.  
   
  [  **@internet_url =** ] **'***internet_url***'**  
- Percorso del listener per la replica (REPLISAPI.DLL) per la sincronizzazione Web. *internet_url* viene **nvarchar(260)**, con un valore predefinito è NULL. *internet_url* è un URL completo nel formato `http://server.domain.com/directory/replisapi.dll`. Se il server è configurato per l'attesa su una porta diversa dalla porta 80, è necessario specificare anche il numero di porta nel formato `http://server.domain.com:portnumber/directory/replisapi.dll`, dove `portnumber` rappresenta la porta.  
+ Percorso del listener per la replica (REPLISAPI.DLL) per la sincronizzazione Web. *internet_url* viene **nvarchar(260)**, con un valore predefinito è NULL. *internet_url* è un URL completo nel formato `https://server.domain.com/directory/replisapi.dll`. Se il server è configurato per l'attesa su una porta diversa dalla porta 80, è necessario specificare anche il numero di porta nel formato `https://server.domain.com:portnumber/directory/replisapi.dll`, dove `portnumber` rappresenta la porta.  
   
  [  **@internet_login =** ] **'***internet_login***'**  
  Account di accesso utilizzato dall'agente di merge per la connessione al server Web che ospita la sincronizzazione Web tramite l'autenticazione di base HTTP. *internet_login* viene **sysname**, con un valore predefinito è NULL.  

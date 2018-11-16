@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b33acbcf74857cd6a2def74f3596e3dda2a034a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 880ccf036a12d5cc8e7e2bd56aa3bbcc58a2984f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720869"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665675"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Nozioni fondamentali sulla disponibilità di SQL Server per le distribuzioni di Linux
 
@@ -77,7 +77,7 @@ Samba, ovvero la variante Linux del (SMB) server message block, consente inoltre
 
 Consente inoltre alle condivisioni SMB basate su Windows; Non è necessario essere basato su Linux, purché la parte client di Samba sia configurata correttamente nei server Linux che ospita le condivisioni SMB [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e la condivisione disponga dell'accesso a destra. Per quelle in un ambiente misto, sarebbe un modo per sfruttare l'infrastruttura esistente per basato su Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] le distribuzioni.
 
-Un aspetto importante è che la versione di Samba distribuito deve essere compatibile con SMB 3.0. Quando è stato aggiunto il supporto SMB in [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], è necessaria tutte le condivisioni per supportare SMB 3.0. Se si usa Samba per la condivisione e non Windows Server, deve usare la condivisione Samba basata Samba 4.0 o versione successiva e idealmente 4.3 o versione successiva, che supporta SMB 3.1.1. È un'ottima fonte di informazioni su SMB e Linux [SMB3 in Samba](http://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
+Un aspetto importante è che la versione di Samba distribuito deve essere compatibile con SMB 3.0. Quando è stato aggiunto il supporto SMB in [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], è necessaria tutte le condivisioni per supportare SMB 3.0. Se si usa Samba per la condivisione e non Windows Server, deve usare la condivisione Samba basata Samba 4.0 o versione successiva e idealmente 4.3 o versione successiva, che supporta SMB 3.1.1. È un'ottima fonte di informazioni su SMB e Linux [SMB3 in Samba](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
 
 Infine, è possibile usare una condivisione di file system (NFS) di rete. Uso di NFS non è un'opzione in distribuzioni basate su Windows di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]e può essere usato solo per le distribuzioni basate su Linux.
 
@@ -117,7 +117,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **Documentazione del firewall:**
--   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Installare [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] pacchetti per la disponibilità
@@ -156,7 +156,7 @@ Per una documentazione completa su Pacemaker, tra cui una spiegazione più appro
 
 Ubuntu non dispone di una Guida per la disponibilità.
 
-Per altre informazioni sull'intero stack, vedere anche ufficiale [pagina della documentazione di Pacemaker](http://clusterlabs.org/doc/) sul sito Clusterlabs.
+Per altre informazioni sull'intero stack, vedere anche ufficiale [pagina della documentazione di Pacemaker](https://clusterlabs.org/doc/) sul sito Clusterlabs.
 
 ### <a name="pacemaker-concepts-and-terminology"></a>Pacemaker concetti e terminologia
 Questa sezione illustra i concetti e terminologia per un'implementazione di Pacemaker comuni.
@@ -208,13 +208,13 @@ Per modificare il percorso di registrazione predefinito, modificare `corosync.co
 Questa sezione illustra le considerazioni di pianificazione per un cluster Pacemaker.
 
 ### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Per i cluster Pacemaker virtualizzazione basati su Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
-Utilizzo delle macchine virtuali per la distribuzione basati su Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] le distribuzioni per gruppi di disponibilità e le istanze FCI è coperto dalle stesse regole per le relative controparti basati su Windows. È un set di regole per il supporto di base virtualizzata [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fornite da Microsoft nelle distribuzioni [956893 KB di supporto Microsoft](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Gli hypervisor diversi, ad esempio Microsoft Hyper-V e VMware ESXi potrebbero hanno varianze diverse per di più, a causa di differenze tra le piattaforme autonomamente.
+Utilizzo delle macchine virtuali per la distribuzione basati su Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] le distribuzioni per gruppi di disponibilità e le istanze FCI è coperto dalle stesse regole per le relative controparti basati su Windows. È un set di regole per il supporto di base virtualizzata [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fornite da Microsoft nelle distribuzioni [956893 KB di supporto Microsoft](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Gli hypervisor diversi, ad esempio Microsoft Hyper-V e VMware ESXi potrebbero hanno varianze diverse per di più, a causa di differenze tra le piattaforme autonomamente.
 
 Quando si tratta di gruppi di disponibilità e le istanze FCI in virtualization, assicurarsi che Microsoft anti-affinità viene impostata per i nodi di un determinato cluster Pacemaker. Quando è configurato per la disponibilità elevata in una configurazione del gruppo di disponibilità o FCI, le macchine virtuali che ospitano [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] mai deve essere in esecuzione nello stesso host hypervisor. Ad esempio, se viene distribuita un'infrastruttura di classificazione file due nodi, si dovranno essere *almeno* tre host hypervisor in modo che in una posizione per una delle VM che ospita un nodo per passare in caso di un errore dell'host, soprattutto se le funzionalità come Live Migrazione o vMotion.
 
 Per informazioni più specifiche, consultare:
 -   Documentazione di Hyper-V – [tramite Clustering Guest per la disponibilità elevata](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
--   White paper (scritto per le distribuzioni basate su Windows, ma la maggior parte dei concetti ancora applicare) – [pianificazione della disponibilità elevata, SQL Server distribuzioni di importanza strategica con VMware vSphere](http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
+-   White paper (scritto per le distribuzioni basate su Windows, ma la maggior parte dei concetti ancora applicare) – [pianificazione della disponibilità elevata, SQL Server distribuzioni di importanza strategica con VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 >[!NOTE]
 >RHEL con un cluster Pacemaker con STONITH non è ancora supportato da Hyper-V. Fino a quando non supportata, per altre informazioni e aggiornamenti, consultare [criteri di supporto per i cluster a disponibilità elevata RHEL](https://access.redhat.com/articles/29440#3physical_host_mixing).

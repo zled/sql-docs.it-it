@@ -20,12 +20,12 @@ ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29bb67908dc0f2946aa92738ab83c1d43a884f81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 251e5f79c03c02499aec9f3c0f90f42902d32474
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791189"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656610"
 ---
 # <a name="syssoapendpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47791189"
 |**is_sql_language_enabled**|**bit**|1 = BATCHES = è stata specificata l'opzione ENABLED, ovvero sono consentiti batch SQL ad hoc sull'endpoint.|  
 |**wsdl_generator_procedure**|**nvarchar(776)**|Nome in tre parti della stored procedure che implementa questo metodo.<br /><br /> I nomi dei metodi richiedono strettamente una sintassi in tre parti. Nomi in una, due e quattro parti non sono consentiti.|  
 |**default_database**|**sysname**|Nome del database predefinito indicato nell'opzione DATABASE =.<br /><br /> NULL = è specificato DEFAULT.|  
-|**default_namespace**|**nvarchar(384)**|Lo spazio dei nomi predefinito specificato nello spazio dei nomi = opzione o `http://tempuri.org` se è specificato DEFAULT.|  
+|**default_namespace**|**nvarchar(384)**|Lo spazio dei nomi predefinito specificato nello spazio dei nomi = opzione o `https://tempuri.org` se è specificato DEFAULT.|  
 |**default_result_schema**|**tinyint**|Valore predefinito dell'opzione SCHEMA =.<br /><br /> 0 = NONE<br /><br /> 1 = STANDARD|  
 |**default_result_schema_desc**|**nvarchar(60)**|Descrizione del valore predefinito dell'opzione SCHEMA =.<br /><br /> Nessuno<br /><br /> STANDARD|  
 |**is_xml_charset_enforced**|**bit**|0 = è specificata l'opzione CHARACTER_SET = SQL.<br /><br /> 1 = è specificata l'opzione CHARACTER_SET = XML.|  

@@ -10,35 +10,35 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 02d76e3eadd8852d1c512c263e74dd8f8d6013de
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: c74b39f4b7816221e2258bde2b1fef2b9e74d9d3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356452"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658575"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>Gruppi di disponibilità per i contenitori di SQL Server
 
-2019 di SQL Server supporta i gruppi di disponibilità in contenitori in Kubernetes. Per i gruppi di disponibilità, distribuire il Server SQL [Kubernetes operatore](http://coreos.com/blog/introducing-operators.html) al cluster Kubernetes. L'operatore consente di creare pacchetti, distribuire e gestire il gruppo di disponibilità in un cluster.
+2019 di SQL Server supporta i gruppi di disponibilità in contenitori in Kubernetes. Per i gruppi di disponibilità, distribuire il Server SQL [Kubernetes operatore](https://coreos.com/blog/introducing-operators.html) al cluster Kubernetes. L'operatore consente di creare pacchetti, distribuire e gestire il gruppo di disponibilità in un cluster.
 
 ![Gruppo di disponibilità nel contenitore Kubernetes](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
 Nell'immagine precedente, un cluster di quattro nodi kubernetes ospitato un gruppo di disponibilità con tre repliche. La soluzione include i componenti seguenti:
 
-* Kubernetes [ *distribuzione*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). La distribuzione include l'operatore e una mappa di configurazione. Queste forniscono l'immagine del contenitore, software e le istruzioni necessarie per distribuire le istanze di SQL Server per il gruppo di disponibilità.
+* Kubernetes [ *distribuzione*](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/). La distribuzione include l'operatore e una mappa di configurazione. Queste forniscono l'immagine del contenitore, software e le istruzioni necessarie per distribuire le istanze di SQL Server per il gruppo di disponibilità.
 
-* Tre nodi, ognuno dei quali ospita un [ *StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). L'oggetto StatefulSet contiene un [ *pod*](http://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). Ogni pod contiene:
+* Tre nodi, ognuno dei quali ospita un [ *StatefulSet*](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). L'oggetto StatefulSet contiene un [ *pod*](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). Ogni pod contiene:
   * Un contenitore di SQL Server in esecuzione un'istanza di SQL Server.
   * Un agente del gruppo di disponibilità. 
 
-* Due [ *ConfigMaps* ](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) correlate al gruppo di disponibilità. Il ConfigMaps forniscono informazioni su:
+* Due [ *ConfigMaps* ](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/) correlate al gruppo di disponibilità. Il ConfigMaps forniscono informazioni su:
   * La distribuzione per l'operatore.
   * Gruppo di disponibilità.
 
- * [*Volumi permanenti* ](http://kubernetes.io/docs/concepts/storage/persistent-volumes/) sono parti di archiviazione. Oggetto *attestazione di volume permanente* (PVC) è una richiesta per l'archiviazione da un utente. Ogni contenitore è associato a un'attestazione di volume permanente per l'archiviazione dati e di log. In Azure Kubernetes Service (AKS), si [creare un'attestazione di volume permanente](http://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) a automaticamente il provisioning dell'archiviazione basato su una classe di archiviazione.
+ * [*Volumi permanenti* ](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) sono parti di archiviazione. Oggetto *attestazione di volume permanente* (PVC) è una richiesta per l'archiviazione da un utente. Ogni contenitore è associato a un'attestazione di volume permanente per l'archiviazione dati e di log. In Azure Kubernetes Service (AKS), si [creare un'attestazione di volume permanente](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) a automaticamente il provisioning dell'archiviazione basato su una classe di archiviazione.
 
 
-Inoltre, il cluster memorizza [ *segreti* ](http://kubernetes.io/docs/concepts/configuration/secret/) per le password, certificati, chiavi e altre informazioni riservate.
+Inoltre, il cluster memorizza [ *segreti* ](https://kubernetes.io/docs/concepts/configuration/secret/) per le password, certificati, chiavi e altre informazioni riservate.
 
 ## <a name="deploy-the-availability-group-in-kubernetes"></a>Distribuire il gruppo di disponibilità in Kubernetes
 
@@ -74,11 +74,11 @@ Il codice per l'operatore, supervisor a disponibilità elevata e SQL Server vien
 
 * `mssql-operator`
 
-    Questo processo viene distribuito come una distribuzione di Kubernetes distinta. Registra il [risorsa personalizzata di Kubernetes](http://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) chiamato `SqlServer` (sqlservers.mssql.microsoft.com). Quindi rimane in ascolto per tali risorse viene creato o aggiornato nel cluster Kubernetes. Per ogni evento, crea o aggiorna le risorse di Kubernetes per l'istanza corrispondente (ad esempio l'oggetto StatefulSet, o `mssql-server-k8s-init-sql` processo).
+    Questo processo viene distribuito come una distribuzione di Kubernetes distinta. Registra il [risorsa personalizzata di Kubernetes](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) chiamato `SqlServer` (sqlservers.mssql.microsoft.com). Quindi rimane in ascolto per tali risorse viene creato o aggiornato nel cluster Kubernetes. Per ogni evento, crea o aggiorna le risorse di Kubernetes per l'istanza corrispondente (ad esempio l'oggetto StatefulSet, o `mssql-server-k8s-init-sql` processo).
 
 * `mssql-server-k8s-health-agent`
 
-    Il server web serve Kubernetes [probe attività](http://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) per determinare l'integrità di un'istanza di SQL Server. Monitora l'integrità dell'istanza di SQL Server locale tramite una chiamata `sp_server_diagnostics` e confrontare i risultati con i criteri di monitoraggio.
+    Il server web serve Kubernetes [probe attività](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) per determinare l'integrità di un'istanza di SQL Server. Monitora l'integrità dell'istanza di SQL Server locale tramite una chiamata `sp_server_diagnostics` e confrontare i risultati con i criteri di monitoraggio.
 
 * `mssql-ha-supervisor`
 
@@ -92,7 +92,7 @@ Il codice per l'operatore, supervisor a disponibilità elevata e SQL Server vien
 
 * `mssql-server-k8s-init-sql`
   
-    Questo Kubernetes [processo](http://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) applicherà una configurazione DSC a un'istanza di SQL Server. Il processo viene creato dall'operatore ogni volta che una risorsa di SQL Server viene creata o aggiornata. Assicura che l'istanza di SQL Server di destinazione corrispondente per la risorsa personalizzata disponga della configurazione desiderata descritta nelle sezioni della risorsa.
+    Questo Kubernetes [processo](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) applicherà una configurazione DSC a un'istanza di SQL Server. Il processo viene creato dall'operatore ogni volta che una risorsa di SQL Server viene creata o aggiornata. Assicura che l'istanza di SQL Server di destinazione corrispondente per la risorsa personalizzata disponga della configurazione desiderata descritta nelle sezioni della risorsa.
 
     Ad esempio, se le impostazioni seguenti sono necessari, li completa:
   * Aggiornare la password dell'amministratore di sistema

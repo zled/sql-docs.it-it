@@ -10,12 +10,12 @@ ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5ec1a21a717c642a4ca3b9ba83f3aba9636c8e4c
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: ea6d9a77cc7639bc9adc8daa38f12d0e21dbfb71
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099382"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664351"
 ---
 # <a name="creating-the-server-connection-files-db2tosql"></a>Creazione di file di connessione del Server (DB2ToSQL)
 Nella sezione dei server del file di script o in un file di connessione server separato, è possibile specificare le informazioni sul server. Il parametro della riga di comando per il file di connessione del server è, `-c <serverconnectionfile>`. Se lo stesso id di server è presente nel file di connessione server sia file di script, viene considerata la definizione del server nel file di script.  
@@ -78,5 +78,5 @@ Nella sezione dei server del file di script o in un file di connessione server s
 Il passaggio successivo in costi operativi console consiste [esecuzione della Console SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esecuzione della console SSMA](http://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
+[Esecuzione della console SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

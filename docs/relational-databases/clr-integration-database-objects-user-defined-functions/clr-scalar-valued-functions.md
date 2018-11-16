@@ -17,12 +17,12 @@ ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c2f90b3f7ce82a0ad6b21f2ad76d3e986ba1fb68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41c8dad185ad310cda38521819fc46146fe57743
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663865"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677350"
 ---
 # <a name="clr-scalar-valued-functions"></a>Funzioni a valori scalari CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Mapping dei dati dei parametri CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
- [Panoramica degli attributi personalizzati di integrazione CLR](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
+ [Panoramica degli attributi personalizzati di integrazione CLR](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
  [Funzioni definite dall'utente](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  [Accesso ai dati da oggetti di database CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
   

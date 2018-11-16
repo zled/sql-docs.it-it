@@ -10,12 +10,12 @@ ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 481429d65f587cdbeb7ed977cafd4553f697c59c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 094ceed90543e61bf0577131508612244393cead
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771445"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671673"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Riferimento all'interfaccia utente (DB2ToSQL)
 In questa sezione include argomenti della Guida per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per DB2.  
@@ -31,7 +31,7 @@ Nella tabella seguente sono elencate le finestre di dialogo SSMA:
 |[La connessione al Database DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Usare la **connettersi a DB2** finestra di dialogo per la connessione al database DB2 che si desidera eseguire la migrazione.|  
 |[Connettersi a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|Usare la **Connetti al Server SQL** finestra di dialogo per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui si desidera eseguire la migrazione.|  
 |[Report di migrazione dati &#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|Visualizza i risultati della migrazione dei dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Impostazioni di migrazione dei dati](http://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|Usare la **esteso le impostazioni di migrazione dati** pressione di tab per scrivere query personalizzate per la migrazione dei dati.|  
+|[Impostazioni di migrazione dei dati](https://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|Usare la **esteso le impostazioni di migrazione dati** pressione di tab per scrivere query personalizzate per la migrazione dei dati.|  
 |[Modificare il Mapping di tipo &#40;DB2ToSQL&#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|Usare la **nuovi Mapping dei tipi** o **Mapping dei tipi di modifica** finestre di dialogo per creare o modificare il mapping dei tipi di dati tra gli oggetti di database e il database di origine e destinazione.|  
 |[Impostazioni globali &#40;Editor&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|Utilizzare la pagina Editor del **Global Settings** finestra di dialogo per configurare le opzioni dell'editor di codice.|  
 |[Impostazioni globali &#40;finestre di dialogo&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-dialogs-db2tosql.md)|Utilizzare la pagina di finestre di dialogo del **Global Settings** finestra di dialogo per configurare le impostazioni di avviso e nella finestra di dialogo impostazione predefinita.|  

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,23 +15,23 @@ ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0c58d6c90b67369f969a37cc2ad7e03cc6cad82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65ed1ab997566c44aa67da44c8d14418304eecd0
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624609"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600661"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Panoramica di Provider Microsoft OLE DB remota
 Il Provider .NET Remoting Microsoft OLE DB consente a un utente locale in un computer client richiamare i provider di dati in un computer remoto. Come si farebbe se trattasse di un utente locale nel computer remoto, specificare i parametri del provider di dati per il computer remoto. Quindi specificare i parametri utilizzati dal Provider di servizi remoti di accedere al computer remoto. È quindi possibile accedere nel computer remoto come se trattasse di un utente locale.
 
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).
 
 ## <a name="provider-keyword"></a>Parola chiave provider
  Per richiamare il Provider OLE DB remota, specificare la parola chiave e il valore seguenti nella stringa di connessione. Si noti lo spazio vuoto nel nome del provider.
 
-```
+```vb
 "Provider=MS Remote"
 ```
 
@@ -58,14 +58,14 @@ Il Provider .NET Remoting Microsoft OLE DB consente a un utente locale in un com
 
  È anche possibile impostare le proprietà dinamiche scrivibile specificando i relativi nomi come parole chiave nella stringa di connessione. Ad esempio, impostare il **Timeout Internet** proprietà dinamica su cinque secondi, specificando:
 
-```
+```vb
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MS Remote;Internet Timeout=5000"
 ```
 
  È anche possibile impostare o recuperare una proprietà dinamica specificandone il nome dell'indice per la **proprietà** proprietà. Nell'esempio seguente viene illustrato come ottenere e visualizzare il valore corrente del **Timeout Internet** proprietà dinamica e quindi impostare un nuovo valore:
 
-```
+```vb
 Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
@@ -80,16 +80,16 @@ cn.Properties("Internet Timeout") = 5000
 ## <a name="example"></a>Esempio
  In questo esempio viene eseguita una query sulla **autori** tabella del **Pubs** database in un server denominato *server*. I nomi di origine dati remota e di server remoti sono incluse nel [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) metodo del[connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto e la query SQL viene specificata nel[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodo il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto. Oggetto **Recordset** oggetto viene restituito, modificato e utilizzato per aggiornare l'origine dati.
 
-```
+```vb
 Dim rs as New ADODB.Recordset
 Dim cn as New ADODB.Connection
-cn.Open  "Provider=MS Remote;Data Source=pubs;" & _
-         "Remote Server=http://YourServer"
+cn.Open  "Provider=MS Remote;Data Source=pubs;" & _
+         "Remote Server=https://YourServer"
 rs.Open "SELECT * FROM authors", cn
-...                'Edit the recordset
-rs.UpdateBatch     'Equivalent of RDS SubmitChanges
+...                'Edit the recordset
+rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ...
 ```
 
 ## <a name="see-also"></a>Vedere anche
- [Panoramica del Provider OLE DB per .NET Remoting](http://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)
+ [Panoramica del Provider OLE DB per .NET Remoting](https://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)

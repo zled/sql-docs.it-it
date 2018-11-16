@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 912d4bfee171c795518e794d4afbcb302e96ee33
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985326"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601458"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;modello &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |Continuo|Punto medio dei valori nella colonna.|  
   
 ## <a name="discrete-column-example"></a>Esempio con una colonna discreta  
- Esempio di codice seguente si basa sul `[TM Decision Tree]` modello creati nel [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La query restituisce i valori univoci presenti nella colonna discreta `Gender`.  
+ Esempio di codice seguente si basa sul `[TM Decision Tree]` modello creati nel [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La query restituisce i valori univoci presenti nella colonna discreta `Gender`.  
   
 ```  
 SELECT DISTINCT [Gender]  

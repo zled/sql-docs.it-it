@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64570b9a6f2052fdc3f9e5544a442853110587b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e3b29fd5f4fab7e487be5be18752ac7de892537
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613149"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560298"
 ---
 # <a name="address-book-command-buttons"></a>Pulsanti di comando di Address Book
 L'applicazione Address Book include i pulsanti di comando seguenti:  
@@ -33,7 +33,7 @@ L'applicazione Address Book include i pulsanti di comando seguenti:
 -   Oggetto **Cancel Changes** pulsante per annullare le modifiche.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="find-button"></a>Pulsante Trova  
  Facendo clic sui **trovare** pulsante Attiva Find_OnClick routine Sub di VBScript, che crea e invia la query SQL. Facendo clic su questo pulsante consente di popolare la griglia dei dati.  
@@ -45,7 +45,7 @@ L'applicazione Address Book include i pulsanti di comando seguenti:
   
  Ad esempio, se il **Last Name** casella conteneva la voce "Berge" e il **titolo** casella conteneva la voce "Program Manager", l'istruzione SQL (valore di `myQuery`) leggerebbe:  
   
-```  
+```sql
 Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee where lastname like 'Berge%' and title like 'Program Manager%'  
 ```  
   
@@ -54,7 +54,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
 ## <a name="preparing-and-sending-the-query"></a>La preparazione e l'invio di Query  
  L'ultima parte della routine Sub Find_OnClick è costituito da due istruzioni. L'istruzione prima assegna il [SQL](../../../ado/reference/rds-api/sql-property.md) proprietà del [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto uguale alla query SQL compilata in modo dinamico. La seconda istruzione fa sì che il **Servizi Desktop remoto. DataControl** oggetto (`DC1`) per eseguire query sul database e quindi visualizzare i nuovi risultati della query nella griglia.  
   
-```  
+```vb
 Sub Find_OnClick  
    '...  
    DC1.SQL = myQuery  
@@ -65,7 +65,7 @@ End Sub
 ## <a name="update-profile-button"></a>Pulsante Aggiorna profilo  
  Facendo clic sui **aggiornare il profilo** pulsante Attiva la routine Sub Update_OnClick VBScript, che esegue il [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) dell'oggetto (`DC1`) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) e [Aggiorna](../../../ado/reference/rds-api/refresh-method-rds.md) metodi.  
   
-```  
+```vb
 Sub Update_OnClick  
    DC1.SubmitChanges  
    DC1.Refresh  
@@ -77,7 +77,7 @@ End Sub
 ## <a name="cancel-changes-button"></a>Pulsante Annulla modifiche  
  Facendo clic **Cancel Changes** di VBScript routine Sub Cancel_OnClick, che viene eseguito il [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) dell'oggetto (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) (metodo).  
   
-```  
+```vb
 Sub Cancel_OnClick  
    DC1.CancelUpdate  
 End Sub  

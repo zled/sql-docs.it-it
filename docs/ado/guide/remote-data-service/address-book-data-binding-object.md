@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,18 +14,18 @@ ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95e948a80d4749a92ef1c8e299b47272d72c333f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da63965c867c56572956ca5400a4b9dcc1281abf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659259"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601912"
 ---
 # <a name="address-book-data-binding-object"></a>Oggetto di data binding di Address Book
 L'applicazione Address Book utilizza il [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto a cui associare i dati dal database di SQL Server a un oggetto visivo (in questo caso, una tabella DHTML) nella pagina dell'applicazione client HTML. La logica di programma VBScript guidato dagli eventi Usa le [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) per:  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 -   Eseguire query sul database, inviare gli aggiornamenti al database e aggiornare la griglia dei dati.  
   
@@ -33,10 +33,10 @@ L'applicazione Address Book utilizza il [Servizi Desktop remoto. DataControl](..
   
  Il codice seguente definisce il **Servizi Desktop remoto. DataControl** componente:  
   
-```  
+```vb
 <OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"  
    ID=DC1 Width=1 Height=1>  
-   <PARAM NAME="SERVER" VALUE="http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+   <PARAM NAME="SERVER" VALUE="https://<%=Request.ServerVariables("SERVER_NAME")%>">  
    <PARAM NAME="CONNECT" VALUE="Provider=sqloledb;  
 Initial Catalog=AddrBookDb;Integrated Security=SSPI;">  
 </OBJECT>  
@@ -61,7 +61,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |Parametro|Description|  
 |---------------|-----------------|  
-|[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|Se si Usa HTTP, il valore è il nome del computer del server preceduto da `http://`.|  
+|[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|Se si Usa HTTP, il valore è il nome del computer del server preceduto da `https://`.|  
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|Fornisce le informazioni di connessione necessarie per il **Servizi Desktop remoto. DataControl** per connettersi a SQL Server.|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|Imposta o restituisce la stringa di query usata per recuperare il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).|  
   

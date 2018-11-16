@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a8d89adf13e2e377122321fd8e385b96888e699e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5413d6900b133cb7a5baf1e80fe4fa5be09b285
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817479"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665890"
 ---
 # <a name="syspdwnodestables-transact-sql"></a>sys.pdw_nodes_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47817479"
   
 |Nome colonna|Tipo di dati|Description|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|\<colonne ereditate >||Per un elenco delle colonne ereditate da questa vista, vedere [Sys. Objects](http://msdn.microsoft.com/c36fa71e-549a-4533-a6cd-1314d26f533f).||  
+|\<colonne ereditate >||Per un elenco delle colonne ereditate da questa vista, vedere [Sys. Objects](https://msdn.microsoft.com/c36fa71e-549a-4533-a6cd-1314d26f533f).||  
 |lob_data_space_id|**int**||Sempre 0.|  
 |filestream_data_space_id|**int**|ID dello spazio dati per un filegroup FILESTREAM o [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|ID di colonna massimo utilizzato dalla tabella.||  

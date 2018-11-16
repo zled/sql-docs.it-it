@@ -19,12 +19,12 @@ ms.assetid: c1e64905-3c2b-4974-88f4-abf17cf7e289
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8caf413d437817f8723403ff94c0864b3cd03ade
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 01758e9dadcb0090a7bd55ec99375ce122633859
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215099"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676150"
 ---
 # <a name="using-wql-and-scripting-languages-with-the-wmi-provider"></a>Uso di WQL e di linguaggi di scripting con il provider WMI
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51215099"
   
  In alternativa, i servizi e le impostazioni di rete di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere gestiti a livello di programmazione utilizzando oggetti gestiti WMI in SMO. Per ulteriori informazioni sulla programmazione WMI gestiti gli oggetti, vedere [la gestione dei servizi e le impostazioni di rete dal Provider WMI utilizzando](../../relational-databases/server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md).  
   
- È possibile accedere al provider WMI per la gestione della configurazione utilizzando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console. Per altre informazioni sull'accesso al provider WMI da un'interfaccia utente, vedere [gestione dei servizi di argomenti relativi alle procedure &#40;Gestione configurazione SQL Server&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6).  
+ È possibile accedere al provider WMI per la gestione della configurazione utilizzando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console. Per altre informazioni sull'accesso al provider WMI da un'interfaccia utente, vedere [gestione dei servizi di argomenti relativi alle procedure &#40;Gestione configurazione SQL Server&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Accedere al Provider WMI per Gestione configurazione usando WQL](../../relational-databases/wmi-provider-configuration/access-wmi-provider-for-configuration-management-using-wql.md)   

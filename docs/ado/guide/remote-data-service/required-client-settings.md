@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,16 +13,16 @@ ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c7e8b5d0583c2f0938c792d4e7fb9980e663a9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cec3e79e3d37f064cb742588519a374737e01319
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667239"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558218"
 ---
 # <a name="required-client-settings"></a>Impostazioni obbligatorie dei client
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Specificare le impostazioni seguenti per usare una classe personalizzata **DataFactory** gestore.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47667239"
   
  Si supponga che le sezioni seguenti **MSDFMAP. INI** e il nome dell'origine dati AdvWorks, sono stati definiti in precedenza:  
   
-```  
+```console
 [connect CustomerDataBase]  
 Access=ReadWrite  
 Connect="DSN=AdvWorks"  
@@ -51,10 +51,10 @@ SQL="SELECT * FROM Customers WHERE CustomerID = ?"
   
 ## <a name="rdsdatacontrol-version"></a>SERVIZI DESKTOP REMOTO. Versione DataControl  
   
-```  
+```vb
 Dim dc as New RDS.DataControl  
 Set dc.Handler = "MSDFMAP.Handler"  
-Set dc.Server = "http://yourServer"  
+Set dc.Server = "https://yourServer"  
 Set dc.Connect = "Data Source=CustomerDatabase"  
 Set dc.SQL = "CustomerById(4)"  
 dc.Refresh  
@@ -62,7 +62,7 @@ dc.Refresh
   
 ## <a name="recordset-version"></a>Versione del recordset  
   
-```  
+```vb
 Dim rs as New ADODB.Recordset  
 rs.CursorLocation = adUseClient  
 ```  
@@ -71,9 +71,9 @@ rs.CursorLocation = adUseClient
   
  RS. Aprire "CustomerByID (4)", "gestore = MSDFMAP. Gestore;"& _  
   
-```  
+```vb
 "Provider=MS Remote;Data Source=CustomerDatabase;" & _  
-"Remote Server=http://yourServer"  
+"Remote Server=https://yourServer"  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
@@ -84,25 +84,4 @@ rs.CursorLocation = adUseClient
  [Impostazioni Client richieste](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Informazioni sul file di personalizzazione.](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Scrittura di un gestore personalizzato](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

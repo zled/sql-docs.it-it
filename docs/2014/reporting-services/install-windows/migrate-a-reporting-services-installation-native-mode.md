@@ -1,32 +1,23 @@
 ---
 title: Eseguire la migrazione di un'installazione di Reporting Services (modalità nativa) | Microsoft Docs
-ms.custom: ''
-ms.date: 08/10/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- database-engine
-ms.topic: conceptual
-helpviewer_keywords:
-- manual Reporting Services migrations
-- Report Server Windows service
-- custom Reporting Services installations
-- automatic Reporting Services migrations
-- Reporting Services, upgrades
-- upgrading Reporting Services
-- migrating Reporting Services
-ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0c156dee6d76d9b83cdaa2cc7f1856e128d53186
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.custom: ''
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.technology: database-engine
+ms.topic: conceptual
+ms.date: 08/10/2017
+ms.openlocfilehash: 2575f73102f1fbaa73a7606ceb8c070dcdd72b58
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082891"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604061"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Eseguire la migrazione di un'installazione di Reporting Services (modalità nativa)
+
   Questo argomento fornisce istruzioni dettagliate per la migrazione di una delle versioni supportate seguenti di una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa a una nuova istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -77,7 +68,7 @@ ms.locfileid: "48082891"
   
  Sono presenti restrizioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospitano il database del server di report. Rivedere l'argomento seguente se si riutilizza un database del server di report creato in un'installazione precedente.  
   
--   [Creare un Database del Server di Report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+-   [Creare un database del server di report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
   
 ##  <a name="bkmk_fixed_database_name"></a> Nome fisso del database  
  Non è possibile rinominare il database del server di report poiché l'identità del database viene registrata nelle stored procedure del server di report al momento della creazione del database stesso. La ridenominazione dei database primari o temporanei del server di report causa errori durante l'esecuzione delle stored procedure, invalidando l'installazione del server di report.  
@@ -246,7 +237,7 @@ ms.locfileid: "48082891"
   
 1.  Testare le directory virtuali del server di report e di Gestione report aprendo un browser e digitando l'indirizzo URL. Per altre informazioni, vedere [Verificare un'installazione di Reporting Services](verify-a-reporting-services-installation.md).  
   
-2.  Testare i report e verificare che contengano i dati previsti. Rivedere le informazioni di origine dei dati per verificare se le informazioni sulla connessione all'origine dei dati sono ancora specificate. Il server di report utilizza il modello a oggetti dei report di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per l'elaborazione e il rendering dei report, ma non sostituisce i costrutti di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] con i nuovi elementi RDL (Report Definition Language). Per altre informazioni sulla modalità di esecuzione dei report esistenti in un server di report di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vedere [Aggiornare i report](upgrade-reports.md).  
+2.  Testare i report e verificare che contengano i dati previsti. Rivedere le informazioni di origine dei dati per verificare se le informazioni sulla connessione all'origine dei dati sono ancora specificate. Il server di report utilizza il modello a oggetti dei report di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per l'elaborazione e il rendering dei report, ma non sostituisce i costrutti di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] con i nuovi elementi RDL (Report Definition Language). Per altre informazioni sulla modalità di esecuzione dei report esistenti in un server di report di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , vedere [Aggiornare i report](upgrade-reports.md).  
   
 ##  <a name="bkmk_remove_unused"></a> Rimozione di programmi e file inutilizzati  
  Dopo avere eseguito la migrazione del server di report a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , potrebbe essere necessario seguire questa procedura per rimuovere programmi e file che non sono più necessari.  
@@ -269,7 +260,7 @@ ms.locfileid: "48082891"
   
 ## <a name="see-also"></a>Vedere anche  
  [Eseguire la migrazione di un'installazione di Reporting Services &#40;modalità SharePoint&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
- [Database del Server di report &#40;modalità nativa SSRS&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
+ [Database del server di report &#40;modalità nativa SSRS&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [Eseguire l'aggiornamento e la migrazione di Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [Compatibilità con le versioni precedenti di Reporting Services](../reporting-services-backward-compatibility.md)   
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

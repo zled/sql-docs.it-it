@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9462f144cf578aad6e8e704bf5ebf5cd46a66f77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1deb50644c6a23e08dd566f0781902c0d5bdb88d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598609"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658494"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Recupero di dati BLOB mediante IRow::Open e ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,6 +84,6 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
  I dati di grandi dimensioni possono essere associati o recuperati utilizzando l'interfaccia **ISequentialStream**. Per le colonne associate l'impostazione del flag di stato DBSTATUS_S_TRUNCATED consente di indicare se i dati vengono troncati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Recupero di dati BLOB tramite IRow](http://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
+ [Recupero di dati BLOB tramite IRow](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
   
   

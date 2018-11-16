@@ -13,19 +13,19 @@ ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1dc2552c848b691346c57a0191f9c9200bad4523
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce48e7aa89451131b7ed483fa5132af22565c170
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666169"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673550"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>Funzione SQLCleanupConnectionPoolID
 **Conformità**  
  Versione introdotta: Conformità 3,81 standard ODBC: ODBC  
   
  **Riepilogo**  
- **SQLCleanupConnectionPoolID** informa un driver che è stato verificato il timeout di un ID del pool. Timeout di un pool di ID possibile timeout ogni volta che sono state tutte le connessioni in un pool associato a tale ID del pool. Visualizzare [limitazione delle richieste in Microsoft Data Access Components](http://msdn.microsoft.com/library/ms810829.aspx) per altre informazioni sul timeout di connessione.  
+ **SQLCleanupConnectionPoolID** informa un driver che è stato verificato il timeout di un ID del pool. Timeout di un pool di ID possibile timeout ogni volta che sono state tutte le connessioni in un pool associato a tale ID del pool. Visualizzare [limitazione delle richieste in Microsoft Data Access Components](https://msdn.microsoft.com/library/ms810829.aspx) per altre informazioni sul timeout di connessione.  
   
 ## <a name="syntax"></a>Sintassi  
   

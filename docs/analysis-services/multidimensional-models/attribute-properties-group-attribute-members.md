@@ -1,5 +1,5 @@
 ---
-title: Raggruppare i membri dell'attributo (discretizzazione) | Documenti Microsoft
+title: Raggruppare membri di attributo (discretizzazione) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: edf1f554a4e7829883263198b132f479b0001d5d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 622258222ef4f9dc8e4e4944daf584bc5780ea6e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021758"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813714"
 ---
-# <a name="attribute-properties---group-attribute-members"></a>Proprietà dell'attributo - gruppo i membri dell'attributo
+# <a name="attribute-properties---group-attribute-members"></a>Proprietà degli attributi - Membri del gruppo di attributi
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Un gruppo di membri è una raccolta generata dal sistema di membri consecutivi di una dimensione. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], i membri di un attributo possono essere raggruppati in gruppi di membri tramite un processo denominato "discretizzazione". Un livello di una gerarchia contiene gruppi di membri o membri, ma non entrambi. Esplorando un livello contenente gruppi di membri, gli utenti aziendali visualizzano i nomi e i valori delle celle dei gruppi di membri. I membri generati da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per supportare i gruppi di membri vengono denominati membri di raggruppamento e vengono visualizzati come membri ordinari.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "34021758"
   
  `<First definition> ::= <Name expression>`  
   
- `<Intermediate defintion> ::= <Name expression>`  
+ `<Intermediate definition> ::= <Name expression>`  
   
  `<Last definition> ::= <Name expression>`  
   
@@ -98,6 +98,6 @@ ms.locfileid: "34021758"
 -   Se la tabella di una dimensione contenente gruppi di membri viene aggiornata e la dimensione viene quindi completamente elaborata, verrà generato un nuovo set di gruppi di membri. I nomi e gli elementi figlio dei nuovi gruppi di membri potranno essere diversi da quelli dei gruppi di membri precedenti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli attributi e gerarchie di attributi](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
+ [Attributi e gerarchie di attributi](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf04bac335e35088c1faf7a29b2e07b1ad324add
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa87aa3514af538f55965b00efe8f5965f5c753f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602589"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674310"
 ---
 # <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47602589"
   
  Numerosi tentativi sono indicativi di problemi di concorrenza; contattare il supporto [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- Per altre informazioni sugli indici con ottimizzazione per la memoria, non cluster, vedere [panoramica dei meccanismi interni OLTP In memoria SQL Server](http://t.co/T6zToWc6y6), pagina 17.  
+ Per altre informazioni sugli indici con ottimizzazione per la memoria, non cluster, vedere [panoramica dei meccanismi interni OLTP In memoria SQL Server](https://t.co/T6zToWc6y6), pagina 17.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  

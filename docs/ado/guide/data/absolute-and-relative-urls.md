@@ -15,12 +15,12 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2bb960fc84dd1558589918096daedf4d36d18ebf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c00420d6bed0b49c6e136c82f03460dcaaea8a85
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632169"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604881"
 ---
 # <a name="absolute-and-relative-urls"></a>URL relativi e assoluti
 Un URL specifica la posizione di una destinazione archiviata in un computer locale o in rete. La destinazione può essere un file, directory, pagina HTML, image, programma e così via *.*  
@@ -68,7 +68,7 @@ Un URL specifica la posizione di una destinazione archiviata in un computer loca
  Ad esempio, l'esempio di codice seguente viene illustrato come aprire una **Recordset** sul file Readme25. txt della directory/Winnt system32:  
   
 ```  
-recordset.Open "system32/Readme25.txt", "URL=http://YourServer/Winnt/",,,adCmdTableDirect  
+recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
  L'URL assoluto nella stringa di connessione specifica il server (`YourServer`) e il percorso (`Winnt`). Questo URL definisce anche il contesto.  
@@ -80,7 +80,7 @@ recordset.Open "system32/Readme25.txt", "URL=http://YourServer/Winnt/",,,adCmdTa
  Come ulteriore esempio, verrà aperto il codice seguente un' **Recordset** sul contenuto del `Winnt` directory:  
   
 ```  
-recordset.Open "", "URL=http://YourServer/Winnt/",,,adCmdTableDirect  
+recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
 ## <a name="ole-db-provider-supplied-url-schemes"></a>Schemi di URL fornito dal Provider OLE DB  

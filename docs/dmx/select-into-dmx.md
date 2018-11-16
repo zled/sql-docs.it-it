@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: acc30b259a9fa327c7f5d48fb0f77fdc3b8bf110
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8a453fb545fd0a51b7d356c0d855813cea69f272
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040419"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602601"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +54,7 @@ FROM <existing model>
  Il **WITH DRILLTHROUGH** clausola consente il drill-through sul nuovo modello di data mining. È possibile attivare il drill-through solo al momento della creazione del modello.  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>Esempio 1: Modifica dei parametri del modello  
- L'esempio seguente crea un nuovo modello di data mining basato su un modello di data mining esistente, `TM_Clustering`, che si crea nel [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Il parametro CLUSTER_COUNT viene modificato in modo che nel nuovo modello esistano al massimo cinque cluster. Nel modello esistente viene invece utilizzato il valore predefinito 10.  
+ L'esempio seguente crea un nuovo modello di data mining basato su un modello di data mining esistente, `TM_Clustering`, che si crea nel [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Il parametro CLUSTER_COUNT viene modificato in modo che nel nuovo modello esistano al massimo cinque cluster. Nel modello esistente viene invece utilizzato il valore predefinito 10.  
   
 ```  
 SELECT * INTO [New_Clustering]  

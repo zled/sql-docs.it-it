@@ -16,12 +16,12 @@ ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: add581048739a6ba12dc046d2f9362816b661687
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77ad00d9c21a7f7558f8f5cafc66464c1ffc54f7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680617"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600181"
 ---
 # <a name="server-property-rds"></a>Proprietà Server (Servizi Desktop remoto)
 Indica il protocollo di nome e la comunicazione Internet Information Services (IIS).  
@@ -29,7 +29,7 @@ Indica il protocollo di nome e la comunicazione Internet Information Services (I
  È possibile impostare il **Server** in fase di progettazione nei tag dell'oggetto di proprietà di[Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) dell'oggetto, o in fase di esecuzione nel codice di script.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintassi  
  **HTTP**  
@@ -49,7 +49,7 @@ Indica il protocollo di nome e la comunicazione Internet Information Services (I
 ```  
   
 DataControl  
-.Server="http://  
+.Server="https://  
 awebsrvr:port  
 "  
   
@@ -112,7 +112,7 @@ DataControl.Server=""
  Oggetto **stringa** valore che contiene un Internet o intranet percorso o nome del computer, se il server è in un computer remoto; oppure, una stringa vuota se il server nel computer locale.  
   
  *port*  
- Facoltativa. Una porta che viene usata per connettersi a un server che esegue IIS. Il numero di porta è impostato in Internet Explorer (nelle **visualizzazione** menu, fare clic su **opzioni**e quindi selezionare il **connessione** scheda) o in IIS.  
+ Facoltativo. Una porta che viene usata per connettersi a un server che esegue IIS. Il numero di porta è impostato in Internet Explorer (nelle **visualizzazione** menu, fare clic su **opzioni**e quindi selezionare il **connessione** scheda) o in IIS.  
   
  *DataControl*  
  Una variabile oggetto che rappresenta un **Servizi Desktop remoto. DataControl** oggetto.  

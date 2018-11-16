@@ -5,8 +5,7 @@ ms.date: 07/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
@@ -16,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d6e3a5e26fd40fc4f2fca093a41048aa7e3c5b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695900"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512706"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Graph processing con SQL Server e Database SQL di Azure
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47695900"
 
 
 ## <a name="what-is-a-graph-database"></a>Che cos'è un database a grafo?  
-Un database a grafo è una raccolta di nodi (o i vertici) e i bordi (o le relazioni). Un nodo rappresenta un'entità (ad esempio, una persona o un'organizzazione) e una rete perimetrale rappresenta una relazione tra i due nodi che si connette (ad esempio, mi piace o amici). I nodi e bordi possono avere proprietà associate. Ecco alcune funzionalità che rendono un database a grafo univoco:  
+Un database a grafo è una raccolta di nodi (o vertici) e archi (o relazioni). Un nodo rappresenta un'entità (ad esempio, una persona o un'organizzazione) e un arco rappresenta una relazione tra i due nodi che connette (ad esempio, Mi piace o amici). I nodi e bordi possono avere proprietà associate. Ecco alcune funzionalità che rendono un database a grafo univoco:  
 -   Perimetri o le relazioni sono entità di prima classe in un Database a grafo e possono avere attributi o le proprietà associate. 
 -   Un bordo singolo può connettersi in modo flessibile più nodi in un Database a grafo.
 -   È possibile esprimere facilmente criteri di ricerca e query di esplorazione multi hop.

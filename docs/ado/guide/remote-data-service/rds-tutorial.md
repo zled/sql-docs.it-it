@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 02/15/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9a7538bb51ebe0a04a20aff81e83c3cc1ac92aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c9136f1fc1fdf7538744501984af50e2ca52f04
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747889"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558628"
 ---
 # <a name="rds-tutorial"></a>Esercitazione su RDS
 Questa esercitazione viene illustrato l'utilizzo del modello di programmazione di servizi desktop remoto per eseguire query e aggiornare un'origine dati. In primo luogo, la descrive i passaggi necessari per completare questa attività. Quindi l'esercitazione viene ripetuta in Microsoft® Visual Basic Scripting Edition (con ADO per Windows Foundation Classes (ADO/WFC)).  
@@ -30,7 +30,7 @@ Questa esercitazione viene illustrato l'utilizzo del modello di programmazione d
 -   Se si è incerti su una determinata funzionalità di servizi desktop remoto e ha una conoscenza minima di un altro linguaggio, potrebbe essere in grado di risolvere la domanda cercando la stessa funzionalità in un altro linguaggio.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="how-the-tutorial-is-presented"></a>La modalità di presentazione dell'esercitazione  
  Questa esercitazione è basata sul modello di programmazione di servizi desktop remoto. Viene descritto ogni passaggio del modello di programmazione singolarmente. Inoltre, viene illustrato ogni passaggio con un frammento di codice Visual Basic.  

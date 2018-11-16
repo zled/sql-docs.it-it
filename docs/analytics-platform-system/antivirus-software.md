@@ -1,6 +1,6 @@
 ---
-title: Il software antivirus - Analitica Platform System | Documenti Microsoft
-description: Se il centro dati richiede un software antivirus, è possibile utilizzare queste linee guida per installare il software antivirus nel sistema di piattaforma Analitica. Si consiglia di non installare il software antivirus a meno che non è un requisito rigorosi a livello del data center.
+title: Il software antivirus - sistema di piattaforma Analitica | Microsoft Docs
+description: Se il data center richiede un software antivirus, usare queste linee guida per installare il software antivirus nel sistema di piattaforma Analitica. È consigliabile non installare il software antivirus a meno che non è un requisito fisso del data center.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,42 +9,42 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5d9ff6848d2df43408613d41dc7a0e6f8c1b0b8c
-ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
+ms.openlocfilehash: 2bf94fb04bd6f96de019c7e8543b8a626cebe439
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34550044"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699122"
 ---
-# <a name="antivirus-software-for-analytics-platform-system"></a>Software antivirus per Analitica Platform System
-Se il centro dati richiede un software antivirus, è possibile utilizzare queste linee guida per installare il software antivirus nel sistema di piattaforma Analitica. Si consiglia di non installare il software antivirus a meno che non è un requisito rigorosi a livello del data center.  
+# <a name="antivirus-software-for-analytics-platform-system"></a>Software antivirus per il sistema di piattaforma Analitica
+Se il data center richiede un software antivirus, usare queste linee guida per installare il software antivirus nel sistema di piattaforma Analitica. È consigliabile non installare il software antivirus a meno che non è un requisito fisso del data center.  
   
 > [!WARNING]  
-> È consigliabile valutare singolarmente per ogni computer e per il sistema della piattaforma Analitica nel suo complesso il rischio di sicurezza e di selezionare gli strumenti appropriati per il livello di rischio per la sicurezza di ogni computer. Inoltre, è consigliabile che prima di distribuire qualsiasi progetto di protezione da virus, provare l'intero sistema sotto un carico completo per misurare le modifiche alla stabilità e prestazioni.  
+> È consigliabile valutare singolarmente il rischio di sicurezza per ogni computer e per il sistema di piattaforma Analitica nel suo complesso e di selezionare gli strumenti appropriati per il livello di rischio di sicurezza di ciascun computer. Inoltre, è consigliabile che prima di distribuire qualsiasi progetto di protezione da virus, provare l'intero sistema sotto un carico completo per misurare le modifiche della stabilità e prestazioni.  
 >   
-> Protezione da virus richiede alcune risorse di sistema per l'esecuzione. È necessario eseguire il test prima e dopo l'installazione del software antivirus per determinare se è presente alcun effetto sulle prestazioni del sistema di piattaforma Analitica.  
+> Protezione da virus richiede alcune risorse di sistema per l'esecuzione. È necessario eseguire test prima e dopo l'installazione del software antivirus per determinare se è presente alcun effetto sulle prestazioni del sistema di piattaforma Analitica.  
   
-Questo argomento è basato sulle indicazioni fornite in [come scegliere il software antivirus in esecuzione in computer che eseguono SQL Server](http://support.microsoft.com/kb/309422) e [961804 articolo KB](http://support.microsoft.com/kb/961804/en-us).  
+In questo argomento si basa sulle indicazioni fornite in [come scegliere il software antivirus per l'esecuzione nei computer che eseguono SQL Server](https://support.microsoft.com/kb/309422) e [KB articolo 961804](https://support.microsoft.com/kb/961804/en-us).  
   
 ## <a name="exclusion-list-for-physical-hosts"></a>Elenco di esclusione per gli host fisici  
-Per installare il software antivirus in host fisici, escludere il seguente elenco di directory e processi. Questi non da analizzare, il software antivirus.  
+Per installare il software antivirus in host fisici, escludere il seguente elenco di processi e le directory. Questi non devono essere analizzati con il software antivirus.  
   
-**Escludi directory seguenti:**  
+**Escludere queste directory:**  
   
--   C:\ProgramData\Microsoft\Windows\Hyper-V - directory di configurazione macchina virtuale  
+-   C:\programdata\microsoft\windows\hyper-v. - directory di configurazione macchina virtuale  
   
--   Dischi rigidi C:\Users\Public\Documents\Hyper-V\Virtual - directory di unità disco rigido virtuale predefinita  
+-   Dischi rigidi C:\Users\Public\Documents\Hyper-V\Virtual - directory unità disco rigido virtuale predefinita  
   
 -   C:\clusterStorage - directory unità disco rigido virtuale  
   
 **Escludere questi processi:**  
   
--   Virtual machine management (Vmms.exe)  
+-   Gestione delle macchine virtuali (Vmms.exe)  
   
 -   Processi di lavoro di macchina virtuale (Vmwp.exe)  
   
 ## <a name="exclusion-list-for-virtual-machines-vms"></a>Elenco di esclusione per le macchine virtuali (VM)  
-Per installare il software antivirus in macchine virtuali, escludere il seguente elenco di file e directory. Questi non da analizzare, il software antivirus.  
+Per installare il software antivirus nelle macchine virtuali, escludere nell'elenco seguente di file e directory. Questi non devono essere analizzati con il software antivirus.  
   
 ***PDW_region*-CTL01**  
   
@@ -75,5 +75,5 @@ Per installare il software antivirus in macchine virtuali, escludere il seguente
 -   C:\iscsitarget  
   
 ## <a name="see-also"></a>Vedere anche  
-[Attività di gestione dello strumento &#40;Analitica Platform System&#41;](appliance-management-tasks.md)  
+[Attività di gestione di Appliance &#40;sistema di piattaforma Analitica&#41;](appliance-management-tasks.md)  
   

@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ebaeb1a0fce11d984f858247763c4222d4a8b27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90c611eff42a3cd31894e27b1a7737ca77e91bea
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603549"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670407"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipi di dati XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47603549"
  XPath utilizza tre tipi di dati: **stringa**, **numero**, e **booleano**. Il **numero** tipo di dati è sempre una valore IEEE 754 a precisione doppia. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float (53)** tipo di dati è il più vicino a XPath **numero**. Tuttavia **float (53)** è non esattamente IEEE 754. Ad esempio, non viene utilizzato né un valore diverso da un numero (NaN, Not-a-Number) né un valore infinito. Tenta di convertire una stringa in un valore numerico **numero** e tenta di dividere per zero restituiscono un errore.  
   
 ## <a name="xpath-conversions"></a>Conversioni XPath  
- Quando si utilizza una query XPath, ad esempio `OrderDetail[@UnitPrice > "10.0"]`, le conversioni dei tipi di dati implicite ed esplicite possono modificare impercettibilmente il significato della query. È pertanto importante comprendere le modalità di implementazione dei tipi di dati XPath. La specifica del linguaggio XPath, XML Path Language (XPath) version 1.0 W3C Proposed Recommendation 8 October 1999, visitare il sito Web W3C all'indirizzo http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ Quando si utilizza una query XPath, ad esempio `OrderDetail[@UnitPrice > "10.0"]`, le conversioni dei tipi di dati implicite ed esplicite possono modificare impercettibilmente il significato della query. È pertanto importante comprendere le modalità di implementazione dei tipi di dati XPath. La specifica del linguaggio XPath, XML Path Language (XPath) version 1.0 W3C Proposed Recommendation 8 October 1999, visitare il sito Web W3C all'indirizzo https://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  Gli operatori XPath sono suddivisi in quattro categorie:  
   

@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 3369dfd653f1a0485f60145779b5691e200493a3
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: eb92907b87382c9aad2b7c1a580bf0feb33ac7bd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254407"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657150"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>Le Stored procedure di SQL Data Warehouse
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "50254407"
  [sp_special_columns_100 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md)  
   
 > [!NOTE]  
->  Un sistema aggiuntivo vengono usate stored procedure solo all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tramite il client di API e non sono destinati per cliente generale utilizzare. Queste procedure sono elencate in [Stored procedure di sistema (Transact-SQL)](http://msdn.microsoft.com/library/ms187961.aspx). Queste procedure sono soggetti a modifiche e non è garantita la compatibilità. Non sono disponibili in tutte le procedure nell'elenco [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+>  Un sistema aggiuntivo vengono usate stored procedure solo all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tramite il client di API e non sono destinati per cliente generale utilizzare. Queste procedure sono elencate in [Stored procedure di sistema (Transact-SQL)](https://msdn.microsoft.com/library/ms187961.aspx). Queste procedure sono soggetti a modifiche e non è garantita la compatibilità. Non sono disponibili in tutte le procedure nell'elenco [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni archiviate di sistema &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md)   

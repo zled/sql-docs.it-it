@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f20220208aed16d745dbab5aecce64e6653ef350
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394501"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700915"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Caricare dati con Integration Services per Parallel Data Warehouse
 Fornisce informazioni di riferimento e la distribuzione per il caricamento di dati in SQL Server Parallel Data Warehouse usando i pacchetti di SQL Server Integration Services (SSIS).  
@@ -29,7 +29,7 @@ Before you can start loading data, use the following topics to install the Integ
   
 -   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
-For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
+For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
 
 -->
   
@@ -249,12 +249,12 @@ Eseguire il pacchetto nel computer Integration Services.
 ## <a name="see-also"></a>Vedere anche  
 [Creare un'attività script che utilizza l'adattatore di destinazione PDW SSIS](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
-[Progettazione e implementazione di pacchetti (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
-[Esercitazione: Creazione di un pacchetto di base utilizzando una procedura guidata](http://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
-[Introduzione (Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
-[Esempio di generazione dinamica dei pacchetti](http://go.microsoft.com/fwlink/?LinkId=202413)  
-[Progettazione di pacchetti SSIS per parallelismo (Video di SQL Server)](http://msdn.microsoft.com/library/dd795221.aspx)  
-[Esempi della Community di Microsoft SQL Server: Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
+[Progettazione e implementazione di pacchetti (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
+[Esercitazione: Creazione di un pacchetto di base utilizzando una procedura guidata](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
+[Introduzione (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
+[Esempio di generazione dinamica dei pacchetti](https://go.microsoft.com/fwlink/?LinkId=202413)  
+[Progettazione di pacchetti SSIS per parallelismo (Video di SQL Server)](https://msdn.microsoft.com/library/dd795221.aspx)  
+[Esempi della Community di Microsoft SQL Server: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [Miglioramento dei caricamenti incrementali con Change Data Capture](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [Trasformazione Dimensione a modifica lenta](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
 [Attività Inserimento bulk](../integration-services/control-flow/bulk-insert-task.md)  

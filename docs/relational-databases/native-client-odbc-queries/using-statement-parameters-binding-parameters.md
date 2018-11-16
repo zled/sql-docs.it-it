@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3927708ae0e9fe00043bc0cb51926d836dd912f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a81f7808275dfee216d6d884db45e267e06271c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748699"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662490"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>Uso dei parametri dell'istruzione - Associazione di parametri
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47748699"
   
  Parametri denominati sono supportati solo quando si utilizza il [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** istruzione o la sequenza di escape ODBC CALL per eseguire una stored procedure.  
   
- Se **SQL_DESC_NAME** è impostata per un parametro di stored procedure, è necessario impostare anche tutti i parametri di stored procedure nella query **SQL_DESC_NAME**.  Se i valori letterali vengono usati nelle chiamate a stored procedure, in cui i parametri hanno **SQL_DESC_NAME** impostato, i valori letterali devono utilizzare il formato *' nome*=*valore*', in cui *name* è il nome di parametro della stored procedure (ad esempio, @p1). Per ulteriori informazioni, vedere [associazione di parametri (parametri) di nome](http://go.microsoft.com/fwlink/?LinkId=167215).  
+ Se **SQL_DESC_NAME** è impostata per un parametro di stored procedure, è necessario impostare anche tutti i parametri di stored procedure nella query **SQL_DESC_NAME**.  Se i valori letterali vengono usati nelle chiamate a stored procedure, in cui i parametri hanno **SQL_DESC_NAME** impostato, i valori letterali devono utilizzare il formato *' nome*=*valore*', in cui *name* è il nome di parametro della stored procedure (ad esempio, @p1). Per ulteriori informazioni, vedere [associazione di parametri (parametri) di nome](https://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso dei parametri di un'istruzione](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

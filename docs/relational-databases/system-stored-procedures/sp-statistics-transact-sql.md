@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d72e2c9f79e2029e26275be46e200d476dbf621a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b365ad16ce7f96ba3e0dd14f278b1ce4db60a32
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704549"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657133"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +99,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  Il tipo di indice Hash accetta ricerche di corrispondenze esatte o ricerche basate su intervalli, ma non viene utilizzato per ricerche con criteri.  
   
- **sp_statistics** equivale a **SQLStatistics** in ODBC. I risultati restituiti vengono ordinati **NON_UNIQUE**, **tipo**, **INDEX_QUALIFIER**, **INDEX_NAME**, e **SEQ_IN_ INDICE**. Per altre informazioni, vedere la [riferimento all'API ODBC](http://go.microsoft.com/fwlink/?LinkId=68323).  
+ **sp_statistics** equivale a **SQLStatistics** in ODBC. I risultati restituiti vengono ordinati **NON_UNIQUE**, **tipo**, **INDEX_QUALIFIER**, **INDEX_NAME**, e **SEQ_IN_ INDICE**. Per altre informazioni, vedere la [riferimento all'API ODBC](https://go.microsoft.com/fwlink/?LinkId=68323).  
   
 ## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione SELECT per lo schema.  

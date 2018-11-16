@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eefb9269a3eb0dc7a6b95e84accb4c68c6737a13
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b7e80f8a9dfb82f13350b94b310690a081fae1de
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063951"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606641"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ IsTestCase()
  Per restituire i case che fanno parte del set di dati di training, utilizzare la funzione [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md).  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente usa il `Targeted Mailing` struttura di data mining che viene creato nel [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La query restituisce tutti i case nella struttura utilizzati per il testing.  
+ L'esempio seguente usa il `Targeted Mailing` struttura di data mining che viene creato nel [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La query restituisce tutti i case nella struttura utilizzati per il testing.  
   
 ```  
 SELECT *  
@@ -54,7 +54,7 @@ WHERE IsTestCase()
   
 ## <a name="see-also"></a>Vedere anche  
  [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Query di Data Mining](../analysis-services/data-mining/data-mining-queries.md)   
+ [Query di data mining](../analysis-services/data-mining/data-mining-queries.md)   
  [Set di dati di training e di testing](../analysis-services/data-mining/training-and-testing-data-sets.md)  
   
   

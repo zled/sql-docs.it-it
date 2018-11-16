@@ -19,12 +19,12 @@ ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b61127c2844117b2d9c042b352129a1860e227c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f258d7e49f86ed8015d8e51f2373633b7d7f10c4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743189"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663139"
 ---
 # <a name="sysdmoswindowsinfo-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "47743189"
 |-----------------|---------------|-----------------|  
 |**windows_release**|**nvarchar(256)**|Per Windows, restituisce il numero di versione. Per un elenco di valori e descrizioni, vedere [versione del sistema operativo (Windows)](/windows/desktop/SysInfo/operating-system-version). Non può essere NULL.|  
 |**windows_service_pack_level**|**nvarchar(256)**| Per Windows, restituisce il numero di service pack. Non può essere NULL. |  
-|**windows_sku**|**int**|Per Windows, restituisce l'ID di Windows Stock mantenendo Unit (SKU). Per un elenco degli ID SKU e descrizioni, vedere [funzione GetProductInfo](http://msdn.microsoft.com/library/ms724358.aspx). Sono ammessi valori null. |  
-|**os_language_version**|**int**| Per Windows, restituisce l'identificatore di impostazioni locali (LCID) di Windows del sistema operativo. Per un elenco dei valori LCID e delle descrizioni, vedere [Locale IDs Assigned by Microsoft](http://go.microsoft.com/fwlink/?LinkId=208080). Non può essere NULL.|  
+|**windows_sku**|**int**|Per Windows, restituisce l'ID di Windows Stock mantenendo Unit (SKU). Per un elenco degli ID SKU e descrizioni, vedere [funzione GetProductInfo](https://msdn.microsoft.com/library/ms724358.aspx). Sono ammessi valori null. |  
+|**os_language_version**|**int**| Per Windows, restituisce l'identificatore di impostazioni locali (LCID) di Windows del sistema operativo. Per un elenco dei valori LCID e delle descrizioni, vedere [Locale IDs Assigned by Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). Non può essere NULL.|  
   
   
 ## <a name="permissions"></a>Permissions  

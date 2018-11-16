@@ -19,12 +19,12 @@ ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 97aa72e4b4012878125ec6635cc181d0f012ecb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f43d395238bb7b100fd4374e7e10a6382370fff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847519"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677191"
 ---
 # <a name="sysdmosclusternodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47847519"
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**NodeName**|**sysname**|Nome di un nodo nella configurazione (server virtuale) dell'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|status|**int**|Lo stato del nodo in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza cluster di failover: 0, 1, 2, 3, -1. Per altre informazioni, vedere [funzione GetClusterNodeState](http://go.microsoft.com/fwlink/?LinkId=204794).|  
+|status|**int**|Lo stato del nodo in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza cluster di failover: 0, 1, 2, 3, -1. Per altre informazioni, vedere [funzione GetClusterNodeState](https://go.microsoft.com/fwlink/?LinkId=204794).|  
 |status_description|**nvarchar(20)**|Descrizione dello stato del nodo del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = funzionante<br /><br /> 1 = non funzionante<br /><br /> 2 = in pausa<br /><br /> 3 = partecipante<br /><br /> -1 = sconosciuto|  
 |is_current_owner|bit|1 indica che il nodo è il proprietario corrente della risorsa cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo in questa distribuzione.|  

@@ -15,12 +15,12 @@ ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 82349ca6935f685c441dfa15fede994d19173fb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4222e8a63a29fe8c41d0e1715d2569bc9863068c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685935"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661263"
 ---
 # <a name="creating-user-defined-types"></a>Creazione di tipi definiti dall'utente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Reconfigure
 ## <a name="example"></a>Esempio  
  Il listato di codice seguente definisce il punto di tipo definito dall'utente, descritto dettagliatamente nelle [codifica di tipi](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
- È possibile ottenere elenchi di codice completi per gli altri esempi discussi in questa sezione installando gli esempi CLR. Per istruzioni sull'installazione di questi esempi, vedere [esempi del motore di Database di SQL Server](http://msftengprodsamples.codeplex.com/).  
+ È possibile ottenere elenchi di codice completi per gli altri esempi discussi in questa sezione installando gli esempi CLR. Per istruzioni sull'installazione di questi esempi, vedere [esempi del motore di Database di SQL Server](https://msftengprodsamples.codeplex.com/).  
   
  C#  
   

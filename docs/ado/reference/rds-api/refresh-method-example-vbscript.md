@@ -15,16 +15,16 @@ ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fcb4ccd685a5f28377972db03d32496017bda8cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaa379431395f3f5fbb01d777042118553bd7e18
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731220"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599631"
 ---
 # <a name="refresh-method-example-vbscript"></a>Esempio del metodo Refresh (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Nell'esempio seguente viene illustrato come impostare i parametri necessari di [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) in fase di esecuzione. Il modo in cui un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) viene recuperato utilizzando il [aggiornare](../../../ado/reference/ado-api/refresh-method-ado.md) metodo è determinato dalle impostazioni del [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) e [FetchOptions ](../../../ado/reference/rds-api/fetchoptions-property-rds.md) proprietà. Per testare questo esempio, tagliare e incollare il codice seguente in un documento ASP normale e denominarla **RefreshVBS**. Usare **trovare** per individuare il file Adovbs. inc e inserirlo nella directory di cui si intende usare. Lo script identificherà il server.  
   
@@ -86,7 +86,7 @@ body {
    ID=RDC HEIGHT=1 WIDTH=1>  
 </OBJECT>  
 <HR>  
-Server: <Input Size=70 Name="txtServer" Value="http://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
+Server: <Input Size=70 Name="txtServer" Value="https://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
 Connect: <Input Size=70 Name="txtConnect" Value="Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind'"><BR>  
 SQL: <Input Size=70 Name="txtSQL" Value="Select * from Employees">  
 <HR>  
@@ -104,7 +104,7 @@ SQL: <Input Size=70 Name="txtSQL" Value="Select * from Employees">
    <TD>Asynchronously: <BR>  
       <Input Type="Radio" Name="optExecuteOptions"  OnClick="SetExO('adcExecAsync')">  
    </TD>  
-   <TD> </TD>  
+   <TD> </TD>  
 </TR>  
 <TR>  
    <TD COLSPAN=3 BGCOLOR=silver>  

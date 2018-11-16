@@ -21,12 +21,12 @@ ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 93e6bcfc4ec686f61672fa382d545db5a7000f96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7722193dc643b4fd5afaa9a21559febe137cba6b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838799"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662850"
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_config_basic
  Il nome del database per l'abilitazione del backup gestito in un database specifico.  
   
  @container_url  
- URL che indica la posizione del backup. Quando si @credential_name è NULL, questo URL è un URL di firma di accesso condiviso in un contenitore blob in archiviazione di Azure e i backup usano la nuova funzionalità di backup in blocco blob. Per altre informazioni, esaminare [Understanding SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Quando si @credential_name è specificato, questo è un URL di account di archiviazione e i backup usano l'obsoleta funzionalità di backup in pagina blob.  
+ URL che indica la posizione del backup. Quando si @credential_name è NULL, questo URL è un URL di firma di accesso condiviso in un contenitore blob in archiviazione di Azure e i backup usano la nuova funzionalità di backup in blocco blob. Per altre informazioni, esaminare [Understanding SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Quando si @credential_name è specificato, questo è un URL di account di archiviazione e i backup usano l'obsoleta funzionalità di backup in pagina blob.  
   
 > [!NOTE]  
 >  Per questo parametro è supportato solo un URL di firma di accesso condiviso in questo momento.  

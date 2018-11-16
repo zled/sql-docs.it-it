@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f7b4f9303a96e6197cc6580a5c799404f48e5c4a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5d8562661e313aea59dfb233dbc5b2194b582c2d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040439"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602491"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +85,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   Nel terzo esempio è illustrato come utilizzare il parametro EXTEND_MODEL_CASES per aggiornare un modello di data mining con nuovi dati.  
   
- Per altre informazioni sull'uso di modelli time series, vedere l'esercitazione di data mining [lezione 2: compilazione di uno Scenario di previsione &#40;esercitazione intermedia sul Data Mining&#41; ](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) e [tempo serie di stima DMX Esercitazione](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Per altre informazioni sull'uso di modelli time series, vedere l'esercitazione di data mining [lezione 2: compilazione di uno Scenario di previsione &#40;esercitazione intermedia sul Data Mining&#41; ](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) e [tempo serie di stima DMX Esercitazione](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
   
 > [!NOTE]  
 >  È possibile che vengano restituiti risultati diversi dal modello utilizzato. I risultati degli esempi seguenti sono forniti solo per illustrare il formato del risultato.  
@@ -119,7 +119,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>Esempio 2: Aggiunta di dati nuovi e utilizzo di REPLACE_MODEL_CASES  
  Si supponga di trovare dati non corretti per una particolare area e di voler utilizzare gli schemi nel modello per modificare le stime in modo che riflettano i nuovi dati. In alternativa, si potrebbe scoprire che un'altra area dispone di tendenze più affidabili e desiderare di applicare il modello più affidabile ai dati da un'area diversa.  
   
- In questo scenario, è possibile utilizzare il parametro REPLACE_MODEL_CASES e specificare un nuovo set di dati da impiegare come dati della cronologia. In tal modo, le proiezioni saranno basate sugli schemi nel modello specificato, ma continueranno uniformemente dalla fine dei nuovi punti dati. Per una procedura dettagliata completa di questo scenario, vedere [Advanced stime basate su serie temporali &#40;esercitazione intermedia sul Data Mining dei dati&#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
+ In questo scenario, è possibile utilizzare il parametro REPLACE_MODEL_CASES e specificare un nuovo set di dati da impiegare come dati della cronologia. In tal modo, le proiezioni saranno basate sugli schemi nel modello specificato, ma continueranno uniformemente dalla fine dei nuovi punti dati. Per una procedura dettagliata completa di questo scenario, vedere [Advanced stime basate su serie temporali &#40;esercitazione intermedia sul Data Mining dei dati&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
   
  Nella seguente query PREDICTION JOIN è illustrata la sintassi per la sostituzione di dati e l'esecuzione delle nuove stime. Per i dati della sostituzione, l'esempio recupera il valore delle colonne Amount e Quantity e moltiplica ogni valore per due:  
   
@@ -194,7 +194,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   Restituisce stime nuove per i tre intervalli di tempo rimanenti in base al modello appena espanso.  
   
- Nella tabella seguente sono elencati i risultati della query dell'esempio 2. Notare che i primi due valori restituiti per M200 Europa corrispondono esattamente ai nuovi valori forniti. Questo comportamento avviene per motivi strutturali. Per avviare stime dopo la fine dei nuovi dati, è necessario specificare intervallo temporale di inizio e di fine. Per un esempio di come eseguire questa operazione, vedere [lezione 5: estendere il modello Time Series](http://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
+ Nella tabella seguente sono elencati i risultati della query dell'esempio 2. Notare che i primi due valori restituiti per M200 Europa corrispondono esattamente ai nuovi valori forniti. Questo comportamento avviene per motivi strutturali. Per avviare stime dopo la fine dei nuovi dati, è necessario specificare intervallo temporale di inizio e di fine. Per un esempio di come eseguire questa operazione, vedere [lezione 5: estendere il modello Time Series](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
   
  Inoltre, notare che non sono stati forniti i nuovi dati per l'area Pacifico. Pertanto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] restituisce nuove stime per tutti e cinque gli intervalli di tempo,  
   
@@ -254,7 +254,7 @@ OR [Model Region] = 'M200 North America'
   
 ## <a name="see-also"></a>Vedere anche  
  [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Time Series Model Query Examples](../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Prevedere &#40;DMX&#41;](../dmx/predict-dmx.md)  
+ [Esempi di query sul modello di serie temporale](../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
   

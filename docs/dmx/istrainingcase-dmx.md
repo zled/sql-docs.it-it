@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 00344eeb38f3aae5cae7ac25c1b65b403cc85cb9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6c42ecb976884573e313c06adc4241e202e123df
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37994473"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599932"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ IsTrainingCase()
  Per restituire i case che fanno parte del set di dati di test, usare la funzione [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md).  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente usa il modello di data mining clustering da di uno scenario di mailing nel [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Nella query vengono restituiti solo i case utilizzati per il training del modello di data mining. Inoltre, i case di training sono limitati ai clienti di età inferiore a 40 anni.  
+ L'esempio seguente usa il modello di data mining clustering da di uno scenario di mailing nel [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Nella query vengono restituiti solo i case utilizzati per il training del modello di data mining. Inoltre, i case di training sono limitati ai clienti di età inferiore a 40 anni.  
   
 ```  
 SELECT *  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5314c18f7626ee631d7d0b59ad8d9c004a33148b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3134ff97059efa61ab2df82a9b7d3c7aa4ee769e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147866"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697011"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Database Consistency Checker (DBCC) per Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ Il comando accetta una definizione di oggetto e restituisce un set di risultati 
  DBCC per Analysis Services viene eseguito su qualsiasi database di Analysis Services con qualsiasi livello di compatibilità, purché il database venga eseguito in un'istanza di SQL Server 2016. Assicurarsi di usare la sintassi del comando corretto per ogni tipo di database.  
   
 > [!NOTE]  
->  Se si ha familiarità con [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md), si noterà subito che l'ambito di DBCC in Analysis Services è molto più ristretto. DBCC in Analysis Services è un comando singolo che segnala esclusivamente il danneggiamento dei dati nel database o in singoli oggetti. Se si considerano altre attività, ad esempio la raccolta di informazioni, provare a usare invece script XMLA o PowerShell per AMO. Per i collegamenti ad altre informazioni, vedere [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md) .  
+>  Se si ha familiarità con [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md), si noterà subito che l'ambito di DBCC in Analysis Services è molto più ristretto. DBCC in Analysis Services è un comando singolo che segnala esclusivamente il danneggiamento dei dati nel database o in singoli oggetti. Se si considerano altre attività, ad esempio la raccolta di informazioni, provare a usare invece script XMLA o PowerShell per AMO.
   
 ## <a name="permission-requirements"></a>Requisiti relativi alle autorizzazioni  
  Per eseguire il comando, è necessario essere un amministratore del server o del database di Analysis Services, ovvero un membro del ruolo del server. Per istruzioni, vedere [Concedere le autorizzazioni per il database &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) o [Concedere i diritti di amministratore del server a un'istanza di Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
@@ -299,7 +299,6 @@ Execution complete
 ## <a name="see-also"></a>Vedere anche  
  [Elaborare database, tabelle o partizioni &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [Livello di compatibilità per i modelli tabulari in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [proprietà server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   

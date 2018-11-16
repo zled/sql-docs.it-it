@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,22 +14,22 @@ ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aaeedb6dffb992ac940eebd450c63d33badb299d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e936b6b68a67c1616a00d38f6d84776d44ef327
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845279"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559435"
 ---
 # <a name="rds-scenario"></a>Scenario RDS
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  L'applicazione Address Book è uno scenario che illustra come usare Remote Data Service (RDS) per compilare un'applicazione Web semplice e basata sui dati, ovvero una rubrica online aziendali. Questo scenario è utile per Microsoft Visual Basic, Scripting Edition (VBScript) e ai programmatori di COM che desiderano imparare a usare i controlli ActiveX in grado di riconoscere i dati con Servizi Desktop remoto per il software più esperto gli sviluppatori che desiderano creare applicazioni Web incentrate sui dati.  
   
  Questo scenario presuppone che si sappia usare layout tag HTML, le tecniche di associazione di dati di utilizzo DHTML e programma di base con i controlli ActiveX.  
   
- Se è stato installato il SDK, il codice sorgente completo per l'applicazione di esempio Address Book è reperibile nella directory SDK in samples\dataaccess\rds\AddressBook\AddressBook.asp. Per visualizzare lo scenario di Address Book, in Internet Explorer 4.0 o versione successiva, digitare **http://*webserver*/RDS/AddressBook/AddressBook.asp** in cui *webserver* è il nome assegnato nel computer server Windows NT 4.0 o Windows 2000 Web che esegue Internet Information Services (IIS) e ASP.  
+ Se è stato installato il SDK, il codice sorgente completo per l'applicazione di esempio Address Book è reperibile nella directory SDK in samples\dataaccess\rds\AddressBook\AddressBook.asp. Per visualizzare lo scenario di Address Book, in Internet Explorer 4.0 o versione successiva, digitare **https://*webserver*/RDS/AddressBook/AddressBook.asp** in cui *webserver* corrisponde al nome assegnato al computer server Windows NT 4.0 o Windows 2000 Web che esegue Internet Information Services (IIS) e ASP.  
   
 ## <a name="introduction-to-address-book"></a>Introduzione alla Rubrica  
  L'applicazione di esempio Address Book offre una rubrica online semplice che è possibile usare per pubblicare una directory disponibili per la ricerca su una rete intranet. Nella Rubrica è progettata in modo che un utente può immettere una stringa di ricerca in uno o più campi per richiedere informazioni sui dipendenti. Per illustrare le funzionalità di base del servizio dati remoto, l'applicazione di esempio è intenzionalmente mantenerle di dimensioni ridotte, con un numero minimo di oggetti e i campi di ricerca.  

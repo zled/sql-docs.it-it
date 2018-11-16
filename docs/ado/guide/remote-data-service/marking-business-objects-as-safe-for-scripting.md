@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,16 +13,16 @@ ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a8c6e3b1d74cb122a94cc643a9eb94d5dbb6c5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 729daea7fe719f33ec8931424143c3fedc5ac86f
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772719"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558328"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>Contrassegnare gli oggetti business come sicuri per lo scripting
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Per garantire un ambiente Internet protetto, è necessario contrassegnare tutti gli oggetti business istanziati con il [Servizi Desktop remoto. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) dell'oggetto [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) metodo come "sicuri per lo script". È necessario verificare che siano contrassegnati come tale nell'area di licenza del Registro di sistema prima di poter essere utilizzati in DCOM.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "47772719"
   
  Per contrassegnare manualmente gli oggetti business come sicuri per lo script, creare un file di testo con estensione reg contenente il testo seguente. In questo esempio \< *MyActiveXGUID*> è il numero GUID esadecimale dell'oggetto business. I seguenti due numeri abilitare la funzionalità safe per lo scripting:  
   
-```  
+```console
 [HKEY_CLASSES_ROOT\CLSID\<MyActiveXGUID>\Implemented   
 Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}]  
 [HKEY_CLASSES_ROOT\CLSID\<MyActiveXGUID>\Implemented   

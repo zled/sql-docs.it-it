@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a844bf7f3e8ab474b9eb9c0cfa85b2b75ffcadc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 372a4859c80fc58dff37080e9383ffeebc1721a1
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776219"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559383"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Supporto dei tipi di parametri con valori di tabella OLE DB (proprietà)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47776219"
   In questo argomento sono incluse informazioni sulle proprietà e i set di proprietà OLE DB associati a oggetti set di righe di parametri con valori di tabella.  
   
 ## <a name="properties"></a>Proprietà  
- Di seguito viene specificato l'elenco delle proprietà esposte tramite il metodo IRowsetInfo::GetPropeties sugli oggetti set di righe di parametri con valori di tabella. Si noti che tutte le proprietà dei set di righe di parametri con valori di tabella sono di sola lettura. Pertanto, il tentativo di impostare le proprietà tramite IOpenRowset:: OPENROWSET o ITableDefinitionWithConstraints::CreateTableWithConstraints metodi per i relativi valori non predefiniti comporterà un errore e non verrà creato alcun oggetto.  
+ Di seguito è riportato l'elenco delle proprietà esposte tramite il metodo IRowsetInfo:: GetProperties sugli oggetti set di righe di parametri con valori di tabella. Si noti che tutte le proprietà dei set di righe di parametri con valori di tabella sono di sola lettura. Pertanto, il tentativo di impostare le proprietà tramite IOpenRowset:: OPENROWSET o ITableDefinitionWithConstraints::CreateTableWithConstraints metodi per i relativi valori non predefiniti comporterà un errore e non verrà creato alcun oggetto.  
   
  Le proprietà non implementate nell'oggetto set di righe di parametri con valori di tabella non sono incluse nell'elenco. Per un elenco completo delle proprietà, vedere la documentazione di OLE DB in Windows Data Access Components.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "47776219"
 |SSPROP_COL_COMPUTED|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Tipo: VT_BOOL<br /><br /> Descrizione: se impostata su VARIANT_TRUE, indica che la colonna è una colonna calcolata. VARIANT_FALSE indica che non si tratta di una colonna calcolata.|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- Queste proprietà vengono lette dal consumer durante l'individuazione di informazioni sul tipo di parametro con valori di tabella nelle chiamate a ISSCommandWithParamters::GetParameterProperties e impostate dal consumer durante l'impostazione delle proprietà specifiche relative al parametro con valori di tabella tramite isscommandwithparameters:: Setparameterproperties.  
+ Queste proprietà vengono lette dal consumer durante l'individuazione di informazioni sul tipo di parametro con valori di tabella nelle chiamate a isscommandwithparameters:: Getparameterproperties e impostate dal consumer durante l'impostazione delle proprietà specifiche relative al parametro con valori di tabella tramite isscommandwithparameters:: Setparameterproperties.  
   
  Tali proprietà vengono descritte in modo dettagliato nella tabella seguente.  
   

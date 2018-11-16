@@ -15,12 +15,12 @@ ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4da058b6c4a36640ceb5273c18df5bf10feb602a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48f9935f26ac4ae17b15f4008dcdb0d8a0e69e5c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607209"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677720"
 ---
 # <a name="clr-integration-security"></a>Sicurezza per l'integrazione con CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +46,16 @@ ms.locfileid: "47607209"
  [Attributi di protezione host e programmazione dell'integrazione con CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  Vengono fornite informazioni sui valori di attributi di protezione host che non sono consentiti negli assembly SAFE e EXTERNAL_ACCESS.  
   
- [Collegamenti nella sicurezza per l'integrazione con CLR](http://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
+ [Collegamenti nella sicurezza per l'integrazione con CLR](https://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
  Viene illustrato come parti del codice utente possano chiamarsi reciprocamente in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Rappresentazione e sicurezza per l'integrazione con CLR](http://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
+ [Rappresentazione e sicurezza per l'integrazione con CLR](https://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
  Viene illustrato con il codice gestito acceda a risorse esterne utilizzando la rappresentazione.  
   
- [Accettazione di chiamanti parzialmente attendibili](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [Accettazione di chiamanti parzialmente attendibili](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  Vengono illustrati i problemi che si verificano quando un metodo gestito richiama un metodo di una classe contenuta in un altro assembly.  
   
- [Domini applicazione e sicurezza per l'integrazione con CLR](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
+ [Domini applicazione e sicurezza per l'integrazione con CLR](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
  Viene descritto come caricare gli assembly nei domini applicazione.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -27,12 +27,12 @@ ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 10eaa071ed8fa57bb648e5ece87dc91bb4cb62e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 455b7b8e5b12f330a970589b04844d3a62f983b8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779189"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661300"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Architettura di integrazione CLR - Ambiente ospitato in CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "47779189"
  Il codice indipendente dai tipi è un codice che accede alle strutture di memoria solo in modalità ben definite. Dato un riferimento a un oggetto valido, ad esempio, il codice indipendente dai tipi può accedere alla memoria solo a offset fissi corrispondenti ai membri di campo effettivi. Se, tuttavia, il codice accede alla memoria a offset arbitrari interni o esterni all'intervallo di memoria dell'oggetto, non si tratta di codice indipendente dai tipi. Quando gli assembly vengono caricati in CLR, prima che MSIL venga compilato tramite compilazione JIT (Just-In-Time), il runtime esegue una fase di verifica che esamina il codice per determinarne l'indipendenza dai tipi. Il codice che supera correttamente questa verifica viene denominato codice effettivamente indipendente dai tipi.  
   
 ###### <a name="application-domains"></a>Domini applicazione  
- CLR supporta il concetto di domini applicazione come aree di esecuzione all'interno di un processo host in cui è possibile caricare ed eseguire assembly di codice gestito. Il confine del dominio applicazione fornisce isolamento tra assembly. Gli assembly sono isolati in termini di visibilità di variabili statiche e membri di dati e di possibilità di chiamare codice dinamicamente. I domini applicazione costituiscono inoltre il meccanismo per caricare e scaricare codice. Il codice può essere scaricato dalla memoria solo scaricando il dominio applicazione. Per altre informazioni, vedere [domini applicazione e sicurezza dell'integrazione CLR](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473).  
+ CLR supporta il concetto di domini applicazione come aree di esecuzione all'interno di un processo host in cui è possibile caricare ed eseguire assembly di codice gestito. Il confine del dominio applicazione fornisce isolamento tra assembly. Gli assembly sono isolati in termini di visibilità di variabili statiche e membri di dati e di possibilità di chiamare codice dinamicamente. I domini applicazione costituiscono inoltre il meccanismo per caricare e scaricare codice. Il codice può essere scaricato dalla memoria solo scaricando il dominio applicazione. Per altre informazioni, vedere [domini applicazione e sicurezza dell'integrazione CLR](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473).  
   
 ###### <a name="code-access-security-cas"></a>Sicurezza dall'accesso di codice (CAS, Code Access Security)  
  Il sistema di sicurezza CLR fornisce un metodo per determinare i possibili tipi di operazioni eseguite dal codice gestito tramite l'assegnazione di autorizzazioni al codice. Le autorizzazioni di accesso per il codice vengono assegnate in base all'identità del codice, ad esempio la firma dell'assembly o l'origine del codice.  

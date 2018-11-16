@@ -15,16 +15,16 @@ ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57c0c8e6a7a6bcab7ea5d096ee27ae510065daa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe7074c592c837d292257bcaa18f3eb0638a6515
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634799"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606721"
 ---
 # <a name="internettimeout-property-example-vb"></a>Esempio della proprietà InternetTimeout (VB)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Questo esempio viene illustrato il [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) proprietà, che sia disponibile la [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) e [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) oggetti. Questo esempio Usa la **DataControl** dell'oggetto e imposta il timeout su 20 secondi.  
   
@@ -38,7 +38,7 @@ Public Sub Main()
     Dim rst As ADODB.Recordset  
     Set dc = New RDS.DataControl  
   
-    dc.Server = "http://MyServer"  
+    dc.Server = "https://MyServer"  
     dc.ExecuteOptions = 1  
     dc.FetchOptions = 1  
     dc.Connect = "Provider='sqloledb';Data Source='MySqlServer';" & _  

@@ -21,19 +21,19 @@ ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 95adea5a61ecc102dae885e9ea526113942a13a5
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 8a3f6118c2227ad81d368c012c7282e3ba962881
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216779"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671740"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>Utilizzo del provider WMI per eventi del server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   In questo argomento vengono fornite linee guida che è consigliabile tenere presenti prima di programmare tramite il provider WMI per eventi del server.  
   
 ## <a name="enabling-service-broker"></a>Abilitazione di Service Broker  
- Il provider WMI per eventi del server converte query WQL per eventi in notifiche degli eventi nel database di destinazione. Una corretta comprensione del funzionamento delle notifiche degli eventi può risultare utile quando si programma per il provider. Per ulteriori informazioni, vedere [Concetti relativi al provider WMI per eventi del server](http://technet.microsoft.com/library/ms180560.aspx).  
+ Il provider WMI per eventi del server converte query WQL per eventi in notifiche degli eventi nel database di destinazione. Una corretta comprensione del funzionamento delle notifiche degli eventi può risultare utile quando si programma per il provider. Per ulteriori informazioni, vedere [Concetti relativi al provider WMI per eventi del server](https://technet.microsoft.com/library/ms180560.aspx).  
   
  In particolare, poiché le notifiche degli eventi create dal provider WMI utilizzano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per inviare messaggi sugli eventi del server, questo servizio deve essere abilitato ogni volta che vengono generati gli eventi. Se il programma esegue query sugli eventi in un'istanza del server, è necessario abilitare [!INCLUDE[ssSB](../../includes/sssb-md.md)] in msdb di tale istanza, in quanto corrisponde al percorso del servizio [!INCLUDE[ssSB](../../includes/sssb-md.md)] di destinazione (denominato SQL/Notifications/ProcessWMIEventProviderNotification/v1.0) creato dal provider. Se il programma esegue query sugli eventi in un database o in un determinato oggetto di database, è necessario che [!INCLUDE[ssSB](../../includes/sssb-md.md)] sia abilitato nel database di destinazione specifico. Se il servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)] non è abilitato in seguito alla distribuzione dell'applicazione, qualsiasi evento generato dalla notifica degli eventi sottostante viene inviato alla coda del servizio utilizzato dalla notifica, ma non viene restituito all'applicazione di gestione WMI fino a quando [!INCLUDE[ssSB](../../includes/sssb-md.md)] non è abilitato.  
   
@@ -64,7 +64,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
   
 -   Per creare una notifica degli eventi il cui ambito è costituito da una coda, è necessario disporre almeno dell'autorizzazione ALTER per la coda.  
   
- Per informazioni sull'ambito delle query WQL, vedere [Utilizzo di WQL con il provider WMI per eventi del server](http://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).  
+ Per informazioni sull'ambito delle query WQL, vedere [Utilizzo di WQL con il provider WMI per eventi del server](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).  
   
  Per illustrare l'ambito, si consideri un'applicazione del provider WMI che include la query WQL seguente:  
   
@@ -114,6 +114,6 @@ WHERE DatabaseName = "AdventureWorks2012"
  Quando il Provider WMI per eventi del Server crea la notifica dell'evento richiesta nel database di destinazione, tale notifica invia i dati dell'evento al servizio di destinazione in msdb denominato **SQL/notifiche/ProcessWMIEventProviderNotification /V1.0**. Il servizio di destinazione inserisce l'evento in una coda in **msdb** denominata **WMIEventProviderNotificationQueue**. Sia il servizio sia la coda vengono creati dinamicamente dal provider quando si connette per la prima volta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il provider legge quindi i dati degli eventi XML dalla coda e li trasforma in dati MOF (Managed Object Format) prima di restituirli all'applicazione client. I dati MOF sono costituiti dalle proprietà dell'evento richiesto dalla query WQL come definizione della classe CIM (Common Information Model). Ogni proprietà dispone di un tipo CIM corrispondente. La proprietà `SPID` , ad esempio, viene restituita come tipo CIM **Sint32**. I tipi CIM per ogni proprietà sono elencati all'interno di ogni classe di evento in [Classi e proprietà del provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti relativi al provider WMI per eventi del server](http://technet.microsoft.com/library/ms180560.aspx)  
+ [Concetti relativi al provider WMI per eventi del server](https://technet.microsoft.com/library/ms180560.aspx)  
   
   

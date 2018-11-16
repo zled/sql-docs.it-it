@@ -14,12 +14,12 @@ ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 488a4d7107b15d5bea12666dbb83a957f47339f9
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: fdfdfc65abef5c7d0793c4a00cdb78a033e67998
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099152"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659530"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>Convertire, caricare ed eseguire la migrazione (AccessToSQL)
 Il **convertire, caricare ed eseguire la migrazione** nella finestra di dialogo segnala lo stato di migrazione quando si usa il pulsante Convert, carico ed eseguire la migrazione o la migrazione guidata.  
@@ -33,6 +33,6 @@ Il **la migrazione dei dati per gli oggetti selezionati** sezione della pagina c
 Mostra il report associato di conversione o la migrazione.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Reference(Access) dell'interfaccia utente](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Reference(Access) dell'interfaccia utente](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
 [Migrazione guidata](migration-wizard-accesstosql.md)  
   

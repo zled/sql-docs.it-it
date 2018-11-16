@@ -11,12 +11,12 @@ ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87731fd9ebd2bf02f1fca2d81a918c330df08925
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a7a38a3d71b28cc32b863bf95ca6b99fa2bddaa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820189"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661750"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Sviluppo del rilevamento di pool di connessioni in un driver ODBC
 Questo argomento illustra i dettagli dello sviluppo di un driver ODBC che contiene informazioni sul modo in cui il driver deve fornire i servizi del pool di connessione.  
@@ -68,7 +68,7 @@ Questo argomento illustra i dettagli dello sviluppo di un driver ODBC che contie
 ## <a name="the-connection-rating"></a>La classificazione di connessione  
  Rispetto a una nuova connessione, è possibile ottenere prestazioni migliori reimpostando alcune informazioni di connessione (ad esempio, DATABASE) in una connessione in pool. Pertanto, è possibile non il nome del database sia nel set di attributi chiave. In caso contrario, è possibile avere un pool separato per ogni database, che potrebbe non essere ottimale in applicazioni di livello intermedio, in cui i clienti di usano varie stringhe di connessione diversa.  
   
- Ogni volta che si riutilizza una connessione con alcuni attributi non corrispondenti, è consigliabile reimpostare gli attributi non corrispondenti in base alla nuova richiesta di applicazione, in modo che la connessione restituita è identica alla richiesta dell'applicazione (vedere la discussione dell'attributo SQL_ATTR In _DBC_INFO_TOKEN [funzione SQLSetConnectAttr](http://go.microsoft.com/fwlink/?LinkId=59368)). Tuttavia, la reimpostazione di tali attributi potrebbe ridurre le prestazioni. Ad esempio, la reimpostazione di un database richiede una chiamata di rete al server. Riutilizzare una connessione perfettamente corrispondente, di conseguenza, se disponibile.  
+ Ogni volta che si riutilizza una connessione con alcuni attributi non corrispondenti, è consigliabile reimpostare gli attributi non corrispondenti in base alla nuova richiesta di applicazione, in modo che la connessione restituita è identica alla richiesta dell'applicazione (vedere la discussione dell'attributo SQL_ATTR In _DBC_INFO_TOKEN [funzione SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59368)). Tuttavia, la reimpostazione di tali attributi potrebbe ridurre le prestazioni. Ad esempio, la reimpostazione di un database richiede una chiamata di rete al server. Riutilizzare una connessione perfettamente corrispondente, di conseguenza, se disponibile.  
   
  Una funzione di classificazione nel driver può restituire una connessione esistente con una nuova richiesta di connessione. Ad esempio, è possibile determinare la funzione del driver classificazione:  
   
@@ -109,7 +109,7 @@ Questo argomento illustra i dettagli dello sviluppo di un driver ODBC che contie
   
  La gestione di Driver **SQLAllocHandle** e **SQLFreeHandle** non accetta questo nuovo tipo di handle.  
   
- SQL_HANDLE_DBC_INFO_TOKEN potrebbero contenere informazioni riservate, ad esempio le credenziali. Di conseguenza, un driver in modo protetto necessario cancellare il buffer di memoria (tramite [SecureZeroMemory](http://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)) che contiene le informazioni sensibili prima di rilasciare l'handle con **SQLFreeHandle**. Ogni volta che viene chiuso l'handle di ambiente di un'applicazione, tutti i pool di connessione associata verranno chiusa.  
+ SQL_HANDLE_DBC_INFO_TOKEN potrebbero contenere informazioni riservate, ad esempio le credenziali. Di conseguenza, un driver in modo protetto necessario cancellare il buffer di memoria (tramite [SecureZeroMemory](https://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)) che contiene le informazioni sensibili prima di rilasciare l'handle con **SQLFreeHandle**. Ogni volta che viene chiuso l'handle di ambiente di un'applicazione, tutti i pool di connessione associata verranno chiusa.  
   
 ## <a name="driver-manager-connection-pool-rating-algorithm"></a>Pool di connessioni di Gestione driver algoritmo di classificazione  
  Questa sezione descrive l'algoritmo di classificazione per il pool di connessioni di gestione Driver. Gli sviluppatori di driver possono implementare lo stesso algoritmo per la compatibilità con le versioni precedenti. Questo algoritmo potrebbe non essere quello più adatto. È necessario perfezionare questo algoritmo è basato l'implementazione (in caso contrario, non è necessario implementare questa funzionalità).  

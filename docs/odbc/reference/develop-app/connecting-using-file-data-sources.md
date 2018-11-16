@@ -18,12 +18,12 @@ ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af24a0656f46f0256775f4ea1649ab806e207fdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fec2cea71ba818e955e0b6c2ce31c58f2c07357
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856344"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677320"
 ---
 # <a name="connecting-using-file-data-sources"></a>Connessione tramite origini dati dei file
 Informazioni di connessione per un'origine dati file viene archiviate in un file DSN. Di conseguenza, la stringa di connessione usata più volte da un singolo utente o condiviso da più utenti se hanno il driver appropriato installato. Il file contiene un nome del driver (o un altro nome dell'origine dati nel caso di un'origine dati file condivisibili) e, facoltativamente, una stringa di connessione che può essere utilizzata da **SQLDriverConnect**. Gestione Driver compila la stringa di connessione per la chiamata a **SQLDriverConnect** tra le parole chiave nel file DSN.  
@@ -55,4 +55,4 @@ DSN = MyDataSource
  La stringa di connessione usata per un'origine dati file rappresenta l'unione tra le parole chiave specificate nel file DSN e le parole chiave specificate nella stringa di connessione nella chiamata a **SQLDriverConnect**. Se la parola chiave nel file DSN in conflitto con le parole chiave nella stringa di connessione, gestione Driver decide quale valore parola chiave deve essere utilizzato. Per altre informazioni, vedere [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [http://support.microsoft.com/kb/165866](http://support.microsoft.com/kb/165866)
+ [https://support.microsoft.com/kb/165866](https://support.microsoft.com/kb/165866)

@@ -12,18 +12,18 @@ ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 024e6fb62da2038c19faad0919413e9f2c52fe0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5cdd19895a1cf91e1c5c8608013cb52482f946c5
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189101"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559454"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Supporto dei tipi di parametri con valori di tabella OLE DB (proprietà)
   In questo argomento sono incluse informazioni sulle proprietà e i set di proprietà OLE DB associati a oggetti set di righe di parametri con valori di tabella.  
   
 ## <a name="properties"></a>Proprietà  
- Di seguito viene specificato l'elenco delle proprietà esposte tramite il metodo IRowsetInfo::GetPropeties sugli oggetti set di righe di parametri con valori di tabella. Si noti che tutte le proprietà dei set di righe di parametri con valori di tabella sono di sola lettura. Pertanto, il tentativo di impostare le proprietà tramite IOpenRowset:: OPENROWSET o ITableDefinitionWithConstraints::CreateTableWithConstraints metodi per i relativi valori non predefiniti comporterà un errore e non verrà creato alcun oggetto.  
+ Di seguito è riportato l'elenco delle proprietà esposte tramite il metodo IRowsetInfo:: GetProperties sugli oggetti set di righe di parametri con valori di tabella. Si noti che tutte le proprietà dei set di righe di parametri con valori di tabella sono di sola lettura. Pertanto, il tentativo di impostare le proprietà tramite IOpenRowset:: OPENROWSET o ITableDefinitionWithConstraints::CreateTableWithConstraints metodi per i relativi valori non predefiniti comporterà un errore e non verrà creato alcun oggetto.  
   
  Le proprietà non implementate nell'oggetto set di righe di parametri con valori di tabella non sono incluse nell'elenco. Per un elenco completo delle proprietà, vedere la documentazione di OLE DB in Windows Data Access Components.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48189101"
 |SSPROP_COL_COMPUTED|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Tipo: VT_BOOL<br /><br /> Descrizione: se impostata su VARIANT_TRUE, indica che la colonna è una colonna calcolata. VARIANT_FALSE indica che non si tratta di una colonna calcolata.|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- Queste proprietà vengono lette dal consumer durante l'individuazione di informazioni sul tipo di parametro con valori di tabella nelle chiamate a ISSCommandWithParamters::GetParameterProperties e impostate dal consumer durante l'impostazione delle proprietà specifiche relative al parametro con valori di tabella tramite isscommandwithparameters:: Setparameterproperties.  
+ Queste proprietà vengono lette dal consumer durante l'individuazione di informazioni sul tipo di parametro con valori di tabella nelle chiamate a isscommandwithparameters:: Getparameterproperties e impostate dal consumer durante l'impostazione delle proprietà specifiche relative al parametro con valori di tabella tramite isscommandwithparameters:: Setparameterproperties.  
   
  Tali proprietà vengono descritte in modo dettagliato nella tabella seguente.  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 781b5c660826ff963497a5b89b7bc01a16eeb265
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 60af695b92b23db33b009c446431a1b8f325d68f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040399"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600391"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ TopPercent(<table expression>, <rank expression>, <percent>)
  Il **TopPercent** funzione restituisce le prime righe in ordine decrescente di rango decrescente in base al valore valutato del \<rank expression > argomento per ogni riga, in modo che la somma del \<rank expression > i valori corrisponde almeno alla percentuale specificata dal \<percentuale > argomento. **TopPercent** restituisce il più piccolo numero di elementi possibile mentre soddisfa ancora il valore percentuale specificato.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente crea una query di stima sul modello di associazione che si compila usando il [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ L'esempio seguente crea una query di stima sul modello di associazione che si compila usando il [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
  Per comprendere il funzionamento di TopPercent, potrebbe essere utile eseguire prima una query di stima che restituisce solo la tabella nidificata.  
   

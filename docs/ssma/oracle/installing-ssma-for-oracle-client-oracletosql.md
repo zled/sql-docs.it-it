@@ -12,12 +12,12 @@ ms.assetid: d5d4903d-e296-4bbf-8780-63674c4d62d5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 72df6a9da82e421dfb921501c110d363aa54a8f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27e5c0ef0c834806351bda73eb69dbe783d78db2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781560"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666820"
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>Installazione di SSMA per il client Oracle (OracleToSQL)
 Il client SSMA include i file di programma che eseguono le attività seguenti:  
@@ -43,7 +43,7 @@ Prima di installare SSMA, assicurarsi che il computer soddisfi i requisiti segue
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 o versione successiva.  
   
--   Il [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versione 4.0 o versione successiva. Il [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] è disponibile nella versione 4.0 di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporto del prodotto. È inoltre possibile ottenerlo dal [.NET Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=48882).  
+-   Il [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versione 4.0 o versione successiva. Il [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] è disponibile nella versione 4.0 di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporto del prodotto. È inoltre possibile ottenerlo dal [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).  
   
 -   Client Oracle 9.0 o versione successiva e la connettività ai database di Oracle che vuoi eseguire la migrazione. La versione del client Oracle deve essere la stessa versione o una versione successiva, la versione del database Oracle.  
   
@@ -54,7 +54,7 @@ Prima di installare SSMA, assicurarsi che il computer soddisfi i requisiti segue
 -   4 GB di RAM consigliato.  
   
 ## <a name="installing-the-ssma-for-oracle-client"></a>Installazione di SSMA per Oracle Client  
-SSMA è un download Web. Per scaricare la versione più recente, vedere la [pagina di download di SQL Server Migration Assistant](http://aka.ms/ssmafororacle).  
+SSMA è un download Web. Per scaricare la versione più recente, vedere la [pagina di download di SQL Server Migration Assistant](https://aka.ms/ssmafororacle).  
   
 Dopo aver scaricato la versione più recente, è necessario estrarre i file di installazione prima di poter installare SSMA.  
   

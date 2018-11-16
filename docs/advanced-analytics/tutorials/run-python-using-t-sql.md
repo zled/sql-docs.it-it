@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3b4a7987a0fc9d50bbc5c8803d741be13acf7433
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 59897cbe6abc13b9842dc148ef8c2de4413926d0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050895"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702956"
 ---
 # <a name="run-python-using-t-sql"></a>Eseguire Python con T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -139,7 +139,7 @@ Per impostazione predefinita [sp_execute_external_script](../../relational-datab
 
 Altri tipi di input possono essere passati come variabili SQL: ad esempio, è possibile passare un modello con training come una variabile, usando una funzione di serializzazione, ad esempio [pickle](https://docs.python.org/3.0/library/pickle.html) oppure [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) per scrivere il modello un formato binario.
 
-La stored procedure restituisce un singolo Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html) frame di dati come output, ma è anche possibile restituire valori scalari e i modelli come variabili. Ad esempio, è possibile restituire un modello con training come una variabile binaria e che passare a un'istruzione T-SQL INSERT, per scrivere tale modello in una tabella. È anche possibile generare grafici (in formato binario) o valori scalari (valori singoli, ad esempio la data e ora, il tempo trascorso per il training del modello e così via).
+La stored procedure restituisce un singolo Python [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) frame di dati come output, ma è anche possibile restituire valori scalari e i modelli come variabili. Ad esempio, è possibile restituire un modello con training come una variabile binaria e che passare a un'istruzione T-SQL INSERT, per scrivere tale modello in una tabella. È anche possibile generare grafici (in formato binario) o valori scalari (valori singoli, ad esempio la data e ora, il tempo trascorso per il training del modello e così via).
 
 Per ora, esaminiamo l'impostazione predefinita le variabili di input e outpue di sp_execute_external_script: `InputDataSet` e `OutputDataSet`. 
 
@@ -313,7 +313,7 @@ In che modo si esporrà il singolo risultato di un calcolo come frame di dati, s
 
 Visto convertito risultati matematici scalari in una struttura tabulare, è comunque necessario convertirli in un formato che può gestire SQL Server. 
 
-1. Per convertire una serie in un frame di dati, chiamare il pandas [DataFrame](http://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) (metodo).
+1. Per convertire una serie in un frame di dati, chiamare il pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) (metodo).
 
     ```sql
     execute sp_execute_external_script 

@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 924a1b8dcdeda6f8e90ab9955cd831cd3c9f29dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d9861ff474a2029a54ef09e5d707e23b334be2b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704119"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668881"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47704119"
   **SQLStatistics** può essere eseguito su un cursore statico. Un tentativo di eseguire **SQLStatistics** su un cursore aggiornabile (dinamico o gestito da keyset) restituirà SQL_SUCCESS_WITH_INFO a indicare che il tipo di cursore è stato modificato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLStatistics](http://go.microsoft.com/fwlink/?LinkId=59372)   
+ [Funzione SQLStatistics](https://go.microsoft.com/fwlink/?LinkId=59372)   
  [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

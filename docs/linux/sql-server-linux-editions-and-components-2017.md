@@ -27,12 +27,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 11cb2d92d0a18e837a1bf7887ddf6f7a2dfbc449
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 089ced09d718b0716f0c19d4553e52ff02c3d505
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628829"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665580"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Edizioni e funzionalità supportate di SQL Server 2017 in Linux
 
@@ -50,7 +50,7 @@ Per un elenco delle funzionalità di SQL Server non è disponibile in Linux, ved
 
 ### <a name="try-sql-server"></a>Per provare SQL Server    
     
-[Scaricare SQL Server 2017](http://www.microsoft.com/sql-server/sql-server-2017)
+[Scaricare SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)
 
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Edizioni di[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]   
  La tabella seguente descrive tali edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
@@ -217,9 +217,9 @@ Per informazioni sulle funzionalità di Integration Services (SSIS) supportate d
 ## <a name="next-steps"></a>Passaggi successivi 
  [Edizioni e funzionalità supportate per SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [Edizioni e funzionalità supportate per SQL Server 2016 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [Edizioni e funzionalità supportate per SQL Server 2014 - Windows](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
+ [Edizioni e funzionalità supportate per SQL Server 2014 - Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md) (Installazione per SQL Server)  
- [Specifiche di prodotto per SQL Server](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb) 
+ [Specifiche di prodotto per SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb) 
 
   
   

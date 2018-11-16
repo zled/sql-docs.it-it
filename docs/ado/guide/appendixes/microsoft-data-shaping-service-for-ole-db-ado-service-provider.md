@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e3dac6aefb8db2dbd1c651f0a2cf27b0f29559c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46f48aa117c18bcc7af28cdf7c676cf195b553f6
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735007"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350065"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft Data Shaping servizi per Panoramica OLE DB
 > [!IMPORTANT]
@@ -30,7 +30,7 @@ ms.locfileid: "47735007"
 ## <a name="provider-keyword"></a>Parola chiave provider
  Per richiamare il servizio di Data Shaping dei dati per OLE DB, specificare la parola chiave e il valore seguenti nella stringa di connessione.
 
-```
+```vb
 "Provider=MSDataShape"
 ```
 
@@ -44,14 +44,14 @@ ms.locfileid: "47735007"
 
  È anche possibile impostare proprietà dinamiche scrivibile specificando i relativi nomi come parole chiave nella stringa di connessione. Ad esempio, in Microsoft Visual Basic, impostare il **Provider di dati** proprietà dinamica da "MSDASQL", specificando:
 
-```
+```vb
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MSDataShape;Data Provider=MSDASQL"
 ```
 
  È anche possibile impostare o recuperare una proprietà dinamica specificandone il nome dell'indice per la [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) proprietà. Ad esempio, il codice seguente recupera e stampa il valore corrente della **Provider di dati** proprietà dinamica, quindi imposta un nuovo valore se cn. DataProvider è stata impostata su "MSDataShape" (direttamente o indirettamente tramite la stringa di connessione) e non è stata aperta la connessione:
 
-```
+```vb
 Debug.Print cn.Properties("Data Provider")
 cn.Properties("Data Provider") = "MSDASQL"
 ```

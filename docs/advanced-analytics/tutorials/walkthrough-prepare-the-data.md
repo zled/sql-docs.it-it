@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cc47b7a8ba7090064983063ab579bd8ac8a1ccbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5206213c06b283e8736dea8079f6909149e670e9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142091"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703679"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Preparare i dati usando PowerShell (procedura dettagliata)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -100,7 +100,7 @@ Esistono molti modi diversi che è possibile installare i pacchetti in SQL Serve
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - Questo esempio Usa la funzione grep di R per cercare il vettore di percorsi disponibili e trovare il percorso che include "Program Files". Per altre informazioni, vedere [ http://www.rdocumentation.org/packages/base/functions/grep ](http://www.rdocumentation.org/packages/base/functions/grep).
+    - Questo esempio Usa la funzione grep di R per cercare il vettore di percorsi disponibili e trovare il percorso che include "Program Files". Per altre informazioni, vedere [ https://www.rdocumentation.org/packages/base/functions/grep ](https://www.rdocumentation.org/packages/base/functions/grep).
 
     - Se si ritiene che i pacchetti già installati, controllare l'elenco dei pacchetti installati eseguendo `installed.packages()`.
 
@@ -173,7 +173,7 @@ Se si verificano problemi con lo script di PowerShell, è possibile eseguire alc
 
 Per scaricare i dati manualmente, fare clic con il pulsante destro del mouse sul collegamento seguente e selezionare **Salva oggetto con nome**.
 
-[http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
+[https://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](https://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
 
 Annotare il percorso dei file di dati scaricato e del nome del file in cui sono stati salvati i dati. È necessario caricare i dati per la tabella usando il percorso completo **bcp**.
 
@@ -265,7 +265,7 @@ Quando si scaricano i file dal repository GitHub, si ottiene quanto segue:
 
 I dati sono un campione rappresentativo del set di dati dei taxi di New York City, contenente record di oltre 173 milioni di corse singole effettuate nel 2013, inclusi gli importi delle corse e delle mance corrisposte per ogni corsa. Per semplificare la manipolazione, il team di analisi scientifica dei dati Microsoft ha eseguito un downsampling per ottenere solo l'1% dei dati.  Tali dati sono stati quindi condivisi in un contenitore di archiviazione BLOB pubblico di Azure, in formato csv. L'origine dati è un file non compresso, poco meno 350 MB.
 
-+ Set di dati pubblico: [su NYC Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ Set di dati pubblico: [su NYC Taxi and Limousine Commission](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
 + [Creazione di modelli di Azure Machine Learning nel set di dati dei Taxi di NYC](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/).
 

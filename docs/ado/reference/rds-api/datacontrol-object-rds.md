@@ -17,18 +17,18 @@ ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e5c207a6928c82adeb8d45e22ea342bc40f0322
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa05b8b4be3c155c7ca59132892e0863dda60a5f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798829"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600641"
 ---
 # <a name="datacontrol-object-rds"></a>Oggetto DataControl (Servizi Desktop remoto)
 Associa una query di data [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) a uno o più controlli (ad esempio, una casella di testo, un controllo griglia o una casella combinata) per visualizzare i **Recordset** dati in una pagina Web.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,7 +36,7 @@ Associa una query di data [Recordset](../../../ado/reference/ado-api/recordset-o
   
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="DataControl"  
    <PARAM NAME="Connect" VALUE="DSN=DSNName;UID=MyUserID;PWD=MyPassword;">  
-   <PARAM NAME="Server" VALUE="http://awebsrvr">  
+   <PARAM NAME="Server" VALUE="https://awebsrvr">  
    <PARAM NAME="SQL" VALUE="QueryText">  
 </OBJECT>  
 ```  
@@ -78,7 +78,7 @@ Associa una query di data [Recordset](../../../ado/reference/ado-api/recordset-o
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"   
     ID="DataControl"  
    <PARAM NAME="Connect" VALUE="DSN=DSNName;UID=MyUserID;PWD=MyPassword;">  
-   <PARAM NAME="Server" VALUE="http://awebsrvr">  
+   <PARAM NAME="Server" VALUE="https://awebsrvr">  
    <PARAM NAME="SQL" VALUE="QueryText">  
    <PARAM NAME="ExecuteOptions" VALUE="1">   <PARAM NAME="FetchOptions" VALUE="1">  
 </OBJECT>  

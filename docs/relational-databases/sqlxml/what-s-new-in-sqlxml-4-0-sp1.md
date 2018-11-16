@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3e39c7e7d6c94ce83889fbd6e29b26da278862f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e55b8ee380645df874d10b04e54e341411105953
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618471"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658294"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>Cosa&#39;s novità di SQLXML 4.0 SP1
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47618471"
 -   Problemi di migrazione  
   
 ## <a name="installing-sqlxml-40-sp1"></a>Installazione di SQLXML 4.0 SP1  
- Prima di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQLXML 4.0 veniva rilasciato con SQL Server e apparteneva all'installazione predefinita di tutte le versioni di SQL Server, ad eccezione di SQL Server Express. A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], la versione più recente di SQLXML (SQLXML 4.0 SP1) non è più inclusa in SQL Server. Per installare SQLXML 4.0 SP1, scaricarlo dal [Install Location for SQLXML 4.0 SP1](http://www.microsoft.com/download/details.aspx?id=30403).  
+ Prima di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQLXML 4.0 veniva rilasciato con SQL Server e apparteneva all'installazione predefinita di tutte le versioni di SQL Server, ad eccezione di SQL Server Express. A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], la versione più recente di SQLXML (SQLXML 4.0 SP1) non è più inclusa in SQL Server. Per installare SQLXML 4.0 SP1, scaricarlo dal [Install Location for SQLXML 4.0 SP1](https://www.microsoft.com/download/details.aspx?id=30403).  
   
  I file di SQLXML 4.0 SP1 vengono installati nel percorso seguente:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47618471"
  Il processo di installazione di SQLXML 4.0 non determina la rimozione dei file installati da versioni precedenti di SQLXML. È pertanto possibile che in un computer siano presenti le DLL relative a installazioni di diverse versioni di SQLXML. È possibile eseguire installazioni side-by-side. In SQLXML 4.0 sono inclusi sia i PROGID dipendenti sia quelli indipendenti dalla versione. Per tutte le applicazioni di produzione è consigliabile usare i PROGID dipendenti dalla versione.  
   
 ## <a name="sqlxml-40-sp1-and-msxml"></a>SQLXML 4.0 SP1 e MSXML  
- SQLXML 4.0 non prevede l'installazione di MSXML, ma l'utilizzo di MSXML 6.0, che viene installato insieme a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva.  
+ SQLXML 4.0 non prevede l'installazione di MSXML, ma l'uso di MSXML 6.0, che viene installato insieme a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva.  
   
 ## <a name="redistributing-sqlxml-40-sp1"></a>Ridistribuzione di SQLXML 4.0 SP1  
  Per distribuire SQLXML 4.0 SP1, usare il pacchetto del programma di installazione ridistribuibile. Un modo per installare più pacchetti in un'installazione che all'utente può sembrare singola consiste nell'usare la tecnologia del chainer e del programma di avvio automatico. Per altre informazioni, vedere Authoring a Custom Bootstrapper Package for Visual Studio 2005 e Aggiunta di prerequisiti personalizzati.  

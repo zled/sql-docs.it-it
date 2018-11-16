@@ -17,12 +17,12 @@ ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7d1c6c05e196e1a845c073545c3f79f0f83a19b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9b69fa2c6ed790a33da50c0002b17a7e4461d0e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622279"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656760"
 ---
 # <a name="creating-an-assembly"></a>Creazione di un assembly
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   L'assembly chiamato o cui si fa riferimento è stato creato nello stesso database.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>Configurazione della sicurezza durante la creazione di assembly  
- Quando si crea un assembly in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, è possibile specificare uno dei tre diversi livelli di sicurezza in cui è possibile eseguire il codice: **sicuri**, **EXTERNAL_ACCESS**, o **UNSAFE** . Quando la **CREATE ASSEMBLY** istruzione viene eseguita, vengono effettuati alcuni controlli sull'assembly del codice che potrebbe causare l'assembly a non riescono a registrarsi nel server. Per altre informazioni, vedere l'esempio Impersonation sul [CodePlex](http://msftengprodsamples.codeplex.com/).  
+ Quando si crea un assembly in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, è possibile specificare uno dei tre diversi livelli di sicurezza in cui è possibile eseguire il codice: **sicuri**, **EXTERNAL_ACCESS**, o **UNSAFE** . Quando la **CREATE ASSEMBLY** istruzione viene eseguita, vengono effettuati alcuni controlli sull'assembly del codice che potrebbe causare l'assembly a non riescono a registrarsi nel server. Per altre informazioni, vedere l'esempio Impersonation sul [CodePlex](https://msftengprodsamples.codeplex.com/).  
   
  **SAFE** è il set di autorizzazioni predefinito e funziona per la maggior parte degli scenari. Per specificare un determinato livello di sicurezza, è necessario modificare la sintassi dell'istruzione CREATE ASSEMBLY come indicato di seguito:  
   
@@ -136,6 +136,6 @@ WITH PERMISSION_SET = UNSAFE;
  [Eliminazione di un Assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [Sicurezza dall'accesso di codice integrazione CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Proprietà di database TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md)   
- [Accettazione di chiamanti parzialmente attendibili](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [Accettazione di chiamanti parzialmente attendibili](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   
   

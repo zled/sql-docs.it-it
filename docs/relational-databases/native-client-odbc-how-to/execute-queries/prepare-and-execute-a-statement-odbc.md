@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df6353935efe167023b39d51d53e061b5a6b5deb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e67a239248271720e943ec80eeef6a2cb6f875e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673547"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677230"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Preparare ed eseguire un'istruzione (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "47673547"
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>Per preparare un'istruzione da eseguire più volte  
   
-1.  Chiamare [funzione SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360) per preparare l'istruzione.  
+1.  Chiamare [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) per preparare l'istruzione.  
   
-2.  Facoltativamente, è possibile chiamare [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) per determinare il numero di parametri nell'istruzione preparata.  
+2.  Facoltativamente, è possibile chiamare [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) per determinare il numero di parametri nell'istruzione preparata.  
   
 3.  Per ogni parametro dell'istruzione preparata è possibile:  
   
@@ -43,9 +43,9 @@ ms.locfileid: "47673547"
   
     -   Se nell'istruzione sono inclusi marcatori di parametro, inserire i valori dei dati nel buffer di parametri associato.  
   
-    -   Chiamare [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) per eseguire l'istruzione preparata.  
+    -   Chiamare [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) per eseguire l'istruzione preparata.  
   
-    -   Se si utilizzano parametri di input data-at-execution, [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) restituisce SQL_NEED_DATA. Inviare i dati in blocchi mediante [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+    -   Se si utilizzano parametri di input data-at-execution, [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) restituisce SQL_NEED_DATA. Inviare i dati in blocchi mediante [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>Per preparare un'istruzione con associazione di parametri a livello di colonna  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47673547"
   
 2.  Chiamare la funzione SQLPrepare per preparare l'istruzione.  
   
-3.  Facoltativamente, è possibile chiamare [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) per determinare il numero di parametri nell'istruzione preparata.  
+3.  Facoltativamente, è possibile chiamare [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) per determinare il numero di parametri nell'istruzione preparata.  
   
 4.  Facoltativamente, per ogni parametro nell'istruzione preparata, è possibile chiamare SQLDescribeParam per ottenere informazioni sui parametri.  
   

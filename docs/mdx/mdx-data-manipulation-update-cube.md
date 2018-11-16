@@ -1,5 +1,5 @@
 ---
-title: Istruzione UPDATE CUBE (MDX) | Documenti Microsoft
+title: Istruzione UPDATE CUBE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6d6eb2f8ae6ec4898642cf014fbfe46768453983
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 878f103e236a198ff71181a64b39400c8f6ea0ca
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741880"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702369"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>Manipolazione dei dati MDX - UPDATE CUBE
 
 
-  L'istruzione UPDATE CUBE viene utilizzata per eseguire il writeback dei dati in qualsiasi cella di un cubo aggregato al relativo elemento padre mediante l'aggregazione SUM. Per ulteriori informazioni ed esempi, vedere "Informazioni sulle allocazioni" in questo post di blog: [la creazione di un'applicazione di Writeback con Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977).  
+  L'istruzione UPDATE CUBE viene utilizzata per eseguire il writeback dei dati in qualsiasi cella di un cubo aggregato al relativo elemento padre mediante l'aggregazione SUM. Per una spiegazione più approfondita e un esempio, vedere "Informazioni sulle allocazioni" in questo post di blog: [compilazione di un'applicazione di Writeback con Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,14 +53,14 @@ UPDATE [ CUBE ] Cube_Name
  *Weight_Expression*  
  Espressione numerica MDX (Multidimensional Expression) valida che restituisce un valore decimale compreso tra 0 e 1.  
   
-## <a name="remarks"></a>Remarks  
- È possibile aggiornare il valore di una cella foglia o non foglia specificata di un cubo, allocando facoltativamente il valore di una cella non foglia specificata a celle foglia dipendenti. La cella specificata dall'espressione di tupla può essere una cella valida qualsiasi dello spazio multidimensionale, ovvero la cella non deve essere necessariamente una cella foglia. Tuttavia, la cella deve essere aggregata con la [somma](../mdx/sum-mdx.md) funzione di aggregazione e non deve includere un membro calcolato nella tupla utilizzata per identificare la cella.  
+## <a name="remarks"></a>Note  
+ È possibile aggiornare il valore di una cella foglia o non foglia specificata di un cubo, allocando facoltativamente il valore di una cella non foglia specificata a celle foglia dipendenti. La cella specificata dall'espressione di tupla può essere una cella valida qualsiasi dello spazio multidimensionale, ovvero la cella non deve essere necessariamente una cella foglia. Tuttavia, è necessario aggregare la cella con il [somma](../mdx/sum-mdx.md) funzione di aggregazione e non deve includere un membro calcolato nella tupla utilizzata per identificare la cella.  
   
- Potrebbe essere opportuno considerare il **UPDATE CUBE** istruzione come una subroutine che genera automaticamente una serie di operazioni di writeback delle celle singole celle foglia e non foglia che eseguirà il rollup somma specificata.  
+ Potrebbe essere opportuno considerare il **UPDATE CUBE** istruzione come una subroutine che genera automaticamente una serie di operazioni di writeback delle celle singole celle foglia e non foglia che eseguirà il rollup in una somma specificata.  
   
  Di seguito è una descrizione dei metodi di allocazione.  
   
- **USE_EQUAL_ALLOCATION:** ogni cella foglia che contribuisce alla cella aggiornata verrà assegnato un valore uguale in base all'espressione seguente.  
+ **USE_EQUAL_ALLOCATION:** ogni cella foglia che contribuisce alla cella aggiornata verrà assegnato un valore uguale basato sull'espressione seguente.  
   
 ```  
 <leaf cell value> =   
@@ -75,7 +75,7 @@ UPDATE [ CUBE ] Cube_Name
 Count(leaf cells contained in <tuple>)  
 ```  
   
- **USE_WEIGHTED_ALLOCATION:** ogni cella foglia che contribuisce alla cella aggiornata verrà assegnato un valore uguale a cui si basa l'espressione seguente.  
+ **USE_WEIGHTED_ALLOCATION:** ogni cella foglia che contribuisce alla cella aggiornata verrà assegnato un valore uguale basato sull'espressione seguente.  
   
 ```  
 <leaf cell value> = < New Value> * Weight_Expression  
@@ -88,7 +88,7 @@ Count(leaf cells contained in <tuple>)
 (<New Value> - <existing value>)  * Weight_Expression  
 ```  
   
- Se un'espressione di ponderazione non è specificata, il **UPDATE CUBE** istruzione utilizza in modo implicito l'espressione seguente.  
+ Se un'espressione di ponderazione viene omesso, il **UPDATE CUBE** istruzione utilizza in modo implicito l'espressione seguente.  
   
 ```  
 Weight_Expression = <leaf cell value> / <existing value>  
@@ -99,7 +99,7 @@ Weight_Expression = <leaf cell value> / <existing value>
 > [!CAUTION]  
 >  L'applicazione client deve prendere in considerazione l'allocazione di tutte le dimensioni simultaneamente in modo da evitare risultati imprevisti, tra cui valori di rollup non corretti o dati inconsistenti.  
   
- Ogni **UPDATE CUBE** allocazione deve essere considerata atomica fini delle transazioni. Ciò significa che, se una delle operazioni di allocazione ha esito negativo, ad esempio nel caso di errore in una formula o di una violazione di sicurezza, l'intera operazione UPDATE CUBE avrà esito negativo. Prima dell'elaborazione dei calcoli delle singole operazioni di allocazione viene eseguito uno snapshot dei dati per assicurare che i calcoli risultanti siano corretti.  
+ Ciascuna **UPDATE CUBE** allocazione deve essere considerata atomica per scopi transazionali. Ciò significa che, se una delle operazioni di allocazione ha esito negativo, ad esempio nel caso di errore in una formula o di una violazione di sicurezza, l'intera operazione UPDATE CUBE avrà esito negativo. Prima dell'elaborazione dei calcoli delle singole operazioni di allocazione viene eseguito uno snapshot dei dati per assicurare che i calcoli risultanti siano corretti.  
   
 > [!CAUTION]  
 >  Quando si utilizza una misura contenente dati integer, il metodo USE_WEIGHTED_ALLOCATION potrebbe restituire risultati non precisi in seguito a modifiche di arrotondamento incrementali.  
