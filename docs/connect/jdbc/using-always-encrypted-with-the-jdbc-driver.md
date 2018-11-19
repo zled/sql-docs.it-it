@@ -11,12 +11,12 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ce122713ce5d57daa9a7313d8b6d184bd33b850
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f9eded908271973415987155de5cf1efdc906db
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842749"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600971"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Uso di Always Encrypted con il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,9 +29,9 @@ Always Encrypted consente ai client di eseguire la crittografia dei dati sensibi
 - Assicurarsi che Microsoft JDBC Driver 6.0 (o versione successiva) per SQL Server sia installato nel computer di sviluppo. 
 - Scaricare e installare Java Cryptography Extension (JCE) Unlimited Strenght Jurisdiction Policy Files.  Leggere il file leggimi incluso nel file ZIP per istruzioni sull'installazione e dettagli rilevanti sui possibili problemi di importazione/esportazione.  
 
-    - Se si usa mssql-jdbc-X.X.X.jre7.jar o sqljdbc41.jar, i file dei criteri possono essere scaricati da [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 7 Download](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)
+    - Se si usa mssql-jdbc-X.X.X.jre7.jar o sqljdbc41.jar, i file dei criteri possono essere scaricati da [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 7 Download](https://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)
 
-    - Se si usa mssql-jdbc-X.X.X.jre8.jar o sqljdbc42.jar, i file dei criteri possono essere scaricati da [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8 Download](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
+    - Se si usa mssql-jdbc-X.X.X.jre8.jar o sqljdbc42.jar, i file dei criteri possono essere scaricati da [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8 Download](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
 
     - Se si usa il mssql-jdbc-X.X.X.jre9.jar, non è necessario scaricare alcun file di criteri. I criteri di una giurisdizione in Java 9 viene impostato su un numero illimitato di livello di crittografia.
 
@@ -105,7 +105,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >
 > Per un esempio di come includere queste dipendenze in un progetto Maven, vedere [scaricare ADAL4J AKV dipendenze e con Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
-### <a name="using-windows-certificate-store-provider"></a>Uso del provider di Windows Store di certificato
+### <a name="using-windows-certificate-store-provider"></a>Uso del provider per l'archivio certificati Windows
 SqlColumnEncryptionCertificateStoreProvider consente di archiviare le chiavi master della colonna nell'archivio certificati Windows. Usare la procedura guidata Always Encrypted di SQL Server Management Studio (SSMS) o altri strumenti supportati per creare la chiave master della colonna e la crittografia di colonna definizioni chiave nel database. La stessa procedura guidata può essere utilizzata per generare un certificato autofirmato in Store il certificato di Windows che può essere utilizzato come chiave master della colonna per i dati sempre crittografati. Per altre informazioni sulla chiave master della colonna e sintassi T-SQL della colonna crittografia chiave, vedere [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) e [CREATE COLUMN ENCRPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) rispettivamente.
 
 Il nome del SQLServerColumnEncryptionCertificateStoreProvider è MSSQL_CERTIFICATE_STORE e può eseguire query di getName() API dell'oggetto del provider. Viene automaticamente registrato dal driver ed è possibile usare facilmente senza apportare modifiche dell'applicazione.
@@ -154,7 +154,7 @@ String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<p
 Il driver JDBC crea automaticamente il SQLServerColumnEncryptionJavaKeyStoreProvider quando queste credenziali sono presenti nelle proprietà di connessione.
 
 ### <a name="creating-a-column-master-key-for-the-java-key-store"></a>Creazione di una chiave master della colonna per la Store chiave Java
-Il SQLServerColumnEncryptionJavaKeyStoreProvider è utilizzabile con i tipi di archivio chiavi JKS o PKCS12. Creare o importare una chiave da usare con questo provider Usa Java [dello strumento keytool](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html) utilità. La chiave deve avere la stessa password dell'archivio chiavi stesso. Di seguito è riportato un esempio di come creare una chiave pubblica e la relativa chiave privata associata tramite l'utilità keytool:
+Il SQLServerColumnEncryptionJavaKeyStoreProvider è utilizzabile con i tipi di archivio chiavi JKS o PKCS12. Creare o importare una chiave da usare con questo provider Usa Java [dello strumento keytool](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html) utilità. La chiave deve avere la stessa password dell'archivio chiavi stesso. Di seguito è riportato un esempio di come creare una chiave pubblica e la relativa chiave privata associata tramite l'utilità keytool:
 
 ```
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.jks -storepass mypassword -validity 360 -keysize 2048 -storetype jks

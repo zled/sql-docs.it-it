@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 901f2a276e1b09befa2fc10e01003456e4cfe7e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a7f5c3452d63ad622dfd24d6ec3756ac5a028b2
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795459"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812930"
 ---
 # <a name="access-report-server-items-using-url-access"></a>Accesso agli elementi del server di report utilizzando l'accesso tramite URL
   Questo argomento descrive come accedere a tipi diversi di elementi del catalogo in un database del server di report o in un sito di SharePoint usando *rs:Command*=*Value*. In realtà non è necessario aggiungere questa stringa del parametro. Se la si omette, il tipo di elemento viene valutato dal server di report e il valore del parametro appropriato viene selezionato automaticamente. Tuttavia, l'uso della stringa *rs:Command*=*Valore* nell'URL migliora le prestazioni del server di report.  
@@ -26,8 +26,8 @@ ms.locfileid: "47795459"
 ## <a name="access-a-report"></a>Accedere a report  
  Per visualizzare un report nel browser, usare il parametro *rs:Command*=*Render* . Ad esempio  
   
- - **Nativo** `http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
- - **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
+ - **Nativo** `https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
+ - **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver? https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
   
 > [!TIP]  
 >  È importante che nell'URL sia inclusa la sintassi proxy `_vti_bin` per indirizzare la richiesta tramite SharePoint e il proxy HTTP di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Tramite il proxy viene aggiunto del contesto alla richiesta HTTP. Questo contesto è necessario per garantire l'esecuzione corretta del report per i server di report in modalità SharePoint.  
@@ -35,16 +35,16 @@ ms.locfileid: "47795459"
 ## <a name="access-a-resource"></a>Accedere a una risorsa  
  Per accedere a una risorsa, usare il parametro *rs:Command*=*GetResourceContents* . Se la risorsa è compatibile con il browser, come accade per un'immagine, viene aperta nel browser. In caso contrario, verrà chiesto di aprire oppure salvare il file o la risorsa su disco.  
   
- **Nativo** `http://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
+ **Nativo** `https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
   
- **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
+ **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver? https://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
   
 ## <a name="access-a-data-source"></a>Accedere a un'origine dati  
  Per accedere a un'origine dati, usare il parametro *rs:Command*=*GetDataSourceContents* . Se il browser supporta XML, la definizione dell'origine dati viene visualizzata se l'utente è autenticato con l'autorizzazione per la **lettura del contenuto** per l'origine dati. Ad esempio  
   
- **Nativo** `http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+ **Nativo** `https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
- **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+ **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver? https://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
  La struttura XML potrebbe essere simile a quella illustrata nell'esempio seguente:  
   
@@ -65,9 +65,9 @@ ms.locfileid: "47795459"
 ## <a name="access-the-contents-of-a-folder"></a>Accedere ai contenuti di una cartella  
  Per accedere ai contenuti di una cartella, usare il parametro *rs:Command*=*GetChildren* . Viene restituita una pagina generica di navigazione della cartella che contiene collegamenti alle sottocartelle, alle origini dati, alle risorse e ai report inclusi nella cartella richiesta. Ad esempio  
   
- **Nativo** `http://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
+ **Nativo** `https://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
   
- **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales&rs:Command=GetChildren`  
+ **SharePoint** `https://myspsite/subsite/_vti_bin/reportserver? https://myspsite/subsite/Sales&rs:Command=GetChildren`  
   
  L'interfaccia utente visualizzata è simile alla modalità di esplorazione delle directory utilizzata da [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Server (IIS). Sotto l'elenco della cartella viene visualizzato anche il numero di versione, incluso il numero di build, del server di report.  
   

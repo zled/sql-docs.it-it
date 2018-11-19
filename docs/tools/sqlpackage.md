@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: b7bf75b16a9c7962ce1d04f51182d21107daa181
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 2d16e9c805f9979a53a9e8bc8c2e265e06ccbab9
+ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051223"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51629624"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -102,6 +102,8 @@ Un'operazione di pubblicazione tramite SqlPackage.exe consente di aggiornare in 
 |**/AccessToken:**|**/at**|{string}| Specifica il token di accesso per l'autenticazione basata su token da usare per la connessione al database di destinazione. |
 |**/ AzureKeyVaultAuthMethod:**|**/akv**|{Interattivo&#124;ClientIdSecret}|Specifica il metodo di autenticazione che viene usato per l'accesso ad Azure Key Vault |
 |**/ClientId:**|**/CID**|{string}|Specifica l'ID client da usare nell'autenticazione con Azure Key Vault, quando necessario |
+|**/ DeployScriptPath:**|**/DSP**|{string}|Specifica un percorso file facoltativo per lo script di distribuzione di output. Per una distribuzione di Azure, se sono disponibili comandi TSQL per creare o modificare il database master, verrà scritto uno script nello stesso percorso, ma con "Filename_Master.sql" come nome del file di output. |
+|**/ DeployReportPath:**|**/DRP**|{string}|Specifica un percorso file facoltativo per l'output del file xml di report di distribuzione. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifica se la registrazione diagnostica viene restituita come output nella console. Il valore predefinito è False. |
 |**/ DiagnosticsFile:**|**/DF**|{string}|Specifica un file per archiviare i log di diagnostica. |
 |**/ MaxParallelism:**|**/mp**|{int}| Specifica il grado di parallelismo per le operazioni simultanee in esecuzione su un database. Il valore predefinito è 8. |
@@ -476,6 +478,8 @@ L'azione Script di **SqlPackage.exe** consente di creare uno script di aggiornam
 |---|---|---|---|
 |**/Action:**|**/a**|Script|Specifica l'azione da eseguire. |
 |**/AccessToken:**|**/at**|{string}| Specifica il token di accesso per l'autenticazione basata su token da usare per la connessione al database di destinazione. |
+|**/ DeployScriptPath:**|**/DSP**|{string}|Specifica un percorso file facoltativo per lo script di distribuzione di output. Per una distribuzione di Azure, se sono disponibili comandi TSQL per creare o modificare il database master, verrà scritto uno script nello stesso percorso, ma con "Filename_Master.sql" come nome del file di output. |
+|**/ DeployReportPath:**|**/DRP**|{string}|Specifica un percorso file facoltativo per l'output del file xml di report di distribuzione. |
 |**/Diagnostics:**|**/d**|{True&#124;False}|Specifica se la registrazione diagnostica viene restituita come output nella console. Il valore predefinito è False. |
 |**/ DiagnosticsFile:**|**/DF**|{string}|Specifica un file per archiviare i log di diagnostica. |
 |**/ MaxParallelism:**|**/mp**|{int}| Specifica il grado di parallelismo per le operazioni simultanee in esecuzione su un database. Il valore predefinito è 8. |

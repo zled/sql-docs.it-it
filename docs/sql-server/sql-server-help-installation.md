@@ -10,12 +10,12 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57b606af70ac4018fbedd266a9fe38243347458d
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: e9a1ae0aac049fef58d8007c26dce6ce355344a6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460586"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700529"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Guida offline di SQL Server e Help Viewer
 
@@ -134,7 +134,7 @@ Le versioni precedenti di SQL Server Management Studio e Visual Studio usano Hel
 
 Questa procedura usa Help Viewer 1.x per scaricare la Guida di SQL Server 2014 da Microsoft Download Center e installarla nel computer in uso.
 
-1. Passare al sito di download della [documentazione del prodotto per Microsoft SQL Server 2014](https://www.microsoft.com/en-us/download/details.aspx?id=42557) e fare clic su **Scarica**.  
+1. Passare al sito di download della [documentazione del prodotto per Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=42557) e fare clic su **Scarica**.  
 2. Fare clic su **Salva** nella finestra del messaggio per salvare il file *SQLServer2014Documentation\_\*.exe* nel computer.  
    
    >[!NOTE]

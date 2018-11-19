@@ -5,8 +5,7 @@ ms.date: 09/12/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -29,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1b62fe2d79dfa947cb9c8f0f6ebbd0c484960e26
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 9ba83c8913d9e906925986cc07e3a2816c131cc6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461166"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661240"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "49461166"
 L'utilità Usa ODBC per eseguire batch Transact-SQL. 
  
 > [!NOTE]
-> Le versioni più recenti dell'utilità sqlcmd sono disponibili come versione Web nell' [Area download](http://go.microsoft.com/fwlink/?LinkID=825643). È necessaria versione 13.1 o successiva per supportare Always Encrypted (`-g`) e l'autenticazione di Azure Active Directory (`-G`). Nel computer potrebbero essere installate diverse versioni di sqlcmd.exe. Assicurarsi di usare la versione corretta. Per determinare la versione, eseguire `sqlcmd -?`.
+> Le versioni più recenti dell'utilità sqlcmd sono disponibili come versione Web nell' [Area download](https://go.microsoft.com/fwlink/?LinkID=825643). È necessaria versione 13.1 o successiva per supportare Always Encrypted (`-g`) e l'autenticazione di Azure Active Directory (`-G`). Nel computer potrebbero essere installate diverse versioni di sqlcmd.exe. Assicurarsi di usare la versione corretta. Per determinare la versione, eseguire `sqlcmd -?`.
 
 È possibile provare l'utilità sqlcmd da Azure Cloud Shell pre-installata per impostazione predefinita: [ ![avvia Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "avvia Cloud Shell")](https://shell.azure.com)
 
@@ -142,10 +141,10 @@ sqlcmd
  L'opzione **-E** ignora eventuali impostazioni delle variabili di ambiente relative a nome utente e password, ad esempio SQLCMDPASSWORD. Se si usa l'opzione **-E** in combinazione con l'opzione **-U** o con l'opzione **-P** , viene generato un messaggio di errore.  
 
 **-g**  
-Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vedere [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md). Sono supportate solo le chiavi master presenti nell'archivio certificati Windows. L'opzione -g richiede almeno **sqlcmd** versione [13.1](http://go.microsoft.com/fwlink/?LinkID=825643). Per determinare la versione, eseguire `sqlcmd -?`.
+Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vedere [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md). Sono supportate solo le chiavi master presenti nell'archivio certificati Windows. L'opzione -g richiede almeno **sqlcmd** versione [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Per determinare la versione, eseguire `sqlcmd -?`.
 
  **-G**  
- Questa opzione viene usata dal client durante la connessione al database SQL o a SQL Data Warehouse per specificare che l'utente venga autenticato tramite l'autenticazione di Azure Active Directory. Questa opzione imposta la variabile di scripting SQLCMDUSEAAD = true di **sqlcmd** . L'opzione -G richiede almeno **sqlcmd** versione [13.1](http://go.microsoft.com/fwlink/?LinkID=825643). Per determinare la versione, eseguire `sqlcmd -?`. Per altre informazioni, vedere [Connessione al database SQL oppure a SQL Data Warehouse con l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). L'opzione - A non è supportata con l'opzione -G.
+ Questa opzione viene usata dal client durante la connessione al database SQL o a SQL Data Warehouse per specificare che l'utente venga autenticato tramite l'autenticazione di Azure Active Directory. Questa opzione imposta la variabile di scripting SQLCMDUSEAAD = true di **sqlcmd** . L'opzione -G richiede almeno **sqlcmd** versione [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Per determinare la versione, eseguire `sqlcmd -?`. Per altre informazioni, vedere [Connessione al database SQL oppure a SQL Data Warehouse con l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). L'opzione - A non è supportata con l'opzione -G.
 
 > [!IMPORTANT]
 > L'opzione **-G** si applica solo al database SQL di Azure e ad Azure Data Warehouse.
@@ -799,7 +798,7 @@ Se si preme INVIO, verrà stampato il messaggio informativo seguente: "Il contes
   
  `GO`  
   
- Se si preme INVIO, viene restituito il set di risultati seguente.  
+ Quando si preme INVIO, viene restituito il set di risultati seguente.  
   
  `BusinessEntityID FirstName    LastName`  
   
