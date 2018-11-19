@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02cd5a093d0af3d325437c77dc07846ee8f6db23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83346a846e180cd2e77c6ba895bac7a899b1143a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601269"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639179"
 ---
 # <a name="dtexec-utility"></a>Utilità dtexec
   L'utilità del prompt dei comandi **dtexec** viene usata per configurare ed eseguire i pacchetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Con l'utilità **dtexec** è possibile accedere a tutte le funzionalità di configurazione ed esecuzione dei pacchetti, ad esempio parametri, connessioni, proprietà, variabili, registrazione e indicatori di stato. L'utilità **dtexec** consente di caricare i pacchetti da queste origini: server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , file di progetto con estensione ispac, database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e file system.  
@@ -172,7 +172,7 @@ dtexec /option [value] [/option [value]]...
   
      Questa opzione richiede che vengano specificati entrambi i parametri: il nome o il GUID della gestione connessione deve essere specificato nell'argomento *id_or_name*, mentre nell'argomento *connection_string* deve essere specificata una stringa di connessione valida. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
-     In fase di esecuzione è possibile usare l'opzione **/Connection** per caricare le configurazioni di pacchetto da una posizione diversa da quella specificata in fase di progettazione. I valori di queste configurazioni sostituiscono i valori specificati in origine. È tuttavia possibile usare l'opzione **/Connection** solo per le configurazioni che usano una gestione connessione, ad esempio le configurazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per capire come sono applicate le configurazioni dei pacchetti, vedere [Configurazioni di pacchetto](../../integration-services/packages/package-configurations.md) e [Differenze di funzionamento delle funzionalità di Integration Services in SQL Server 2016](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
+     In fase di esecuzione è possibile usare l'opzione **/Connection** per caricare le configurazioni di pacchetto da una posizione diversa da quella specificata in fase di progettazione. I valori di queste configurazioni sostituiscono i valori specificati in origine. È tuttavia possibile usare l'opzione **/Connection** solo per le configurazioni che usano una gestione connessione, ad esempio le configurazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per capire come sono applicate le configurazioni dei pacchetti, vedere [Configurazioni di pacchetto](../../integration-services/packages/package-configurations.md) e [Differenze di funzionamento delle funzionalità di Integration Services in SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]: (facoltativo). Consente di visualizzare le voci di log specificate nella console durante l'esecuzione del pacchetto. Se questa opzione viene omessa, non verrà visualizzata alcuna voce di log nella console. Se si specifica l'opzione senza tuttavia alcun parametro per limitare la visualizzazione, verrà visualizzata ogni voce di log. Per limitare il numero di voci visualizzate nella console, è possibile specificare le colonne da visualizzare tramite il parametro *displayoptions* e limitare i tipi di voci di log tramite il parametro *list_options* .  
   
@@ -403,7 +403,7 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     È possibile usare l'opzione **/Set** per modificare il percorso da cui vengono caricate le configurazioni di pacchetto. Non è tuttavia possibile usare l'opzione **/Set** per ignorare un valore specificato da una configurazione in fase di progettazione. Per capire come sono applicate le configurazioni dei pacchetti, vedere [Configurazioni di pacchetto](../../integration-services/packages/package-configurations.md) e [Differenze di funzionamento delle funzionalità di Integration Services in SQL Server 2016](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
+     È possibile usare l'opzione **/Set** per modificare il percorso da cui vengono caricate le configurazioni di pacchetto. Non è tuttavia possibile usare l'opzione **/Set** per ignorare un valore specificato da una configurazione in fase di progettazione. Per capire come sono applicate le configurazioni dei pacchetti, vedere [Configurazioni di pacchetto](../../integration-services/packages/package-configurations.md) e [Differenze di funzionamento delle funzionalità di Integration Services in SQL Server 2016](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794).  
   
 -   **/Ser[ver]** *server*: (facoltativo). Se si specifica l'opzione **/SQL** o **/DTS** , questa opzione specifica il nome del server dal quale recuperare il pacchetto. Se si omette l'opzione **/Server** e si specifica l'opzione **/SQL** o **/DTS** , verrà tentata l'esecuzione del pacchetto nel server locale. Il valore *server_instance* può essere racchiuso fra virgolette.  
   
@@ -630,6 +630,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
 ```  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Intervento sul blog relativo a [codici di uscita, DTEXEC e catalogo SSIS](http://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/), su www.mattmasson.com.  
+ Intervento sul blog relativo a [codici di uscita, DTEXEC e catalogo SSIS](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/), su www.mattmasson.com.  
   
   

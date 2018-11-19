@@ -84,7 +84,7 @@ ms.locfileid: "34019618"
   
 4.  Nella pagina Seleziona utenti o computer immettere l'account usato per eseguire l'istanza di SQL Server che fornisce i dati ai database del modello tabulare di Analysis Services. Fare clic su **OK** per accettare l'account del servizio.  
   
-     Se non è possibile selezionare l'account desiderato, verificare che SQL Server sia in esecuzione e disponga di un nome SPN registrato per tale account. Per altre informazioni sui nomi SPN per il motore di database, vedere [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+     Se non è possibile selezionare l'account desiderato, verificare che SQL Server sia in esecuzione e disponga di un nome SPN registrato per tale account. Per altre informazioni sui nomi SPN per il motore di database, vedere [Registrazione di un nome dell'entità servizio per le connessioni Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
      ![SSAS_Kerberos_3_SelectUsers](../../analysis-services/instances/media/ssas-kerberos-3-selectusers.gif "SSAS_Kerberos_3_SelectUsers")  
   

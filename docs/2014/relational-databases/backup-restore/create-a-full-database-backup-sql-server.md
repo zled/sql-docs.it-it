@@ -36,7 +36,7 @@ ms.locfileid: "48094025"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un database completo di backup, utilizzando:**  
   

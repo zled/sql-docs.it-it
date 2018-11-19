@@ -1,5 +1,5 @@
 ---
-title: Change Data Capture Service per Oracle di Attunity | Microsoft Docs
+title: Servizio Change Data Capture per Oracle di Attunity | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -76,7 +76,7 @@ ms.locfileid: "51640108"
   
 -   [Servizio Oracle CDC](../../integration-services/change-data-capture/the-oracle-cdc-service.md)  
   
--   [Change Data Capture Service for Oracle by Attunity F1 Help](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-f1-help.md)  
+-   [Guida del servizio Change Data Capture per Oracle di Attunity](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-f1-help.md)  
   
 -   [Guida procedurale del servizio Change Data Capture per Oracle di Attunity](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-how-to-guide.md)  
   

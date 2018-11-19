@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8decfb0a7378ef1acfaf671276f6449cde19ba1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c67e42a98bf6b653b35ead538449d725a6ed9d96
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794609"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662260"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47794609"
  È possibile usare la GUI anche per visualizzare l'output dell'ottimizzazione generato dall'utilità della riga di comando **dta** .  
   
 > [!NOTE]  
->  Se si usa l'utilità della riga di comando **dta** e si specifica che l'output venga scritto in un file XML con l'argomento **-ox** , sarà possibile aprire e visualizzare il file di output XML scegliendo **Apri file** dal menu **File** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be). Per informazioni sull'utilità della riga di comando **dta** , vedere [Utilità dta](../../tools/dta/dta-utility.md).  
+>  Se si usa l'utilità della riga di comando **dta** e si specifica che l'output venga scritto in un file XML con l'argomento **-ox** , sarà possibile aprire e visualizzare il file di output XML scegliendo **Apri file** dal menu **File** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be). Per informazioni sull'utilità della riga di comando **dta** , vedere [Utilità dta](../../tools/dta/dta-utility.md).  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Per visualizzare le indicazioni relative all'ottimizzazione tramite la GUI di Ottimizzazione guidata motore di database  
   
@@ -175,7 +175,7 @@ ms.locfileid: "47794609"
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     XML Schema di Ottimizzazione guidata motore di database è anche disponibile online all'indirizzo [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta).  
+     XML Schema di Ottimizzazione guidata motore di database è anche disponibile online all'indirizzo [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta).  
   
 6.  Dopo aver creato un carico di lavoro e un file di input XML, è possibile specificare il file di input nell'utilità della riga di comando **dta** per eseguirne l'analisi. Assicurarsi di specificare un nome di file di output XML nell'argomento **-ox** . In tal modo viene creato un file di output XML con la configurazione indicata specificata nell'elemento **Configuration** . Se si desidera eseguire nuovamente Ottimizzazione guidata motore di database per verificare un'altra configurazione ipotetica basata sull'output, copiare il contenuto dell'elemento **Configuration** del file di output e incollarlo nel file di input XML originale o in un nuovo file XML. Per informazioni sull'uso di un file di input XML con l'utilità **dta** , vedere la sezione "Ottimizzazione di un database tramite l'utilità dta" in [Avvio e utilizzo di Ottimizzazione guidata motore di database](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
