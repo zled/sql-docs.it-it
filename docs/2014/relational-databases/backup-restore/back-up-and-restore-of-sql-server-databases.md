@@ -34,7 +34,7 @@ ms.locfileid: "48096791"
   
  Il componente di backup e ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rappresenta uno strumento essenziale per la sicurezza e la protezione di dati di importanza critica archiviati nei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ridurre il rischio di perdita irreversibile dei dati, è necessario eseguire regolarmente il backup dei database per preservare le modifiche ai dati. Una strategia di backup e ripristino ben pianificata aiuta a proteggere i database dalla perdita di dati causata da vari tipi di guasti e problemi. Il test della strategia mediante il ripristino di un set di backup e il recupero del database assicura una efficace preparazione a reagire in qualsiasi emergenza.  
   
- Oltre alle risorse di archiviazione locale per l'archiviazione di backup, SQL Server supporta anche il backup e il ripristino dal servizio di archiviazione BLOB di Windows Azure. Per altre informazioni, vedere [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Oltre alle risorse di archiviazione locale per l'archiviazione di backup, SQL Server supporta anche il backup e il ripristino dal servizio di archiviazione BLOB di Windows Azure. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 
   
@@ -67,7 +67,7 @@ ms.locfileid: "48096791"
  Copia dei dati utilizzabile per il ripristino e il recupero in seguito a un errore. I backup di un database possono essere utilizzati anche per ripristinare una copia del database in una nuova posizione.  
   
  dispositivo di backup  
- Dispositivo disco o nastro nel quale vengono scritti i backup di SQL Server e da cui è possibile eseguirne il ripristino. I backup di SQL Server possono anche essere scritti in un servizio di archiviazione BLOB di Windows Azure e il formato **URL** viene utilizzato per specificare la destinazione e il nome del file di backup. Per altre informazioni, vedere [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Dispositivo disco o nastro nel quale vengono scritti i backup di SQL Server e da cui è possibile eseguirne il ripristino. I backup di SQL Server possono anche essere scritti in un servizio di archiviazione BLOB di Windows Azure e il formato **URL** viene utilizzato per specificare la destinazione e il nome del file di backup. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  supporti di backup  
  Uno o più nastri o file del disco in cui sono stati scritti uno o più backup.  

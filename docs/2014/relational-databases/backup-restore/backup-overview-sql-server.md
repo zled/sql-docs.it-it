@@ -86,7 +86,7 @@ ms.locfileid: "48049398"
  **Supporti di backup termini e definizioni**  
   
  [Dispositivo di backup](backup-devices-sql-server.md)  
- Dispositivo nastro o disco in cui vengono scritti i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e da cui è possibile eseguirne il ripristino. I backup di SQL Server possono anche essere scritti in un servizio di archiviazione BLOB di Windows Azure e il formato **URL** viene utilizzato per specificare la destinazione e il nome del file di backup. Per altre informazioni, vedere [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Dispositivo nastro o disco in cui vengono scritti i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e da cui è possibile eseguirne il ripristino. I backup di SQL Server possono anche essere scritti in un servizio di archiviazione BLOB di Windows Azure e il formato **URL** viene utilizzato per specificare la destinazione e il nome del file di backup. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  [supporti di backup](media-sets-media-families-and-backup-sets-sql-server.md)  
  Uno o più nastri o file del disco in cui sono stati scritti uno o più backup.  
