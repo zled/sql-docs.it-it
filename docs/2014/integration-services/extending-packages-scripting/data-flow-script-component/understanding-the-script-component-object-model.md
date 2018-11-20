@@ -137,7 +137,7 @@ public override void PreExecute()
   
 -   Eseguire l'override di **\<inputbuffer>_ProcessInputRow** per elaborare i dati in ogni riga di input non appena vengono passati.  
   
--   Eseguire l'override di **\<inputbuffer>_ProcessInput** solo se è necessario eseguire operazioni aggiuntive mentre si esegue il ciclo delle righe di input, ad esempio se è necessario verificare la presenza di `EndOfRowset` per eseguire un'altra azione dopo l'elaborazione di tutte le righe. Chiamare \<** inputbuffer>_ProcessInputRow per eseguire l'elaborazione delle righe.  
+-   Eseguire l'override di **\<inputbuffer>_ProcessInput** solo se è necessario eseguire operazioni aggiuntive mentre si esegue il ciclo delle righe di input, ad esempio se è necessario verificare la presenza di `EndOfRowset` per eseguire un'altra azione dopo l'elaborazione di tutte le righe. Chiamare **\<inputbuffer>_ProcessInputRow** per eseguire l'elaborazione delle righe.  
   
 -   Eseguire l'override di `FinishOutputs` se è necessario eseguire operazioni sugli output prima che vengano chiusi.  
   
