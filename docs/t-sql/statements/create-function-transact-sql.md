@@ -1,7 +1,7 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/25/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -36,17 +36,20 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 55bbcbb08d9062d4eb8402a8c15dd243aa9b6a98
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 90c31ce4210cb05b205459c63bd616c8bba382d3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864289"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704069"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Crea una funzione definita dall'utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Una funzione definita dall'utente è una routine [!INCLUDE[tsql](../../includes/tsql-md.md)] o Common Language Runtime (CLR) tramite cui vengono accettati parametri, viene effettuata un'azione, ad esempio un calcolo complesso, e viene restituito il risultato di tale azione sotto forma di valore. Il valore restituito può essere un valore scalare (singolo) o una tabella. Utilizzare questa istruzione per creare una routine riutilizzabile che può essere utilizzata in queste modalità:  
+> [!div class="nextstepaction"]
+> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+Crea una funzione definita dall'utente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Una funzione definita dall'utente è una routine [!INCLUDE[tsql](../../includes/tsql-md.md)] o Common Language Runtime (CLR) tramite cui vengono accettati parametri, viene effettuata un'azione, ad esempio un calcolo complesso, e viene restituito il risultato di tale azione sotto forma di valore. Il valore restituito può essere un valore scalare (singolo) o una tabella. Utilizzare questa istruzione per creare una routine riutilizzabile che può essere utilizzata in queste modalità:  
   
 -   Nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio SELECT.  
   
@@ -135,6 +138,7 @@ RETURNS @return_variable TABLE <table_type_definition>
   | [ SCHEMABINDING ]  
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
   | [ EXECUTE_AS_Clause ]  
+  | [ INLINE = { ON | OFF }]  
 }  
   
 <table_type_definition>:: =   
@@ -367,7 +371,7 @@ RETURNS return_data_type
   
  *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) Definisce il tipo di dati table per una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La dichiarazione di tabella include definizioni di colonna, nonché vincoli di colonna o tabella. La tabella viene sempre inserita nel filegroup primario.  
   
- \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([in anteprima in alcune aree](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+ \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([in anteprima in alcune aree](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
  Definisce i tipi di dati della tabella per una funzione CLR. La dichiarazione di tabella include solo nomi di colonna e tipi di dati. La tabella viene sempre inserita nel filegroup primario.  
   
@@ -418,18 +422,21 @@ RETURNS return_data_type
   
 -   L'utente che ha eseguito l'istruzione CREATE FUNCTION dispone dell'autorizzazione REFERENCES per gli oggetti di database a cui la funzione fa riferimento.  
   
- RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
- Specifica l'attributo **OnNULLCall** di una funzione a valori scalari. Se omesso, viene utilizzata l'opzione CALLED ON NULL INPUT per impostazione predefinita. Ciò significa che viene eseguito il corpo della funzione anche se come argomento viene passato NULL.  
+RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
+Specifica l'attributo **OnNULLCall** di una funzione a valori scalari. Se omesso, viene utilizzata l'opzione CALLED ON NULL INPUT per impostazione predefinita. Ciò significa che viene eseguito il corpo della funzione anche se come argomento viene passato NULL.  
   
- Se in una funzione CLR si specifica l'opzione RETURNS NULL ON NULL INPUT, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce NULL se uno qualsiasi degli argomenti ricevuti è NULL senza effettivamente richiamare il corpo della funzione. Se per il metodo di una funzione CLR specificato in \<method_specifier> è stato definito un attributo personalizzato impostato su RETURNS NULL ON NULL INPUT, ma l'istruzione CREATE FUNCTION include CALLED ON NULL INPUT, l'istruzione CREATE FUNCTION risulta prioritaria. Non è possibile specificare l'attributo **OnNULLCall** per le funzioni CLR con valori di tabella. 
+Se in una funzione CLR si specifica l'opzione RETURNS NULL ON NULL INPUT, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce NULL se uno qualsiasi degli argomenti ricevuti è NULL senza effettivamente richiamare il corpo della funzione. Se per il metodo di una funzione CLR specificato in \<method_specifier> è stato definito un attributo personalizzato impostato su RETURNS NULL ON NULL INPUT, ma l'istruzione CREATE FUNCTION include CALLED ON NULL INPUT, l'istruzione CREATE FUNCTION risulta prioritaria. Non è possibile specificare l'attributo **OnNULLCall** per le funzioni CLR con valori di tabella. 
   
- Clausola EXECUTE AS  
- Specifica il contesto di sicurezza nel quale viene eseguita la funzione definita dall'utente. Sarà pertanto possibile controllare l'account utente utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per convalidare le autorizzazioni per qualsiasi oggetto di database a cui la funzione fa riferimento.  
+Clausola EXECUTE AS  
+Specifica il contesto di sicurezza nel quale viene eseguita la funzione definita dall'utente. Sarà pertanto possibile controllare l'account utente utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per convalidare le autorizzazioni per qualsiasi oggetto di database a cui la funzione fa riferimento.  
   
 > [!NOTE]  
->  Non è possibile specificare la clausola EXECUTE AS per le funzioni inline definite dall'utente.  
+>  Non è possibile specificare la clausola EXECUTE AS per le funzioni inline con valori di tabella.
   
  Per altre informazioni, vedere [Clausola EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
+
+INLINE = { ON | OFF }  
+Specifica se questa funzione scalare definita dall'utente deve essere impostata come inline. Questa clausola è applicabile solo alle funzioni scalari definite dall'utente. La clausola `INLINE` non è obbligatoria. Se la clausola `INLINE` viene omessa, viene automaticamente impostata su ON/OFF in base al fatto che possa essere eseguito l'inline della funzione. Se viene specificato `INLINE=ON` ma la funzione definita dall'utente non è idonea per l'inlining, viene generato un errore. Per altre informazioni, vedere [Inlining di funzioni definite dall'utente scalari](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
   
  **\< column_definition >::=** 
   
@@ -580,7 +587,7 @@ RETURNS return_data_type
 |**SystemDataAccess**|La funzione accede ai dati di sistema (cataloghi di sistema o tabelle di sistema virtuali) nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].||  
 |**UserDataAccess**|La funzione accede ai dati utente nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Include le tabelle definite dall'utente e le tabelle temporanee, ma non le variabili di tabella.|  
   
- Le proprietà relative alla precisione e le proprietà deterministiche delle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] vengono definite automaticamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le proprietà relative all'accesso ai dati e le proprietà deterministiche delle funzioni CLR possono essere specificate dall'utente. Per altre informazioni, vedere [Panoramica degli attributi personalizzati dell'integrazione con CLR](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820).  
+ Le proprietà relative alla precisione e le proprietà deterministiche delle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] vengono definite automaticamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le proprietà relative all'accesso ai dati e le proprietà deterministiche delle funzioni CLR possono essere specificate dall'utente. Per altre informazioni, vedere [Panoramica degli attributi personalizzati dell'integrazione con CLR](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820).  
   
  Per visualizzare i valori correnti di queste proprietà, usare [OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md).  
   

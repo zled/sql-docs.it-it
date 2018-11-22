@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 096948b417e29b073ecc30abd9831c62ef520646
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 15d83a8f15492e0d1f9c0cf1d804645f4b14c867
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252198"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814354"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni ALTER DATABASE SET (Transact-SQL) 
 
@@ -668,7 +668,7 @@ Vedere [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-
   
 **\<mixed_page_allocation_option> ::=**  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)). 
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
   
 MIXED_PAGE_ALLOCATION {OFF | ON} controlla se il database può creare pagine iniziali usando un extent misto per le prime otto pagine di un indice o di una tabella.  
  
@@ -682,7 +682,7 @@ Questa opzione è impostata su ON per tutti i database di sistema. **tempdb** è
   
 **\<PARAMETERIZATION_option> ::=**  
   
-Consente di controllare l'opzione di parametrizzazione.  
+Consente di controllare l'opzione di parametrizzazione. Per altre informazioni sulla parametrizzazione, vedere [Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#SimpleParam). 
   
 PARAMETERIZATION { SIMPLE | FORCED }  
 SIMPLE  
@@ -698,13 +698,13 @@ Per determinare l'impostazione corrente di questa opzione, è possibile esaminar
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ON | OFF | CLEAR [ ALL ]  
-Verifica se l'archivio di query è abilitato nel database e controlla la rimozione del contenuto dell'archivio di query.  
+Verifica se l'archivio di query è abilitato nel database e controlla la rimozione del contenuto dell'archivio di query. Per altre informazioni, vedere [Scenari di utilizzo di Query Store](../../relational-databases/performance/query-store-usage-scenarios.md). 
   
 ON  
 Abilita Query Store.  
   
 OFF  
-Disabilita Query Store.  Si tratta del valore predefinito.   
+Disabilita Query Store. Si tratta del valore predefinito.   
   
 CLEAR  
 Rimuove il contenuto di Query Store.  
@@ -809,7 +809,7 @@ Se viene rilevato un errore di pagina incompleta o di checksum, è possibile ese
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue quattro tentativi per qualsiasi operazione di lettura non riuscita a causa di un errore di checksum, di pagina incompleta o di I/O. Se la lettura viene completata correttamente durante uno di questi tentativi, viene scritto un messaggio nel log degli errori e l'esecuzione del comando che ha attivato la lettura continua. Se tutti i tentativi hanno esito negativo, il comando viene interrotto con il messaggio di errore 824.  
   
-Per altre informazioni sui messaggi di errore 823, 824 e 825, vedere [Come risolvere un messaggio di errore 823 in SQL Server](http://support.microsoft.com/help/2015755), [Come risolvere un messaggio di errore 824 in SQL Server](http://support.microsoft.com/help/2015756) e [How to troubleshoot Msg 825 &#40;read retry&#41; in SQL Server](http://support.microsoft.com/help/2015757) (Come risolvere un messaggio di errore 825 &#40;tentativo di lettura&#41; in SQL Server.
+Per altre informazioni sui messaggi di errore 823, 824 e 825, vedere [Come risolvere un messaggio di errore 823 in SQL Server](https://support.microsoft.com/help/2015755), [Come risolvere un messaggio di errore 824 in SQL Server](https://support.microsoft.com/help/2015756) e [How to troubleshoot Msg 825 &#40;read retry&#41; in SQL Server](https://support.microsoft.com/help/2015757) (Come risolvere un messaggio di errore 825 &#40;tentativo di lettura&#41; in SQL Server.
   
 Per determinare l'impostazione corrente di questa opzione, è possibile esaminare la colonna *page_verify_option* nella vista del catalogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) oppure la proprietà *IsTornPageDetectionEnabled* della funzione [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
@@ -866,7 +866,7 @@ NEW_BROKER
 Specifica che al database deve essere assegnato un nuovo identificatore di Service Broker. Poiché il database viene considerato una nuova istanza di Service Broker, tutte le conversazioni esistenti nel database vengono rimosse immediatamente senza generare messaggi di fine dialogo. Tutte le route che fanno riferimento all'identificatore di [!INCLUDE[ssSB](../../includes/sssb-md.md)] precedente devono essere ricreate con il nuovo identificatore.  
   
 ERROR_BROKER_CONVERSATIONS  
-Specifica che il recapito dei messaggi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è abilitato. In questo modo viene mantenuto l'identificatore di [!INCLUDE[ssSB](../../includes/sssb-md.md)] esistente per il database. [!INCLUDE[ssSB](../../includes/sssb-md.md)] termina tutte le conversazioni nel database con un errore. Ciò consente alle applicazioni di eseguire operazioni regolari di pulizia per le conversazioni esistenti.  
+Specifica che il recapito dei messaggi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è abilitato. In questo modo viene mantenuto l'identificatore [!INCLUDE[ssSB](../../includes/sssb-md.md)] esistente per il database. [!INCLUDE[ssSB](../../includes/sssb-md.md)] termina tutte le conversazioni nel database con un errore. Ciò consente alle applicazioni di eseguire operazioni regolari di pulizia per le conversazioni esistenti.  
   
 HONOR_BROKER_PRIORITY {ON | OFF}  
 ON  
