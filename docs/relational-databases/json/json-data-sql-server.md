@@ -14,15 +14,18 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a049e4b6d965f5eccc661414214585430a305290
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 166b6517389b9c48b37544df1a0e71e621b617f8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758569"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664620"
 ---
 # <a name="json-data-in-sql-server"></a>Dati JSON in SQL Server
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+> [!div class="nextstepaction"]
+> [Contribuisci a migliorare la documentazione di SQL Server](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 JSON è un popolare formato di dati testuali usato per lo scambio di dati in applicazioni per dispositivi mobili e Web moderne. JSON viene usato anche per archiviare dati non strutturati nei file di log o nei database NoSQL come Microsoft Cosmos DB. Molti servizi Web REST restituiscono risultati formattati come testo JSON oppure accettano dati formattati come JSON. La maggior parte dei servizi di Azure, come Ricerca di Azure, Archiviazione di Azure e Azure Cosmos DB, include ad esempio endpoint REST che restituiscono o usano JSON. JSON è anche il formato principale per lo scambio di dati tra le pagine Web e i server Web tramite le chiamate AJAX. 
 
@@ -62,9 +65,9 @@ Le sezioni successive illustrano le principali funzionalità offerte da SQL Serv
 Se un testo JSON viene archiviato in tabelle di database, è possibile leggere o modificare i valori nel testo JSON usando le funzioni predefinite seguenti:  
     
 -   [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) verifica se una stringa include contenuto JSON valido.
--   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) estrae un valore scalare da una stringa JSON.
--   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) estrae un oggetto o una matrice da una stringa JSON.
--   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) modifica un valore in una stringa JSON.
+-   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) estrae un valore scalare da una stringa JSON.
+-   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) estrae un oggetto o una matrice da una stringa JSON.
+-   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) modifica un valore in una stringa JSON.
 
 
 **Esempio**
@@ -255,7 +258,7 @@ Per altre informazioni sulle opzioni per l'archiviazione, l'indicizzazione e l'o
 
 È possibile formattare le informazioni archiviate nei file come JSON standard o JSON delimitato da righe. SQL Server può importare il contenuto di file JSON, analizzarlo usando le funzioni **OPENJSON** e **JSON_VALUE** e caricarlo nelle tabelle.  
   
--   Se i documenti JSON vengono archiviati in file locali, unità di rete condivise o posizioni di File di Azure accessibili da SQL Server, è possibile usare l'importazione in blocco per caricare i dati JSON in SQL Server. Per altre informazioni su questo scenario, vedere [Importing JSON files into SQL Server using OPENROWSET (BULK)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)(Importazione di file JSON in SQL Server usando OPENROWSET - BULK).  
+-   Se i documenti JSON vengono archiviati in file locali, unità di rete condivise o posizioni di File di Azure accessibili da SQL Server, è possibile usare l'importazione in blocco per caricare i dati JSON in SQL Server. Per altre informazioni su questo scenario, vedere [Importing JSON files into SQL Server using OPENROWSET (BULK)](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)(Importazione di file JSON in SQL Server usando OPENROWSET - BULK).  
   
 -   Se i file JSON delimitati da righe vengono archiviati nell'archivio BLOB di Azure o nel file system di Hadoop, è possibile usare PolyBase per caricare il testo JSON, analizzarlo nel codice Transact-SQL e caricarlo nelle tabelle.  
 
@@ -335,12 +338,12 @@ Ad esempio, può essere necessario generare output JSON che sia conforme alla sp
   
 -   Richiesta: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
   
--   Risposta: `{"@odata.context":"http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
+-   Risposta: `{"@odata.context":"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
   
 Questo URL OData rappresenta una richiesta per le colonne ProductID e ProductName per il prodotto con `id` 1. È possibile usare la clausola **FOR JSON** per formattare l'output come previsto in SQL Server.  
   
 ```sql  
-SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
+SELECT 'https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
  AS '@odata.context',   
  ProductID, Name as ProductName   
 FROM Production.Product  
@@ -377,7 +380,7 @@ Di seguito sono elencate le operazioni possibili con gli script inclusi nel file
   
 ### <a name="microsoft-blog-posts"></a>Post del blog Microsoft  
   
-Per soluzioni specifiche, casi d'uso e indicazioni, vedere questi [post del blog sul supporto JSON integrato](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server e nel database SQL di Azure.  
+Per soluzioni specifiche, casi d'uso e indicazioni, vedere questi [post del blog sul supporto JSON integrato](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server e nel database SQL di Azure.  
 
 ### <a name="microsoft-videos"></a>Video Microsoft
 

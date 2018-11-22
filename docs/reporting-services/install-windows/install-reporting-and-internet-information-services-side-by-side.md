@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 69be1793c824014abc7262ebdb7d231ce4bb66af
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 991eefb50ec949098e132f17f2c18691f4822987
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020565"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813508"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Installare Reporting Services e Internet Information Services side-by-side
 
@@ -41,11 +41,11 @@ ms.locfileid: "50020565"
   
 |Esempio|Richiesta|  
 |-------------|-------------|  
-|`http://123.234.345.456:80/reports`|Riceve tutte le richieste inviate a `http://123.234.345.456/reports` o a `http://\<computername>/reports` se un DNS può risolvere l'indirizzo IP nel nome host.|  
-|`http://+:80/reports`|Riceve tutte le richieste inviate a qualsiasi indirizzo IP o nome host valido per tale computer finché l'URL contiene il nome della directory virtuale "reports".|  
-|`http://123.234.345.456:80`|Riceve tutte le richieste che specificano `http://123.234.345.456` o `http://\<computername>` se un DNS può risolvere l'indirizzo IP nel nome host.|  
-|`http://+:80`|Riceve le richieste che non sono già state ricevute da altre applicazioni, per qualsiasi endpoint dell'applicazione di cui è stato eseguito il mapping all'opzione **Tutti assegnati**.|  
-|`http://*:80`|Riceve le richieste che non sono già state ricevute da altre applicazioni, per gli endpoint dell'applicazione di cui è stato eseguito il mapping all'opzione **Non assegnati**.|  
+|`https://123.234.345.456:80/reports`|Riceve tutte le richieste inviate a `https://123.234.345.456/reports` o a `https://\<computername>/reports` se un DNS può risolvere l'indirizzo IP nel nome host.|  
+|`https://+:80/reports`|Riceve tutte le richieste inviate a qualsiasi indirizzo IP o nome host valido per tale computer finché l'URL contiene il nome della directory virtuale "reports".|  
+|`https://123.234.345.456:80`|Riceve tutte le richieste che specificano `https://123.234.345.456` o `https://\<computername>` se un DNS può risolvere l'indirizzo IP nel nome host.|  
+|`https://+:80`|Riceve le richieste che non sono già state ricevute da altre applicazioni, per qualsiasi endpoint dell'applicazione di cui è stato eseguito il mapping all'opzione **Tutti assegnati**.|  
+|`https://*:80`|Riceve le richieste che non sono già state ricevute da altre applicazioni, per gli endpoint dell'applicazione di cui è stato eseguito il mapping all'opzione **Non assegnati**.|  
   
  Un'indicazione di un conflitto di porte è la visualizzazione del messaggio di errore seguente: "System.IO.FileLoadException: Il processo non può accedere al file perché è in uso da un altro processo. (Eccezione da HRESULT: 0x80070020)".  
   
@@ -54,9 +54,9 @@ ms.locfileid: "50020565"
   
 |Applicazione|Prenotazione URL|Descrizione|Ricezione richiesta|  
 |-----------------|---------------------|-----------------|---------------------|  
-|Server di report|`http://+:80/ReportServer`|Carattere jolly complesso sulla porta 80, con directory virtuale del server di report.|Riceve sulla porta 80 tutte le richieste che specificano la directory virtuale del server di report. Il servizio Web ReportServer riceve tutte le richieste all'indirizzo http://\<nomecomputer>/reportserver.|  
-|Portale Web|`http://+:80/Reports`|Carattere jolly complesso sulla porta 80, con directory virtuale Reports.|Riceve sulla porta 80 tutte le richieste che specificano la directory virtuale reports. [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] riceve tutte le richieste all'indirizzo http://<nomecomputer\</reports.|  
-|IIS|`http://*:80/`|Carattere jolly vulnerabile sulla porta 80.|Riceve sulla porta 80 tutte le richieste rimanenti che non vengono ricevute da un'altra applicazione.|  
+|Server di report|`https://+:80/ReportServer`|Carattere jolly complesso sulla porta 80, con directory virtuale del server di report.|Riceve sulla porta 80 tutte le richieste che specificano la directory virtuale del server di report. Il servizio Web ReportServer riceve tutte le richieste all'indirizzo https://\<nomecomputer>/reportserver.|  
+|Portale Web|`https://+:80/Reports`|Carattere jolly complesso sulla porta 80, con directory virtuale Reports.|Riceve sulla porta 80 tutte le richieste che specificano la directory virtuale reports. [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] riceve tutte le richieste all'indirizzo https://\<nomecomputer/reports.|  
+|IIS|`https://*:80/`|Carattere jolly vulnerabile sulla porta 80.|Riceve sulla porta 80 tutte le richieste rimanenti che non vengono ricevute da un'altra applicazione.|  
 
 ## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>Distribuzioni side-by-side di SQL Server Reporting Services in IIS 8.0, 8.5
 
@@ -66,7 +66,7 @@ ms.locfileid: "50020565"
   
 -   Un'istanza del server di report installata nella configurazione predefinita, in cui anche la prenotazione URL specifica la porta 80 e l'applicazione [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] usa "Reports" come nome della directory virtuale.  
   
- In una configurazione di questo tipo una richiesta inviata all'indirizzo http://<nomecomputer\<:80/reports viene ricevuta da [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. L'applicazione cui si accede con la directory virtuale Reports in IIS non riceverà più richieste dopo l'installazione dell'istanza del server di report.  
+ In una configurazione di questo tipo una richiesta inviata all'indirizzo https://\<nomecomputer:80/reports viene ricevuta da [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. L'applicazione cui si accede con la directory virtuale Reports in IIS non riceverà più richieste dopo l'installazione dell'istanza del server di report.  
   
  Se si eseguono distribuzioni side-by-side di versioni meno recenti e più recenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è possibile che si verifichi il problema di routing descritto in precedenza, perché tutte le versioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usano "ReportServer" e "Reports" come nomi delle directory virtuali per il server di report e le applicazioni di [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] , aumentando la probabilità di rilevare directory virtuali denominate "reports" e "reportserver" in IIS.  
   

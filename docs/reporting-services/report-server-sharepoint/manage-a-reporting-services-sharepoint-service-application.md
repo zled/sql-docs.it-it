@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5edf3a09bb12f39541413e52ba5afcabe20fd5c8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 5ce513473683d12d5ba2af68f08bc96c0f47d893
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021675"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814004"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gestire un'applicazione di servizio SharePoint di Reporting Services
 
@@ -92,7 +92,7 @@ ms.locfileid: "50021675"
 |Impostazione|Commenti|  
 |-------------|--------------|  
 |Abilita download Generatore report|Il valore predefinito è TRUE.<br /><br /> Consente di specificare se i client sono in grado di visualizzare il pulsante per il download dell'applicazione Generatore report.|  
-|URL di avvio del Generatore report|Consente di specificare un URL personalizzato se per il server di report non viene utilizzato l'URL predefinito di Generatore report. Questa impostazione è facoltativa. Se non si specifica un valore, verrà utilizzato l'URL predefinito, che consente di avviare Generatore report. Per avviare Generatore report 3.0 come applicazione ClickOnce, immettere il valore seguente: http://\<nomecomputer>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
+|URL di avvio del Generatore report|Consente di specificare un URL personalizzato se per il server di report non viene utilizzato l'URL predefinito di Generatore report. Questa impostazione è facoltativa. Se non si specifica un valore, verrà utilizzato l'URL predefinito, che consente di avviare Generatore report. Per avviare Generatore report 3.0 come applicazione ClickOnce, immettere il valore seguente: https://\<nomecomputer>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
 |Abilita stampa client|Il valore predefinito è TRUE.<br /><br /> Consente di specificare se gli utenti possono scaricare il controllo lato client, che fornisce opzioni di stampa.|  
 |Modifica timeout sessione|Il valore predefinito è 7200 secondi.|  
 |Modifica limite cache di sessione|Il valore predefinito è 5.|  

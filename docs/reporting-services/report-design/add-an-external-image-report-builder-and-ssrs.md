@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e7f83a95102716547e14b7bea10d5f05a9277ec4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c42c413e235abd758d51a76b1726e0c35e3ff758
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031190"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812294"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>Aggiungere un'immagine esterna (Generatore report e SSRS)
   Le immagini esterne possono trovarsi in un server di report in modalità nativa o in modalità integrata SharePoint oppure in qualsiasi altro sito Web. Quando si includono immagini esterne nel report, è necessario verificare che l'immagine esista e che il lettore del report disponga delle autorizzazioni per accedervi. Per altre informazioni, vedere [Immagini &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "50031190"
   
      Per un'immagine in un server di report in modalità nativa, digitare il percorso relativo dell'immagine nella casella **Utilizzare questa immagine** , ad esempio ../images/image1.jpg.  
   
-     Per un'immagine in un server di report in modalità integrata SharePoint o in qualsiasi altro sito Web, digitare un URL completo dell'immagine nella casella **Usare questa immagine**, ad esempio http://\<nomeserverSharePoint>/\<sito>/Documents/images/image1.jpg.  
+     Per un'immagine in un server di report in modalità integrata SharePoint o in qualsiasi altro sito Web, digitare l'URL completo dell'immagine nella casella **Usare questa immagine**, ad esempio https://\<nomeserverSharePoint>/\<sito>/Documents/images/image1.jpg.  
   
      Per altre informazioni, vedere [Specifica di percorsi di elementi esterni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   

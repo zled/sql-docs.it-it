@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0180124c5904c6ea1020ad92337a566d8418651
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96a2e1c791ba80a7aba39cd77e309228404a04a8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791479"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697392"
 ---
 # <a name="statistics"></a>Statistiche
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47791479"
   
 ##  <a name="DefinitionQOStatistics"></a> Componenti e concetti  
 ### <a name="statistics"></a>Statistiche  
- Le statistiche di ottimizzazione delle query sono oggetti binari di grandi dimensioni (BLOB) contenenti informazioni statistiche sulla distribuzione dei valori in una o più colonne di una tabella o di una vista indicizzata. Query Optimizer usa queste statistiche per la stima della *cardinalità* o del numero di righe nel risultato della query. Queste *stime di cardinalità* consentono a Query Optimizer di creare un piano di query di alta qualità. A seconda dei predicati, ad esempio, Query Optimizer può usare le stime della cardinalità per scegliere l'operatore Index Seek anziché l'operatore Index Scan che usa un numero più elevato di risorse, migliorando di conseguenza le prestazioni delle query.  
+ Le statistiche di ottimizzazione delle query sono oggetti binari di grandi dimensioni (BLOB) contenenti informazioni statistiche sulla distribuzione dei valori in una o più colonne di una tabella o di una vista indicizzata. Query Optimizer usa queste statistiche per la stima della *cardinalità* o del numero di righe nel risultato della query. Queste *stime di cardinalità* consentono a Query Optimizer di creare un piano di query di alta qualità. A seconda dei predicati, ad esempio, Query Optimizer può usare le stime della cardinalità per scegliere l'operatore Index Seek anziché l'operatore Index Scan che usa una maggior quantità di risorse, se questa opzione migliora le prestazioni delle query.  
   
  Ogni oggetto statistiche viene creato in un elenco di una o più colonne di tabella e include un *istogramma* in cui è visualizzata la distribuzione dei valori nella prima colonna. Negli oggetti statistiche su più colonne sono inoltre archiviate informazioni statistiche sulla correlazione dei valori tra le colonne. Queste statistiche sulla correlazione o *densità*derivano dal numero di righe distinte di valori di colonna. 
 
@@ -45,7 +45,7 @@ ms.locfileid: "47791479"
 Un **istogramma** misura la frequenza di occorrenza per ogni valore distinto in un set di dati. Query Optimizer calcola un istogramma nei valori di colonna nella prima colonna chiave dell'oggetto statistiche, selezionando i valori di colonna tramite il campionamento statistico delle righe o un'analisi completa di tutte le righe della tabella o della vista. Se l'istogramma viene creato da un set campionato di righe, i totali archiviati per numero di righe e numero di valori distinct sono stime e non è necessario che siano numeri interi.
 
 > [!NOTE]
-> In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli istogrammi vengono creati solo per una colonna singola, ovvero la prima colonna nel set di colonne chiave dell'oggetto statistiche.
+> <a name="frequency"></a> In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli istogrammi vengono creati solo per una colonna singola, ovvero la prima colonna nel set di colonne chiave dell'oggetto statistiche.
   
 Per creare l'istogramma, Query Optimizer ordina i valori di colonna, calcola il numero di valori che corrispondono a ogni valore distinct di colonna, quindi aggrega i valori di colonna in un massimo di 200 intervalli contigui dell'istogramma. Ogni intervallo dell'istogramma comprende un insieme di valori di colonna seguiti da un valore di colonna pari al limite superiore. Nell'insieme sono inclusi tutti i possibili valori di colonna compresi tra i valori limite, esclusi questi ultimi. Il minore tra i valori di colonna ordinati costituisce il limite superiore per il primo intervallo dell'istogramma.
 
@@ -70,12 +70,12 @@ Per ogni passaggio dell'istogramma sopra citato:
 -   Le linee punteggiate rappresentano i valori campionati usati per stimare il numero complessivo dei valori distinti nell'intervallo (*distinct_range_rows*) e il numero complessivo dei valori nell'intervallo (*range_rows*). Query Optimizer usa *range_rows* e *distinct_range_rows* per calcolare *average_range_rows* e non archivia i valori campionati.   
   
 #### <a name="density"></a>Vettore di densità  
-La **densità** è rappresentata da informazioni sul numero di duplicati in una colonna o combinazione di colonne specifica e viene calcolata con la formula 1/(numero di valori distinti). Per ottimizzare le stime relative alla cardinalità per query che restituiscono più colonne della stessa tabella o vista indicizzata, Query Optimizer utilizza le densità. Il vettore di densità contiene una densità per ogni prefisso di colonna nell'oggetto statistiche. 
+La **densità** è rappresentata da informazioni sul numero di duplicati in una colonna o combinazione di colonne specifica e viene calcolata con la formula 1/(numero di valori distinti). Per ottimizzare le stime relative alla cardinalità per query che restituiscono più colonne della stessa tabella o vista indicizzata, Query Optimizer utilizza le densità. Man mano che la densità diminuisce, aumenta la selettività di un valore. Ad esempio, in una tabella che rappresenta automobili, molte automobili vengono prodotte dallo stesso costruttore, ma a ciascuna è assegnato un numero di identificazione univoco. Un indice basato sul numero di identificazione del veicolo è più selettivo rispetto all'indice del produttore, perché il numero di identificazione del veicolo ha una densità minore rispetto produttore. 
 
 > [!NOTE]
 > La frequenza è rappresentata dalle informazioni sull'occorrenza di ogni valore distinto nella prima colonna chiave dell'oggetto statistiche e viene calcolata con la formula conteggio delle righe * densità. Nelle colonne con valori univoci è possibile trovare una frequenza massima pari a 1.
 
-Se in un oggetto statistiche, ad esempio, sono presenti le colonne chiave `CustomerId`, `ItemId` e `Price`, la densità viene calcolata per ognuno dei prefissi di colonna seguenti.
+Il vettore di densità contiene una densità per ogni prefisso di colonna nell'oggetto statistiche. Se in un oggetto statistiche, ad esempio, sono presenti le colonne chiave `CustomerId`, `ItemId` e `Price`, la densità viene calcolata per ognuno dei prefissi di colonna seguenti.
   
 |Prefisso di colonna|Densità calcolata su|  
 |---|---|
@@ -112,7 +112,7 @@ ORDER BY s.name;
     * Se la cardinalità della tabella è 500 o minore al momento della valutazione delle statistiche, l'aggiornamento avviene ogni 500 modifiche.
     * Se la cardinalità della tabella è maggiore di 500 al momento della valutazione delle statistiche, l'aggiornamento avviene ogni 500 modifiche + il 20%.
 
-* A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e con [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa una soglia di aggiornamento delle statiche dinamica decrescente, che si adatta al numero di righe nella tabella. Tale soglia viene calcolata come radice quadrata del prodotto di 1000 e della cardinalità della tabella corrente. Ad esempio se la tabella contiene 2 milioni di righe, il calcolo sarà sqrt (1000 * 2000000) = 44721.359. Con questa modifica, le statistiche sulle tabelle di grandi dimensioni vengono aggiornate più spesso. Tuttavia, se il livello di compatibilità di un database è minore di 130, viene applicata la soglia di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+* A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e con [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa una soglia di aggiornamento delle statiche dinamica decrescente, che si adatta al numero di righe nella tabella. Tale soglia viene calcolata come radice quadrata del prodotto di 1000 e della cardinalità della tabella corrente. Se ad esempio la tabella contiene 2 milioni di righe, il calcolo sarà sqrt (1000 * 2000000) = 44721,359. Con questa modifica, le statistiche sulle tabelle di grandi dimensioni vengono aggiornate più spesso. Tuttavia, se il livello di compatibilità di un database è minore di 130, viene applicata la soglia di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
 
 > [!IMPORTANT]
 > A partire da [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] con [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, usare il [flag di traccia 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] userà una soglia di aggiornamento delle statiche dinamica decrescente, che si adatta al numero di righe nella tabella.
@@ -121,7 +121,7 @@ Query Optimizer controlla la presenza di statistiche non aggiornate prima di com
   
 L'opzione AUTO_UPDATE_STATISTICS si applica a oggetti statistiche creati per indici, colonne singole nei predicati di query e statistiche create con l'istruzione [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) . Questa opzione si applica anche alle statistiche filtrate.  
  
-Per altre informazioni sul controllo di AUTO_UPDATE_STATISTICS, vedere [Controlling Autostat (AUTO_UPDATE_STATISTICS) behavior in SQL Server](http://support.microsoft.com/help/2754171) (Controllo del comportamento Autostat (AUTO_UPDATE_STATISTICS) in SQL Server).
+Per altre informazioni sul controllo di AUTO_UPDATE_STATISTICS, vedere [Controlling Autostat (AUTO_UPDATE_STATISTICS) behavior in SQL Server](https://support.microsoft.com/help/2754171) (Controllo del comportamento Autostat (AUTO_UPDATE_STATISTICS) in SQL Server).
   
 #### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  L'opzione relativa all'aggiornamento asincrono delle statistiche, [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async), determina se Query Optimizer usa gli aggiornamenti sincroni o asincroni delle statistiche. L'opzione relativa all'aggiornamento asincrono delle statistiche è OFF per impostazione predefinita. Query Optimizer aggiorna quindi le statistiche in modo sincrono. L'opzione AUTO_UPDATE_STATISTICS_ASYNC si applica a oggetti statistiche creati per indici, colonne singole nei predicati di query e statistiche create con l'istruzione [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  
@@ -273,7 +273,7 @@ Solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile c
 
 ### <a name="automatic-index-and-statistics-management"></a>Gestione automatica dell'indice e delle statistiche
 
-Sfruttare le soluzioni, ad esempio la [deframmentazione dell'indice adattativo](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), per gestire automaticamente la deframmentazione dell'indice e gli aggiornamenti delle statistiche per uno o più database. Questa procedura sceglie automaticamente se ricompilare o riorganizzare un indice in base al relativo livello di frammentazione, tra gli altri parametri, e aggiornare le statistiche con una soglia lineare.
+Sfruttare le soluzioni, ad esempio la [deframmentazione dell'indice adattativo](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), per gestire automaticamente la deframmentazione dell'indice e gli aggiornamenti delle statistiche per uno o più database. Questa procedura sceglie automaticamente se ricompilare o riorganizzare un indice in base al relativo livello di frammentazione, tra gli altri parametri, e aggiornare le statistiche con una soglia lineare.
   
 ##  <a name="DesignStatistics"></a> Query che usano le statistiche in modo efficace  
  Alcune implementazioni delle query, quali le variabili locali e le espressioni complesse nel predicato di query, possono comportare la definizione di piani di query non ottimali. Per evitare che ciò accada, attenersi alle linee guida relative alla progettazione delle query per un utilizzo efficace delle statistiche. Per altre informazioni sui predicati, vedere [Condizione di ricerca&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
@@ -378,15 +378,15 @@ GO
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [Creare indici filtrati](../../relational-databases/indexes/create-filtered-indexes.md)   
- [Controllo del comportamento Autostat (AUTO_UPDATE_STATISTICS) in SQL Server](http://support.microsoft.com/help/2754171)   
+ [Controllo del comportamento Autostat (AUTO_UPDATE_STATISTICS) in SQL Server](https://support.microsoft.com/help/2754171)   
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)   
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)    
- [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) (Deframmentazione dell'indice adattativo)   
+ [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) (Deframmentazione dell'indice adattativo)   

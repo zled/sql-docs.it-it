@@ -1,7 +1,7 @@
 ---
 title: Configurare il database di distribuzione di SQL Server nel gruppo di disponibilità | Microsoft Docs
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 11/13/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b8d12a1626d6d2d76e24f5aeebfe6d3f50a66959
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 94616b5950ca1ff7f33d9061d2bbc8bab53fbc8c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48817999"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602631"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurare il database di distribuzione repliche nel gruppo di disponibilità Always On
 
@@ -48,6 +48,7 @@ Dopo aver configurato un database di distribuzione nel gruppo di disponibilità 
 - Aggiunta o rimozione di nodi nel gruppo di disponibilità del database di distribuzione esistente.
 - Un'istanza del server di distribuzione può avere più database di distribuzione. Ogni database di distribuzione può essere nel proprio gruppo di disponibilità e non può essere in tutti i gruppi di disponibilità. Più database di distribuzione possono condividere un gruppo di disponibilità.
 - Il server di pubblicazione e il server di distribuzione devono essere in istanze separate di SQL Server.
+- Se il listener del gruppo di disponibilità che ospita il database di distribuzione è configurato per usare una porta non predefinita, è necessario configurare un alias per il listener e la porta non predefinita.
 
 ## <a name="limitations-or-exclusions"></a>Limitazioni o esclusioni
 
@@ -63,6 +64,7 @@ Dopo aver configurato un database di distribuzione nel gruppo di disponibilità 
 - Il gruppo di disponibilità del database di distribuzione deve avere un listener configurato.
 - Le repliche secondarie in un gruppo di disponibilità del database di distribuzione possono essere sincrone o asincrone. La modalità sincrona è consigliata e preferita.
 - La replica transazionale bidirezionale non è supportata.
+- SSMS non visualizza il database di distribuzione come in fase di sincronizzazione/sincronizzato quando il database di distribuzione viene aggiunto a un gruppo di disponibilità.
 
 
    >[!NOTE]
@@ -391,9 +393,9 @@ Go
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
-EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
- /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
+EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
+ /* For security reasons the linked server remote logins password is changed with ######## */
+EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
 ```
 
 ## <a name="see-also"></a>Vedere anche  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2dd074f4cd7d3d9042e5f0deb3de6ee0731c4af9
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: e899430e196563d4477ae4cbe072cdc1078cd471
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806721"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606561"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurare PolyBase per l'accesso a dati esterni in Hadoop
 
@@ -35,11 +35,9 @@ L'articolo illustra come usare PolyBase in un'istanza di SQL Server per eseguire
 
 - PolyBase supporta due provider di Hadoop, Hortonworks Data Platform (HDP) e Cloudera Distributed Hadoop (CDH). Hadoop segue il modello "principale.secondaria.versione" per le nuove versioni e sono supportate tutte le versioni all'interno di una versione principale e secondaria supportata. Sono supportati i provider Hadoop seguenti:
 
-  - Hortonworks HDP 1.3 su Linux/Windows Server  
-  - Hortonworks HDP 2.1 - 2.6 su Linux
-  - Hortonworks HDP 2.1 - 2.3 su Windows Server  
-  - Cloudera CDH 4.3 su Linux  
-  - Cloudera CDH 5.1 – 5.5, 5.9 - 5.13 su Linux
+  - Hortonworks HDP 1.3, 2.1-2.6, 3.0 in Linux
+  - Hortonworks HDP 1.3, 2.1-2.3 in Windows Server
+  - Cloudera CDH 4.3, 5.1-5.5, 5.9-5.13 in Linux
 
 > [!NOTE]
 > PolyBase supporta le zone di crittografia Hadoop a partire da SQL Server 2016 SP1 CU7 e SQL Server 2017 CU3. Se si usano i [gruppi con scalabilità orizzontale PolyBase](polybase-scale-out-groups.md), anche tutti i nodi di calcolo devono essere in una build che include il supporto per le zone di crittografia Hadoop.
@@ -75,7 +73,7 @@ Per migliorare le prestazioni delle query, abilitare il calcolo con distribuzion
 1. Trovare il file **yarn-site.xml** nel percorso di installazione di SQL Server. In genere il percorso è:  
 
    ```xml  
-   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolybaseHadoopconf  
+   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBaseHadoopconf  
    ```  
 
 1. Nel computer Hadoop trovare il file analogo nella directory di configurazione Hadoop. Nel file trovare e copiare il valore della chiave di configurazione yarn.application.classpath.  
@@ -88,7 +86,7 @@ Per migliorare le prestazioni delle query, abilitare il calcolo con distribuzion
 
 Per eseguire query sui dati nell'origine dati Hadoop, è necessario definire una tabella esterna da usare in query Transact-SQL. Le procedure seguenti descrivono come configurare la tabella esterna.
 
-1. Creare una chiave master nel database, se non ne esiste già. Questo passaggio è necessario per crittografare il segreto delle credenziali.
+1. Creare una chiave master nel database, se non esiste già. Questo passaggio è necessario per crittografare il segreto delle credenziali.
 
      ```sql
       CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  

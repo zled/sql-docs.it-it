@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3041a862639c8cbd71f2ad71378e980ec0b31fdc
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b9294d9208b9cafc3610a9682c13cebcc970669e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905135"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672940"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Migliorare i gruppi con scalabilità orizzontale PolyBase in Windows
 
@@ -52,7 +52,7 @@ Di seguito vengono illustrati i passaggi per configurare un gruppo di PolyBase c
   
    - PQTH4A-CMP02  
   
-2. Account di dominio: *PQTH4A\PolybaseUse*r  
+2. Account di dominio: *PQTH4A\PolyBaseUse*r  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>Installare SQL Server con PolyBase in tutti i computer
 
@@ -60,7 +60,7 @@ Di seguito vengono illustrati i passaggi per configurare un gruppo di PolyBase c
   
 2. Nella pagina Selezione funzionalità scegliere **Servizio query PolyBase per i dati esterni**.
   
-3. Nella pagina Configurazione server usare l'**account di dominio** PQTH4A\PolybaseUser per il motore di ricerca PolyBase di SQL Server e il servizio SQL Server PolyBase Data Movement.
+3. Nella pagina Configurazione server usare l'**account di dominio** PQTH4A\PolyBaseUser per il motore di ricerca PolyBase di SQL Server e SQL Server PolyBase Data Movement Service.
   
 4. Nella pagina di configurazione di PolyBase selezionare l'opzione **Usare questa istanza di SQL Server come parte del gruppo PolyBase con scalabilità orizzontale**. Verrà aperto il firewall per consentire le connessioni in ingresso ai servizi di PolyBase.
   
@@ -106,6 +106,6 @@ Al termine dell'installazione, entrambi i computer possono fungere da nodi head 
   
 ## <a name="next-steps"></a>Passaggi successivi  
 
-Per la risoluzione dei problemi, vedere [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).
+Per la risoluzione dei problemi, vedere [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).
   
 Per altre informazioni su PolyBase, vedere la [panoramica di PolyBase](../../relational-databases/polybase/polybase-guide.md).

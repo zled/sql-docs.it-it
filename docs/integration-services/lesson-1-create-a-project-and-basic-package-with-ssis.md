@@ -11,24 +11,24 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98f2039da862c64e8f223afdedba7889627a5116
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: a4431e593a74c7f6a656f78cd70abfd19c813bdd
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384076"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642078"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lezione 1: Creare un progetto e un pacchetto di base
 
-In questa lezione verrà creato un pacchetto ETL semplice tramite cui vengono estratti i dati da un'unica origine file flat, trasformati i dati usando due componenti di trasformazione Ricerca e scritti i dati in questione nella tabella dei fatti **FactCurrency** di **AdventureWorksDW2012**. In questa lezione si imparerà a creare nuovi pacchetti, aggiungere e configurare connessioni origine e destinazione dati e usare nuovi componenti flusso di controllo e flusso di dati.  
+In questa lezione verrà creato un pacchetto ETL semplice che estrae i dati da un'unica origine file flat, trasforma i dati usando due componenti di trasformazione Ricerca e scrive tali dati in una copia della tabella dei fatti **FactCurrencyRate** di **AdventureWorksDW2012**. In questa lezione si imparerà a creare nuovi pacchetti, aggiungere e configurare connessioni origine e destinazione dati e usare nuovi componenti flusso di controllo e flusso di dati.  
   
 > [!IMPORTANT]  
-> Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni sull'installazione e la distribuzione di **AdventureWorksDW2012**, vedere gli [esempi di Reporting Services su CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=526910).  
+> Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni sull'installazione e la distribuzione di **AdventureWorksDW2012**, vedere gli [esempi di Reporting Services su CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
   
 ## <a name="understanding-the-package-requirements"></a>Informazioni sui requisiti del pacchetto  
 Per questa esercitazione è richiesto Microsoft SQL Server Data Tools.  
   
-Per altre informazioni sull'installazione di SQL Server Data Tools, vedere [Scaricare SQL Server Data Tools (SSDT)](http://msdn.microsoft.com/data/hh297027).  
+Per altre informazioni sull'installazione di SQL Server Data Tools, vedere [Scaricare SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/data/hh297027).  
   
 Prima di creare un pacchetto è necessario conoscere bene la formattazione usata nei dati di origine e nella destinazione. Dopo avere acquisito familiarità con questi due formati di dati sarà possibile definire le trasformazioni necessarie per eseguire il mapping tra i dati di origine e la destinazione.  
   
@@ -51,7 +51,7 @@ Di seguito viene riportato un esempio dei dati di origine contenuti nel file Sam
 Quando si usano dati di origine di file flat, è importante capire in che modo Gestione connessione file flat interpreta i relativi dati. Se l'origine del file flat è Unicode, tutte le colonne vengono definite nella gestione connessione file flat come [DT_WSTR] con una larghezza predefinita di 50. Se l'origine del file flat è con codifica ANSI, le colonne sono definite come [DT_STR] con una larghezza di 50. Le impostazioni predefinite sono liberamente modificabili per adattare al meglio i tipi di colonna ai dati. Per farlo, è necessario esaminare il tipi di dati della destinazione di scrittura dei dati e scegliere il tipo corretto all'interno di Gestione connessione file flat.  
   
 ### <a name="looking-at-the-destination"></a>Esame della destinazione  
-La destinazione finale dei dati di origine è la tabella dei fatti **FactCurrency** di **AdventureWorksDW**. La tabella dei fatti **FactCurrency** presenta quattro colonne e ha relazioni con due tabelle delle dimensioni, come mostrato nella tabella seguente.  
+La destinazione finale dei dati di origine è una copia della tabella dei fatti **FactCurrencyRate** in **AdventureWorksDW**. La tabella **FactCurrencyRate** presenta quattro colonne ed ha relazioni con due tabelle delle dimensioni, come illustrato nella tabella seguente.  
   
 |Nome colonna|Tipo di dati|Tabella di ricerca|Colonna di ricerca|  
 |---------------|-------------|----------------|-----------------|  
@@ -65,10 +65,10 @@ L'analisi dei formati dei dati di origine e di destinazione indica che per i val
   
 |Colonna file flat|Nome tabella|Nome colonna|Tipo di dati|  
 |--------------------|--------------|---------------|-------------|  
-|0|FactCurrency|AverageRate|FLOAT|  
+|0|FactCurrencyRate|AverageRate|FLOAT|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
 |2|DimDate|FullDateAlternateKey|Data|  
-|3|FactCurrency|EndOfDayRate|FLOAT|  
+|3|FactCurrencyRate|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>Argomenti della lezione  
 In questa lezione sono incluse le attività seguenti:  

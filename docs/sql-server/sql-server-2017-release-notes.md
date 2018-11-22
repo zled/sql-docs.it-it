@@ -11,26 +11,26 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ff000457e8328864ac8e77c5d21b0048da3b024
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: d414f256e0eb06bfe3925b0e8e1a61b4799c3c7c
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419406"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703769"
 ---
 # <a name="sql-server-2017-release-notes"></a>Note sulla versione di SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 Questo articolo descrive le limitazioni e i problemi relativi a SQL Server 2017. Per informazioni correlate, vedere:
 - [Novità di SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Note sulla versione di SQL Server in Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
-- [Aggiornamenti cumulativi di SQL Server 2017](http://aka.ms/sql2017cu) per informazioni sulla versione di aggiornamento cumulativo più recente
+- [Aggiornamenti cumulativi di SQL Server 2017](https://aka.ms/sql2017cu) per informazioni sulla versione di aggiornamento cumulativo più recente
 
 **Prova SQL Server 2016;**
-- [![Download da Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Scaricare SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Download da Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Scaricare SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Creare una macchina virtuale](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Avviare una macchina virtuale con SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 > [!NOTE]
-> L'anteprima di SQL Server 2019 è ora disponibile. Per altre informazioni, vedere [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15) (Novità di SQL Server 2019).
+> L'anteprima di SQL Server 2019 è ora disponibile. Per altre informazioni, vedere [Novità di SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15).
 
 ## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server 2017 - versione di disponibilità generale (ottobre 2017)
 ### <a name="database-engine"></a>Motore di database
@@ -44,12 +44,12 @@ Questo articolo descrive le limitazioni e i problemi relativi a SQL Server 2017.
     3. Selezionare di nuovo **Abilita FILESTREAM per l'accesso tramite il flusso di I/O dei file** con il nome di condivisione originale e fare clic su **Applica**.
 
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
-- **Problema e impatto sul cliente:** nella pagina delle autorizzazioni utente, quando si concede l'autorizzazione a livello radice nella visualizzazione albero entità, viene visualizzato l'errore seguente: `"The model permission cannot be saved. The object guid is not valid"`
+- **Problema e impatto sul cliente:**  nella pagina delle autorizzazioni utente, quando si concede l'autorizzazione a livello radice nella visualizzazione albero entità, viene visualizzato l'errore seguente: `"The model permission cannot be saved. The object guid is not valid"`
 
 - **Soluzioni alternative:** 
   - Concedere l'autorizzazione per i nodi figlio nella visualizzazione albero anziché a livello radice.
   - o Gestione configurazione
-  - Eseguire lo script descritto in questo blog del team MDS relativo all'[errore durante l'applicazione di autorizzazioni a livello di entità](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
+  - Eseguire lo script descritto in questo blog del team MDS relativo all'[errore durante l'applicazione di autorizzazioni a livello di entità](https://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
 
 ### <a name="analysis-services"></a>Analysis Services
 - **Problema e impatto per i clienti:** i connettori dati per le origini seguenti non sono ancora disponibili per i modelli tabulari a livello di compatibilità 1400.

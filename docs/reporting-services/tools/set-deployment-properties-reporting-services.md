@@ -13,12 +13,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: markingmyname
 ms.author: maghan
 ms.date: 03/07/2017
-ms.openlocfilehash: 204e8d3e85c76edac6ccc56e8fd3a5b51975bd28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63cee227f67a6e4c07974a296e3c512318d83fe2
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681459"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813204"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Impostare le proprietà di distribuzione (Reporting Services)
 
@@ -64,7 +64,7 @@ ms.locfileid: "47681459"
   
 10. Nella casella di testo **TargetServerURL** digitare l'URL del server di report di destinazione. Prima di pubblicare un report, è necessario impostare questa proprietà su un URL valido per il server di report. Quando si pubblica in un server di report in esecuzione in modalità nativa, usare l'URL della directory virtuale del server di report, ad esempio http:*//server/serverdireport* o https:*//server/serverdireport*. In questa casella è necessario impostare la directory virtuale del server di report e non di Gestione report.  
   
-     Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL di un sito principale o secondario di SharePoint. Se non si specifica un sito, verrà usato il sito principale predefinito, ad esempio http://*nomeserver*, http://*nomeserver*/*sito* o http://*nomeserver*/*sito*/*sitosecondario*.  
+     Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL di un sito principale o secondario di SharePoint. Se non si specifica un sito, verrà usato il sito principale predefinito, ad esempio https://*nomeserver*, https://*nomeserver*/*sito* o https://*nomeserver*/*sito*/*sitosecondario*.  
   
 ### <a name="to-set-configuration-manager-properties"></a>Per impostare le proprietà di Gestione configurazione  
   

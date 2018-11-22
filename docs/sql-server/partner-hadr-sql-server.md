@@ -12,19 +12,19 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 32e670dea1bc4531c63f25cc2ccd36960cd8b743
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d9dbe423415e1014a31621ba15f44fb0758e1a5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688579"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699118"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>Partner di disponibilità elevata e ripristino di emergenza per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Per garantire la disponibilità elevata e il ripristino di emergenza per i servizi di SQL Server, è disponibile un'ampia gamma di strumenti leader nel settore.  In questo articolo vengono evidenziate le aziende partner Microsoft con soluzioni per la disponibilità elevata e il ripristino di emergenza che supportano Microsoft SQL Server.
 
 ## <a name="high-availability-and-disaster-recovery-partners"></a>Partner per la disponibilità elevata e il ripristino di emergenza
-<!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
+<!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
 -->
 
 | Partner | Descrizione | Collegamenti | 
@@ -34,9 +34,9 @@ Per garantire la disponibilità elevata e il ripristino di emergenza per i servi
 |![HPE][4] |**HPE Serviceguard**<br>HPE Serviceguard per Linux (SGLX) consente di proteggere i carichi di lavoro critici di SQL Server 2017 in Linux® da tempi di inattività pianificati e non pianificati con i relativi errori dell'infrastruttura e delle applicazioni negli ambienti fisici e virtuali su qualsiasi distanza. HPE SGLX A.12.20.00 e versioni successive offre opzioni di monitoraggio e recupero sensibili al contesto per i carichi di lavoro di SQL Server delle istanze del cluster di failover e dei gruppi di disponibilità Always On. Ottimizzare i tempi di attività con HPE SGLX senza compromettere l'integrità e le prestazioni dei dati.<br><br>SQL Server 2017 in Linux - RedHat 7.3, 7.4, SUSE 12 SP2, SP3|[Sito Web][hpe_website]<br>[Foglio dati][hpe]<br>[Download copia di valutazione][hpe_download]<br>[Blog][hpe_download]<br>[Twitter][hpe_twitter]
 |![IDERA][3]|**IDERA**<br>SQL Safe Backup è una soluzione di backup e recupero ad alte prestazioni per SQL Server che consente di risparmiare denaro riducendo i tempi di backup e le dimensioni dei file di backup dei database e offre l'accesso immediato in lettura e scrittura ai database all'interno dei file di backup.<br><br>Microsoft SQL Server: 2005 SP1 o versioni successive, 2008, 2008 R2, 2012, 2014, 2016; tutte le versioni |[Sito Web][idera_website]|
 |![NEC][7]|**NEC**<br>ExpressCluster è una soluzione di disponibilità elevata e ripristino di emergenza completa e del tutto automatizzata contro tutti gli errori gravi, inclusi gli errori hardware, software, di rete e del sito per SQL Server e le applicazioni associate in esecuzione su computer fisici o macchine virtuali in ambienti locali o cloud.<br><br>Microsoft SQL Server: 2005 o versione successiva, tutte le edizioni |[Sito Web][necec_website]<br>[Foglio dati][necec_datasheet]<br>[Video][necec_youtube]<br>[Download][necec_download]|
-|![Portworx][6] |**Portworx**<br>Portworx è la soluzione per i contenitori con stato in esecuzione nell'ambiente di produzione. Con Portworx gli utenti possono gestire qualsiasi database o servizio con stato in qualsiasi infrastruttura usando un'utilità di pianificazione del contenitore, ad esempio Kubernetes, Mesosphere DC/OS e Docker Swarm. Portworx risolve i cinque problemi più comuni affrontati dai team DevOps durante l'esecuzione dei database nei contenitori e altri servizi con stato nell'ambiente di produzione: persistenza, disponibilità elevata, automazione dei dati, supporto per più archivi dati e infrastruttura, sicurezza.<br><br>SQL Server 2017 in Docker |[Sito Web][portworx_website]<br>[Documentazione][portworx_docs]<br>[Video][portworx_youtube]|
+|![Portworx][6] |**Portworx**<br>Portworx è la soluzione per i contenitori con stato in esecuzione nell'ambiente di produzione. Con Portworx gli utenti possono gestire qualsiasi database o servizio con stato in qualsiasi infrastruttura usando un'utilità di pianificazione del contenitore, ad esempio Kubernetes, Mesosphere DC/OS e Docker Swarm. Portworx risolve i cinque problemi più comuni affrontati dai team DevOps durante l'esecuzione dei database nei contenitori e altri servizi con stato nell'ambiente di produzione: persistenza, disponibilità elevata, automazione dei dati, supporto per più archivi dati e infrastruttura, sicurezza.<br><br>SQL Server 2017 in Docker |[Sito Web][portworx_website]<br>[Documentazione][portworx_docs]<br>[Video][portworx_youtube]|
 |![SIOS][8] |**SIOS**<br>La tecnologia SIOS offre soluzioni economiche per la disponibilità elevata e il ripristino di emergenza per SQL Server in Windows o Linux. Il clustering SIOS SANless rende superflua una SAN di archiviazione condivisa, offrendo così la massima flessibilità per proteggere le applicazioni più importanti in configurazioni fisiche, virtuali, cloud e cloud ibride, in ambienti con uno o più siti.<br><br>Aggiungere SIOS DataKeeper all'ambiente per il clustering di failover di Windows Server per creare una risorsa volume SANless che sostituisce l'archiviazione condivisa tradizionale, rendendo più semplice eseguire WSFC in Azure.<br><br>SIOS Protection Suite è una soluzione di clustering altamente flessibile che protegge le applicazioni Linux cruciali, come SQL Server, SAP, HANA, Oracle e molte altre.|[Sito Web][sios_website]<br>[Foglio dati][sios_datasheet]<br>[Twitter][sios_twitter]<br>[Marketplace][sios_marketplace]<br>[Video][sios_youtube]|
-|![Veeam][1] |**Veeam**<br>Veeam Backup & Replication è una soluzione di backup e per la disponibilità potente, economica e facile da usare. Offre un recupero rapido, affidabile e flessibile delle applicazioni virtualizzate e dei dati, combinando il backup e la replica delle macchine virtuali in un'unica soluzione software. Veeam Backup & Replication offre un eccellente supporto per gli ambienti virtuali VMware vSphere e Microsoft Hyper-V.<br><br>SQL Server 2005 SP4 – SQL Server 2016 in Windows |[Sito Web][veeam_website]<br>[Foglio dati][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[Video][veeam_youtube]|
+|![Veeam][1] |**Veeam**<br>Veeam Backup & Replication è una soluzione di backup e per la disponibilità potente, economica e facile da usare. Offre un recupero rapido, affidabile e flessibile delle applicazioni virtualizzate e dei dati, combinando il backup e la replica delle macchine virtuali in un'unica soluzione software. Veeam Backup & Replication offre un eccellente supporto per gli ambienti virtuali VMware vSphere e Microsoft Hyper-V.<br><br>SQL Server 2005 SP4 - SQL Server 2016 in Windows |[Sito Web][veeam_website]<br>[Foglio dati][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[Video][veeam_youtube]|
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per altre informazioni su ulteriori partner, vedere [monitoraggio][mon_partners], [partner di gestione][management_partners] e [partner di sviluppo][dev_partners].
@@ -58,10 +58,10 @@ Per altre informazioni su ulteriori partner, vedere [monitoraggio][mon_partners]
 
 <!--Website links -->
 [veeam_website]:https://www.veeam.com/
-[dh2i_website]:http://dh2i.com
+[dh2i_website]:https://dh2i.com
 [idera_website]:https://www.idera.com/productssolutions/sqlserver
 [hpe_website]: https://www.hpe.com/us/en/product-catalog/detail/pip.376220.html
-[azure_website]: http://docs.microsoft.com/azure/site-recovery/site-recovery-sql
+[azure_website]: https://docs.microsoft.com/azure/site-recovery/site-recovery-sql
 [necec_website]: https://www.necam.com/ExpressCluster/
 [portworx_website]: https://portworx.com/
 [sios_website]: https://us.sios.com/
@@ -70,15 +70,15 @@ Per altre informazioni su ulteriori partner, vedere [monitoraggio][mon_partners]
 
 <!--Datasheet Links-->
 [veeam_datasheet]:https://www.veeam.com/veeam_backup_9_5_datasheet_en_ds.pdf
-[dh2i_datasheet]:http://dh2i.com/wp-content/uploads/DxE-Win-QuickFacts.pdf
+[dh2i_datasheet]:https://dh2i.com/wp-content/uploads/DxE-Win-QuickFacts.pdf
 [hpe]:https://www.hpe.com/h20195/v2/default.aspx?cc=us&lc=en&oid=376220
 [necec_datasheet]: https://www.necam.com/docs/?id=0d9ef7a7-f935-4909-b6bb-20a47b3
-[azure_datasheet]: http://docs.microsoft.com/azure/site-recovery/site-recovery-sql#site-recovery-support
+[azure_datasheet]: https://docs.microsoft.com/azure/site-recovery/site-recovery-sql#site-recovery-support
 [sios_datasheet]: https://us.sios.com/solutions/high-availability-cluster-software-cloud/
 
 <!--Marketplace Links -->
 [azure_marketplace]: https://azuremarketplace.microsoft.com/marketplace/apps?search=site%20recovery&page=1
-[sios_marketplace]: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/sios_datakeeper.sios-datakeeper-8
+[sios_marketplace]: https://azuremarketplace.microsoft.com/marketplace/apps/sios_datakeeper.sios-datakeeper-8
 <!--Press links-->
 <!--[veeam_press]:-->
 
@@ -88,7 +88,7 @@ Per altre informazioni su ulteriori partner, vedere [monitoraggio][mon_partners]
 [idera_youtube]:https://www.idera.com/resourcecentral/videos/sql-safe-overview
 [azure_youtube]: https://mva.microsoft.com/en-US/training-courses/is-your-lack-of-a-disaster-recovery-site-keeping-you-up-at-night-8680?l=oF7YrFH1_7504984382
 [necec_youtube]: https://www.youtube.com/watch?v=9La3Cw1Q1Jk
-[portworx_youtube]: https://www.youtube.com/channel/UCSexpvQ9esSRgiS_Q9_3mLQ 
+[portworx_youtube]: https://www.youtube.com/channel/UCSexpvQ9esSRgiS_Q9_3mLQ 
 [sios_youtube]: https://www.youtube.com/watch?v=U3M44gJNWQE
 
 <!--Twitter links-->
@@ -99,7 +99,7 @@ Per altre informazioni su ulteriori partner, vedere [monitoraggio][mon_partners]
 [sios_twitter]:https://www.twitter.com/SIOSTech
 
 <!--Docs links>-->
-[portworx_docs]: http://docs.portworx.com/
+[portworx_docs]: https://docs.portworx.com/
 
 <!--Download links-->
 [hpe_download]: https://h20392.www2.hpe.com/portal/swdepot/displayProductInfo.do?productNumber=SGLX-DEMO

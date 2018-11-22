@@ -1,7 +1,7 @@
 ---
 title: Catalogo SSIS | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 11/12/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c168338d466273d28f2b8bd9d1f27c71f3a30b31
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: e63424772029acf5862d19362e9a7e9bd0e082c1
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864299"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641408"
 ---
 # <a name="ssis-catalog"></a>Catalogo SSIS
   Il catalogo **SSISDB** è il punto centrale dell'utilizzo di progetti [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) che sono stati distribuiti nel server [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Ad esempio, è possibile impostare parametri di progetti e pacchetti, configurare ambienti per specificare valori di runtime per i pacchetti, eseguire e risolvere i problemi dei pacchetti e gestire le operazioni del server [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -36,7 +36,7 @@ ms.locfileid: "47864299"
   
  Per gestire il database **SSISDB** , si consiglia di applicare criteri aziendali standard per la gestione di database utente. Per informazioni sulla creazione dei piani di manutenzione, vedere [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- Il catalogo **SSISDB** e il database **SSISDB** supportano Windows PowerShell. Per altre informazioni sull'uso di SQL Server con Windows PowerShell, vedere [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md). Per gli esempi di come usare Windows PowerShell per completare attività quali la distribuzione di un progetto, vedere l'intervento sul blog relativo a [SSIS e PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539)sul sito blogs.msdn.com.  
+ Il catalogo **SSISDB** e il database **SSISDB** supportano Windows PowerShell. Per altre informazioni sull'uso di SQL Server con Windows PowerShell, vedere [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md). Per gli esempi di come usare Windows PowerShell per completare attività quali la distribuzione di un progetto, vedere l'intervento sul blog relativo a [SSIS e PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)sul sito blogs.msdn.com.  
   
  Per altre informazioni sulla visualizzazione dei dati delle operazioni, vedere [Esecuzione di pacchetti e altre operazioni di monitoraggio](../../integration-services/performance/monitor-running-packages-and-other-operations.md).  
   
@@ -356,12 +356,12 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
   
     ```  
   
-     Per altri esempi di come usare Windows PowerShell e lo spazio dei nomi <xref:Microsoft.SqlServer.Management.IntegrationServices>, vedere l'intervento sul blog relativo a [SSIS e PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539) nel sito blogs.msdn.com. Per una panoramica dello spazio dei nomi e degli esempi di codice, vedere l'intervento sul blog relativo a [uno sguardo rapido del modello a oggetti gestito del catalogo SSIS](http://go.microsoft.com/fwlink/?LinkId=254267)sul sito blogs.msdn.com.  
+     Per altri esempi di come usare Windows PowerShell e lo spazio dei nomi <xref:Microsoft.SqlServer.Management.IntegrationServices>, vedere l'intervento sul blog relativo a [SSIS e PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539) nel sito blogs.msdn.com. Per una panoramica dello spazio dei nomi e degli esempi di codice, vedere l'intervento sul blog relativo a [uno sguardo rapido del modello a oggetti gestito del catalogo SSIS](https://go.microsoft.com/fwlink/?LinkId=254267)sul sito blogs.msdn.com.  
 
 ## <a name="catalog-properties-dialog-box"></a>Finestra di dialogo Proprietà catalogo
   Utilizzare la finestra di dialogo Proprietà catalogo per configurare il catalogo di SSISDB. Le proprietà del catalogo consentono di definire come vengono crittografati i dati sensibili, come vengono mantenuti i dati del controllo delle versioni dei progetti e quando si verifica il timeout delle operazioni di convalida. Il catalogo di SSISDB rappresenta un punto centrale di archiviazione e amministrazione di progetti, pacchetti, parametri e ambienti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Inoltre, è possibile visualizzare le proprietà del catalogo nella vista catalog.catalog_property e impostare le proprietà tramite la stored procedure catalog.configure_catalog. Per altre informazioni, vedere [catalog.catalog_properties &#40;database SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) e [catalog.configure_catalog &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
+ È anche possibile visualizzare le proprietà del catalogo nella vista `catalog.catalog_properties` e impostare le proprietà tramite la stored procedure `catalog.configure_catalog`. Per altre informazioni, vedere [catalog.catalog_properties &#40;database SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) e [catalog.configure_catalog &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
  **Per saperne di più**  
   
@@ -380,15 +380,14 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
 ###  <a name="options"></a> Configurare le opzioni  
   
 #### <a name="options"></a>Opzioni  
- Nella tabella seguente sono descritte determinate proprietà nella finestra di dialogo e le proprietà corrispondenti nella vista catalog.catalog_property.  
+ La tabella seguente illustra determinate proprietà nella finestra di dialogo e le proprietà corrispondenti nella vista `catalog.catalog_properties`.  
   
-|Nome proprietà (finestra di dialogo Proprietà catalogo)|Nome proprietà (vista catalog.catalog_property)|Descrizione|  
+|Nome proprietà (finestra di dialogo Proprietà catalogo)|Nome proprietà (vista catalog.catalog_properties)|Descrizione|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
-|Nome algoritmo di crittografia|ENCRYPTION_CLEANUP_ENABLED|Consente di specificare il tipo di crittografia utilizzato per crittografare i valori di parametro sensibili nel catalogo. Di seguito sono indicati i valori possibili:<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (predefinito)|  
-|Timeout di convalida (secondi)|VALIDATION_TIMEOUT|Specificare il numero massimo di secondi durante i quali è possibile eseguire la convalida di un progetto o di un pacchetto prima dell'arresto. Il valore predefinito è 300 secondi.<br /><br /> L'esecuzione della convalida è un'operazione asincrona. Più grande è il progetto o il pacchetto, più tempo richiederà la convalida.<br /><br /> Per informazioni sulla convalida di progetti e pacchetti, vedere [Tipi di dati nelle espressioni di Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md).|  
+|Nome algoritmo di crittografia|ENCRYPTION_ALGORITHM|Consente di specificare il tipo di crittografia utilizzato per crittografare i valori di parametro sensibili nel catalogo. Di seguito sono indicati i valori possibili:<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (predefinito)|  
+|Numero massimo di versioni per progetto|MAX_PROJECT_VERSIONS|Specificare il numero di versioni di un progetto archiviate nel catalogo. Le versioni precedenti di progetti che superano il numero massimo vengono rimosse quando viene eseguito il processo di pulizia della versione del progetto.|  
 |Pulisci log periodicamente|OPERATION_CLEANUP_ENABLED|Impostare la proprietà su True per indicare l'esecuzione della pulizia di operazioni da parte del processo di SQL Server Agent. In caso contrario, impostare la proprietà su False.|  
 |Periodo di memorizzazione (giorni)|RETENTION_WINDOW|Specificare la validità massima di dati di operazioni consentiti (in giorni). I dati che superano il numero di giorni specificato vengono rimossi dalla pulizia delle operazioni del processo di SQL Agent.|  
-|Numero massimo di versioni per progetto|MAX_PROJECT_VERSIONS|Specificare il numero di versioni di un progetto archiviate nel catalogo. Le versioni precedenti di progetti che superano il numero massimo vengono rimosse quando viene eseguito il processo di pulizia della versione del progetto.|  
 
 ## <a name="back-up-restore-and-move-the-ssis-catalog"></a>Backup, ripristino e spostamento del catalogo SSIS
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -413,7 +412,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
   
     ```  
   
-3.  Eseguire il backup del database SSISDB tramite la finestra di dialogo **Backup database** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per ulteriori informazioni, vedere [Procedura: Esecuzione del backup di un database (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Eseguire il backup del database SSISDB tramite la finestra di dialogo **Backup database** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per ulteriori informazioni, vedere [Procedura: Esecuzione del backup di un database (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Generare lo script CREATE LOGIN per ##MS_SSISServerCleanupJobLogin##, effettuando le operazioni riportate di seguito. Per altre informazioni, vedere [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
   
@@ -437,7 +436,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
   
 ### <a name="to-restore-the-ssis-database"></a>Per ripristinare il database SSIS  
   
-1.  Se si ripristina il database SSISDB a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui il catalogo SSISDB non è mai stato creato, abilitare Common Language Runtime (CLR) eseguendo la stored procedure sp_configure. Per altre informazioni, vedere [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e [Opzione clr enabled](http://go.microsoft.com/fwlink/?LinkId=231855).  
+1.  Se si ripristina il database SSISDB a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui il catalogo SSISDB non è mai stato creato, abilitare Common Language Runtime (CLR) eseguendo la stored procedure sp_configure. Per altre informazioni, vedere [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e [Opzione clr enabled](https://go.microsoft.com/fwlink/?LinkId=231855).  
   
     ```  
     use master   
@@ -580,7 +579,7 @@ Per eseguire il **processo di manutenzione del server SSIS**, SSIS crea l'access
 ###  <a name="prereq"></a> Prerequisiti  
 Eseguire questi passaggi preliminari prima di abilitare il supporto Always On per il database SSISDB.  
   
-1.  Configurare un cluster di failover di Windows Vedere il post del blog relativo all’ [installazione della funzionalità e degli strumenti per il cluster di failover per Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) per le istruzioni. Installare la funzionalità e gli strumenti in tutti i nodi del cluster.  
+1.  Configurare un cluster di failover di Windows Vedere il post del blog relativo all’ [installazione della funzionalità e degli strumenti per il cluster di failover per Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) per le istruzioni. Installare la funzionalità e gli strumenti in tutti i nodi del cluster.  
   
 2.  Installare SQL Server 2016 con Integration Services (SSIS) in ogni nodo del cluster.  
   
@@ -662,8 +661,8 @@ Se l'opzione **Abilita supporto per AlwaysOn** nel menu di scelta rapida risulta
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   Intervento nel blog su [SSIS e PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539)sul sito Web blogs.msdn.com.  
+-   Intervento nel blog su [SSIS e PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)sul sito Web blogs.msdn.com.  
   
--   Intervento nel blog sui [suggerimenti per il controllo dell'accesso al catalogo SSIS](http://go.microsoft.com/fwlink/?LinkId=246669)sul sito Web blogs.msdn.com.  
+-   Intervento nel blog sui [suggerimenti per il controllo dell'accesso al catalogo SSIS](https://go.microsoft.com/fwlink/?LinkId=246669)sul sito Web blogs.msdn.com.  
   
--   Intervento nel blog relativo a [uno sguardo rapido del modello a oggetti gestito del catalogo SSIS](http://go.microsoft.com/fwlink/?LinkId=254267)su blogs.msdn.com.  
+-   Intervento nel blog relativo a [uno sguardo rapido del modello a oggetti gestito del catalogo SSIS](https://go.microsoft.com/fwlink/?LinkId=254267)su blogs.msdn.com.  

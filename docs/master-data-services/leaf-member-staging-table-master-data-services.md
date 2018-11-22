@@ -15,12 +15,12 @@ ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 46dc98904bc82a167fa1c014b5ace8b8699170a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82ca5e58e5e24c128e37a9335fd87bc3bb2d4e28
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626219"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700259"
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>Tabella di gestione temporanea dei membri foglia (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "47626219"
 |**Code**<br /><br /> Richiesto, tranne quando i codici vengono generati automaticamente per **ImportType1** o **2**. Per altre informazioni, vedere [Creazione di codice automatica &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)|Un codice univoco per il membro.||  
 |**Nome**<br /><br /> Facoltativo|Nome per il membro.||  
 |**NewCode**|Utilizzare solo se si sta modificando il codice membro.||  
-|\<Nome attributo >|Esiste una colonna per ogni attributo dell'entità. Utilizzarlo con **ImportType** uguale a **0** o a **2**. Per gli attributi in formato libero specificare il nuovo testo o valore stringa per l'attributo. Per gli attributi basati su dominio specificare il codice del membro che sarà utilizzato come attributo. Per gli attributi di collegamento, l'URL deve iniziare con **http://**.<br /><br /> Nota: non è possibile usare la gestione temporanea per gli attributi di file.||  
+|\<Nome attributo >|Esiste una colonna per ogni attributo dell'entità. Utilizzarlo con **ImportType** uguale a **0** o a **2**. Per gli attributi in formato libero specificare il nuovo testo o valore stringa per l'attributo. Per gli attributi basati su dominio specificare il codice del membro che sarà utilizzato come attributo. Per gli attributi di collegamento, l'URL deve iniziare con **https://**.<br /><br /> Nota: non è possibile usare la gestione temporanea per gli attributi di file.||  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   

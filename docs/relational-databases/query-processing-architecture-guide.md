@@ -5,8 +5,7 @@ ms.date: 06/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, query processing architecture
@@ -17,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b6be4caf0746d7ebbcd25c1a3a27221d48db582
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: d85ac4addb2b1ec0e709a4e0fd72f0ca0be46f86
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226383"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701479"
 ---
 # <a name="query-processing-architecture-guide"></a>Guida sull'architettura di elaborazione delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +119,9 @@ Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è un'
 
 Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non sceglie esclusivamente il piano di esecuzione con il costo minore in termini di risorse, ma individua il piano che restituisce più rapidamente i risultati all'utente con un costo ragionevole in termini di risorse. Ad esempio, l'esecuzione parallela di una query in genere utilizza una quantità di risorse maggiore rispetto all'esecuzione seriale, ma consente di completare la query più rapidamente. Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] userà un piano di esecuzione parallela per restituire i risultati, a condizione che tale piano non aumenti il carico sul server.
 
-Per la stima dei costi in termini di risorse relativi ai diversi metodi di estrazione delle informazioni da una tabella o da un indice, Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si basa sulle le statistiche di distribuzione. Le statistiche di distribuzione vengono registrate per le colonne e gli indici e indicano la selettività dei valori di un indice o di una colonna. Ad esempio, in una tabella che rappresenta automobili, molte automobili vengono prodotte dallo stesso costruttore, ma a ciascuna è assegnato un numero di identificazione univoco. L'indice dei numeri di identificazione dei veicoli è quindi più selettivo rispetto all'indice dei produttori. Se le statistiche dell'indice non sono aggiornate, è possibile che Query Optimizer non scelga la soluzione migliore per lo stato corrente della tabella. Per altre informazioni sull'aggiornamento delle statistiche dell'indice, vedere [Statistiche](../relational-databases/statistics/statistics.md). 
+Per la stima dei costi in termini di risorse relativi ai diversi metodi di estrazione delle informazioni da una tabella o da un indice, Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si basa sulle le statistiche di distribuzione. Le statistiche di distribuzione vengono registrate per le colonne e gli indici e contengono informazioni sulla densità <sup>1</sup> dei dati sottostanti. Queste informazioni sono usate per indicare la selettività dei valori in un indice o in una colonna. Ad esempio, in una tabella che rappresenta automobili, molte automobili vengono prodotte dallo stesso costruttore, ma a ciascuna è assegnato un numero di identificazione univoco. Un indice basato sul numero di identificazione del veicolo è più selettivo rispetto all'indice basato sul produttore, perché il numero di identificazione del veicolo ha una densità minore rispetto al produttore. Se le statistiche dell'indice non sono aggiornate, è possibile che Query Optimizer non scelga la soluzione migliore per lo stato corrente della tabella. Per altre informazioni sulle densità, vedere [Statistiche](../relational-databases/statistics/statistics.md#density). 
+
+<sup>1</sup> La densità definisce la distribuzione di valori univoci esistenti nei dati, o il numero medio di valori duplicati per una determinata colonna. Man mano che la densità diminuisce, aumenta la selettività di un valore.
 
 Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è un componente importante perché consente al server di database di adattarsi in modo dinamico alle condizioni variabili del database senza fare ricorso all'intervento di un programmatore o di un amministratore di database. In questo modo i programmatori possono concentrarsi sulla descrizione del risultato finale della query. A ogni esecuzione dell'istruzione, Query Optimizer di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila un piano di esecuzione efficace per lo stato corrente del database.
 
@@ -138,11 +139,11 @@ Di seguito viene illustrata la procedura di base necessaria per elaborare una si
 
 La procedura di base descritta per l'elaborazione di un'istruzione `SELECT` è valida anche per altre istruzioni SQL, ad esempio `INSERT`, `UPDATE`e `DELETE`. Entrambe le istruzioni`UPDATE` e `DELETE` devono definire il set di righe da modificare o eliminare. usando un processo di identificazione delle righe corrispondente a quello che consente di identificare le righe di origine che formano il set di risultati di un'istruzione `SELECT` . Le istruzioni `UPDATE` e `INSERT` possono includere istruzioni SELECT incorporate che forniscono i valori dei dati da aggiornare o da inserire.
 
-Anche le istruzioni DDL (Data Definition Language), quali `CREATE PROCEDURE` o `ALTER TABL`E, vengono risolte in una serie di operazioni relazionali eseguite sulle tabelle del catalogo di sistema e in alcuni casi, ad esempio con `ALTER TABLE ADD COLUMN`, sulle tabelle di dati.
+Anche le istruzioni DDL (Data Definition Language), ad esempio `CREATE PROCEDURE` o `ALTER TABLE`, vengono risolte in una serie di operazioni relazionali eseguite nelle tabelle del catalogo di sistema e in alcuni casi, ad esempio con `ALTER TABLE ADD COLUMN`, nelle tabelle di dati.
 
 ### <a name="worktables"></a>Tabelle di lavoro
 
-È possibile che il motore relazionale debba compilare una tabella di lavoro per eseguire un'operazione logica specificata in un'istruzione SQL. Le tabelle di lavoro sono tabelle interne utilizzate per inserirvi i risultati intermedi. Le tabelle di lavoro vengono generate per alcune query `GROUP BY`, `ORDER BY`o `UNION` . Se, ad esempio, una clausola `ORDER BY` fa riferimento a colonne non coperte da indici, può essere necessario generare una tabella di lavoro per disporre il set di risultati nell'ordine richiesto. Le tabelle di lavoro vengono a volte utilizzate anche come spool per conservare temporaneamente il risultato dell'esecuzione di un piano della query. Le tabelle di lavoro vengono compilate in `tempdb` e vengono eliminate automaticamente quando non sono più necessarie.
+È possibile che il motore relazionale debba compilare una tabella di lavoro per eseguire un'operazione logica specificata in un'istruzione SQL. Le tabelle di lavoro sono tabelle interne utilizzate per inserirvi i risultati intermedi. Le tabelle di lavoro vengono generate per alcune query `GROUP BY`, `ORDER BY`o `UNION` . Se, ad esempio, una clausola `ORDER BY` fa riferimento a colonne non coperte da indici, può essere necessario generare una tabella di lavoro per disporre il set di risultati nell'ordine richiesto. Le tabelle di lavoro vengono a volte utilizzate anche come spool per conservare temporaneamente il risultato dell'esecuzione di un piano della query. Le tabelle di lavoro vengono compilate in tempdb e vengono eliminate automaticamente quando non sono più necessarie.
 
 ### <a name="view-resolution"></a>Risoluzione delle viste
 
@@ -698,7 +699,7 @@ I cursori statici e gestiti da keyset possono essere popolati tramite piani di e
 
 L'impostazione dell'opzione max degree of parallelism su 0 (impostazione predefinita) consente a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di usare tutti i processori disponibili fino a un massimo di 64 nell'esecuzione di piani paralleli. Anche se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] imposta una destinazione di runtime di 64 processori logici quando l'opzione MAXDOP è impostata su 0, è possibile impostare manualmente un valore diverso se necessario. L'impostazione di MAXDOP su 0 per query e indici consente a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di usare tutti i processori disponibili fino a un massimo di 64 per le query o gli indici specificati nell'esecuzione di piani paralleli. MAXDOP non è un valore imposto per tutte le query parallele, ma piuttosto un valore target provvisorio per tutte le query idonee per il parallelismo. Ciò significa che se ci sono thread di lavoro sufficienti disponibili in fase di esecuzione, una query può essere eseguita con un grado di parallelismo minore rispetto all'opzione di configurazione del server MAXDOP.
 
-Fare riferimento a questo [articolo del supporto tecnico Microsoft](http://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server) per informazioni sulle procedure consigliate per la configurazione di MAXDOP.
+Fare riferimento a questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server) per informazioni sulle procedure consigliate per la configurazione di MAXDOP.
 
 ### <a name="parallel-query-example"></a>Esempio di query parallela
 
@@ -1019,7 +1020,7 @@ Per migliorare le prestazioni di query che accedono a una grande quantità di da
 * Utilizzare un server con processori veloci e il maggior numero possibile di core del processore per sfruttare a pieno la funzionalità di elaborazione di query parallele.
 * Assicurarsi che per il server sia disponibile larghezza di banda sufficiente del controller I/O. 
 * Creare un indice cluster in ogni tabella partizionata grande per sfruttare le ottimizzazioni dell'analisi dell'albero B.
-* Quando si esegue il caricamento bulk di dati in tabelle partizionate, attenersi ai requisiti della procedura consigliata nel white paper [The Data Loading Performance Guide](http://msdn.microsoft.com/library/dd425070.aspx) (Guida alle prestazioni del caricamento dati).
+* Quando si esegue il caricamento bulk di dati in tabelle partizionate, attenersi ai requisiti della procedura consigliata nel white paper [The Data Loading Performance Guide](https://msdn.microsoft.com/library/dd425070.aspx) (Guida alle prestazioni del caricamento dati).
 
 ### <a name="example"></a>Esempio
 

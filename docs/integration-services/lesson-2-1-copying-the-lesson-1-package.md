@@ -11,12 +11,12 @@ ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29172f4a1abca10e5b2968b77cfdd62ee44810e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7638d36f78853612c312880cd9698625af1ffe3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827109"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640478"
 ---
 # <a name="lesson-2-1---copying-the-lesson-1-package"></a>Lezione 2-1 - Copia del pacchetto della lezione 1
 In questa attività si procederà alla creazione di una copia del pacchetto della lezione 1, denominato Lesson 1.dtsx. Se non è stata completata la lezione 1, è possibile aggiungere al progetto il pacchetto completo della lezione 1 incluso nell'esercitazione e quindi copiarlo. Questa nuova copia verrà usata per tutto il seguito della lezione 2.  
@@ -39,7 +39,7 @@ In questa attività si procederà alla creazione di una copia del pacchetto dell
   
 7.  Nella finestra Proprietà aggiornare la proprietà **Name** impostandola su **Lesson 2**.  
   
-8.  Fare clic sulla casella relativa alla proprietà **ID** , fare clic sulla freccia a discesa, quindi scegliere **<Generate New ID>**.  
+8.  Fare clic sulla casella relativa alla proprietà **ID**, fare clic sulla freccia a discesa, quindi scegliere **\<Genera nuovo ID\>**.  
   
 ### <a name="to-add-the-completed-lesson-1-package"></a>Per aggiungere il pacchetto della lezione 1 completato  
   
@@ -53,7 +53,7 @@ In questa attività si procederà alla creazione di una copia del pacchetto dell
   
     Per scaricare tutti i pacchetti di lezioni di questa esercitazione, effettuare le operazioni seguenti.  
   
-    1.  Passare alla pagina degli [esempi del prodotto di Integration Services](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Passare alla pagina degli [esempi del prodotto di Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Fare clic sulla scheda **DOWNLOADS** .  
   

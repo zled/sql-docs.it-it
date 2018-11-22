@@ -1,12 +1,10 @@
 ---
 title: Guida di ottimizzazione e convalida post-migrazione | Microsoft Docs
-ms.custom: ''
 ms.date: 5/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - post-migration validation and optimization
@@ -14,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-manager: ''
-ms.openlocfilehash: fe6ebb9967a3f1569db605a17b8f48b2a82a0470
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: craigg
+ms.openlocfilehash: 897f8affc74e764b19457aec84bfff21b867895e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662949"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658523"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guida di ottimizzazione e convalida post-migrazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ Quando si esegue la migrazione da una versione precedente di [!INCLUDE[ssNoVersi
 
 Ciò avviene perché a partire da [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] tutte le modifiche di Query Optimizer sono legate al [livello di compatibilità del database](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) più recente, quindi i piani non vengono modificati esattamente nel punto di aggiornamento, ma quando un utente passa dall'opzione di database `COMPATIBILITY_LEVEL` a una versione più recente. Questa funzionalità, in combinazione con Archivio query, offre un alto livello di controllo sulle prestazioni delle query nel processo di aggiornamento. 
 
-Per altre informazioni sulle modifiche di Query Optimizer introdotte in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], vedere la sezione relativa all'[ottimizzazione dei piani di query con la stima di cardinalità di SQL Server 2014](http://msdn.microsoft.com/library/dn673537.aspx).
+Per altre informazioni sulle modifiche di Query Optimizer introdotte in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], vedere la sezione relativa all'[ottimizzazione dei piani di query con la stima di cardinalità di SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx).
 
 ### <a name="steps-to-resolve"></a>Procedura di risoluzione
 
@@ -53,7 +51,7 @@ Per altre informazioni su questo argomento, vedere [Mantenere la stabilità dell
 **Si applica a:** migrazione da piattaforma esterna, ad esempio Oracle, DB2, MySQL e Sybase, a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
-> Per le migrazioni da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se questo problema si verificava nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di origine, la semplice migrazione a una versione più recente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non risolverà il problema descritto in questo scenario. 
+> Per le migrazioni da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se questo problema si verificava nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di origine, la semplice migrazione a una versione più recente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  non risolverà il problema descritto in questo scenario. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila i piani di query sulle stored procedure analizzando i parametri di input alla prima compilazione e generando un piano con parametri riutilizzabile e ottimizzato per la distribuzione di questi dati di input. Anche se non vengono usate stored procedure, la maggior parte delle istruzioni che generano piani semplici includerà dei parametri. Dopo che un piano è stato inizialmente memorizzato nella cache, per le esecuzioni future verrà eseguito il mapping a un piano precedentemente memorizzato nella cache.
 Un potenziale problema si presenta nel caso in cui durante questa prima compilazione non siano stati usati i set di parametri più comuni per il normale carico di lavoro. Per parametri diversi, lo stesso piano di esecuzione diventa inefficiente. Per altre informazioni su questo argomento, vedere il blog sull'[analisi dei parametri](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
@@ -81,7 +79,7 @@ Gli indici non corretti o mancanti causano un maggiore I/O che a sua volta deter
 
 1.  Usare il piano di esecuzione grafico per i riferimenti a indici mancanti.
 2.  Suggerimenti di indicizzazione generati da [Ottimizzazione guidata motore di database](../tools/dta/tutorial-database-engine-tuning-advisor.md).
-3.  Usare [Missing Indexes DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) (DMV degli indici mancanti) oppure [SQL Server Performance Dashboard](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
+3.  Usare [Missing Indexes DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) (DMV degli indici mancanti) oppure [SQL Server Performance Dashboard](https://www.microsoft.com/download/details.aspx?id=29063).
 4.  Usare script pre-esistenti in grado di usare DMV esistenti che offrano informazioni su indici mancanti, duplicati, ridondanti, raramente usati e completamente inutilizzati, ma che possano anche rivelare se i riferimenti agli indici includono hint o sono hardcoded in procedure e funzioni esistenti nel database. 
 
 > [!TIP] 

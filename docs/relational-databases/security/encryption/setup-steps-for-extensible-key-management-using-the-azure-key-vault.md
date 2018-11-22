@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 646d0cd8cb030e2e848ce5bd56b7b3ee228db449
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 422b8e8d8436430ec01cd92045e951850ee913ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817655"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663357"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Extensible Key Management TDE di SQL Server con Azure Key Vault - Passaggi di configurazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47817655"
   
 -   È necessaria una sottoscrizione di Azure  
   
--   Installare la versione più recente di [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) 5.2.0 o successiva.  
+-   Installare la versione più recente di [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 5.2.0 o successiva.  
 
 -   Creare Azure Active Directory  
 
@@ -239,10 +239,13 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
    
   
 ## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>Parte 3: Installare il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- È possibile scaricare il Connettore SQL Server dall' [Area download Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=521700). Questa operazione deve essere eseguita dall'amministratore del computer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ È possibile scaricare il Connettore SQL Server dall' [Area download Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=521700). Questa operazione deve essere eseguita dall'amministratore del computer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
 
 > [!NOTE]  
 >  Le versioni 1.0.0.440 e precedenti sono state sostituite e non sono più supportate negli ambienti di produzione. Eseguire l'aggiornamento alla versione 1.0.1.0 o successiva visitando l' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) e seguendo le istruzioni nella pagina [Manutenzione e risoluzione dei problemi di Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) in "Aggiornamento del Connettore SQL Server".
+
+> [!NOTE]  
+> La versione 1.0.5.0 presenta una modifica che causa un'interruzione, associata all'algoritmo di identificazione personale. Dopo l'aggiornamento alla versione 1.0.5.0 può verificarsi un errore di ripristino del database. Consultare l'articolo della KB [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
   
  ![ekm-connector-install](../../../relational-databases/security/encryption/media/ekm-connector-install.png "ekm-connector-install")  
   

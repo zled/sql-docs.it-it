@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f23ea32acdc0384bf0395f6cdd54913e33a0e51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df7cb6c2f5c04138d6738eadeb9b352d21f240f5
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614779"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813684"
 ---
 # <a name="html-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo HTML
 Nella tabella seguente si elencano le impostazioni relative alle informazioni sul dispositivo per il rendering nel formato HTML.  
@@ -44,7 +44,7 @@ Nella tabella seguente si elencano le impostazioni relative alle informazioni su
 |**ReplacementRoot(\*)**|Stringa da anteporre a tutti i collegamenti di drill-through, attivazione/disattivazione e segnalibro nel report quando viene eseguito il rendering al di fuori del controllo ReportViewer. Ad esempio, viene usata per il reindirizzamento della selezione di un utente a una pagina personalizzata.|  
 |**ResourceStreamRoot(\*)**|Stringa da anteporre all'URL per tutte le risorse dell'immagine, ad esempio le immagini per l'attivazione o la disattivazione oppure l'ordinamento.|  
 |**Sezione**|Numero di pagina del report di cui eseguire il rendering. Un valore **0** indica che viene eseguito il rendering di tutte le sezioni del report. Il valore predefinito è **1**.|  
-|**StreamRoot (\*)**|Percorso usato per anteporre un prefisso al valore dell'attributo **src** dell'elemento IMG nel report HTML restituito dal server di report. Per impostazione predefinita, il percorso viene fornito dal server di report. È possibile usare questa impostazione per specificare un percorso radice per le immagini in un report, ad esempio **http://\<nomeserver>/risorse/immaginiazienda**.|  
+|**StreamRoot (\*)**|Percorso usato per anteporre un prefisso al valore dell'attributo **src** dell'elemento IMG nel report HTML restituito dal server di report. Per impostazione predefinita, il percorso viene fornito dal server di report. È possibile usare questa impostazione per specificare un percorso radice per le immagini in un report, ad esempio **https://\<nomeserver>/risorse/immaginiazienda**.|  
 |**StyleStream**|Indica se stili e script vengono creati come flusso separato anziché nel documento. Il valore predefinito è **false**.|  
 |**Barra degli strumenti**|Indica se mostrare o nascondere la barra degli strumenti. Il valore predefinito di questo parametro è **true**. Se il valore di questo parametro è **false**, tutte le opzioni rimanenti (ad eccezione della mappa documento) vengono ignorate. Se si omette questo parametro, la barra degli strumenti viene visualizzata automaticamente nei formati di rendering che la supportano.<br /><br /> Il rendering della barra degli strumenti del Visualizzatore report viene eseguito quando si usano l'accesso con URL per il rendering di un report, ma non quando si usano l'API SOAP. L'impostazione relativa alle informazioni sul dispositivo **Toolbar** influisce tuttavia sulla modalità di visualizzazione del report in caso di utilizzo del metodo **Render** SOAP. Se il valore di questo parametro è **true** quando si usano SOAP per eseguire il rendering in formato HTML, viene eseguito il rendering solo della prima sezione del report. Se il valore è **false**, viene eseguito il rendering dell'intero report HTML come singola pagina HTML.|  
 |**UserAgent**|La stringa **user-agent** del browser che effettua la richiesta, situata nella richiesta HTTP.|  
@@ -53,7 +53,7 @@ Nella tabella seguente si elencano le impostazioni relative alle informazioni su
   
 ## <a name="see-also"></a>Vedere anche  
  [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizzare i parametri di estensione per il rendering in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Personalizzare i parametri di estensione per il rendering in RSReportServer.config.](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Riferimento tecnico &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

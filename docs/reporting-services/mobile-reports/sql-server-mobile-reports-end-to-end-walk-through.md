@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5e0f3461cee55781379fc598bbc6c61e51f5704
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7db1fd9af6a36f0804819c389b06778ae04d2ebf
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021175"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813764"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Report per dispositivi mobili di SQL Server: procedura dettagliata completa
 Procedura dettagliata per creare report per dispositivi mobili per schermi di qualsiasi dimensione con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] nel portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e visualizzarli nell'app Power BI per dispositivi mobili.
@@ -37,7 +37,7 @@ Per proseguire, sono necessari questi prodotti:
 *  OPPURE: database di esempio World Wide Importers, disponibile nella pagina [Esempi di Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Per visualizzare il risultato: 
   *   [Iscriversi al servizio Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) e
-  *  [Scaricare l'app Power BI per dispositivi mobili](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) per il proprio dispositivo mobile: telefono iOS o Android o dispositivo Windows 10.  
+  *  [Scaricare l'app Power BI per dispositivi mobili](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) per il proprio dispositivo mobile: telefono iOS o Android o dispositivo Windows 10.  
 
   
 ## <a name="create-a-shared-data-source"></a>Creazione di un'origine dati condivisa  
@@ -76,7 +76,7 @@ Per creare il set di dati condiviso, usare uno strumento client di [!INCLUDE[PRO
    
 4. Nel campo Nome digitare il nome del server in cui è stata salvata l'origine dati, in questo formato:   
    
-   Nome: http://*localhost*/ReportServer  
+   Nome: https://*localhost*/ReportServer  
    Elementi di tipo: origini dati (file con estensione rsds)  
    
 5. Fare clic su **Apri**e passare all'origine dati creata sul server.  
@@ -260,7 +260,7 @@ Ora che sono stati creati gli oggetti visivi nel layout master, è possibile cre
 Per visualizzare il report di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , è necessario innanzitutto:
 
 *  Se non si ha ancora un account,[iscriversi al servizio Power BI](https://go.microsoft.com/fwlink/?LinkID=513879).
-*  [Scaricare l'app Power BI per dispositivi mobili](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) nel proprio dispositivo mobile.  
+*  [Scaricare l'app Power BI per dispositivi mobili](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) nel proprio dispositivo mobile.  
 
 ### <a name="view-your-mobile-report"></a>Visualizzare il report per dispositivi mobili
   

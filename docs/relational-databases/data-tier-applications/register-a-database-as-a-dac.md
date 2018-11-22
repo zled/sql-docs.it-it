@@ -19,12 +19,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e94c6c8e96685f7b53348589ae4b30445447a2a0
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 53ca1a857e08b538f61067ba6a035a6ceab1e8c6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814997"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813994"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrare un database come applicazione livello dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "43814997"
 ##  <a name="Set_properties"></a> Pagina Imposta proprietà  
  Utilizzare questa pagina per specificare le proprietà a livello di applicazione livello dati quali il nome dell'applicazione e la versione.  
   
- **Nome applicazione** - Stringa che specifica il nome utilizzato per identificare la definizione dell'applicazione livello dati; il campo viene popolato con il nome del database.  
+ **Nome applicazione** - Stringa che specifica il nome usato per identificare la definizione dell'applicazione livello dati; il campo viene popolato con il nome del database.  
   
  **Versione** - Valore numerico che identifica la versione dell'applicazione livello dati. La versione DAC viene utilizzata in Visual Studio per identificare la versione della DAC alla quale stanno lavorando gli sviluppatori. Quando si distribuisce un'applicazione livello dati, la versione viene archiviata nel database **msdb** e può essere visualizzata successivamente nel nodo **Applicazioni livello dati** di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

@@ -11,12 +11,12 @@ ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bad683dc5ad0b49ac464ab3efcb90a652d45aa9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca00f40146d5019f770e3141d3961e40ed526ccc
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760819"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559159"
 ---
 # <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>Lezione 3-3 - Test del pacchetto creato nella lezione 3 dell'esercitazione
 In questa attività verrà eseguito il pacchetto Lesson 3.dtsx. Durante l'esecuzione del pacchetto, nella finestra Registra eventi verranno elencate le voci di log scritte nel file di log. Al termine dell'esecuzione del pacchetto sarà possibile verificare il contenuto del file di log generato dal provider di log.  
@@ -32,7 +32,7 @@ Prima di testare il pacchetto è consigliabile verificare che il flusso di contr
   
 ![Flusso di dati nel pacchetto](../integration-services/media/task9lesson1data.gif "Flusso di dati nel pacchetto")  
   
-### <a name="to-run-the-lesson-4-tutorial-package"></a>Per eseguire il pacchetto creato nella lezione 4 dell'esercitazione  
+### <a name="to-run-the-lesson-3-tutorial-package"></a>Per eseguire il pacchetto creato nella lezione 3 dell'esercitazione  
   
 1.  Scegliere Registra eventi dal menu SSIS.  
   

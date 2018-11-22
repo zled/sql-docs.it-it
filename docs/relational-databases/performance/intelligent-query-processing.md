@@ -2,7 +2,7 @@
 title: Elaborazione di query intelligenti nei database Microsoft SQL | Microsoft Docs
 description: Funzionalità di elaborazione di query intelligenti e miglioramento delle prestazioni delle query in SQL Server e nel database SQL di Azure.
 ms.custom: ''
-ms.date: 10/10/2018
+ms.date: 11/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,19 +14,19 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eba7eba4e21e0bb488664149347e8c58fae3e3ad
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: c4269cc9f61ecd1bd3130fe7fab0f1e5a1ae65bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030938"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660953"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Elaborazione di query intelligenti nei database SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 La famiglia di funzionalità di **elaborazione di query intelligenti** include funzionalità ad ampio spettro che migliorano le prestazioni di carichi di lavoro esistenti con un impegno minimo per l'implementazione.
 
-![Funzionalità di elaborazione di query intelligenti](./media/2_IQPFeatureFamily.png)
+![Funzionalità di elaborazione di query intelligenti](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>Elaborazione di query adattive
 La famiglia di funzionalità di elaborazione di query adattive include miglioramenti di elaborazione delle query che adattano le strategie di ottimizzazione alle condizioni di runtime del carico di lavoro dell'applicazione. Questi miglioramenti includono: join adattivi in modalità batch, feedback delle concessioni di memoria ed esecuzione interleaved per funzioni con valori di tabella a più istruzioni.
@@ -54,6 +54,14 @@ La compilazione posticipata delle variabili di tabella migliora la qualità del 
 Con la compilazione posticipata delle variabili di tabella, la compilazione di un'istruzione che fa riferimento a una variabile di tabella viene posticipata fino alla prima esecuzione effettiva dell'istruzione. Questo comportamento di compilazione posticipata è identico a quello delle tabelle temporanee e con questo cambiamento viene usata la cardinalità effettiva invece dell'ipotesi originale basata su una sola riga. Per abilitare l'anteprima pubblica della compilazione posticipata delle variabili di tabella nel database SQL di Azure, abilitare il livello di compatibilità del database 150 per il database a cui si è connessi quando si esegue la query.
 
 Per altre informazioni, vedere [Compilazione posticipata delle variabili di tabella](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation ).
+
+## <a name="scalar-udf-inlining"></a>Inlining di funzioni definite dall'utente scalari
+> [!NOTE]
+> L'inlining di funzioni definite dall'utente scalari è una funzionalità di anteprima pubblica.  
+
+L'inlining di funzioni definite dall'utente scalari trasforma automaticamente le funzioni definite dall'utente (UDF) scalari in espressioni relazionali e le incorpora nella query SQL chiamante, migliorando così le prestazioni dei carichi di lavoro che usano funzioni definite dall'utente scalari. L'inlining di funzioni definite dall'utente scalari facilita l'ottimizzazione basata sui costi delle operazioni all'interno di funzioni definite dall'utente e genera piani efficienti orientati ai set e paralleli, invece di piani di esecuzione seriali, inefficienti e iterativi. Questa funzionalità è abilitata per impostazione predefinita nel livello di compatibilità del database 150.
+
+Per altre informazioni, vedere [Inlining di funzioni definite dall'utente scalari](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sqlallproducts-allversions).
 
 ## <a name="approximate-query-processing"></a>Elaborazione delle query approssimativa
 > [!NOTE]

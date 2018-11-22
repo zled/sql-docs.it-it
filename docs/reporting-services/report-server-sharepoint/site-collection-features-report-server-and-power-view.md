@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e40163fe08b451e59dc28915002079b80e987e6f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9ae23135583dc09db8d8a8b0cfb7d356244fb753
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021185"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812278"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Attivare le funzionalità di integrazione del server di report e di Power View in SharePoint
 
@@ -26,7 +26,7 @@ ms.locfileid: "50021185"
 > [!NOTE]
 > L'integrazione di Reporting Services con SharePoint non è più disponibile nelle versioni successive a SQL Server 2016.
 
- Se si installa il componente aggiuntivo Reporting Services per prodotti SharePoint 2010 dopo l'installazione del prodotto SharePoint, la funzionalità di integrazione del server di report e la funzionalità di integrazione di Power View verranno attivate solo per le raccolte siti radice. Per le altre raccolte di siti è necessario attivare le funzionalità manualmente. Ad esempio, in presenza di una raccolta siti **http://[nome server]/sites/[nome raccolta siti]** sarà necessario attivare manualmente le funzionalità di raccolta siti di Reporting Services.  
+ Se si installa il componente aggiuntivo Reporting Services per prodotti SharePoint 2010 dopo l'installazione del prodotto SharePoint, la funzionalità di integrazione del server di report e la funzionalità di integrazione di Power View verranno attivate solo per le raccolte siti radice. Per le altre raccolte di siti è necessario attivare le funzionalità manualmente. Ad esempio, in presenza di una raccolta siti **https://[nome server]/sites/[nome raccolta siti]** sarà necessario attivare manualmente le funzionalità di raccolta siti di Reporting Services.  
   
  Se non è presente alcuna raccolta siti radice, il componente aggiuntivo Reporting Services registrerà un messaggio simile al seguente.  
   

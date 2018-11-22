@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: d391061ce82c0516bbfc30e9d05cce7bdedd65ed
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051014"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813674"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali al report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per organizzare e riepilogare i dati.  
@@ -115,7 +115,7 @@ In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali a
 3.  In **TargetServerURL** digitare il nome del server di report in uso, ad esempio   
     - `http:/<servername>/reportserver`  
    
-    - `http://localhost/reportserver` funziona se la progettazione del report viene eseguita nel server di report.  
+    - `https://localhost/reportserver` funziona se la progettazione del report viene eseguita nel server di report.  
   
   
 4. Si noti che TargetReportFolder è l'esercitazione, il nome del progetto.  Questo è il nome della cartella in cui il report verrà distribuito nei passaggi successivi.  
@@ -129,7 +129,7 @@ In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali a
     > 'Sales Orders.rdl' verrà ignorato. L'elemento è aggiornato.  
     > Compilazione completata -- 0 errori, 0 avvisi  
     > ------ Distribuzione avviata: Progetto: tutorial, Configurazione: Debug ------  
-    > Distribuzione in http://[nome server]/reportserver  
+    > Distribuzione in https://[nome server]/reportserver  
     > Distribuzione report '/tutorial/Sales Orders'.  
     > Distribuzione completata -- 0 errori, 0 avvisi  
     > ========== Compilazione: 1 completate o aggiornate, 0 non riuscite, 0 ignorate ==========  
@@ -143,8 +143,8 @@ In questa lezione dell'esercitazione verranno aggiunti raggruppamenti e totali a
   
     Individuare l'URL del portale Web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
     **Nota:** l'URL del *portale* è "Reports", non l'URL del *server* di report di "Reportserver".  Ad esempio   
-    `http://<server name>/reports`(Indici per tabelle con ottimizzazione per la memoria).  
-    `http://localhost/reports` funziona se la progettazione del report viene eseguita nel server di report.  
+    `https://<server name>/reports`(Indici per tabelle con ottimizzazione per la memoria).  
+    `https://localhost/reports` funziona se la progettazione del report viene eseguita nel server di report.  
   
 8.  Passare alla cartella che contiene il report. Il nome predefinito è *tutorial*, il nome del progetto o il nome digitato nel campo TargetReportFolder nelle proprietà del progetto.   
 Fare clic sul nome del report **Sales Orders** per visualizzare il report visualizzabile nel browser.  

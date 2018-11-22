@@ -11,15 +11,15 @@ ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b26f7b7a36d024ec18de617b08fdefe2d352083
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed4b198ab8f0582f3e01cfaca957af4f72e343e2
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686199"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641218"
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>Lezione 2: Aggiungere cicli con SSIS
-Nella [Lezione 1: Creazione del progetto e del pacchetto di base](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)è stato creato un pacchetto che ha estratto i dati da un'unica origine file flat, ha trasformato i dati usando la trasformazione Ricerca e infine ha caricato i dati nella tabella dei fatti **FactCurrency** del database di esempio **AdventureWorksDW2012** .  
+Nella [Lezione 1: Creare un progetto e un pacchetto di base con SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md) è stato creato un pacchetto che ha estratto i dati da un'unica origine file flat, ha trasformato i dati usando la trasformazione Ricerca e infine ha caricato i dati in una copia della tabella dei fatti **FactCurrencyRate** del database di esempio **AdventureWorksDW2012**.  
   
 Tuttavia, per un processo di estrazione, trasformazione e caricamento (ETL, Extract, Transform and Loading) raramente viene usato un unico file flat. In genere durante un processo ETL i dati vengono estratti da più origini file flat. L'estrazione dei dati da più origini richiede un flusso di controllo iterativo. Una delle caratteristiche più attese di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consiste nella possibilità di aggiungere facilmente iterazioni o cicli ai pacchetti.  
   
@@ -48,7 +48,7 @@ In questa lezione verranno illustrate le procedure per modificare il pacchetto E
 In questa lezione verrà modificato solo il flusso di controllo, non il flusso di dati.  
   
 > [!IMPORTANT]  
-> Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni sull'installazione e sulla distribuzione di **AdventureWorksDW2012**, vedere la pagina relativa agli [esempi del prodotto Reporting Services su CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=526910).  
+> Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni sull'installazione e sulla distribuzione di **AdventureWorksDW2012**, vedere [Esempi di Reporting Services su CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
   
 ## <a name="lesson-tasks"></a>Argomenti della lezione  
 In questa lezione sono incluse le attività seguenti:  

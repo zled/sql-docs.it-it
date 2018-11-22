@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4b53d5804668a46ade48d0beb41eae8fb7650374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a094030a35acf997186061b752f9b61d8f7b8200
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794389"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601681"
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>Controllo locale per la raccolta di dati relativi all'utilizzo di SQL Server
 
@@ -27,7 +27,7 @@ ms.locfileid: "47794389"
 
 ## <a name="introduction"></a>Introduzione
 
-Microsoft SQL Server include funzionalità che supportano Internet e sono in grado di raccogliere e inviare a Microsoft dati relativi al computer o al dispositivo. Queste informazioni sono denominate *informazioni standard del computer*. Il componente per il controllo locale della [raccolta di dati relativi all'utilizzo di SQL Server](http://support.microsoft.com/kb/3153756) scrive i dati raccolti dal servizio in una specifica cartella, che rappresenta i dati (log) da inviare a Microsoft. Lo scopo del controllo locale è quello di consentire ai clienti di visualizzare tutti i dati che Microsoft raccoglie con questa funzionalità, per motivi di conformità alle normative o rispetto della privacy.  
+Microsoft SQL Server include funzionalità che supportano Internet e sono in grado di raccogliere e inviare a Microsoft dati relativi al computer o al dispositivo. Queste informazioni sono denominate *informazioni standard del computer*. Il componente per il controllo locale della [raccolta di dati relativi all'utilizzo di SQL Server](https://support.microsoft.com/kb/3153756) scrive i dati raccolti dal servizio in una specifica cartella, che rappresenta i dati (log) da inviare a Microsoft. Lo scopo del controllo locale è quello di consentire ai clienti di visualizzare tutti i dati che Microsoft raccoglie con questa funzionalità, per motivi di conformità alle normative o rispetto della privacy.  
 
 In SQL Server 2016 CU2 il controllo locale è configurabile a livello di istanza per il motore di database di SQL Server e SQL Server Analysis Services (SSAS). In SQL Server 2016 CU4 e SQL Server 2016 SP1 il controllo locale è abilitato anche per SQL Server Integration Services (SSIS). Per altri componenti di SQL Server installati durante la fase di installazione del programma e per strumenti di SQL Server scaricati o installati successivamente, la funzionalità di controllo locale per la raccolta dei dati relativi all'utilizzo non è disponibile. 
 
@@ -37,7 +37,7 @@ Per abilitare il controllo locale in ogni istanza di SQL Server sono previsti i 
 
 1. L'istanza deve essere stata aggiornata a SQL Server 2016 RTM CU2 o versione successiva. Per Integration Services, l'istanza deve essere stata aggiornata a SQL 2016 RTM CU4 o SQL 2016 SP1
 
-1. L'utente deve essere un amministratore di sistema o un ruolo con diritti di accesso per aggiungere e modificare la chiave del Registro di sistema, creare cartelle, gestire la sicurezza delle cartelle e arrestare o avviare un servizio di Windows.  
+1. L'utente deve essere un amministratore di sistema o un ruolo con diritti di accesso per aggiungere e modificare la chiave del Registro di sistema, creare cartelle, gestire la sicurezza delle cartelle e arrestare o avviare un servizio di Windows.  
 
 ## <a name="pre-configuration-steps-prior-to-turning-on-local-audit"></a>Passaggi di configurazione preliminari all'abilitazione del controllo locale 
 
@@ -66,7 +66,7 @@ Per ottenere l'account di accesso al servizio di telemetria di Analisi utilizzo 
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>Configurare una nuova cartella per i file del controllo locale.    
 
-Creare una nuova cartella (directory del controllo locale) in cui archiviare i log della funzionalità di controllo locale. Ad esempio, il percorso completo della directory del controllo locale per un'istanza predefinita del motore di database sarà: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
+Creare una nuova cartella (directory del controllo locale) in cui archiviare i log della funzionalità di controllo locale. Ad esempio, il percorso completo della directory del controllo locale per un'istanza predefinita del motore di database sarà: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
  
   >[!NOTE] 
   >Configurare il percorso di directory per il controllo locale all'esterno del percorso di installazione di SQL Server, per evitare che la funzionalità di controllo e l'applicazione di patch possano causare problemi a SQL Server.
@@ -127,7 +127,7 @@ Creare una nuova cartella (directory del controllo locale) in cui archiviare i l
 
 Dopo aver completato i passaggi di configurazione preliminari, è possibile abilitare il controllo locale. A tale scopo, usare un account di amministratore di sistema, o un ruolo simile con accesso alla modifica delle chiavi del Registro di sistema, per abilitare o disabilitare il controllo locale seguendo questa procedura. 
 
-1. Avviare **regedit**.  
+1. Avviare **regedit**.  
 
 1. Passare al [percorso](#create-a-registry-key-setting-to-configure-local-audit-target-directory) di CPE appropriato. 
 
@@ -162,9 +162,9 @@ La funzionalità di controllo locale genererà un file di log al giorno. Ai file
 
 ## <a name="maintenance"></a>Manutenzione 
 
-1. Per limitare l'utilizzo di spazio su disco per i file scritti dalla funzionalità di controllo locale, configurare criteri o un processo regolare per rimuovere dalla directory del controllo locale i file meno recenti e non necessari.  
+1. Per limitare l'utilizzo di spazio su disco per i file scritti dalla funzionalità di controllo locale, configurare criteri o un processo regolare per rimuovere dalla directory del controllo locale i file meno recenti e non necessari.  
 
-2. Proteggere il percorso della directory del controllo locale in modo che sia accessibile solo alle persone appropriate. Si noti che i file di log contengono informazioni come descritto in [Come configurare SQL Server 2016 per inviare commenti e suggerimenti a Microsoft](http://support.microsoft.com/kb/3153756). È quindi opportuno impostare diritti di accesso a questi file in modo da impedirne la lettura alla maggior parte dei membri dell'organizzazione.  
+2. Proteggere il percorso della directory del controllo locale in modo che sia accessibile solo alle persone appropriate. Si noti che i file di log contengono informazioni come descritto in [Come configurare SQL Server 2016 per inviare commenti e suggerimenti a Microsoft](https://support.microsoft.com/kb/3153756). È quindi opportuno impostare diritti di accesso a questi file in modo da impedirne la lettura alla maggior parte dei membri dell'organizzazione.  
 
 ## <a name="data-dictionary-of-local-audit-output-data-structure"></a>Dizionario dei dati della struttura di dati di output del controllo locale 
 
@@ -177,9 +177,9 @@ La funzionalità di controllo locale genererà un file di log al giorno. Ai file
 - L'elemento**data** contiene l'output dell'esecuzione query corrispondente, la cui durata è definita da **queryTimeInTicks**.
 - Gli elementi**queryIdentifier** per le query T-SQL contengono la definizione di query T-SQL archiviata nella query.
 
-| Gerarchia logica delle informazioni del controllo locale | Colonne correlate |
+| Gerarchia logica delle informazioni del controllo locale | Colonne correlate |
 | ------ | -------|
-| Intestazione | emitTime, schemaVersion 
+| Intestazione | emitTime, schemaVersion 
 | Computer | operatingSystem 
 | Istanza | instanceUniqueID, correlationID, clientVersion 
 | Sessione | sessionID, traceName 
@@ -188,12 +188,12 @@ La funzionalità di controllo locale genererà un file di log al giorno. Ai file
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>Definizione di coppie nome/valore ed esempi 
 
-Le colonne elencate di seguito rappresentano l'ordinamento dell'output dei file del controllo locale. Per rendere anonimi i valori per alcune delle colonne seguenti viene usato un hash unidirezionale con SHA 256.  
+Le colonne elencate di seguito rappresentano l'ordinamento dell'output dei file del controllo locale. Per rendere anonimi i valori per alcune delle colonne seguenti viene usato un hash unidirezionale con SHA 256.  
 
 | nome | Descrizione | Valori di esempio
 |-------|--------| ----------|
 |instanceUniqueID| Identificatore dell'istanza reso anonimo | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
-|schemaVersion| Versione dello schema di SQLCEIP |  3 
+|schemaVersion| Versione dello schema di SQLCEIP |  3 
 |emitTime |Data e ora di invio dei punti dati in UTC (Universal Time Coordinated) | 2016-09-08T17:20:22.1124269Z 
 |sessionID | Identificatore di sessione del servizio SQLCEIP | 89decf9a-ad11-485c-94a7-fefb3a02ed86 
 |correlationId | Segnaposto per un identificatore aggiuntivo | 0 
@@ -204,8 +204,8 @@ Le colonne elencate di seguito rappresentano l'ordinamento dell'output dei file 
 |traceName | Categorie di tracce: (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | Identificatore della query | SQLServerProperties.002 
 |data   | Output delle informazioni raccolte su queryIdentifier come output della query T-SQL, della sessione XE o dell'applicazione |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
-|Query| Se applicabile, definizione di query T-SQL correlata all'elemento queryIdentifier che genera i dati.        Questo componente non viene caricato dal servizio Analisi utilizzo software di SQL Server. È incluso nel controllo locale solo come riferimento per i clienti.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolybaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolybaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
-|queryTimeInTicks | Tempo impiegato per l'esecuzione della query con la categoria di traccia seguente: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
+|Query| Se applicabile, definizione di query T-SQL correlata all'elemento queryIdentifier che genera i dati.        Questo componente non viene caricato dal servizio Analisi utilizzo software di SQL Server. È incluso nel controllo locale solo come riferimento per i clienti.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
+|queryTimeInTicks | Tempo impiegato per l'esecuzione della query con la categoria di traccia seguente: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
 ### <a name="trace-categories"></a>Categorie di traccia 
 Attualmente i dati vengono raccolti in base alle categorie di traccia seguenti: 
@@ -263,7 +263,7 @@ Di seguito è riportato un estratto di un output di file JSON della funzionalit�
         "Version": "Microsoft SQL Server 2017 (RTM-CU6) (KB4101464) - 14.0.3025.34 (X64) \n\tApr  9 2018 18:00:41 \n\tCopyright (C) 2017 Microsoft Corporation\n\tEnterprise Edition: Core-based Licensing (64-bit) on Windows 10 Enterprise 10.0 <X64> (Build 16299: )\n"
       }
     ],
-    "query": "SELECT\n      SERVERPROPERTY('Collation') AS [Collation],\n      SERVERPROPERTY('IsFullTextInstalled') AS [SqlFTinstalled],\n      SERVERPROPERTY('IsIntegratedSecurityOnly') AS [SqlIntSec],\n      SERVERPROPERTY('IsSingleUser') AS [IsSingleUser],\n      SERVERPROPERTY ('FileStreamEffectiveLevel') AS [SqlFilestreamMode],\n      SERVERPROPERTY('IsPolybaseInstalled') AS [SqlPbInstalled],\n      SERVERPROPERTY('PolybaseRole') AS [SqlPbNodeRole],\n      SERVERPROPERTY('ProductMajorVersion') AS [SqlVersionMajor],\n      SERVERPROPERTY('ProductMinorVersion') AS [SqlVersionMinor],\n      SERVERPROPERTY('ProductBuild') AS [SqlVersionBuild],\n      SERVERPROPERTY('ProductBuildType') AS ProductBuildType,\n      SERVERPROPERTY('ProductLevel') AS ProductLevel,\n      SERVERPROPERTY('ProductUpdateLevel') AS ProductUpdateLevel,\n      SERVERPROPERTY('ProductUpdateReference') AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)),CHARINDEX('.', REVERSE(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY('EditionID') AS SQLEditionId,\n      SERVERPROPERTY('IsClustered') AS IsClustered,\n      SERVERPROPERTY('IsHadrEnabled') AS IsHadrEnabled,\n      SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version",
+    "query": "SELECT\n      SERVERPROPERTY('Collation') AS [Collation],\n      SERVERPROPERTY('IsFullTextInstalled') AS [SqlFTinstalled],\n      SERVERPROPERTY('IsIntegratedSecurityOnly') AS [SqlIntSec],\n      SERVERPROPERTY('IsSingleUser') AS [IsSingleUser],\n      SERVERPROPERTY ('FileStreamEffectiveLevel') AS [SqlFilestreamMode],\n      SERVERPROPERTY('IsPolyBaseInstalled') AS [SqlPbInstalled],\n      SERVERPROPERTY('PolyBaseRole') AS [SqlPbNodeRole],\n      SERVERPROPERTY('ProductMajorVersion') AS [SqlVersionMajor],\n      SERVERPROPERTY('ProductMinorVersion') AS [SqlVersionMinor],\n      SERVERPROPERTY('ProductBuild') AS [SqlVersionBuild],\n      SERVERPROPERTY('ProductBuildType') AS ProductBuildType,\n      SERVERPROPERTY('ProductLevel') AS ProductLevel,\n      SERVERPROPERTY('ProductUpdateLevel') AS ProductUpdateLevel,\n      SERVERPROPERTY('ProductUpdateReference') AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)),CHARINDEX('.', REVERSE(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY('EditionID') AS SQLEditionId,\n      SERVERPROPERTY('IsClustered') AS IsClustered,\n      SERVERPROPERTY('IsHadrEnabled') AS IsHadrEnabled,\n      SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version",
     "queryTimeInTicks": 0
   },
   {
@@ -322,7 +322,7 @@ Gli amministratori di database devono gestire autonomamente la pulizia dei file 
 
 **Quale client o strumento è possibile usare per leggere l'output JSON?**
 L'output può essere letto con il Blocco note, in Visual Studio o nel lettore JSON desiderato.
-In alternativa, è possibile leggere il file JSON e analizzare i dati in un'istanza di SQL Server 2016, come illustrato di seguito. Per altre informazioni su come leggere il file JSON in SQL Server, visitare [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](http://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(Importazione di file JSON in SQL Server mediante OPENROWSET (BULK) e OPENJSON (Transact-SQL)).
+In alternativa, è possibile leggere il file JSON e analizzare i dati in un'istanza di SQL Server 2016, come illustrato di seguito. Per altre informazioni su come leggere il file JSON in SQL Server, visitare [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(Importazione di file JSON in SQL Server mediante OPENROWSET (BULK) e OPENJSON (Transact-SQL)).
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

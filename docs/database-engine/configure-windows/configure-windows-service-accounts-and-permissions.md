@@ -51,12 +51,12 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 772596b978cebc8b1581ac1a0e2e39f042afdf09
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: ce8d3928a59acfb2c3b53e19b50934b8f30a0eda
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237117"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605982"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurare account di servizio e autorizzazioni di Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "50237117"
   
  - **Motore di PolyBase per SQL Server**. Offre funzionalità di query distribuite a origini dati esterne.
  
- - **Servizio spostamento dati di PolyBase per SQL Server**. Consente lo spostamento dei dati tra SQL Server e origini dati esterne e tra i nodi SQL in gruppi di scalabilità orizzontale di PolyBase.
+ - **SQL Server PolyBase Data Movement Service**. Consente lo spostamento dei dati tra SQL Server e origini dati esterne e tra i nodi SQL in gruppi di scalabilità orizzontale di PolyBase.
   
 ##  <a name="Serv_Prop"></a> Proprietà e configurazione dei servizi
 
@@ -180,9 +180,9 @@ Gli account dei servizi gestiti, gli account dei servizi gestiti di gruppo e gli
   
      Un account del servizio gestito di gruppo è un account del servizio gestito per più server. Windows gestisce un account del servizio per i servizi in esecuzione in un gruppo di server. Active Directory aggiorna automaticamente la password dell'account del servizio gestito di gruppo senza riavviare i servizi. È possibile configurare servizi di SQL Server per l'uso di un'entità di account del servizio gestito di gruppo. A partire da SQL Server 2014, SQL Server supporta gli account del servizio gestito di gruppo per istanze autonome e SQL Server 2016 e versioni successive per istanze del cluster di failover e gruppi di disponibilità.  
   
-    Per usare un account del servizio gestito di gruppo per SQL Server 2014 o versioni successive, il sistema operativo deve essere Windows Server 2012 R2 o versioni successive. I server con Windows Server 2012 R2 richiedono l'applicazione di [KB 2998082](http://support.microsoft.com/kb/2998082) in modo che i servizi possano accedere senza interruzioni immediatamente dopo una modifica della password.  
+    Per usare un account del servizio gestito di gruppo per SQL Server 2014 o versioni successive, il sistema operativo deve essere Windows Server 2012 R2 o versioni successive. I server con Windows Server 2012 R2 richiedono l'applicazione di [KB 2998082](https://support.microsoft.com/kb/2998082) in modo che i servizi possano accedere senza interruzioni immediatamente dopo una modifica della password.  
   
-    Per altre informazioni, vedere [Group Managed Service Accounts](http://technet.microsoft.com/library/hh831782.aspx) (Account del servizio gestito di gruppo)  
+    Per altre informazioni, vedere [Group Managed Service Accounts](https://technet.microsoft.com/library/hh831782.aspx) (Account del servizio gestito di gruppo)  
       
     > [!NOTE]  
     >  L'account del servizio gestito di gruppo deve essere creato in Active Directory dall'amministratore di dominio prima che possa essere usato dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -203,7 +203,7 @@ Gli account dei servizi gestiti, gli account dei servizi gestiti di gruppo e gli
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent nell'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominata **PAYROLL**|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
- Per altre informazioni sugli account dei servizi gestiti e sugli account virtuali, vedere la sezione **Concetti relativi agli account dei servizi gestiti e agli account virtuali** nella pagina [Guida dettagliata agli account di servizio](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx) e la pagina relativa alle [domande frequenti sugli account dei servizi gestiti](http://technet.microsoft.com/library/ff641729\(WS.10\).aspx).  
+ Per altre informazioni sugli account dei servizi gestiti e sugli account virtuali, vedere la sezione **Concetti relativi agli account dei servizi gestiti e agli account virtuali** nella pagina [Guida dettagliata agli account di servizio](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) e la pagina relativa alle [domande frequenti sugli account dei servizi gestiti](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx).  
   
  **Nota sulla sicurezza:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] quando possibile, usare un account [MSA](#MSA) o [virtual account](#VA_Desc) . In alternativa, usare un account utente con privilegi limitati o un account di dominio specifico anziché un account condiviso per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , assegnando account distinti ai diversi servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Non concedere autorizzazioni aggiuntive all'account del servizio oppure ai gruppi di servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le autorizzazioni verranno concesse mediante l'appartenenza a un gruppo o direttamente a un SID del servizio, se quest'ultimo è supportato.  
   
@@ -283,7 +283,7 @@ In questa sezione vengono descritte le autorizzazioni configurate dal programma 
  A seconda della configurazione del servizio, l'account del servizio o il SID del servizio viene aggiunto come membro del gruppo di servizi durante l'installazione o l'aggiornamento.
   
 ###  <a name="Windows"></a> Privilegi e diritti di Windows  
- L'account assegnato per l'avvio di un servizio deve disporre delle **autorizzazioni di avvio, arresto e pausa** per il servizio, che verranno assegnate automaticamente dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  Installare innanzitutto gli strumenti di amministrazione remota del server (RSAT). Per informazioni vedere la pagina relativa agli [strumenti di amministrazione remota del server per Windows 7](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d).
+ L'account assegnato per l'avvio di un servizio deve disporre delle **autorizzazioni di avvio, arresto e pausa** per il servizio, che verranno assegnate automaticamente dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  Installare innanzitutto gli strumenti di amministrazione remota del server (RSAT). Per informazioni vedere la pagina relativa agli [strumenti di amministrazione remota del server per Windows 7](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d).
   
  Nella tabella seguente vengono mostrate le autorizzazioni richieste dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per i SID per servizio o per i gruppi locali di Windows usati dai componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   

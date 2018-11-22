@@ -5,8 +5,7 @@ ms.date: 01/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], from Azure blob storage
@@ -18,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b941c3348f487c501650b903d1413c540c6a9eb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bbc70dbfec864052c4c877794561c8692cdfcfb
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791746"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560408"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Esempi di accesso bulk ai dati nell'archiviazione BLOB di Azure
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +30,11 @@ ms.locfileid: "47791746"
 Le istruzioni `BULK INSERT` e `OPENROWSET` consentono di accedere direttamente a un file nell'archiviazione BLOB di Azure. Gli esempi seguenti usano dati da un file CSV (con valori delimitati da virgola) denominato `inv-2017-01-19.csv`, archiviato in un contenitore denominato `Week3` e archiviato in un account di archiviazione denominato `newinvoices`. È possibile usare il percorso al file di formato, ma non è incluso in questi esempi. 
 
 Per l'accesso bulk all'archiviazione BLOB di Azure da SQL Server è necessario almeno [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+
+>  [!IMPORTANT]
+>  Tutti i percorsi del contenitore e dei file nel BLOB sono `CASE SENSITIVE`. Se l'impostazione non è corretta, è possibile che venga restituito un errore di tipo "Impossibile eseguire il caricamento bulk. Il file "file.csv" non esiste oppure non si dispone dell'autorizzazione per accedervi.
+"
+
 
 ## <a name="create-the-credential"></a>Creare le credenziali   
    

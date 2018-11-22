@@ -7,12 +7,12 @@ ms.prod: reporting-services, reporting-services-sharepoint, reporting-services-n
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 10/3/2018
-ms.openlocfilehash: d264830673f538a80972fb9a6e97edc770b86a16
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 645a599f01233030167998bc8a720b5722a5b30f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032040"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812794"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurare un server di report in un cluster per il bilanciamento del carico di rete
 
@@ -34,7 +34,7 @@ ms.locfileid: "50032040"
 |----------|-----------------|----------------------|  
 |1|Prima di installare Reporting Services nei nodi del server in un cluster per il bilanciamento del carico di rete, verificare i requisiti per la distribuzione con scalabilità orizzontale.|[Distribuzione con scalabilità orizzontale - Modalità nativa di Reporting Services &#40;Gestione configurazione&#41;](https://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |2|Configurare il cluster per il bilanciamento del carico di rete e verificarne il corretto funzionamento.<br /><br /> Assicurarsi di eseguire il mapping di un nome dell'intestazione host all'IP del server virtuale del cluster per il bilanciamento del carico di rete. Il nome dell'intestazione host viene utilizzato nell'URL del server di report ed è più semplice da ricordare e digitare rispetto a un indirizzo IP.|Per ulteriori informazioni, vedere la documentazione di Windows Server relativa alla versione del sistema operativo Windows utilizzato.|  
-|3|Aggiungere il nome del NetBIOS e il nome di dominio completo (FQDN) per l'intestazione host all'elenco di **BackConnectionHostNames** archiviato nel Registro di sistema di Windows. Seguire i passaggi descritti in **Method 2: Specify host names** (Metodo 2: Specificare i nomi host) nell'articolo [KB 896861](http://support.microsoft.com/kb/896861) (http://support.microsoft.com/kb/896861), con la rettifica seguente. In base a quanto specificato nel**passaggio 7** dell'articolo della KB: uscire dall'editor del Registro di sistema e riavviare il servizio IISAdmin. Si consiglia, invece, di riavviare il computer per assicurarsi che le modifiche abbiano effetto.<br /><br /> Ad esempio, se il nome dell'intestazione host \<MyServer> è un nome virtuale per il nome computer Windows "contoso", probabilmente è possibile fare riferimento al modulo FQDN come "contoso.domain.com". Sarà necessario aggiungere il nome di intestazione host (MyServer ) e il nome FQDN (contoso.domain.com) all'elenco in **BackConnectionHostNames**.|Questo passaggio è obbligatorio se l'ambiente server implica l'autenticazione NTLM sul computer locale, creando una connessione loopback.<br /><br /> In tal caso, le richieste tra Gestione report e Server di report restituiscono un errore 401 (Unauthorized).|  
+|3|Aggiungere il nome del NetBIOS e il nome di dominio completo (FQDN) per l'intestazione host all'elenco di **BackConnectionHostNames** archiviato nel Registro di sistema di Windows. Seguire i passaggi descritti in **Method 2: Specify host names** (Metodo 2: Specificare i nomi host) nell'articolo [KB 896861](https://support.microsoft.com/kb/896861) (https://support.microsoft.com/kb/896861), con la rettifica seguente. In base a quanto specificato nel**passaggio 7** dell'articolo della KB: uscire dall'editor del Registro di sistema e riavviare il servizio IISAdmin. Si consiglia, invece, di riavviare il computer per assicurarsi che le modifiche abbiano effetto.<br /><br /> Ad esempio, se il nome dell'intestazione host \<MyServer> è un nome virtuale per il nome computer Windows "contoso", probabilmente è possibile fare riferimento al modulo FQDN come "contoso.domain.com". Sarà necessario aggiungere il nome di intestazione host (MyServer ) e il nome FQDN (contoso.domain.com) all'elenco in **BackConnectionHostNames**.|Questo passaggio è obbligatorio se l'ambiente server implica l'autenticazione NTLM sul computer locale, creando una connessione loopback.<br /><br /> In tal caso, le richieste tra Gestione report e Server di report restituiscono un errore 401 (Unauthorized).|  
 |4|Installare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità solo file in nodi che appartengono già a un cluster per il bilanciamento del carico di rete e configurare le istanze del server di report per la distribuzione con scalabilità orizzontale.<br /><br /> La scalabilità orizzontale configurata potrebbe non rispondere a richieste indirizzate all'IP del server virtuale. La configurazione della scalabilità orizzontale per l'utilizzo dell'IP del server virtuale viene effettuata in un passaggio successivo, dopo la configurazione della convalida dello stato di visualizzazione.|[Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |5|Configurare la convalida dello stato di visualizzazione.<br /><br /> Per ottenere risultati ottimali, eseguire questo passaggio dopo avere configurato la distribuzione con scalabilità orizzontale e prima di configurare le istanze del server di report per l'utilizzo dell'IP del server virtuale. Configurando innanzitutto la convalida dello stato di visualizzazione, è possibile evitare eccezioni a causa di errori di convalida dello stato quando gli utenti tentano di accedere a report interattivi.|[Come configurare la convalida dello stato di visualizzazione](#ViewState) in questo argomento.|  
 |6|Configurare **Hostname** e **UrlRoot** per l'utilizzo dell'IP del server virtuale del cluster per il bilanciamento del carico di rete.|[Come configurare Hostname e UrlRoot](#SpecifyingVirtualServerName) in questo argomento.|  
@@ -114,9 +114,9 @@ Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il
     <Hostname>virtual_server</Hostname>  
     ```  
   
-3. Individuare **UrlRoot**. L'elemento non è specificato nel file di configurazione, ma il valore predefinito usato è un URL in formato http:// o `https://<computername>/<reportserver>`, dove \<*reportserver*> corrisponde al nome della directory virtuale del servizio Web ReportServer.  
+3. Individuare **UrlRoot**. L'elemento non è specificato nel file di configurazione, ma il valore predefinito usato è un URL in formato https:// o `https://<computername>/<reportserver>`, dove \<*reportserver*> corrisponde al nome della directory virtuale del servizio Web ReportServer.  
   
-4. Digitare un valore per **UrlRoot** che includa il nome virtuale del cluster in formato http:// o `https://<virtual_server>/<reportserver>`.  
+4. Digitare un valore per **UrlRoot** che includa il nome virtuale del cluster in formato https:// o `https://<virtual_server>/<reportserver>`.  
   
 5. Salvare il file.  
   

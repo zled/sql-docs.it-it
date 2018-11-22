@@ -1,7 +1,7 @@
 ---
 title: Sicurezza a livello di riga | Microsoft Docs
 ms.custom: ''
-ms.date: 03/29/2017
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,29 +17,31 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d75e4dd2499261fc28f97796d865fa71709bc663
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 13e2f3c63a9712ffa04bf7842815a51ba5a420c4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814679"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672418"
 ---
 # <a name="row-level-security"></a>Sicurezza a livello di riga
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   ![Immagine della sicurezza a livello di riga](../../relational-databases/security/media/row-level-security-graphic.png "Immagine della sicurezza a livello di riga")  
   
- La sicurezza a livello di consente ai clienti di controllare l'accesso alle righe in una tabella del database in base alle caratteristiche dell'utente che esegue una query (ad esempio, l'appartenenza al gruppo o il contesto di esecuzione).  
+ La sicurezza a livello di riga consente ai clienti di controllare l'accesso alle righe in una tabella del database in base alle caratteristiche dell'utente che esegue una query (ad esempio l'appartenenza al gruppo o il contesto di esecuzione).  
   
- La sicurezza a livello di riga semplifica la progettazione e la codifica della sicurezza nell'applicazione e consente di implementare delle restrizioni di accesso alle righe di dati. Ad esempio, assicura che i dipendenti possano accedere solo alle righe di dati relative al proprio reparto o limita l'accesso ai dati di un cliente in modo che possa visualizzare solo i dati rilevanti per la propria azienda.  
+ La sicurezza a livello di riga semplifica la progettazione e la codifica della sicurezza nell'applicazione e facilita l'implementazione delle restrizioni di accesso alle righe di dati. Ad esempio, è possibile garantire che i dipendenti accedano solo alle righe di dati relative al proprio reparto o limitare l'accesso ai dati di un cliente ai soli dati rilevanti per l'azienda.  
   
  La logica di restrizione dell'accesso si trova sul livello del database e non su un altro livello applicazione lontano dai dati. Il sistema del database applica le restrizioni di accesso a ogni tentativo di accesso ai dati da qualsiasi livello. La riduzione della superficie di attacco del sistema di sicurezza lo rende più affidabile e solido.  
   
- Implementare la sicurezza a livello di riga tramite l'istruzione [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] e i predicati creati come [funzioni inline con valori di tabella](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
+ Implementare la sicurezza a livello di riga tramite l'istruzione [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] e i predicati creati come [funzioni con valori di tabella inline](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([fare clic qui per ottenerlo](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([fare clic qui per ottenerlo](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
+> [!NOTE]
+> Azure SQL Data Warehouse supporta solo predicati di filtro. I predicati di blocco non sono attualmente supportati in Azure SQL Data Warehouse.
 
 ##  <a name="Description"></a> Descrizione  
  La sicurezza a livello di riga supporta due tipi di predicati di sicurezza.  
@@ -48,9 +50,9 @@ ms.locfileid: "47814679"
   
 -   I predicati di blocco bloccano esplicitamente le operazioni di scrittura (AFTER INSERT, AFTER UPDATE, BEFORE UPDATE e BEFORE DELETE) che violano il predicato.  
   
- L'accesso ai dati a livello di riga in una tabella è limitato da un predicato di sicurezza definito come una funzione inline con valori di tabella. La funzione viene quindi richiamata e applicata dai criteri di sicurezza. Nel caso dei predicati del filtro non sono presenti indicazioni per l'applicazione che le righe sono state filtrate dal set di risultati. Se vengono filtrate tutte le righe, viene restituito un set Null. Per i predicati di blocco, qualsiasi operazione che violi il predicato non verrà completata e genererà un errore.  
+ L'accesso ai dati a livello di riga in una tabella è limitato da un predicato di sicurezza definito come una funzione inline con valori di tabella. La funzione viene quindi richiamata e applicata dai criteri di sicurezza. Nel caso dei predicati del filtro, l'applicazione non rileva le righe filtrate dal set di risultati. Se vengono filtrate tutte le righe, viene restituito un set Null. Per i predicati di blocco, qualsiasi operazione che violi il predicato non verrà completata e genererà un errore.  
   
- I predicati di filtro vengono applicati durante la lettura dei dati dalla tabella di base. Questa azione influisce su tutte le operazioni Get: **SELECT**, **DELETE** (l'utente non può eliminare le righe filtrate) e **UPDATE** (l'utente non può aggiornare le righe filtrate, sebbene sia possibile aggiornare le righe in modo che vengano filtrate successivamente). I predicati di blocco influiscono su tutte le operazioni di scrittura.  
+ I predicati del filtro vengono applicati durante la lettura dei dati dalla tabella di base e hanno effetto su tutte le operazioni Get: **SELECT**, **DELETE** (l'utente non può eliminare le righe filtrate) e **UPDATE** (l'utente non può aggiornare le righe filtrate, anche se è possibile aggiornare le righe in modo che vengano filtrate successivamente). I predicati di blocco influiscono su tutte le operazioni di scrittura.  
   
 -   I predicati AFTER INSERT e AFTER UPDATE possono impedire agli utenti di aggiornare le righe con valori che violano il predicato.  
   
@@ -76,13 +78,13 @@ ms.locfileid: "47814679"
   
  I predicati del filtro si comportano nel modo seguente:  
   
--   Definire i criteri di sicurezza per filtrare le righe di una tabella. L'applicazione non rileva righe filtrate per le operazioni **SELECT**, **UPDATE**e **DELETE** , incluse le situazioni in cui sono state escluse tutte le righe. L'applicazione può eseguire **INSERT** su qualsiasi riga, a prescindere se sarà filtrata durante altre operazioni.  
+-   Definire i criteri di sicurezza per filtrare le righe di una tabella. L'applicazione non rileva le righe filtrate per le operazioni **SELECT**, **UPDATE** e **DELETE**, anche nelle situazioni in cui tutte le righe sono state escluse. L'applicazione può eseguire **INSERT** su qualsiasi riga, indipendentemente dal fatto che sarà filtrata durante altre operazioni.  
   
  I predicati di blocco si comportano nel modo seguente:  
   
 -   I predicati di blocco di UPDATE vengono suddivisi in operazioni distinte BEFORE e AFTER. Di conseguenza non è possibile, ad esempio, impedire agli utenti di aggiornare una riga con un valore superiore a quello corrente. Se si deve applicare una logica di questo tipo, occorre usare i trigger con le tabelle intermedie DELETED e INSERTED per rimandare ai valori precedenti e nuovi insieme.  
   
--   L'ottimizzatore non controllerà il predicato di blocco AFTER e UPDATE se non è stata modificata nessuna delle colonne usate dalla funzione del predicato. Ad esempio, Alice non deve essere in grado di modificare uno stipendio in modo che superi 100.000, ma deve essere in grado di modificare l'indirizzo di un dipendente il cui stipendio è già maggiore di 100.000 e pertanto viola già il predicato.  
+-   L'ottimizzatore non controllerà il predicato di blocco AFTER e UPDATE se non è stata modificata nessuna delle colonne usate dalla funzione del predicato. Ad esempio, Alice non sarà in grado di modificare uno stipendio in modo che superi 100.000, ma sarà in grado di modificare l'indirizzo di un dipendente il cui stipendio è già maggiore di 100.000, perché viola già il predicato.  
   
 -   Non sono state modificate le API in blocco, compresa l'API BULK INSERT. Questo significa che i predicati di blocco AFTER INSERT verranno applicati alle operazioni di inserimento in blocco come se fossero operazioni di inserimento regolari.  
   
@@ -94,11 +96,11 @@ ms.locfileid: "47814679"
   
 -   Una banca può creare dei criteri per limitare l'accesso alle righe di dati finanziari in base alla divisione aziendale del dipendente o al suo ruolo nell'azienda.  
   
--   Un'applicazione multi-tenant può creare dei criteri per applicare una separazione logica delle righe di dati di ciascun tenant da qualsiasi altra riga del tenant. L'efficienza viene raggiunta archiviando i dati per diversi tenant in un'unica tabella. Naturalmente, ogni tenant può visualizzar solo le proprie righe di dati.  
+-   Un'applicazione multi-tenant può creare dei criteri per applicare una separazione logica delle righe di dati di ciascun tenant da qualsiasi altra riga del tenant. L'efficienza viene raggiunta archiviando i dati per diversi tenant in un'unica tabella. Ogni tenant può visualizzare solo le proprie righe di dati.  
   
  I predicati di filtro della sicurezza a livello di riga sono funzionalmente equivalenti all'aggiunta di una clausola **WHERE** . Il predicato può essere sofisticato, se lo richiedono le procedure aziendali, oppure è possibile usare una clausola semplice, ad esempio `WHERE TenantId = 42`.  
   
- In termini più formali, la sicurezza a livello di riga introduce il controllo degli accessi basato su predicato. Comprende una valutazione basata su predicato flessibile e centralizzata che può prendere in considerazione i metadati o altri criteri ritenuti appropriati dall'amministratore. Il predicato viene usato come criterio per determinare se l'utente dispone o meno dell'accesso appropriato ai dati in base agli attributi utente. Il controllo degli accessi basato su etichetta può essere implementato usando un controllo degli accessi basato su predicato.  
+ In termini più formali, la sicurezza a livello di riga introduce il controllo degli accessi basato su predicato. Comprende una valutazione basata su predicato flessibile e centralizzata che può prendere in considerazione i metadati o altri criteri ritenuti appropriati dall'amministratore. Il predicato viene usato come criterio per determinare se l'utente dispone dell'accesso appropriato ai dati in base agli attributi utente. Il controllo degli accessi basato su etichetta può essere implementato usando un controllo degli accessi basato su predicato.  
   
   
 ##  <a name="Permissions"></a> Permissions  
@@ -121,11 +123,11 @@ ms.locfileid: "47814679"
   
 -   Si consiglia di creare uno schema separato per gli oggetti della sicurezza a livello di riga (funzione di predicato e criteri di sicurezza).  
   
--   L'autorizzazione **ALTER ANY SECURITY POLICY** è destinata agli utenti con privilegi elevati (ad esempio, il gestore dei criteri di sicurezza). Il gestore dei criteri di sicurezza non richiede l'autorizzazione **SELECT** nelle tabella che protegge.  
+-   L'autorizzazione **ALTER ANY SECURITY POLICY** è destinata agli utenti con privilegi elevati (ad esempio il gestore dei criteri di sicurezza). Il gestore dei criteri di sicurezza non richiede l'autorizzazione **SELECT** per le tabelle che protegge.  
   
 -   Non usare le conversioni del tipo nelle funzioni di predicato per evitare potenziali errori di run-time.  
   
--   Se possibile, evitare la ricorsione nelle funzioni di predicato per evitare un calo delle prestazioni. Query Optimizer tenta di rilevare le ricorsioni dirette, ma non garantisce il rilevamento delle ricorsioni indirette (ossia, quando una seconda funzione chiama la funzione di predicato).  
+-   Se possibile, evitare la ricorsione nelle funzioni di predicato per evitare un calo delle prestazioni. Query Optimizer tenta di rilevare le ricorsioni dirette, ma non garantisce il rilevamento delle ricorsioni indirette (in cui una seconda funzione chiama la funzione di predicato).  
   
 -   Evitare di usare un numero eccessivo di join di tabella nelle funzioni di predicato per ottimizzare le prestazioni.  
   
@@ -141,7 +143,7 @@ ms.locfileid: "47814679"
    
   
 ##  <a name="SecNote"></a> Nota sulla sicurezza: attacchi al canale laterale  
- **Gestore dei criteri di sicurezza malintenzionato:** è importante osservare che un gestore dei criteri di sicurezza malintenzionato, con autorizzazioni sufficienti per creare criteri di sicurezza per una colonna sensibile e per creare o modificare le funzioni inline con valori di tabella, può agire in collusione con un altro utente con autorizzazioni Select su una tabella al fine di estrarre dolosamente i dati creando funzioni inline con valori di tabella progettate per usare attacchi al canale laterale per estrapolare i dati. Questi attacchi richiedono la collusione con altre persone (o autorizzazioni eccessive concesse a un utente malintenzionato) e richiedono probabilmente diversi tentativi di modifica dei criteri (che richiede autorizzazioni per rimuovere il predicato per interrompere l'associazione allo schema), la modifica delle funzioni inline con valori di tabella e diverse esecuzioni delle istruzioni Select nella tabella di destinazione. Si consiglia di limitare le autorizzazioni concedendo solo quelle necessarie e di monitorare le attività sospette, ad esempio la modifica frequente dei criteri e delle funzioni inline con valori di tabella relativi alla sicurezza a livello di riga.  
+ **Gestore dei criteri di sicurezza malintenzionato:** è importante osservare che un gestore dei criteri di sicurezza malintenzionato, con autorizzazioni sufficienti per creare criteri di sicurezza per una colonna sensibile e per creare o modificare le funzioni con valori di tabella inline, può agire in collusione con un altro utente con autorizzazioni Select su una tabella al fine di estrarre dolosamente i dati creando funzioni con valori di tabella inline progettate per usare attacchi al canale laterale per estrapolare i dati. Questi attacchi richiedono la collusione con altre persone (o autorizzazioni eccessive concesse a un utente malintenzionato) e richiedono probabilmente diversi tentativi di modifica dei criteri (che richiede autorizzazioni per rimuovere il predicato per interrompere l'associazione allo schema), la modifica delle funzioni con valori di tabella inline e diverse esecuzioni delle istruzioni Select nella tabella di destinazione. È consigliabile di limitare le autorizzazioni concedendo solo quelle necessarie e di monitorare le attività sospette, ad esempio la modifica frequente dei criteri e delle funzioni con valori di tabella inline relativi alla sicurezza a livello di riga.  
   
  **Query create appositamente:** è possibile causare perdite di informazioni mediante l'utilizzo di query create appositamente. Ad esempio, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` consentirebbe a un utente malintenzionato di sapere che lo stipendio di John Doe ammonta a 100.000 dollari. Anche se è disponibile un predicato di sicurezza per impedire le query dirette di un utente malintenzionato relative allo stipendio degli altri dipendenti, l'utente può determinare quando la query restituisce un'eccezione di divisione per zero.  
    
@@ -149,17 +151,17 @@ ms.locfileid: "47814679"
 ##  <a name="Limitations"></a> Compatibilità tra funzionalità  
  In generale la sicurezza a livello di riga funziona tra varie funzionalità nel modo previsto. Esistono tuttavia alcune eccezioni a questa regola. Questa sezione contiene diverse note e avvertenze per l'uso della sicurezza a livello di riga con altre funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **DBCC SHOW_STATISTICS** genera statistiche sui dati non filtrati e potrebbero quindi verificarsi perdite di informazioni altrimenti protette da criteri di sicurezza. Per questo motivo, per visualizzare un oggetto statistiche per una tabella con criteri di sicurezza a livello di riga, l'utente deve essere il proprietario della tabella oppure un membro del ruolo predefinito del server sysadmin o del ruolo predefinito del database db_owner o db_ddladmin.  
+-   **DBCC SHOW_STATISTICS** genera statistiche sui dati non filtrati e può causare perdite di informazioni altrimenti protette da criteri di sicurezza. Per questo motivo, per visualizzare un oggetto statistiche per una tabella con criteri di sicurezza a livello di riga, l'utente deve essere il proprietario della tabella oppure un membro del ruolo predefinito del server sysadmin o del ruolo predefinito del database db_owner o db_ddladmin.  
   
 -   La sicurezza a livello di riga**Filestream** non è compatibile con Filestream.  
   
--   La sicurezza a livello di riga**Polybase** non è compatibile con Polybase.  
+-   La sicurezza a livello di riga **PolyBase** non è compatibile con PolyBase.  
   
 -   **tabelle ottimizzate per la memoria**. La funzione inline con valori di tabella usata come predicato di sicurezza in una tabella ottimizzata per la memoria deve essere definita con l'opzione `WITH NATIVE_COMPILATION`. Con questa opzione le funzionalità del linguaggio non supportate dalle tabelle ottimizzate per la memoria verranno escluse e verrà generato l'errore appropriato al momento della creazione. Per altre informazioni, vedere la sezione relativa alla **sicurezza a livello di riga nelle tabelle con ottimizzazione per la memoria** in [Introduzione alle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 -   **Viste indicizzate** In generale è possibile creare criteri di sicurezza nelle viste ed è possibile creare viste nelle tabelle associate a criteri di sicurezza. Non è possibile tuttavia creare viste indicizzate in tabelle con un criterio di sicurezza, poiché le ricerche di righe tramite l'indice potrebbero ignorare il criterio.  
   
--   **Change Data Capture** . Change Data Capture può causare la perdita di intere righe che devono essere filtrate per i membri di **db_owner** o gli utenti membri del ruolo di "controllo" specificato quando Change Data Capture viene abilitato per una tabella (si noti che è possibile impostare esplicitamente **NULL** per consentire a tutti gli utenti di accedere ai dati di modifica). I membri di questo ruolo di controllo e **db_owner** possono infatti visualizzare tutte le modifiche dei dati in una tabella anche se per la tabella esistono criteri di sicurezza.  
+-   **Change Data Capture** Change Data Capture può causare la perdita di intere righe che devono essere filtrate per i membri di **db_owner** o gli utenti membri del ruolo di "controllo" specificato quando Change Data Capture viene abilitato per una tabella (si noti che è possibile impostare esplicitamente questa funzione su **NULL** per consentire a tutti gli utenti l'accesso ai dati di modifica). I membri di questo ruolo di controllo e **db_owner** possono infatti visualizzare tutte le modifiche dei dati in una tabella anche se per la tabella esistono criteri di sicurezza.  
   
 -   **Rilevamento delle modifiche** Il rilevamento delle modifiche può provocare la perdita della chiave primaria delle righe che devono essere filtrate per gli utenti con autorizzazioni **SELECT** e **VIEW CHANGE TRACKING** . I valori dei dati effettivi non vengono perduti, ma va perduto solo il fatto che la colonna A è stata aggiornata/inserita/eliminata per la riga con la chiave primaria B. Questo rappresenta un problema se la chiave primaria contiene un elemento riservato, ad esempio un codice fiscale. In pratica però **CHANGETABLE** è quasi sempre unito alla tabella originale per ottenere i dati più recenti.  
   
@@ -175,10 +177,13 @@ ms.locfileid: "47814679"
 ##  <a name="CodeExamples"></a> Esempi  
   
 ###  <a name="Typical"></a> A. Scenari per gli utenti che eseguono l'autenticazione nel database  
- Questo breve esempio crea tre utenti, crea e popola una tabella con sei righe, quindi crea una funzione inline con valori di tabella e i criteri di sicurezza per la tabella. L'esempio mostra in che modo le istruzioni Select vengono filtrate per i diversi utenti.  
+ Questo breve esempio crea tre utenti, crea e popola una tabella con sei righe, quindi crea una funzione con valori di tabella inline e i criteri di sicurezza per la tabella. L'esempio mostra in che modo le istruzioni Select vengono filtrate per i diversi utenti.  
   
  Creare tre account utente per mostrare le diverse capacità di accesso.  
-  
+
+> [!NOTE]
+> Azure SQL Data Warehouse non supporta EXECUTE AS USER, pertanto è necessario eseguire CREATE LOGIN per ogni utente in anticipo. In un secondo momento si accede con le credenziali dell'utente appropriato per eseguire il test di questo comportamento.
+
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
 CREATE USER Sales1 WITHOUT LOGIN;  
@@ -197,7 +202,7 @@ CREATE TABLE Sales
     );  
 ```  
   
- Popolare la tabella con sei righe di dati che mostrano tre ordini per ciascun rappresentante.  
+ Popolare la tabella con sei righe di dati che visualizzano tre ordini per ogni rappresentante.  
   
 ```  
 INSERT Sales VALUES   
@@ -219,7 +224,7 @@ GRANT SELECT ON Sales TO Sales1;
 GRANT SELECT ON Sales TO Sales2;  
 ```  
   
- Creare un nuovo schema e una funzione inline con valori di tabella. La funzione restituisce 1 quando una riga nella colonna SalesRep è uguale all'utente che esegue la query (`@SalesRep = USER_NAME()`) o se l'utente che esegue la query è l'utente gestore (`USER_NAME() = 'Manager'`).  
+ Creare un nuovo schema e una funzione con valori di tabella inline. La funzione restituisce 1 quando una riga nella colonna SalesRep è uguale all'utente che esegue la query (`@SalesRep = USER_NAME()`) o se l'utente che esegue la query è l'utente gestore (`USER_NAME() = 'Manager'`).  
   
 ```  
 CREATE SCHEMA Security;  
@@ -233,6 +238,9 @@ AS
 WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';  
 ```  
   
+> [!NOTE]
+> Azure SQL Data Warehouse non supporta USER_NAME(), pertanto è necessario usare SYSTEM_USER.
+
  Creare i criteri di sicurezza aggiungendo la funzione come predicato di filtro. Lo stato deve essere impostato su ON per abilitare i criteri.  
   
 ```  
@@ -257,7 +265,9 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;   
 REVERT;  
 ```  
-  
+> [!NOTE]
+> Azure SQL Data Warehouse non supporta l'istruzione EXECUTE AS USER, pertanto accedere con le credenziali utente appropriate per eseguire il test del comportamento precedente.
+
  Il gestore dovrebbe visualizzare tutte e sei le righe. Gli utenti Sales1 e Sales2 dovrebbero visualizzare solo le proprie vendite.  
   
  Modificare i criteri di sicurezza per disabilitarli.  
@@ -271,7 +281,10 @@ WITH (STATE = OFF);
   
   
 ###  <a name="MidTier"></a> B. Scenari per gli utenti che si connettono al database tramite un'applicazione di livello intermedio  
- Questo esempio mostra in che modo un'applicazione di livello intermedio può implementare il filtro della connessione, in cui gli utenti dell'applicazione (o i tenant) condividono lo stesso utente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (l'applicazione). L'applicazione imposta l'ID utente dell'applicazione corrente in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) dopo la connessione al database, quindi i criteri di sicurezza filtrano in modo trasparente le righe che non devono essere visibili a tale ID e impediscono all'utente di inserire righe per l'ID utente errato. Non sono necessarie altre modifiche all'applicazione.  
+> [!NOTE]
+> Questo esempio non è applicabile ad Azure SQL Data Warehouse, perché SESSION_CONTEXT e i predicati di blocco non sono attualmente supportati.
+
+Questo esempio mostra in che modo un'applicazione di livello intermedio può implementare il filtro della connessione, in cui gli utenti dell'applicazione (o i tenant) condividono lo stesso utente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (l'applicazione). L'applicazione imposta l'ID utente dell'applicazione corrente in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) dopo la connessione al database, quindi i criteri di sicurezza filtrano in modo trasparente le righe che non devono essere visibili a tale ID e impediscono all'utente di inserire righe per l'ID utente errato. Non sono necessarie altre modifiche all'applicazione.  
   
  Creare una tabella semplice per conservare i dati.  
   
@@ -284,7 +297,7 @@ CREATE TABLE Sales (
 );  
 ```  
   
- Popolare la tabella con sei righe di dati che mostrano tre ordini per ciascun utente dell'applicazione.  
+ Popolare la tabella con sei righe di dati che visualizzano tre ordini per ogni utente dell'applicazione.  
   
 ```  
 INSERT Sales VALUES   
@@ -307,8 +320,8 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON Sales TO AppUser;
 DENY UPDATE ON Sales(AppUserId) TO AppUser;  
 ```  
   
- Creare un nuovo schema e una nuova funzione di predicato con cui usare l'ID utente dell'applicazione archiviato in **SESSION_CONTEXT** per filtrare le righe.  
-  
+ Creare un nuovo schema e una nuova funzione di predicato con cui usare l'ID utente dell'applicazione archiviato in **SESSION_CONTEXT** per filtrare le righe.
+
 ```  
 CREATE SCHEMA Security;  
 GO  

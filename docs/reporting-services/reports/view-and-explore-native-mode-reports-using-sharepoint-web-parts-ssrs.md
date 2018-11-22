@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cef5578bc23c7ac49dceedaac6dfb18049600ca5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 4124d8a88485332133baf2cd4a39eb52da56652e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032140"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813415"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
 
@@ -140,7 +140,7 @@ ms.locfileid: "50032140"
   
 6.  In modalità di modifica della pagina fare clic su **Modifica web part** nella web part Visualizzatore report.  
   
-7.  In **Report Manager URL**digitare l'URL di un'istanza di Gestione report associata al server di report in modalità nativa a cui si desidera accedere. Per impostazione predefinita, la sintassi dell'URL di Gestione report è la seguente: **http://\<nomeserver>/reports**.  
+7.  In **Report Manager URL**digitare l'URL di un'istanza di Gestione report associata al server di report in modalità nativa a cui si desidera accedere. Per impostazione predefinita, la sintassi dell'URL di Gestione report è la seguente: **https://\<nomeserver>/reports**.  
   
 8.  In **Percorso report**specificare una barra seguita dal percorso della cartella e dal nome del report. **Non** includere il nome del server o la directory virtuale di Gestione report. Ad esempio, per aprire il report "Company Sales" nella cartella Adventure Works, specificare **/Adventure Works/Company Sales**. Di seguito è riportato un altro esempio in cui il report "Products" si trova nella cartella radice del server di report **/Products**.  
   

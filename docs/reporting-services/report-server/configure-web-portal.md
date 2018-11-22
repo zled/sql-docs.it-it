@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f37cb519981b0f3ac0be532ad82e6ed74d073d8f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 606b6fa37f5dc067cdf134792215fd7c2cd09067
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031706"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813214"
 ---
 # <a name="configure-the-web-portal"></a>Configurare il portale Web
 
@@ -80,7 +80,7 @@ Per altre informazioni sul file di configurazione, vedere [Modificare un file di
 
 2. Aprire Internet Explorer.
 
-3. Immettere l'URL del portale Web. Per impostazione predefinita, l'URL è http://\<**nome-server**>/reports, ma se Reporting Services è stato installato come istanza denominata, l'URL predefinito sarà http://\<**nome-server**>/reports\<**_nomeistanza**>.
+3. Immettere l'URL del portale Web. Per impostazione predefinita, l'URL è https://\<**your-server-name**>/reports, ma se Reporting Services è stato installato come istanza denominata, l'URL predefinito sarà https://\<**nome-server**>/reports\<**_nome istanza**>.
 
 4. Selezionare **Impostazioni sito**.
 

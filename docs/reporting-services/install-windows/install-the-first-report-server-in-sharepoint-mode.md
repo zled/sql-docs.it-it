@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 681f64500bdc7cac83a580dc5a2abef27ff4535d
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: f89e3d512c76557548ef3fc707861e708a28dc64
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051193"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814134"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installare il primo server di report in modalità SharePoint
 
@@ -270,7 +270,7 @@ ms.locfileid: "50051193"
   
 1.  Nei passaggi seguenti si presuppone che il sito di SharePoint sia configurato per la **versione esperienza**2013, per SharePoint 2013.  
   
-     Aprire il browser al sito di SharePoint desiderato. Ad esempio http://\<nomeserver>/sites/bi  
+     Aprire il browser al sito di SharePoint desiderato. Ad esempio https://\<nomeserver >/siti/bi  
   
 2.  Selezionare **Impostazioni**![Impostazioni di SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Impostazioni di SharePoint").  
   
@@ -373,8 +373,8 @@ write-host -foregroundcolor DarkGray $time
 Write-Host -ForegroundColor Green "Enable the PowerView and reportserver site features"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
 #!!!! update "-url"  of the site where you want the features enabled  
-Enable-SPfeature -identity "powerview" -Url http://server/sites/bi  
-Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi  
+Enable-SPfeature -identity "powerview" -Url https://server/sites/bi  
+Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi  
   
 ####To Verify, you can run the following:  
 #Get-SPRSServiceApplication  
